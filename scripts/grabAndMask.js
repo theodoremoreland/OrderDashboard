@@ -4,6 +4,7 @@
  * with the history page enough to understand what is needed for the aforementioned Python web scraper.
  */ 
 
+const restaurantNames = ["Bob's Burgers", "Krusty Krab", "Pizza Planet", "McSpankey's", "Frozen Banana Stand", "Paddy's Irish Pub", "Monk's Cafe"];
 
 /**
  * Immediately invoked function expression (IIFE) to prevent global scope pollution when executing directly in browser dev console.
