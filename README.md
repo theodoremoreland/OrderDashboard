@@ -4,6 +4,9 @@
 
 - [Overview](#overview)
 - [Technologies Used](#technologies-used)
+- [Web scraping](#web-scraping)
+- [Data transformation](#transforming-data)
+- [Video](#video)
 
 ## Overview
 
@@ -51,3 +54,15 @@ The key subjects of the file include:
 
 A Python program that transforms that data created from the aforementioned web scraping script into a simpler format. Also includes
 feature for masking/alternating data and saving given alterations to a special JSON file.
+
+## Video
+
+Why writing the code for this project, I will be recording myself in a video. The purpose of the video is to demonstrate what coding up a few simple programs is like. The focus will be on narrating thought process while exposing a few programming and web development concepts without an opinion piece on the nature of programming as a career and without instruction or lecturing on the steps involved. The video becomes too long and "rambly" otherwise. I may or may not publish and link the video(s) somewhere in this repository.
+
+    const delimiter = " • ";
+    const storeNames = ["Paddy's Irish Pub", "Pizza Planet", "Bob's Burgers", "Krusty Krab", "McSpankey's", "Monk's Cafe"];
+    const dates = ["Thu, Apr 12", "Mon, Jan 1", "Tue, May 5", "Fri, Oct 23", "Thu, Feb 14", "Wed, Mar 15"];
+    const costs = ["$9000.01", "$4444.44", "$22.22", "$1000000.99", "$999.99", "1337.03"];
+    const itemCounts = ["-27 items", "-10000 itmes", "0 items", "1000000 items"];
+    const items = ["Buttered Toast", "Hard Boiled Egg", "Krabby Patty", "Brain Blast", "Secret Formula", "Chemical X"];
+    const getRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
