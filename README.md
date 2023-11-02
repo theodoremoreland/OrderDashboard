@@ -31,7 +31,7 @@ history on its own. However, websites such as doordash.com makes doing so via a 
 website. Under these circumstances, I decided the simplest approach was a semi-automated alternative in which a small JavaScript script would be copied into the
 development console of a standard web browser while the user is already logged in and is already on the order history page. Once the script is executed, it will
 click the "Load More Deliveries" button until all of the user's doordash orders appear on the page. Once all of the orders are present, the script will then
-print all of the order data into the development console. From there, there user can copy said order data into a file of their choosing and save the data onto their computer. If I have time, I will create a UI that allows the user to upload their data and render a dashboard of said data.
+print all of the order data into the development console. From there, there user can copy said order data into a file of their choosing and save the data onto their computer. If I have time, I will create a UI that allows the user to render a dashboard of said data.
 
 ## Web scraping
 
