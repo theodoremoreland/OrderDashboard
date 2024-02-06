@@ -1,5 +1,6 @@
 # Sensitive
 *data.json
+.secret*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
