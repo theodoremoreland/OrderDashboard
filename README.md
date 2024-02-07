@@ -71,6 +71,10 @@ While writing the code for this project, I will be recording myself in a video. 
 - Average number of purchases per day
 - Average number of purchases per year
 
+- Total number of purchases
+- Total number of stores purchased from
+- Total number of days purchase was made
+- Total spent
 - Total spend per year
 - Total spend per month
 - Total spend per week
