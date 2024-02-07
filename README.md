@@ -58,3 +58,24 @@ feature for masking/alternating data and saving given alterations to a special J
 ## Video
 
 While writing the code for this project, I will be recording myself in a video. The purpose of the video is to demonstrate what coding up a few simple programs is like. The focus will be on narrating thought process while exposing a few programming and web development concepts without an opinion piece on the nature of programming as a career and without instruction or lecturing on the steps involved. The video becomes too long and "rambly" otherwise. I may or may not publish and link the video(s) somewhere in this repository.
+
+## Dashboard metrics
+
+- Average spend per month
+- Average spend per week
+- Average spend per day
+- Average spend per year
+
+- Average number of purchases per month
+- Average number of purchases per week
+- Average number of purchases per day
+- Average number of purchases per year
+
+- Total spend per year
+- Total spend per month
+- Total spend per week
+- Total spend per day
+
+- Top 10, 20, 40 stores (total spent)
+- Top 10, 20, 40 stores (times purchases were made)
+- Top 10, 20, 40 items (number purchased)
