@@ -59,6 +59,12 @@ feature for masking/alternating data and saving given alterations to a special J
 
 While writing the code for this project, I will be recording myself in a video. The purpose of the video is to demonstrate what coding up a few simple programs is like. The focus will be on narrating thought process while exposing a few programming and web development concepts without an opinion piece on the nature of programming as a career and without instruction or lecturing on the steps involved. The video becomes too long and "rambly" otherwise. I may or may not publish and link the video(s) somewhere in this repository.
 
+## Dashboard inspiration
+
+- https://dribbble.com/shots/23589425-Oplata-Admin-Dashboard
+- https://dribbble.com/shots/18018508-Financial-Web-App-Dashboard-page-concept
+- https://apexcharts.com/javascript-chart-demos/
+
 ## Dashboard metrics
 
 - Average spend per month
