@@ -80,11 +80,14 @@ While writing the code for this project, I will be recording myself in a video. 
 - Total number of purchases
 - Total number of stores purchased from
 - Total number of days purchase was made
+
 - Total spent
 - Total spend per year
 - Total spend per month
 - Total spend per week
 - Total spend per day
+
+- Top 10 longest streaks without purchases
 
 - Top 10, 20, 40 stores (total spent)
 - Top 10, 20, 40 stores (times purchases were made)
