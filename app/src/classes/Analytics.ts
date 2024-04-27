@@ -41,4 +41,14 @@ export default class Analytics {
 
         return days.size;
     }
+
+    public static getTotalItemsPurchased() {
+        let total = 0;
+
+        for (const order of Analytics.data) {
+            total += order.itemCount;
+        }
+
+        return total;
+    }
 }
