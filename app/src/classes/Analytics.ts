@@ -18,6 +18,48 @@ export default class Analytics {
         Analytics.data = data;
     }
 
+    private static groupByDayOfWeek() {
+        const data: { [key: string]: Order[] } = {};
+
+        for (const order of Analytics.data) {
+            if (!data[order.dayOfWeek]) {
+                data[order.dayOfWeek] = [];
+            }
+
+            data[order.dayOfWeek].push(order);
+        }
+
+        return data;
+    }
+
+    private static groupByDate() {
+        const data: { [key: string]: Order[] } = {};
+
+        for (const order of Analytics.data) {
+            if (!data[order.date]) {
+                data[order.date] = [];
+            }
+
+            data[order.date].push(order);
+        }
+
+        return data;
+    }
+
+    private static groupByStore() {
+        const data: { [key: string]: Order[] } = {};
+
+        for (const order of Analytics.data) {
+            if (!data[order.storeName]) {
+                data[order.storeName] = [];
+            }
+
+            data[order.storeName].push(order);
+        }
+
+        return data;
+    }
+
     public static getTotalPurchases() {
         return Analytics.data.length;
     }
