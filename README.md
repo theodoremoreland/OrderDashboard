@@ -67,36 +67,43 @@ While writing the code for this project, I will be recording myself in a video. 
 
 ## Dashboard metrics
 
-- Average spend per month
-- Average spend per week
-- Average spend per day
-- Average spend per year
+# Pies
 
-- Average number of purchases per month
-- Average number of purchases per week
-- Average number of purchases per day
-- Average number of purchases per year
+Checkboxes for showing two pies at a time.
+
+- Total spend by year
+- Total spend by day of week
+- Total spend by month
+
+# Line chart
+
+- Total spent across all of Doordash history (by day)
 
 # KPIS
 
-- Total number of purchases
-- Total number of stores purchased from
-- Total number of days purchase was made
+Radio button lets user alternate between averages vs totals
 
-# KPI (dropdown)
+- Average number of purchases per month / Average spend per month
+- Average spend per week / Average spend per week
+- Average spend per day / Average spend per day
+- Average spend per year / Average spend per year
 
 - Total spent
-  - Total spend per year
-  - Total spend per month
-  - Total spend per week
-  - Total spend per day
+- Total number of purchases
+- Total number of stores purchased from
+- Total number of days a purchase was made
 
 # Range
 
-- Longest streak without purchases
+Ranges display on a conveyor that stops moving when you hover over it.
+
+- Top 5 Longest streak without purchases
+- Top 5Longest purchase streaks
 
 # Lists
 
-- Top 10, 20, 40 stores (total spent)
-- Top 10, 20, 40 stores (times purchases were made)
-- Top 10, 20, 40 items (number purchased)
+List auto scroll until you hover over
+
+- Top 10, 20, 40 stores (by total spent)
+- Top 10, 20, 40 stores (by number of purchases)
+- Top 10, 20, 40 stores (by number of items purchased)
