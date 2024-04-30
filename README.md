@@ -71,9 +71,9 @@ While writing the code for this project, I will be recording myself in a video. 
 
 Checkboxes for showing two pies at a time.
 
-- Total spend by year
-- Total spend by day of week
-- Total spend by month
+- Total spend by year (x)
+- Total spend by day of week (x)
+- Total spend by month (x)
 
 # Line chart
 
