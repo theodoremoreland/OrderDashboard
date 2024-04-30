@@ -20,15 +20,15 @@ export default class Analytics {
 
     // ---------- !!!! Groups Bys !!!! ----------
 
-    private static groupByDayOfWeek() {
+    private static groupByStore() {
         const data: { [key: string]: Order[] } = {};
 
         for (const order of Analytics.data) {
-            if (!data[order.dayOfWeek]) {
-                data[order.dayOfWeek] = [];
+            if (!data[order.storeName]) {
+                data[order.storeName] = [];
             }
 
-            data[order.dayOfWeek].push(order);
+            data[order.storeName].push(order);
         }
 
         return data;
@@ -48,15 +48,15 @@ export default class Analytics {
         return data;
     }
 
-    private static groupByStore() {
+    private static groupByDayOfWeek() {
         const data: { [key: string]: Order[] } = {};
 
         for (const order of Analytics.data) {
-            if (!data[order.storeName]) {
-                data[order.storeName] = [];
+            if (!data[order.dayOfWeek]) {
+                data[order.dayOfWeek] = [];
             }
 
-            data[order.storeName].push(order);
+            data[order.dayOfWeek].push(order);
         }
 
         return data;
