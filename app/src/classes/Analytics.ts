@@ -18,6 +18,8 @@ export default class Analytics {
         Analytics.data = data;
     }
 
+    // ---------- !!!! Groups Bys !!!! ----------
+
     private static groupByDayOfWeek() {
         const data: { [key: string]: Order[] } = {};
 
@@ -60,6 +62,8 @@ export default class Analytics {
         return data;
     }
 
+    // ---------- !!!! Aggregates !!!! ----------
+
     public static getTotalPurchases() {
         return Analytics.data.length;
     }
@@ -92,5 +96,9 @@ export default class Analytics {
         }
 
         return total;
+    }
+
+    public static getNumberOfStoresPurchasedFrom() {
+        return Object.keys(Analytics.groupByStore()).length;
     }
 }

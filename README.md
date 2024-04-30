@@ -88,10 +88,11 @@ Radio button lets user alternate between averages vs totals
 - Average spend per day / Average spend per day
 - Average spend per year / Average spend per year
 
-- Total spent
-- Total number of purchases
-- Total number of stores purchased from
-- Total number of days a purchase was made
+- Total spent (x)
+- Total number of purchases (x)
+- Total number of stores purchased from (x)
+- Total number of days a purchase was made (x)
+- (optional / bonus) Total number of items purchased (x)
 
 # Range
 
