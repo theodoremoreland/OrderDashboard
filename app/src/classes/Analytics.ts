@@ -62,6 +62,38 @@ export default class Analytics {
         return data;
     }
 
+    private static groupByMonth() {
+        const data: { [key: string]: Order[] } = {};
+
+        for (const order of Analytics.data) {
+            const month = order.date.split(" ")[0];
+
+            if (!data[month]) {
+                data[month] = [];
+            }
+
+            data[month].push(order);
+        }
+
+        return data;
+    }
+
+    private static groupByYear() {
+        const data: { [key: string]: Order[] } = {};
+
+        for (const order of Analytics.data) {
+            const year = order.date.split(" ")[2];
+
+            if (!data[year]) {
+                data[year] = [];
+            }
+
+            data[year].push(order);
+        }
+
+        return data;
+    }
+
     // ---------- !!!! Aggregates !!!! ----------
 
     public static getTotalPurchases() {
