@@ -196,6 +196,17 @@ export default class Analytics {
         return result.sort((a, b) => b.totalSpend - a.totalSpend);
     }
 
+    public static getTopStoresByTotalOrders() {
+        const data = Analytics.groupByStore();
+        const result: { storeName: string, totalOrders: number }[] = [];
+
+        for (const store in data) {
+            result.push({ storeName: store, totalOrders: data[store].length });
+        }
+
+        return result.sort((a, b) => b.totalOrders - a.totalOrders);
+    }
+
     public static getTopStoresByTotalItemsPurchased() {
         const data = Analytics.groupByStore();
         const result: { storeName: string, totalItemsPurchased: number }[] = [];

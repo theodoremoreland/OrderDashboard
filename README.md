@@ -99,12 +99,12 @@ Radio button lets user alternate between averages vs totals
 Ranges display on a conveyor that stops moving when you hover over it.
 
 - Top 5 Longest streak without purchases
-- Top 5Longest purchase streaks
+- Top 5 Longest purchase streaks
 
 # Lists
 
 List auto scroll until you hover over
 
 - Top 10, 20, 40 stores (by total spent) (x)
-- Top 10, 20, 40 stores (by number of purchases) (x)
-- Top 10, 20, 40 stores (by number of items purchased)
+- Top 10, 20, 40 stores (by number of purchases)
+- Top 10, 20, 40 stores (by number of items purchased) (x)
