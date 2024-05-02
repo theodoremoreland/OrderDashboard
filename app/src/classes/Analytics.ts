@@ -227,4 +227,19 @@ export default class Analytics {
     public static getTimeOfOrdersSorted() {
         return Analytics.data.map(order => new Date(order.date).getTime()).sort((a, b) => a - b);
     }
+
+    public static getTop5DroughtsBetweenPurchases() {
+        const times = Analytics.getTimeOfOrdersSorted();
+        const result: { startDate: string, endDate: string, days: number }[] = [];
+
+        for (let i = 0; i < times.length - 1; i++) {
+            const startDate = new Date(times[i]);
+            const endDate = new Date(times[i + 1]);
+            const days = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+            result.push({ startDate: startDate.toDateString(), endDate: endDate.toDateString(), days });
+        }
+
+        return result.sort((a, b) => b.days - a.days).slice(0, 5);
+    }
 }
