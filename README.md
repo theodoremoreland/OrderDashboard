@@ -98,7 +98,7 @@ Radio button lets user alternate between averages vs totals
 
 Ranges display on a conveyor that stops moving when you hover over it.
 
-- Top 5 Longest streak without purchases
+- Top 5 Longest streak without purchases (x)
 - Top 5 Longest purchase streaks
 
 # Lists
