@@ -39,7 +39,7 @@ const mockOrders: Order[] = [
         itemCount: 3,
     },
     {
-        storeName: "Applebees",
+        storeName: "Applebee's",
         date: "Jan 21 2020",
         dayOfWeek: "Fri",
         cost: 50,
@@ -57,7 +57,7 @@ const mockOrders: Order[] = [
         itemCount: 3,
     },
     {
-        storeName: "McDonalds",
+        storeName: "McDonald's",
         date: "Jan 24 2020",
         dayOfWeek: "Fri",
         cost: 50,
