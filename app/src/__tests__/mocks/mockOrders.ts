@@ -1,7 +1,26 @@
 import { Order } from "../../classes/Analytics";
 
 
+// TODO this needs to double as default data displayed in the UI.
 const mockOrders: Order[] = [
+    {
+        storeName: "Walmart",
+        date: "Jan 1 2020",
+        dayOfWeek: "Fri",
+        cost: 50,
+        items: new Array(5).fill("apple"),
+        wasCancelled: false,
+        itemCount: 5,
+    },
+    {
+        storeName: "Walmart",
+        date: "Jan 1 2020",
+        dayOfWeek: "Fri",
+        cost: 50,
+        items: new Array(5).fill("apple"),
+        wasCancelled: false,
+        itemCount: 5,
+    },
     {
         storeName: "Walmart",
         date: "Jan 1 2020",
