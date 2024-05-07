@@ -94,6 +94,12 @@ export default class Analytics {
         return data;
     }
 
+    // ---------- !!!! Sorts !!!! ----------
+
+    private static getTimeOfOrdersSorted() {
+        return Analytics.data.map(order => new Date(order.date).getTime()).sort((a, b) => a - b);
+    }
+                        
     // ---------- !!!! Aggregates !!!! ----------
 
     public static getTotalPurchases() {
@@ -222,10 +228,6 @@ export default class Analytics {
         }
 
         return result.sort((a, b) => b.totalItemsPurchased - a.totalItemsPurchased);
-    }
-
-    public static getTimeOfOrdersSorted() {
-        return Analytics.data.map(order => new Date(order.date).getTime()).sort((a, b) => a - b);
     }
 
     public static getTop5DroughtsBetweenPurchases() {
