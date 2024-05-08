@@ -33,4 +33,18 @@ describe("Analytics", () => {
   test("should get accurate totals for each year", () => {
       expect(Analytics.getTotalSpendByYear()[2020]).toEqual(450);
   });
+
+  test("should get top stores by total spend", () => {
+    expect(Analytics.getTopStoresByTotalSpend()).toEqual([
+      { storeName: "Walmart", total: 150 },
+      { storeName: "Walgreens", total: 50 },
+      { storeName: "Aldi", total: 50 },
+      { storeName: "Dierbergs", total: 50 },
+      { storeName: "Target", total: 50 },
+      { storeName: "Schnucks", total: 50 },
+      { storeName: "Amazon", total: 50 },
+      { storeName: "Whole Foods", total: 50 },
+      { storeName: "Trader Joe's", total: 50 },
+    ]);
+  });
 });
