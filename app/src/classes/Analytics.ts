@@ -15,7 +15,12 @@ export default class Analytics {
     private static data: Order[];
 
     constructor(data: Order[]) {
-        Analytics.data = data;
+        Analytics.data = data.map(order => { 
+            return { 
+                ...order,
+                cost: parseFloat(order.cost.toFixed(2))
+            };
+        });
     }
 
     // ---------- !!!! Groups Bys !!!! ----------
