@@ -82,6 +82,21 @@ const items: string[][] = [
 
 const itemCounts: number[] = items.map(item => item.length);
 
+const months: string[] = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+];
+
 // TODO this needs to double as default data displayed in the UI.
 const mockOrders2020: Order[] = [
     {
