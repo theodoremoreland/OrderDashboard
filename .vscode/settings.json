@@ -1,12 +1,19 @@
 {
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter"
-    },
-    "python.formatting.provider": "none",
-    "cSpell.words": [
-        "Aldi",
-        "Applebee's",
-        "Dierbergs",
-        "Doordash"
-    ]
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none",
+  "cSpell.words": [
+    "Aldi",
+    "Applebee's",
+    "Dierbergs",
+    "Doordash",
+    "Fazoli's",
+    "IHOP",
+    "Kreme",
+    "Krispy",
+    "Panera",
+    "Qdoba",
+    "Wingstop"
+  ]
 }
