@@ -1,5 +1,7 @@
+// vitest
 import { expect, test, describe } from 'vitest'
 
+// Custom
 import Analytics from "../classes/Analytics";
 import mockOrders from './mocks/mockOrders';
 

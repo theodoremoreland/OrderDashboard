@@ -1,8 +1,89 @@
 import { Order } from "../../classes/Analytics";
 
+const storeNames: string[] = [
+    "Aldi",
+    "Aldi",
+    "Dierbergs",
+    "Applebee's",
+    "Applebee's",
+    "Applebee's",
+    "Applebee's",
+    "Tony's Donuts",
+    "Tony's Donuts",
+    "Panera Bread",
+    "Panda Express",
+    "Panda Express",
+    "Chic Fil A",
+    "Culver's",
+    "Walgreens",
+    "McDonald's",
+    "Burger King",
+    "Taco Bell",
+    "Bandana's BBQ",
+    "Fazoli's",
+    "IHOP",
+    "Steak N Shake",
+    "Dairy Queen",
+    "Krispy Kreme",
+    "Chipotle",
+    "Qdoba",
+    "Popeye's Louisiana Kitchen",
+    "Tropical Smoothie Cafe",
+    "KFC",
+    "Wendy's",
+    "Papa John's",
+    "Wingstop",
+];
+
+const costs: number[] = [
+    99.99,
+    46,
+    64,
+    33,
+    56,
+    70,
+    55,
+    62.29,
+    76.42,
+    27.80,
+    55.55,
+    46.42,
+    29.96,
+    45.46,
+    37.77,
+    59.99,
+    76.28,
+    53.42,
+    63.76,
+];
+
+const items: string[][] = [
+    new Array(5).fill("apple"),
+    new Array(12).fill("apple"),
+    new Array(6).fill("apple"),
+    new Array(7).fill("apple"),
+    new Array(9).fill("apple"),
+    new Array(15).fill("apple"),
+    new Array(6).fill("apple"),
+    new Array(3).fill("apple"),
+    new Array(12).fill("apple"),
+    new Array(3).fill("apple"),
+    new Array(6).fill("apple"),
+    new Array(7).fill("apple"),
+    new Array(7).fill("apple"),
+    new Array(6).fill("apple"),
+    new Array(5).fill("apple"),
+    new Array(2).fill("apple"),
+    new Array(3).fill("apple"),
+    new Array(8).fill("apple"),
+    new Array(11).fill("apple"),
+    new Array(1).fill("apple"),
+];
+
+const itemCounts: number[] = items.map(item => item.length);
 
 // TODO this needs to double as default data displayed in the UI.
-const mockOrders: Order[] = [
+const mockOrders2020: Order[] = [
     {
         storeName: "Walgreens",
         date: "Jan 1 2020",
@@ -241,46 +322,46 @@ const mockOrders: Order[] = [
         storeName: "Taco Bell",
         date: "Feb 17 2020",
         dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
+        cost: 27.80,
+        items: new Array(4).fill("apple"),
         wasCancelled: false,
-        itemCount: 3,
+        itemCount: 4,
     },
     {
         storeName: "Chic Fil A",
         date: "Feb 18 2020",
         dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
+        cost: 55.55,
+        items: new Array(6).fill("apple"),
         wasCancelled: false,
-        itemCount: 3,
+        itemCount: 6,
     },
     {
         storeName: "Taco Bell",
         date: "Feb 19 2020",
         dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
+        cost: 40,
+        items: new Array(7).fill("apple"),
         wasCancelled: false,
-        itemCount: 3,
+        itemCount: 7,
     },
     {
         storeName: "Steak N Shake",
         date: "Feb 20 2020",
         dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
+        cost: 46.42,
+        items: new Array(7).fill("apple"),
         wasCancelled: false,
-        itemCount: 3,
+        itemCount: 7,
     },
     {
         storeName: "Pizza Hut",
         date: "Feb 21 2020",
         dayOfWeek: "Fri",
         cost: 29.96,
-        items: new Array(3).fill("apple"),
+        items: new Array(6).fill("apple"),
         wasCancelled: false,
-        itemCount: 3,
+        itemCount: 6,
     },
     {
         storeName: "Bell's",
@@ -364,5 +445,19 @@ const mockOrders: Order[] = [
         itemCount: 3,
     },
 ];
+
+const mockOrders2021: Order[] = [
+];
+
+const mockOrders2023: Order[] = [
+];
+
+const mockOrders2024: Order[] = [
+];
+
+const mockOrders: Order[] = mockOrders2020
+    .concat(mockOrders2021)
+    .concat(mockOrders2023)
+    .concat(mockOrders2024);
 
 export default mockOrders;
