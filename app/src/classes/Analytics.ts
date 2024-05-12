@@ -10,7 +10,6 @@ export interface Order {
     "dayOfWeek": "Sun" | "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat"
 }
 
-
 export default class Analytics {
     private static data: Order[];
 
@@ -20,7 +19,8 @@ export default class Analytics {
                 ...order,
                 cost: parseFloat(order.cost.toFixed(2))
             };
-        });
+        })
+        .filter(order => !order.wasCancelled);
     }
 
     // ---------- !!!! Groups Bys !!!! ----------
