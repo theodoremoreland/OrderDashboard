@@ -33,6 +33,7 @@ const storeNames: string[] = [
     "Wendy's",
     "Papa John's",
     "Wingstop",
+    "Walgreens",
 ];
 
 const costs: number[] = [
@@ -81,6 +82,16 @@ const items: string[][] = [
 ];
 
 const itemCounts: number[] = items.map(item => item.length);
+
+const daysOfWeek: string[] = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+];
 
 const months: string[] = [
     "Jan",
