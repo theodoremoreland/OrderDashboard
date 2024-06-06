@@ -108,6 +108,38 @@ const months: string[] = [
     "Dec",
 ];
 
+// Month in JavaScript is 0-indexed (January is 0, February is 1, etc), 
+// but by using 0 as the day it will give us the last day of the prior
+// month. So passing in 1 as the month number will return the last day
+// of January, not February
+// https://stackoverflow.com/a/1184359
+const getNumberOfDaysInMonth = (month: number, year: number): number => {
+    return new Date(year, month, 0).getDate();
+}
+
+const generateMonthOfOrders = (month: number, year: number, daysWithoutOrders: number): Order[] => {
+    const numberOfDays = getNumberOfDaysInMonth(month, year);
+    const numberOfDaysWithOrders = numberOfDays - daysWithoutOrders;
+
+    for (let i = 0; i < numberOfDaysWithOrders; i++) {
+        const day = i + 1;
+        const dayOfWeek = new Date(year, month - 1, day).getDay();
+        const storeName = storeNames[i % storeNames.length];
+        const cost = costs[i % costs.length];
+        const item = items[i % items.length];
+        const itemCount = itemCounts[i % itemCounts.length];
+        const date = `${months[month - 1]} ${day} ${year}`;
+        const order: Order = {
+            storeName,
+            date,
+            dayOfWeek: daysOfWeek[dayOfWeek],
+            cost,
+            items: item,
+            itemCount,
+            wasCancelled: false,
+        };
+    }
+};
 // TODO this needs to double as default data displayed in the UI.
 const mockOrders2020: Order[] = [
     {
