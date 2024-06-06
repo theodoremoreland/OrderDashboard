@@ -1,21 +1,17 @@
 # Doordash Dashboard
 
+Scripts to grab and transform doordash order history and a web based dashboard to visualize said data.
+
 ## Table of Contents
 
-- [Overview](#overview)
 - [Technologies Used](#technologies-used)
 - [Web scraping](#web-scraping)
 - [Data transformation](#transforming-data)
 - [Video](#video)
 
-## Overview
-
-A project for getting essential data for deriving insight into a user's Doordash spending habits. The result is a JSON file featuring
-data concerning every Doordash order listed on the user's Doordash order history page via doordash.com. Said JSON file can be used
-to create visualizations such as a dashboard.
-
 ## Technologies Used
 
+- TypeScript
 - JavaScript
 - Firefox
   - Firefox Developer Tools
