@@ -1,12 +1,18 @@
 import { ReactElement } from "react"
 
+interface Props {
+    id: string
+}
 
-const KPI = (): ReactElement => {
+const Kpi = ({ id }: Props): ReactElement => {
     return (
-        <div>
+        <div 
+            id={id}
+            className="kpi"
+        >
             <h1>KPI</h1>
         </div>
     )
 } 
 
-export default KPI;
+export default Kpi;
