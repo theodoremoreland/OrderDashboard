@@ -1,4 +1,4 @@
-import { Order } from "../../classes/Analytics";
+import { Order, WeekDayFormat, MonthFormat, DateFormat } from "../../types/types";
 
 const storeNames: string[] = [
     "Aldi",
@@ -83,29 +83,29 @@ const items: string[][] = [
 
 const itemCounts: number[] = items.map(item => item.length);
 
-const daysOfWeek: string[] = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
+const daysOfWeek: WeekDayFormat[] = [
+    WeekDayFormat.Sunday,
+    WeekDayFormat.Monday,
+    WeekDayFormat.Tuesday,
+    WeekDayFormat.Wednesday,
+    WeekDayFormat.Thursday,
+    WeekDayFormat.Friday,
+    WeekDayFormat.Saturday,
 ];
 
-const months: string[] = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+const months: MonthFormat[] = [
+    MonthFormat.January,
+    MonthFormat.February,
+    MonthFormat.March,
+    MonthFormat.April,
+    MonthFormat.May,
+    MonthFormat.June,
+    MonthFormat.July,
+    MonthFormat.August,
+    MonthFormat.September,
+    MonthFormat.October,
+    MonthFormat.November,
+    MonthFormat.December,
 ];
 
 // Month in JavaScript is 0-indexed (January is 0, February is 1, etc), 

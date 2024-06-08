@@ -1,14 +1,4 @@
-
-export interface Order {
-    "storeName": string,
-    /** String of format: Oct 13 2023 */
-    "date": string,
-    "cost": number,
-    "itemCount": number,
-    "items": string[],
-    "wasCancelled": boolean,
-    "dayOfWeek": "Sun" | "Mon" | "Tue" | "Wed" | "Thu" | "Fri" | "Sat"
-}
+import { Order } from "../types/types";
 
 export default class Analytics {
     private static data: Order[];
