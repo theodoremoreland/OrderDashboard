@@ -80,9 +80,9 @@ Checkboxes for showing two pies at a time.
 Radio button lets user alternate between averages vs totals
 
 - Average number of purchases per month / Average spend per month
-- Average spend per week / Average spend per week
-- Average spend per day / Average spend per day
-- Average spend per year / Average spend per year
+- Average number of purchases per week / Average spend per week
+- Average number of purchases per day / Average spend per day
+- Average number of purchases per year / Average spend per year
 
 - Total spent (x)
 - Total number of purchases (x)
