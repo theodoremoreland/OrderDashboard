@@ -1,6 +1,8 @@
 import { ReactElement } from "react";
 
-const LineGraph = (): ReactElement => {
+import { LineChart } from "@mui/x-charts";
+
+const Line = (): ReactElement => {
     return (
         <div>
             <h1>LineGraph</h1>
@@ -8,4 +10,4 @@ const LineGraph = (): ReactElement => {
     )
 }
 
-export default LineGraph;
+export default Line;

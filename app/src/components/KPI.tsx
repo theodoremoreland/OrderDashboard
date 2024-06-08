@@ -1,16 +1,22 @@
-import { ReactElement } from "react"
+import { ReactElement } from "react";
+
+import './Kpi.css';
 
 interface Props {
     id: string
+    title: string
+    value: string
 }
 
-const Kpi = ({ id }: Props): ReactElement => {
+const Kpi = ({ id, title, value }: Props): ReactElement => {
     return (
         <div 
             id={id}
+            data-testid={id}
             className="kpi"
         >
-            <h1>KPI</h1>
+            <span className="title">{title}</span>
+            <span className="value">{value}</span>
         </div>
     )
 } 

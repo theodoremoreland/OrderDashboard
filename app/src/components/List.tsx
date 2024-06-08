@@ -1,10 +1,22 @@
 import { ReactElement } from "react";
 
-const List = (): ReactElement => {
+// Styles
+import './List.css';
+
+interface Props {
+    id: string
+    title: string
+}
+
+const List = ({ id, title }: Props): ReactElement => {
     return (
-        <div>
-            <h1>List</h1>
-        </div>
+        <section 
+            id={id}
+            data-testid={id} 
+            className="list"
+        >
+            <h2 className="list-title">{title}</h2>
+        </section>
     )
 }
 
