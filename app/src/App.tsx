@@ -6,7 +6,6 @@ const App = (): ReactElement => {
 
   return (
     <>
-
     </>
   )
 }
