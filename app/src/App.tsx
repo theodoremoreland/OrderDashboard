@@ -6,6 +6,7 @@ const App = (): ReactElement => {
 
   return (
     <>
+      <h1 id="pp-title" className='title'>Doordash Dashboard</h1>
     </>
   )
 }
