@@ -1,6 +1,6 @@
-import { ReactElement } from 'react'
+import { ReactElement } from 'react';
 
-import './App.css'
+import './App.css';
 
 const App = (): ReactElement => {
 

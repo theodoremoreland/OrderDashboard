@@ -36,28 +36,6 @@ const storeNames: string[] = [
     "Walgreens",
 ];
 
-const costs: number[] = [
-    99.99,
-    46,
-    64,
-    33,
-    56,
-    70,
-    55,
-    62.29,
-    76.42,
-    27.80,
-    55.55,
-    46.42,
-    29.96,
-    45.46,
-    37.77,
-    59.99,
-    76.28,
-    53.42,
-    63.76,
-];
-
 const items: string[][] = [
     new Array(5).fill("apple"),
     new Array(12).fill("apple"),
@@ -82,6 +60,28 @@ const items: string[][] = [
 ];
 
 const itemCounts: number[] = items.map(item => item.length);
+
+const costs: number[] = [
+    99.99,
+    46,
+    64,
+    33,
+    56,
+    70,
+    55,
+    62.29,
+    76.42,
+    27.80,
+    55.55,
+    46.42,
+    29.96,
+    45.46,
+    37.77,
+    59.99,
+    76.28,
+    53.42,
+    63.76,
+];
 
 const daysOfWeek: WeekDayFormat[] = [
     WeekDayFormat.Sunday,
@@ -117,400 +117,119 @@ const getNumberOfDaysInMonth = (month: number, year: number): number => {
     return new Date(year, month, 0).getDate();
 }
 
-const generateMonthOfOrders = (month: number, year: number, daysWithoutOrders: number): Order[] => {
-    const numberOfDays = getNumberOfDaysInMonth(month, year);
-    const numberOfDaysWithOrders = numberOfDays - daysWithoutOrders;
+/***
+ * Generates an object for each day of the month with the given month and year.
+ * @param month The month number using zero based indexing (i.e. 0-11).
+ * @param year The year number.
+ */
+const generateObjectForEachDayOfMonth = (month: number, year: number): Partial<Order>[] => {
+    const numberOfDays: number = getNumberOfDaysInMonth(month, year);
+    const objects: Partial<Order>[] = [];
 
-    for (let i = 0; i < numberOfDaysWithOrders; i++) {
-        const day = i + 1;
-        const dayOfWeek = new Date(year, month - 1, day).getDay();
-        const storeName = storeNames[i % storeNames.length];
-        const cost = costs[i % costs.length];
-        const item = items[i % items.length];
-        const itemCount = itemCounts[i % itemCounts.length];
-        const date = `${months[month - 1]} ${day} ${year}`;
+    for (let i = 0; i < numberOfDays; i++) {
+        const day: number = i + 1;
+        const dayOfWeekIndex: number = new Date(year, month, day).getDay();
+        const dayOfWeek: WeekDayFormat = daysOfWeek[dayOfWeekIndex];
+        const date: DateFormat = `${months[month]} ${day} ${year}` as DateFormat;
+        const order: Partial<Order> = {
+            date,
+            dayOfWeek,
+        };
+
+        objects.push(order);
+    }
+
+    return objects;
+}
+
+const generateMonthOfOrders = (month: number, year: number, daysWithoutOrders: number = 0): Order[] => {
+    const monthOfOrders: Order[] = [];
+    const monthOfObjects: Partial<Order>[] = generateObjectForEachDayOfMonth(month, year);
+
+    for (let i = 0; i < monthOfObjects.length - daysWithoutOrders; i++) {
+        const storeName: string = storeNames[i];
+        const cost: number = costs[i];
+        const _items = items[i];
+        const itemCount: number = itemCounts[i];
+        const wasCancelled: boolean = false;
+        const dayOfWeek: WeekDayFormat = monthOfObjects[i].dayOfWeek as WeekDayFormat;
+        const date: DateFormat = monthOfObjects[i].date as DateFormat;
+
         const order: Order = {
             storeName,
-            date,
-            dayOfWeek: daysOfWeek[dayOfWeek],
             cost,
-            items: item,
+            items: _items,
             itemCount,
-            wasCancelled: false,
+            wasCancelled,
+            dayOfWeek,
+            date,
         };
+
+        monthOfOrders.push(order);
     }
+
+    return monthOfOrders;
 };
+
 // TODO this needs to double as default data displayed in the UI.
 const mockOrders2020: Order[] = [
-    {
-        storeName: "Walgreens",
-        date: "Jan 1 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(5).fill("apple"),
-        wasCancelled: false,
-        itemCount: 5,
-    },
-    {
-        storeName: "Walmart",
-        date: "Jan 1 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(5).fill("apple"),
-        wasCancelled: false,
-        itemCount: 5,
-    },
-    {
-        storeName: "Wingstop",
-        date: "Jan 1 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(5).fill("apple"),
-        wasCancelled: false,
-        itemCount: 5,
-    },
-    {
-        storeName: "Walgreens",
-        date: "Jan 2 2020",
-        dayOfWeek: "Fri",
-        cost: 50.99,
-        items: new Array(12).fill("apple"),
-        wasCancelled: false,
-        itemCount: 12,
-    },
-    {
-        storeName: "Aldi",
-        date: "Jan 2 2020",
-        dayOfWeek: "Fri",
-        cost: 46,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Dierbergs",
-        date: "Jan 2 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Applebee's",
-        date: "Jan 3 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Five Guys",
-        date: "Jan 3 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(15).fill("apple"),
-        wasCancelled: false,
-        itemCount: 15,
-    },
-    {
-        storeName: "McDonald's",
-        date: "Jan 4 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(6).fill("apple"),
-        wasCancelled: false,
-        itemCount: 6,
-    },
-    {
-        storeName: "Burger King",
-        date: "Jan 5 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(5).fill("apple"),
-        wasCancelled: false,
-        itemCount: 5,
-    },
-    {
-        storeName: "Taco Bell",
-        date: "Jan 6 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Bandana's BBQ",
-        date: "Jan 7 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Bandana's BBQ",
-        date: "Jan 8 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Taco Bell",
-        date: "Jan 8 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Chic Fil A",
-        date: "Jan 10 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Fazoli's",
-        date: "Jan 12 2020",
-        dayOfWeek: "Fri",
-        cost: 64.12,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Wendy's",
-        date: "Jan 14 2020",
-        dayOfWeek: "Fri",
-        cost: 33.16,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Panda Express",
-        date: "Jan 15 2020",
-        dayOfWeek: "Fri",
-        cost: 56.07,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Panda Express",
-        date: "Jan 16 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Sonic",
-        date: "Jan 17 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Imo's Pizza",
-        date: "Jan 18 2020",
-        dayOfWeek: "Fri",
-        cost: 70.12,
-        items: new Array(4).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "IHOP",
-        date: "Jan 19 2020",
-        dayOfWeek: "Fri",
-        cost: 55.46,
-        items: new Array(2).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "IHOP",
-        date: "Jan 20 2020",
-        dayOfWeek: "Fri",
-        cost: 62.29,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Chic Fil A",
-        date: "Feb 14 2020",
-        dayOfWeek: "Fri",
-        cost: 76.42,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Taco Bell",
-        date: "Feb 15 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Papa John's",
-        date: "Feb 16 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Taco Bell",
-        date: "Feb 17 2020",
-        dayOfWeek: "Fri",
-        cost: 27.80,
-        items: new Array(4).fill("apple"),
-        wasCancelled: false,
-        itemCount: 4,
-    },
-    {
-        storeName: "Chic Fil A",
-        date: "Feb 18 2020",
-        dayOfWeek: "Fri",
-        cost: 55.55,
-        items: new Array(6).fill("apple"),
-        wasCancelled: false,
-        itemCount: 6,
-    },
-    {
-        storeName: "Taco Bell",
-        date: "Feb 19 2020",
-        dayOfWeek: "Fri",
-        cost: 40,
-        items: new Array(7).fill("apple"),
-        wasCancelled: false,
-        itemCount: 7,
-    },
-    {
-        storeName: "Steak N Shake",
-        date: "Feb 20 2020",
-        dayOfWeek: "Fri",
-        cost: 46.42,
-        items: new Array(7).fill("apple"),
-        wasCancelled: false,
-        itemCount: 7,
-    },
-    {
-        storeName: "Pizza Hut",
-        date: "Feb 21 2020",
-        dayOfWeek: "Fri",
-        cost: 29.96,
-        items: new Array(6).fill("apple"),
-        wasCancelled: false,
-        itemCount: 6,
-    },
-    {
-        storeName: "Bell's",
-        date: "Feb 22 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(5).fill("apple"),
-        wasCancelled: false,
-        itemCount: 5,
-    },
-    {
-        storeName: "Daru",
-        date: "Mar 2 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(2).fill("apple"),
-        wasCancelled: false,
-        itemCount: 2,
-    },
-    {
-        storeName: "Chubby Fish",
-        date: "Mar 2 2020",
-        dayOfWeek: "Fri",
-        cost: 50,
-        items: new Array(6).fill("apple"),
-        wasCancelled: false,
-        itemCount: 6,
-    },
-    {
-        storeName: "Damian",
-        date: "Mar 3 2020",
-        dayOfWeek: "Fri",
-        cost: 45.46,
-        items: new Array(3).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Kasama",
-        date: "Mar 3 2020",
-        dayOfWeek: "Fri",
-        cost: 37.77,
-        items: new Array(13).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Birdie's",
-        date: "Mar 4 2020",
-        dayOfWeek: "Fri",
-        cost: 59.99,
-        items: new Array(30).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Semma",
-        date: "Mar 5 2020",
-        dayOfWeek: "Fri",
-        cost: 76.28,
-        items: new Array(8).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Aragosta",
-        date: "Mar 6 2020",
-        dayOfWeek: "Fri",
-        cost: 53.42,
-        items: new Array(11).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
-    {
-        storeName: "Anajak Thai",
-        date: "Mar 7 2020",
-        dayOfWeek: "Fri",
-        cost: 63.76,
-        items: new Array(1).fill("apple"),
-        wasCancelled: false,
-        itemCount: 3,
-    },
+    ...generateMonthOfOrders(0, 2020),
+    ...generateMonthOfOrders(1, 2020),
+    ...generateMonthOfOrders(2, 2020),
+    ...generateMonthOfOrders(3, 2020),
+    ...generateMonthOfOrders(4, 2020),
+    ...generateMonthOfOrders(5, 2020),
+    ...generateMonthOfOrders(6, 2020),
+    ...generateMonthOfOrders(7, 2020),
+    ...generateMonthOfOrders(8, 2020),
+    ...generateMonthOfOrders(9, 2020),
+    ...generateMonthOfOrders(10, 2020),
+    ...generateMonthOfOrders(11, 2020),
 ];
 
 const mockOrders2021: Order[] = [
+    ...generateMonthOfOrders(0, 2021),
+    ...generateMonthOfOrders(1, 2021),
+    ...generateMonthOfOrders(2, 2021),
+    ...generateMonthOfOrders(3, 2021),
+    ...generateMonthOfOrders(4, 2021),
+    ...generateMonthOfOrders(5, 2021),
+    ...generateMonthOfOrders(6, 2021),
+    ...generateMonthOfOrders(7, 2021),
+    ...generateMonthOfOrders(8, 2021),
+    ...generateMonthOfOrders(9, 2021),
+    ...generateMonthOfOrders(10, 2021),
+    ...generateMonthOfOrders(11, 2021),
 ];
 
 const mockOrders2023: Order[] = [
+    ...generateMonthOfOrders(0, 2023),
+    ...generateMonthOfOrders(1, 2023),
+    ...generateMonthOfOrders(2, 2023),
+    ...generateMonthOfOrders(3, 2023),
+    ...generateMonthOfOrders(4, 2023),
+    ...generateMonthOfOrders(5, 2023),
+    ...generateMonthOfOrders(6, 2023),
+    ...generateMonthOfOrders(7, 2023),
+    ...generateMonthOfOrders(8, 2023),
+    ...generateMonthOfOrders(9, 2023),
+    ...generateMonthOfOrders(10, 2023),
+    ...generateMonthOfOrders(11, 2023),
 ];
 
 const mockOrders2024: Order[] = [
+    ...generateMonthOfOrders(0, 2024),
+    ...generateMonthOfOrders(1, 2024),
+    ...generateMonthOfOrders(2, 2024),
+    ...generateMonthOfOrders(3, 2024),
+    ...generateMonthOfOrders(4, 2024),
+    ...generateMonthOfOrders(5, 2024),
+    ...generateMonthOfOrders(6, 2024),
+    ...generateMonthOfOrders(7, 2024),
+    ...generateMonthOfOrders(8, 2024),
+    ...generateMonthOfOrders(9, 2024),
+    ...generateMonthOfOrders(10, 2024),
+    ...generateMonthOfOrders(11, 2024),
 ];
 
 const mockOrders: Order[] = mockOrders2020
