@@ -197,6 +197,8 @@ export default class Analytics {
                 total += order.cost;
             }
 
+            total = parseFloat(total.toFixed(2));
+
             result.push({ storeName: store, totalSpend: total });
         }
 
