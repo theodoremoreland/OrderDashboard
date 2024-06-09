@@ -87,4 +87,16 @@ describe("Analytics", () => {
       { storeName: "Walgreens", totalSpend: 50 },
     ]);
   });
+
+  test("should get top 5 droughts between purchases", () => {
+    const actualTop5droughts: { startDate: string, endDate: string, days: number }[]
+      = Analytics.getTop5DroughtsBetweenPurchases();
+    expect(actualTop5droughts).toEqual([
+      { startDate: "2020-01-01", endDate: "2020-01-02", days: 1 },
+      { startDate: "2020-01-02", endDate: "2020-01-03", days: 1 },
+      { startDate: "2020-01-03", endDate: "2020-01-04", days: 1 },
+      { startDate: "2020-01-04", endDate: "2020-01-05", days: 1 },
+      { startDate: "2020-01-05", endDate: "2020-01-06", days: 1 },
+    ]);
+  })
 });
