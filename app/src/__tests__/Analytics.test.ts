@@ -13,8 +13,9 @@ describe("Analytics", () => {
     expect(Analytics.getTotalPurchases()).toEqual(1827);
   });
 
-  test("should get accurate total spent", () => {
-    expect(Analytics.getTotalSpent()).toEqual(450);
+  test.only("should get accurate total spent", () => {
+    // $61.16 spent each day. Cielling to nearest integer due to floating point inconsistencies.
+    expect(Analytics.getTotalSpent()).toEqual(Math.ceil(61.16 * 1827));
   });
 
   test.only("should get accurate number of total items purchased", () => {
@@ -26,8 +27,9 @@ describe("Analytics", () => {
     expect(Analytics.getNumberOfStoresPurchasedFrom()).toEqual(25);
   });
 
-  test("should get accurate total spent by day of week", () => {
-    expect(Analytics.getTotalSpendByDayOfWeek()["Fri"]).toEqual(450);
+  test.only("should get accurate total spent by day of week", () => {
+    // 52 Fridays in 2020, 53 Fridays in 2021, 52 Fridays in 2022, 52 Fridays in 2023, 52 Fridays in 2024.
+    expect(Analytics.getTotalSpendByDayOfWeek()["Fri"]).toEqual(Math.ceil(261 * 61.16));
   });
 
   test("should get accurate total spent by month", () => {

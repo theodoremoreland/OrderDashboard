@@ -341,7 +341,7 @@ const generateObjectForEachDayOfMonth = (month: number, year: number): Partial<O
     const objects: Partial<Order>[] = [];
 
     for (let i = 0; i < numberOfDays; i++) {
-        const day: number = i + 1;
+        const day: number = i;
         const dayOfWeekIndex: number = new Date(year, month, day).getDay();
         const dayOfWeek: WeekDayFormat = daysOfWeek[dayOfWeekIndex];
         const date: DateFormat = `${months[month]} ${day} ${year}` as DateFormat;
