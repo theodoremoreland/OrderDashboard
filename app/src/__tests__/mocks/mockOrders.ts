@@ -37,50 +37,274 @@ const storeNames: string[] = [
 ];
 
 const items: string[][] = [
-    new Array(5).fill("apple"),
-    new Array(12).fill("apple"),
-    new Array(6).fill("apple"),
-    new Array(7).fill("apple"),
-    new Array(9).fill("apple"),
-    new Array(15).fill("apple"),
-    new Array(6).fill("apple"),
-    new Array(3).fill("apple"),
-    new Array(12).fill("apple"),
-    new Array(3).fill("apple"),
-    new Array(6).fill("apple"),
-    new Array(7).fill("apple"),
-    new Array(7).fill("apple"),
-    new Array(6).fill("apple"),
-    new Array(5).fill("apple"),
-    new Array(2).fill("apple"),
-    new Array(3).fill("apple"),
-    new Array(8).fill("apple"),
-    new Array(11).fill("apple"),
-    new Array(1).fill("apple"),
+    [
+        "Milk",
+        "Bread",
+        "Eggs",
+        "Cheese",
+        "Apples"
+    ],
+    [
+        "Cereal",
+        "Yogurt",
+        "Chicken Breasts",
+        "Spinach",
+        "Orange Juice"
+    ],
+    [
+        "Ground Beef",
+        "Tomatoes",
+        "Lettuce",
+        "Pasta",
+        "Marinara Sauce"
+    ],
+    [
+        "Boneless Wings",
+        "Classic Burger",
+        "Fiesta Lime Chicken",
+        "Mozzarella Sticks",
+        "Brownie Bites"
+    ],
+    [
+        "Chicken Wonton Tacos",
+        "Four Cheese Mac & Cheese with Honey Pepper Chicken Tenders",
+        "House Salad",
+        "Riblet Platter",
+        "Apple Chimi Cheesecake"
+    ],
+    [
+        "Quesadilla Burger",
+        "Chicken Caesar Salad",
+        "Onion Rings",
+        "Triple Chocolate Meltdown",
+        "Pepsi"
+    ],
+    [
+        "Double-Glazed Baby Back Ribs",
+        "Spinach & Artichoke Dip",
+        "Loaded Fajitas",
+        "Classic Fries",
+        " Blue Ribbon Brownie"
+    ],
+    [
+        "Glazed Donut",
+        "Chocolate Frosted Donut",
+        "Jelly Filled Donut",
+        "Maple Bar",
+        "Apple Fritter"
+    ],
+    [
+        "Boston Cream Donut",
+        "Cinnamon Roll",
+        "Strawberry Frosted Donut",
+        "Powdered Sugar Donut",
+        "Blueberry Donut"
+    ],
+    [
+        "Broccoli Cheddar Soup",
+        "Turkey Sandwich",
+        "Greek Salad",
+        "Bagel with Cream Cheese",
+        "Chocolate Chip Cookie"
+    ],
+    [
+        "Orange Chicken",
+        "Kung Pao Chicken",
+        "Chow Mein",
+        "Fried Rice",
+        "Spring Rolls"
+    ],
+    [
+        "Beijing Beef",
+        "Honey Walnut Shrimp",
+        "String Bean Chicken Breast",
+        "Black Pepper Angus Steak",
+        "Veggie Spring Roll"
+    ],
+    [
+        "Chicken Sandwich",
+        "Waffle Fries",
+        "Spicy Chicken Deluxe Sandwich",
+        "Chicken Nuggets",
+        "Lemonade"
+    ],
+    [
+        "ButterBurger",
+        "Cheese Curds",
+        "Concrete Mixer",
+        "Chicken Tenders",
+        "Crinkle Cut Fries"
+    ],
+    [
+        "Ibuprofen",
+        "Band-Aids",
+        "Toothpaste",
+        "Shampoo",
+        "Laundry Detergent"
+    ],
+    [
+        "Multivitamins",
+        "Cough Syrup",
+        "Lip Balm",
+        "Face Mask",
+        "Hand Sanitizer"
+    ],
+    [
+        "Big Mac",
+        "Chicken McNuggets",
+        "Fries",
+        "McFlurry",
+        "McChicken"
+    ],
+    [
+        "Whopper",
+        "Chicken Fries",
+        "Onion Rings",
+        "Impossible Whopper",
+        "Hershey's Sundae Pie"
+    ],
+    [
+        "Crunchwrap Supreme",
+        "Beef Tacos",
+        "Quesadilla",
+        "Nachos BellGrande",
+        "Cinnamon Twists"
+    ],
+    [
+        "Pulled Pork Sandwich",
+        "BBQ Ribs",
+        "Baked Beans",
+        "Coleslaw",
+        "Cornbread Muffin"
+    ],
+    [
+        "Spaghetti with Meatballs",
+        "Fettuccine Alfredo",
+        "Breadsticks",
+        "Caesar Salad",
+        "Pizza Slice"
+    ],
+    [
+        "Pancakes",
+        "Omelette",
+        "Bacon",
+        "Hash Browns",
+        "French Toast"
+    ],
+    [
+        "Steakburger",
+        "Chili Cheese Fries",
+        "Milkshake",
+        "Chicken Fingers",
+        "Onion Rings"
+    ],
+    [
+        "Blizzard",
+        "Dipped Cone",
+        "Cheeseburger",
+        "Chicken Strip Basket",
+        "Sundae"
+    ],
+    [
+        "Original Glazed Donut",
+        "Chocolate Iced Glazed Donut",
+        "Glazed Raspberry Filled Donut",
+        "Chocolate Iced Custard Filled Donut",
+        "Cinnamon Apple Filled Donut"
+    ],
+    [
+        "Burrito Bowl",
+        "Chicken Burrito",
+        "Chips and Guacamole",
+        "Steak Tacos",
+        "Sofritas Salad"
+    ],
+    [
+        "Chicken Quesadilla",
+        "Ground Beef Nachos",
+        "Veggie Burrito",
+        "Grilled Steak Burrito Bowl",
+        "Chips and Queso"
+    ],
+    [
+        "Spicy Chicken Sandwich",
+        "Cajun Fries",
+        "Mashed Potatoes with Gravy",
+        "Red Beans and Rice",
+        "Biscuits"
+    ],
+    [
+        "Bahama Mama Smoothie",
+        "Chicken Pesto Flatbread",
+        "Island Green Smoothie",
+        "Turkey Bacon Ranch Sandwich",
+        "Acai Berry Boost Smoothie"
+    ],
+    [
+        "Original Recipe Chicken",
+        "Mashed Potatoes with Gravy",
+        "Coleslaw",
+        "Mac & Cheese",
+        "Biscuits"
+    ],
+    [
+        "Baconator",
+        "Spicy Chicken Sandwich",
+        "Frosty",
+        "French Fries",
+        "Chili"
+    ],
+    [
+        "Pepperoni Pizza",
+        "Cheese Pizza",
+        "Breadsticks",
+        "Garlic Knots",
+        "Chicken Wings"
+    ],
+    [
+        "Lemon Pepper Wings",
+        "Cajun Wings",
+        "Garlic Parmesan Wings",
+        "Seasoned Fries",
+        "Veggie Sticks"
+    ]
 ];
 
 const itemCounts: number[] = items.map(item => item.length);
 
 const costs: number[] = [
-    99.99,
-    46,
-    64,
-    33,
-    56,
-    70,
-    55,
-    62.29,
-    76.42,
-    27.80,
-    55.55,
-    46.42,
-    29.96,
-    45.46,
-    37.77,
-    59.99,
-    76.28,
-    53.42,
-    63.76,
+    20.00,
+    21.01,
+    22.02,
+    23.03,
+    24.04,
+    25.05,
+    26.06,
+    27.07,
+    28.08,
+    29.09,
+    30.10,
+    31.11,
+    32.12,
+    33.13,
+    34.14,
+    35.15,
+    36.16,
+    37.17,
+    38.18,
+    39.19,
+    40.20,
+    41.21,
+    42.22,
+    43.23,
+    44.24,
+    45.25,
+    46.26,
+    47.27, // 28 - 941.78
+    48.28, // 29 - 990.06
+    49.29, // 30 - 1039.35
+    50.30, // 31 - 1089.65
+    51.31, // 32 - 1140.96
 ];
 
 const daysOfWeek: WeekDayFormat[] = [

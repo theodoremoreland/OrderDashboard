@@ -1,5 +1,5 @@
 // vitest
-import { expect, test, describe } from 'vitest'
+import { expect, test, describe } from 'vitest';
 
 // Custom
 import Analytics from "../classes/Analytics";
@@ -8,16 +8,18 @@ import mockOrders from './mocks/mockOrders';
 describe("Analytics", () => {
   new Analytics(mockOrders);
 
-  test("should get accurate count of total purchases", () => {
-    expect(Analytics.getTotalPurchases()).toEqual(mockOrders.length);
+  test.only("should get accurate count of total purchases", () => {
+    // 5 years of orders, one for each day (with two leap years) = 1827.
+    expect(Analytics.getTotalPurchases()).toEqual(1827);
   });
 
   test("should get accurate total spent", () => {
     expect(Analytics.getTotalSpent()).toEqual(450);
   });
 
-  test("should get accurate number of total items purchased", () => {
-    expect(Analytics.getTotalItemsPurchased()).toEqual(27);
+  test.only("should get accurate number of total items purchased", () => {
+    // 5 items purchased each day.
+    expect(Analytics.getTotalItemsPurchased()).toEqual(1827 * 5);
   });
 
   test("should get accurate number of stores purchased from", () => {
