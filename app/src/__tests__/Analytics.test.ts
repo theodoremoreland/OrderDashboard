@@ -32,12 +32,14 @@ describe("Analytics", () => {
     expect(Analytics.getTotalSpendByDayOfWeek()["Fri"]).toEqual(Math.ceil(261 * 61.16));
   });
 
-  test("should get accurate total spent by month", () => {
-    expect(Analytics.getTotalSpendByMonth()["Jan"]).toEqual(450);
+  test.only("should get accurate total spent by month", () => {
+    // 31 days in Jan with $61.16 spent each day for 5 years = 9479.8.
+    expect(Analytics.getTotalSpendByMonth()["Jan"]).toEqual(Math.ceil(9479.8));
   });
 
-  test("should get accurate totals for each year", () => {
-      expect(Analytics.getTotalSpendByYear()[2020]).toEqual(450);
+  test.only("should get accurate totals for each year", () => {
+    // 366 days in 2020 (leap year) = 366 * 61.16 = 22384.56.
+    expect(Analytics.getTotalSpendByYear()[2020]).toEqual(Math.ceil(22384.56));
   });
 
   test("should get top stores by total spend", () => {

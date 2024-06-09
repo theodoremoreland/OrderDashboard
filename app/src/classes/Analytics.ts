@@ -146,11 +146,6 @@ export default class Analytics {
 
             for (const order of data[day]) {
                 result[day] += order.cost;
-
-                if (day === "Fri") {
-                    
-                    console.log(order.date);
-                }
             }
 
             result[day] = Math.ceil(result[day]);
@@ -170,7 +165,7 @@ export default class Analytics {
                 result[month] += order.cost;
             }
 
-            result[month] = parseFloat(result[month].toFixed(2));
+            result[month] = Math.ceil(result[month]);
         }
 
         return result;
@@ -187,7 +182,7 @@ export default class Analytics {
                 result[year] += order.cost;
             }
 
-            result[year] = parseFloat(result[year].toFixed(2));
+            result[year] = Math.ceil(result[year]);
         }
 
         return result;
