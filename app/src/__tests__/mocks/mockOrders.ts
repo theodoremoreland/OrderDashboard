@@ -172,78 +172,144 @@ const generateMonthOfOrders = (month: number, year: number, daysWithoutOrders: n
 };
 
 // TODO this needs to double as default data displayed in the UI.
+/**
+ * Leap year. 366 days.
+ */
 const mockOrders2020: Order[] = [
+    // 31 days in January
     ...generateMonthOfOrders(0, 2020),
+    // 29 days in February
     ...generateMonthOfOrders(1, 2020),
+    // 31 days in March
     ...generateMonthOfOrders(2, 2020),
+    // 30 days in April
     ...generateMonthOfOrders(3, 2020),
+    // 31 days in May
     ...generateMonthOfOrders(4, 2020),
+    // 30 days in June
     ...generateMonthOfOrders(5, 2020),
+    // 31 days in July
     ...generateMonthOfOrders(6, 2020),
+    // 31 days in August
     ...generateMonthOfOrders(7, 2020),
+    // 30 days in September
     ...generateMonthOfOrders(8, 2020),
+    // 31 days in October
     ...generateMonthOfOrders(9, 2020),
+    // 30 days in November
     ...generateMonthOfOrders(10, 2020),
+    // 31 days in December
     ...generateMonthOfOrders(11, 2020),
 ];
 
 const mockOrders2021: Order[] = [
+    // 31 days in January
     ...generateMonthOfOrders(0, 2021),
+    // 28 days in February
     ...generateMonthOfOrders(1, 2021),
+    // 31 days in March
     ...generateMonthOfOrders(2, 2021),
+    // 30 days in April
     ...generateMonthOfOrders(3, 2021),
+    // 31 days in May
     ...generateMonthOfOrders(4, 2021),
+    // 30 days in June
     ...generateMonthOfOrders(5, 2021),
+    // 31 days in July
     ...generateMonthOfOrders(6, 2021),
+    // 31 days in August
     ...generateMonthOfOrders(7, 2021),
+    // 30 days in September
     ...generateMonthOfOrders(8, 2021),
+    // 31 days in October
     ...generateMonthOfOrders(9, 2021),
+    // 30 days in November
     ...generateMonthOfOrders(10, 2021),
+    // 31 days in December
     ...generateMonthOfOrders(11, 2021),
 ];
 
 const mockOrders2022: Order[] = [
+    // 31 days in January
     ...generateMonthOfOrders(0, 2022),
+    // 28 days in February
     ...generateMonthOfOrders(1, 2022),
+    // 31 days in March
     ...generateMonthOfOrders(2, 2022),
+    // 30 days in April
     ...generateMonthOfOrders(3, 2022),
+    // 31 days in May
     ...generateMonthOfOrders(4, 2022),
+    // 30 days in June
     ...generateMonthOfOrders(5, 2022),
+    // 31 days in July
     ...generateMonthOfOrders(6, 2022),
+    // 31 days in August
     ...generateMonthOfOrders(7, 2022),
+    // 30 days in September
     ...generateMonthOfOrders(8, 2022),
+    // 31 days in October
     ...generateMonthOfOrders(9, 2022),
+    // 30 days in November
     ...generateMonthOfOrders(10, 2022),
+    // 31 days in December
     ...generateMonthOfOrders(11, 2022),
 ];
 
 const mockOrders2023: Order[] = [
+    // 31 days in January
     ...generateMonthOfOrders(0, 2023),
+    // 28 days in February
     ...generateMonthOfOrders(1, 2023),
+    // 31 days in March
     ...generateMonthOfOrders(2, 2023),
+    // 30 days in April
     ...generateMonthOfOrders(3, 2023),
+    // 31 days in May
     ...generateMonthOfOrders(4, 2023),
+    // 30 days in June
     ...generateMonthOfOrders(5, 2023),
+    // 31 days in July
     ...generateMonthOfOrders(6, 2023),
+    // 31 days in August
     ...generateMonthOfOrders(7, 2023),
+    // 30 days in September
     ...generateMonthOfOrders(8, 2023),
+    // 31 days in October
     ...generateMonthOfOrders(9, 2023),
+    // 30 days in November
     ...generateMonthOfOrders(10, 2023),
+    // 31 days in December
     ...generateMonthOfOrders(11, 2023),
 ];
 
+/**
+ * Leap year. 366 days.
+ */
 const mockOrders2024: Order[] = [
+    // 31 days in January
     ...generateMonthOfOrders(0, 2024),
+    // 29 days in February
     ...generateMonthOfOrders(1, 2024),
+    // 31 days in March
     ...generateMonthOfOrders(2, 2024),
+    // 30 days in April
     ...generateMonthOfOrders(3, 2024),
+    // 31 days in May
     ...generateMonthOfOrders(4, 2024),
+    // 30 days in June
     ...generateMonthOfOrders(5, 2024),
+    // 31 days in July
     ...generateMonthOfOrders(6, 2024),
+    // 31 days in August
     ...generateMonthOfOrders(7, 2024),
+    // 30 days in September
     ...generateMonthOfOrders(8, 2024),
+    // 31 days in October
     ...generateMonthOfOrders(9, 2024),
+    // 30 days in November
     ...generateMonthOfOrders(10, 2024),
+    // 31 days in December
     ...generateMonthOfOrders(11, 2024),
 ];
 
