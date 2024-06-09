@@ -14,7 +14,7 @@ describe("Analytics", () => {
   });
 
   test.only("should get accurate total spent", () => {
-    // $61.16 spent each day. Cielling to nearest integer due to floating point inconsistencies.
+    // $61.16 spent each day. Ceiling to nearest integer due to floating point inconsistencies.
     expect(Analytics.getTotalSpent()).toEqual(Math.ceil(61.16 * 1827));
   });
 
@@ -42,17 +42,49 @@ describe("Analytics", () => {
     expect(Analytics.getTotalSpendByYear()[2020]).toEqual(Math.ceil(22384.56));
   });
 
+  test.only("should get accurate number of days a purchase was made", () => {
+    expect(Analytics.getTotalNumberOfDaysAPurchaseWasMade()).toEqual(1827);
+  });
+
+  test("should get top stores by total orders", () => {
+    expect(Analytics.getTopStoresByTotalOrders()).toEqual([
+      { storeName: "Applebee's", totalOrders: 150 },
+      { storeName: "Aldi", totalOrders: 50 },
+      { storeName: "Tony's Donuts", totalOrders: 50 },
+      { storeName: "Panda Express", totalOrders: 50 },
+      { storeName: "Dierbergs", totalOrders: 50 },
+      { storeName: "Panera Bread", totalOrders: 50 },
+      { storeName: "Chic Fil A", totalOrders: 50 },
+      { storeName: "Culver's", totalOrders: 50 },
+      { storeName: "Walgreens", totalOrders: 50 },
+    ]);
+  });
+
+  test("should get top stores by total items purchased", () => {
+    expect(Analytics.getTopStoresByTotalItemsPurchased()).toEqual([
+      { storeName: "Applebee's", totalItemsPurchased: 150 },
+      { storeName: "Aldi", totalItemsPurchased: 50 },
+      { storeName: "Tony's Donuts", totalItemsPurchased: 50 },
+      { storeName: "Panda Express", totalItemsPurchased: 50 },
+      { storeName: "Dierbergs", totalItemsPurchased: 50 },
+      { storeName: "Panera Bread", totalItemsPurchased: 50 },
+      { storeName: "Chic Fil A", totalItemsPurchased: 50 },
+      { storeName: "Culver's", totalItemsPurchased: 50 },
+      { storeName: "Walgreens", totalItemsPurchased: 50 },
+    ]);
+  });
+
   test("should get top stores by total spend", () => {
     expect(Analytics.getTopStoresByTotalSpend()).toEqual([
-      { storeName: "Walmart", total: 150 },
-      { storeName: "Walgreens", total: 50 },
-      { storeName: "Aldi", total: 50 },
-      { storeName: "Dierbergs", total: 50 },
-      { storeName: "Target", total: 50 },
-      { storeName: "Schnucks", total: 50 },
-      { storeName: "Amazon", total: 50 },
-      { storeName: "Whole Foods", total: 50 },
-      { storeName: "Trader Joe's", total: 50 },
+      { storeName: "Applebee's", totalSpend: 150 },
+      { storeName: "Aldi", totalSpend: 50 },
+      { storeName: "Tony's Donuts", totalSpend: 50 },
+      { storeName: "Panda Express", totalSpend: 50 },
+      { storeName: "Dierbergs", totalSpend: 50 },
+      { storeName: "Panera Bread", totalSpend: 50 },
+      { storeName: "Chic Fil A", totalSpend: 50 },
+      { storeName: "Culver's", totalSpend: 50 },
+      { storeName: "Walgreens", totalSpend: 50 },
     ]);
   });
 });

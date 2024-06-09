@@ -199,7 +199,7 @@ export default class Analytics {
                 total += order.cost;
             }
 
-            total = parseFloat(total.toFixed(2));
+            total = Math.ceil(total);
 
             result.push({ storeName: store, totalSpend: total });
         }
