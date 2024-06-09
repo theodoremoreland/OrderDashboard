@@ -32,8 +32,6 @@ const storeNames: string[] = [
     "KFC",
     "Wendy's",
     "Papa John's",
-    "Wingstop",
-    "Walgreens",
 ];
 
 const items: string[][] = [
@@ -261,13 +259,6 @@ const items: string[][] = [
         "Garlic Knots",
         "Chicken Wings"
     ],
-    [
-        "Lemon Pepper Wings",
-        "Cajun Wings",
-        "Garlic Parmesan Wings",
-        "Seasoned Fries",
-        "Veggie Sticks"
-    ]
 ];
 
 const itemCounts: number[] = items.map(item => item.length);
@@ -304,7 +295,6 @@ const costs: number[] = [
     48.28, // 29 - 990.06
     49.29, // 30 - 1039.35
     50.30, // 31 - 1089.65
-    51.31, // 32 - 1140.96
 ];
 
 const daysOfWeek: WeekDayFormat[] = [

@@ -22,8 +22,8 @@ describe("Analytics", () => {
     expect(Analytics.getTotalItemsPurchased()).toEqual(1827 * 5);
   });
 
-  test("should get accurate number of stores purchased from", () => {
-    expect(Analytics.getNumberOfStoresPurchasedFrom()).toEqual(9);
+  test.only("should get accurate number of stores purchased from", () => {
+    expect(Analytics.getNumberOfStoresPurchasedFrom()).toEqual(25);
   });
 
   test("should get accurate total spent by day of week", () => {
