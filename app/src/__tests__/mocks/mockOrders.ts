@@ -202,6 +202,21 @@ const mockOrders2021: Order[] = [
     ...generateMonthOfOrders(11, 2021),
 ];
 
+const mockOrders2022: Order[] = [
+    ...generateMonthOfOrders(0, 2022),
+    ...generateMonthOfOrders(1, 2022),
+    ...generateMonthOfOrders(2, 2022),
+    ...generateMonthOfOrders(3, 2022),
+    ...generateMonthOfOrders(4, 2022),
+    ...generateMonthOfOrders(5, 2022),
+    ...generateMonthOfOrders(6, 2022),
+    ...generateMonthOfOrders(7, 2022),
+    ...generateMonthOfOrders(8, 2022),
+    ...generateMonthOfOrders(9, 2022),
+    ...generateMonthOfOrders(10, 2022),
+    ...generateMonthOfOrders(11, 2022),
+];
+
 const mockOrders2023: Order[] = [
     ...generateMonthOfOrders(0, 2023),
     ...generateMonthOfOrders(1, 2023),
@@ -234,6 +249,7 @@ const mockOrders2024: Order[] = [
 
 const mockOrders: Order[] = mockOrders2020
     .concat(mockOrders2021)
+    .concat(mockOrders2022)
     .concat(mockOrders2023)
     .concat(mockOrders2024);
 
