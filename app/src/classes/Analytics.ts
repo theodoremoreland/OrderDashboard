@@ -97,12 +97,12 @@ export default class Analytics {
                         
     // ---------- !!!! Aggregates !!!! ----------
 
-    public static getTotalPurchases() {
+    public static getTotalPurchases(): number {
         return Analytics.data.length;
     }
 
-    public static getTotalSpent() {
-        let total = 0;
+    public static getTotalSpent(): number {
+        let total: number = 0;
 
         for (const order of Analytics.data) {
             total += order.cost;
@@ -111,7 +111,7 @@ export default class Analytics {
         return total;
     }
 
-    public static getTotalNumberOfDaysAPurchaseWasMade() {
+    public static getTotalNumberOfDaysAPurchaseWasMade(): number {
         const days = new Set();
 
         for (const order of Analytics.data) {
@@ -121,7 +121,7 @@ export default class Analytics {
         return days.size;
     }
 
-    public static getTotalItemsPurchased() {
+    public static getTotalItemsPurchased(): number {
         let total = 0;
 
         for (const order of Analytics.data) {
@@ -131,7 +131,7 @@ export default class Analytics {
         return total;
     }
 
-    public static getNumberOfStoresPurchasedFrom() {
+    public static getNumberOfStoresPurchasedFrom(): number {
         return Object.keys(Analytics.groupByStore()).length;
     }
 
@@ -145,6 +145,8 @@ export default class Analytics {
             for (const order of data[day]) {
                 result[day] += order.cost;
             }
+
+            result[day] = parseFloat(result[day].toFixed(2));
         }
 
         return result;
@@ -160,13 +162,15 @@ export default class Analytics {
             for (const order of data[month]) {
                 result[month] += order.cost;
             }
+
+            result[month] = parseFloat(result[month].toFixed(2));
         }
 
         return result;
     }
 
     public static getTotalSpendByYear() {
-        const data = Analytics.groupByYear();
+        const data: { [key: string]: Order[] } = Analytics.groupByYear();
         const result: { [key: string]: number } = {};
 
         for (const year in data) {
@@ -175,6 +179,8 @@ export default class Analytics {
             for (const order of data[year]) {
                 result[year] += order.cost;
             }
+
+            result[year] = parseFloat(result[year].toFixed(2));
         }
 
         return result;
@@ -185,7 +191,7 @@ export default class Analytics {
         const result: { storeName: string, totalSpend: number }[] = [];
 
         for (const store in data) {
-            let total = 0;
+            let total: number = 0;
 
             for (const order of data[store]) {
                 total += order.cost;
@@ -213,7 +219,7 @@ export default class Analytics {
         const result: { storeName: string, totalItemsPurchased: number }[] = [];
 
         for (const store in data) {
-            let total = 0;
+            let total: number = 0;
 
             for (const order of data[store]) {
                 total += order.itemCount;
@@ -226,13 +232,13 @@ export default class Analytics {
     }
 
     public static getTop5DroughtsBetweenPurchases() {
-        const times = Analytics.getTimeOfOrdersSorted();
+        const times: number[] = Analytics.getTimeOfOrdersSorted();
         const result: { startDate: string, endDate: string, days: number }[] = [];
 
         for (let i = 0; i < times.length - 1; i++) {
-            const startDate = new Date(times[i]);
-            const endDate = new Date(times[i + 1]);
-            const days = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+            const startDate: Date = new Date(times[i]);
+            const endDate: Date = new Date(times[i + 1]);
+            const days: number = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
 
             result.push({ startDate: startDate.toDateString(), endDate: endDate.toDateString(), days });
         }
