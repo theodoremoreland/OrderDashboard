@@ -8,6 +8,8 @@ import json
 from pprint import pprint
 from datetime import datetime
 
+
+# Argument parser setup
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--file-path",
@@ -29,6 +31,7 @@ parser.add_argument(
 )
 args = parser.parse_args()
 
+# Constants
 FILE_PATH = args.file_path
 OUTPUT_FILE_PATH = args.output_file_path
 VERBOSE = args.verbose
@@ -72,6 +75,7 @@ def is_valid_date(day_of_week, month, day_of_month, year):
         if date.weekday() == day_of_week_index:
             _is_valid_date = True
     except ValueError:
+        # Suppress the error and return False
         pass
 
     return _is_valid_date
