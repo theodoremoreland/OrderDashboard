@@ -1,10 +1,38 @@
 """
 This script is used to transform the data from the raw data to the data that can be used.
 """
+
 # First party imports
+import argparse
 import json
 from pprint import pprint
+from datetime import datetime
 
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    "--file-path",
+    type=str,
+    default="data/raw_data.json",
+    required=False,
+)
+parser.add_argument(
+    "--output-file-path",
+    type=str,
+    default="data/processed_data_test.json",
+    required=False,
+)
+parser.add_argument(
+    "--verbose",
+    type=bool,
+    default=False,
+    required=False,
+)
+args = parser.parse_args()
+
+FILE_PATH = args.file_path
+OUTPUT_FILE_PATH = args.output_file_path
+VERBOSE = args.verbose
+CURRENT_YEAR = datetime.now().year
 MONTH_TO_NUMBER = {
     "Jan": 1,
     "Feb": 2,
@@ -21,91 +49,83 @@ MONTH_TO_NUMBER = {
 }
 
 
+def is_valid_date(day_of_week, month, day_of_month, year):
+    _is_valid_date = False
+    # List of days of the week for reference
+    days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+
+    # Find the index of the given day_of_week
+    if day_of_week not in days_of_week:
+        raise ValueError("Invalid day of the week provided.")
+
+    day_of_week_index = days_of_week.index(day_of_week)
+
+    # Validate month and day_of_month
+    if not (1 <= month <= 12):
+        raise ValueError("Invalid month provided.")
+    if not (1 <= day_of_month <= 31):
+        raise ValueError("Invalid day of the month provided.")
+
+    try:
+        date = datetime(year, month, day_of_month)
+
+        if date.weekday() == day_of_week_index:
+            _is_valid_date = True
+    except ValueError:
+        pass
+
+    return _is_valid_date
+
+
 def main():
-    f = open("data/raw_data.json")
+    f = open(FILE_PATH, encoding="utf-8")
     raw_data = json.load(f)
 
     processing = {
-        "year_in_processing": 2023,
-        "month_in_processing": "Oct",
-        "months_processed": [],
+        "year_in_processing": CURRENT_YEAR,
     }
 
     for i in range(len(raw_data)):
         cost = raw_data[i]["cost"]  # $1.00
         date = raw_data[i]["date"]  # Fri, Oct 13
         item_count = raw_data[i]["itemCount"]  # 1 items
+        day_of_week = date[:3]  # Fri
+        month = date[5:8]  # Oct
+        day = date[9:]  # 13
+
+        identify_year_tries = 10
+
+        while True:
+            if identify_year_tries == 0:
+                raise ValueError("Failed to identify the year for the given date.")
+
+            year = processing["year_in_processing"]
+            month_index = MONTH_TO_NUMBER[month]
+
+            _is_valid_date = is_valid_date(
+                day_of_week,
+                month_index,
+                int(day),
+                year,
+            )
+
+            if _is_valid_date:
+                break
+
+            processing["year_in_processing"] -= 1
+            identify_year_tries -= 1
 
         raw_data[i]["cost"] = float(cost.replace("$", ""))
-        raw_data[i]["dayOfWeek"] = date[:3]
+        raw_data[i]["dayOfWeek"] = day_of_week
         raw_data[i]["itemCount"] = int(item_count.replace("items", ""))
+        raw_data[i]["date"] = f'{month} {day} {str(processing["year_in_processing"])}'
 
-        month = date[5:8]
-        day = date[9:]
+        if VERBOSE:
+            pprint(raw_data[i])
 
-        # If month currently being processed
-        is_month_currently_being_processed = month == processing["month_in_processing"]
-
-        # If month isn't currently being processed but has been processed before
-        has_month_been_processed_before = month in processing["months_processed"]
-
-        # If month is new
-        is_month_new = (
-            has_month_been_processed_before == False
-            and is_month_currently_being_processed == False
-        )
-
-        # ! Logic below breaks if skipping exactly 12 months or more
-        if is_month_new:
-            # Add old month to months processed
-            processing["months_processed"].append(processing["month_in_processing"])
-            # Set new month
-            processing["month_in_processing"] = month
-            # Add current year to date
-            raw_data[i][
-                "date"
-            ] = f'{month} {day} {str(processing["year_in_processing"])}'
-        elif is_month_currently_being_processed and not has_month_been_processed_before:
-            # Cool, we're still processing the same month
-            raw_data[i][
-                "date"
-            ] = f'{month} {day} {str(processing["year_in_processing"])}'
-        elif is_month_currently_being_processed and has_month_been_processed_before:
-            # Not cool, we're in a different year
-            processing["year_in_processing"] -= 1
-            processing["month_in_processing"] = month
-            processing["months_processed"] = []
-            raw_data[i][
-                "date"
-            ] = f'{month} {day} {str(processing["year_in_processing"])}'
-        elif (
-            is_month_currently_being_processed == False
-            and has_month_been_processed_before
-        ):
-            # Not cool, we're in a different year
-            processing["year_in_processing"] -= 1
-            processing["month_in_processing"] = month
-            processing["months_processed"] = []
-            raw_data[i][
-                "date"
-            ] = f'{month} {day} {str(processing["year_in_processing"])}'
-        elif (
-            MONTH_TO_NUMBER[month] > MONTH_TO_NUMBER[processing["month_in_processing"]]
-        ):
-            # Not cool, we're in a different year
-            processing["year_in_processing"] -= 1
-            processing["month_in_processing"] = month
-            processing["months_processed"] = []
-            raw_data[i][
-                "date"
-            ] = f'{month} {day} {str(processing["year_in_processing"])}'
-
-    with open("data/processed_data.json", "w") as outfile:
+    with open(OUTPUT_FILE_PATH, "w") as outfile:
         json.dump(raw_data, outfile)
 
 
 if __name__ == "__main__":
-    # TODO test output data for two edge cases...
-    # TODO 1. (...con) If year increases at any point while going through the orders.
-    # TODO 2. (...con) If year fails to decrease when month increases
     main()
