@@ -385,7 +385,6 @@ const generateMonthOfOrders = (month: number, year: number, daysWithoutOrders: n
     return monthOfOrders;
 };
 
-// TODO this needs to double as default data displayed in the UI.
 /**
  * Leap year. 366 days.
  */
