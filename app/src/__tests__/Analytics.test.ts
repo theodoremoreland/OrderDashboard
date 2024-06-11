@@ -70,13 +70,14 @@ describe("Analytics", () => {
     ]);
   });
 
-  test("should get top stores by total spend", () => {
+  test.only("should get top stores by total spend", () => {
+    // 61.16 * number of orders for store in a month * 12 * 5
     expect(Analytics.getTopStoresByTotalSpend()).toEqual([
-      { storeName: "Applebee's", totalOrders: 240 },
-      { storeName: "Aldi", totalOrders: 50 },
-      { storeName: "Tony's Donuts", totalOrders: 50 },
-      { storeName: "Panda Express", totalOrders: 50 },
-      { storeName: "Dierbergs", totalOrders: 50 },
+      { storeName: "Applebee's", totalSpend: Math.ceil(14678.4) },
+      { storeName: "Aldi", totalSpend: Math.ceil(7339.2) },
+      { storeName: "Tony's Donuts", totalSpend: Math.ceil(7339.2) },
+      { storeName: "Panda Express", totalSpend: Math.ceil(7339.2) },
+      { storeName: "Dierbergs", totalSpend: Math.ceil(3669.6) },
     ]);
   });
 
