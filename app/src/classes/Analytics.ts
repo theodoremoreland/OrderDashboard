@@ -1,4 +1,4 @@
-import { Order } from "../types/types";
+import { MonthFormat, Order } from "../types/types";
 
 export default class Analytics {
     private static data: Order[];
@@ -255,4 +255,14 @@ export default class Analytics {
 
         return result.sort((a, b) => b.days - a.days).slice(0, 5);
     }
+
+    // ---------- !!!! Averages !!!! ----------
+    // TODO: Implement the following methods
+    public static getAverageSpendPerDay(month: MonthFormat, year: string): number {}
+
+    public static getAverageSpendPerWeek(month: MonthFormat, year: string): number {}
+
+    public getAverageSpendPerMonth(month: MonthFormat, year: string): number {}
+
+    public getAverageSpendPerYear(year: string): number {}
 }
