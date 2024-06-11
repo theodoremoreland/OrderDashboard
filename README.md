@@ -23,9 +23,8 @@ Scripts to grab and transform doordash order history and a web based dashboard t
 ## How it works
 
 In some circumstances, a program can be used to log into Doordash's website (@ doordash.com), visit the order history page, and collect all of the user's order
-history on its own. However, websites such as doordash.com makes doing so via a program tricky by preventing remote controlled web browsers from logging into the
-website. Under these circumstances, I decided the simplest approach was a semi-automated alternative in which a small JavaScript script would be copied into the
-development console of a standard web browser while the user is already logged in and is already on the order history page. Once the script is executed, it will
+history on its own. However, websites such as doordash.com make doing so via a program tricky by imploring "are you a robot" like prevention mechanisms. In other words, the website tries to prevent bots from scraping data. Under these circumstances, I decided the simplest approach was a semi-automated alternative in which a small JavaScript program would be copied into the
+development console while the user is already logged in and is already on the order history page. Once the script is executed, it will
 click the "Load More Deliveries" button until all of the user's doordash orders appear on the page. Once all of the orders are present, the script will then
 print all of the order data into the development console. From there, there user can copy said order data into a file of their choosing and save the data onto their computer. If I have time, I will create a UI that allows the user to render a dashboard of said data.
 
@@ -48,8 +47,7 @@ The key subjects of the file include:
 
 ## Transforming data
 
-A Python program that transforms that data created from the aforementioned web scraping script into a simpler format. Also includes
-feature for masking/alternating data and saving given alterations to a special JSON file.
+A Python program that transforms that data created from the aforementioned web scraping script into a more useable format.
 
 ## Video
 
