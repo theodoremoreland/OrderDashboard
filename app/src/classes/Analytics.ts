@@ -188,7 +188,7 @@ export default class Analytics {
         return result;
     }
 
-    public static getTopStoresByTotalSpend() {
+    public static getTopStoresByTotalSpend(limit: number = 5) {
         const data = Analytics.groupByStore();
         const result: { storeName: string, totalSpend: number }[] = [];
 
@@ -204,10 +204,12 @@ export default class Analytics {
             result.push({ storeName: store, totalSpend: total });
         }
 
-        return result.sort((a, b) => b.totalSpend - a.totalSpend);
+        return result
+            .sort((a, b) => b.totalSpend - a.totalSpend)
+            .slice(0, limit);
     }
 
-    public static getTopStoresByTotalOrders() {
+    public static getTopStoresByTotalOrders(limit: number = 5) {
         const data = Analytics.groupByStore();
         const result: { storeName: string, totalOrders: number }[] = [];
 
@@ -215,10 +217,12 @@ export default class Analytics {
             result.push({ storeName: store, totalOrders: data[store].length });
         }
 
-        return result.sort((a, b) => b.totalOrders - a.totalOrders);
+        return result
+            .sort((a, b) => b.totalOrders - a.totalOrders)
+            .slice(0, limit);
     }
 
-    public static getTopStoresByTotalItemsPurchased() {
+    public static getTopStoresByTotalItemsPurchased(limit: number = 5) {
         const data = Analytics.groupByStore();
         const result: { storeName: string, totalItemsPurchased: number }[] = [];
 
@@ -232,7 +236,9 @@ export default class Analytics {
             result.push({ storeName: store, totalItemsPurchased: total });
         }
 
-        return result.sort((a, b) => b.totalItemsPurchased - a.totalItemsPurchased);
+        return result
+            .sort((a, b) => b.totalItemsPurchased - a.totalItemsPurchased)
+            .slice(0, limit);
     }
 
     public static getTop5DroughtsBetweenPurchases() {
