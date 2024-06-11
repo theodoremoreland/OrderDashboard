@@ -65,9 +65,9 @@ While writing the code for this project, I will be recording myself in a video. 
 
 Checkboxes for showing two pies at a time.
 
-- Total spend by year (x)
-- Total spend by day of week (x)
-- Total spend by month (x)
+- Total spend by year (x)(x)
+- Total spend by day of week (x)(x)
+- Total spend by month (x)(x)
 
 # Line chart
 
@@ -82,11 +82,11 @@ Radio button lets user alternate between averages vs totals
 - Average number of purchases per day / Average spend per day
 - Average number of purchases per year / Average spend per year
 
-- Total spent (x)
-- Total number of purchases (x)
-- Total number of stores purchased from (x)
-- Total number of days a purchase was made (x)
-- (optional / bonus) Total number of items purchased (x)
+- Total spent (x)(x)
+- Total number of purchases (x)(x)
+- Total number of stores purchased from (x)(x)
+- Total number of days a purchase was made (x)(x)
+- (optional / bonus) Total number of items purchased (x)(x)
 
 # Range
 
@@ -99,6 +99,6 @@ Ranges display on a conveyor that stops moving when you hover over it.
 
 List auto scroll until you hover over
 
-- Top 10, 20, 40 stores (by total spent) (x)
-- Top 10, 20, 40 stores (by number of purchases)
-- Top 10, 20, 40 stores (by number of items purchased) (x)
+- Top 10, 20, 40 stores (by total spent) (x)(x)
+- Top 10, 20, 40 stores (by number of purchases)(x)(x)
+- Top 10, 20, 40 stores (by number of items purchased) (x)(x)
