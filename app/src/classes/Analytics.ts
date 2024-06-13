@@ -1,4 +1,5 @@
-import { MonthFormat, Order } from "../types/types";
+import { Order } from "../types/types";
+import generateObjectCalendar from "../modules/generateObjectCalendar";
 
 export default class Analytics {
     private static data: Order[];
@@ -258,11 +259,26 @@ export default class Analytics {
 
     // ---------- !!!! Averages !!!! ----------
     // TODO: Implement the following methods
-    public static getAverageSpendPerDay(month: MonthFormat, year: string): number {}
+    public static getAverageSpendPerDay(startDate: Date, endDate: Date): number {
+        const objectCalendar = generateObjectCalendar(startDate, endDate);
+        const data: {[key: string]: Order[]} = Analytics.groupByDate();
+        let sum: number = 0;
 
-    public static getAverageSpendPerWeek(month: MonthFormat, year: string): number {}
+        for (const filler of objectCalendar) {
+            const date: string = filler.date;
+            const orders: Order[] = data[date] || [];
 
-    public getAverageSpendPerMonth(month: MonthFormat, year: string): number {}
+            for (const order of orders) {
+                sum += order.cost;
+            }
+        }
 
-    public getAverageSpendPerYear(year: string): number {}
+        return Math.ceil(sum / objectCalendar.length);
+    }
+
+    public static getAverageSpendPerWeek(startDate: Date, endDate: Date): number {}
+
+    public getAverageSpendPerMonth(startDate: Date, endDate: Date): number {}
+
+    public getAverageSpendPerYear(startDate: Date, endDate: Date): number {}
 }
