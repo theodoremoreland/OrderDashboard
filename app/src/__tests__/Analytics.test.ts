@@ -81,6 +81,14 @@ describe("Analytics", () => {
     ]);
   });
 
+  test.only("should return correct average spend per day", () => {
+    const startDate: Date = new Date("Dec 1 2024");
+    const endDate: Date = new Date("Dec 31 2024");
+    const averageSpendPerDay: number = Analytics.getAverageSpendPerDay(startDate, endDate);
+
+    expect(averageSpendPerDay).toEqual(Math.ceil(61.16));
+  })
+
   test("should get top 5 droughts between purchases", () => {
     const actualTop5droughts: { startDate: string, endDate: string, days: number }[]
       = Analytics.getTop5DroughtsBetweenPurchases();

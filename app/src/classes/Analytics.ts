@@ -266,12 +266,15 @@ export default class Analytics {
 
         for (const filler of objectCalendar) {
             const date: string = filler.date;
-            const orders: Order[] = data[date] || [];
+            const orders: Order[] = data[date] || [{ date, cost: 0 }];
 
             for (const order of orders) {
+                console.log(date, data[date]);
                 sum += order.cost;
             }
         }
+
+        console.log(Object.keys(data).slice(-31), sum, objectCalendar.length);
 
         return Math.ceil(sum / objectCalendar.length);
     }

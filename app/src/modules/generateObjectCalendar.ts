@@ -11,7 +11,7 @@ export default (startDate: Date, endDate: Date): { date: DateFormat }[] => {
     for (let d = startDate; d <= endDate; d.setDate(d.getDate() + 1)) {
         const dateUnits: string[] = d.toString().split(' ');
         const month: string = dateUnits[1];
-        const day: string = dateUnits[2];
+        const day: number = parseInt(dateUnits[2]); // ParseInt is used to remove leading 0s.
         const year: string = dateUnits[3];
         const formattedDate: DateFormat = `${month} ${day} ${year}` as DateFormat;
 

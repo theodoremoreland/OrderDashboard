@@ -328,7 +328,7 @@ const months: MonthFormat[] = [
 // of January, not February
 // https://stackoverflow.com/a/1184359
 const getNumberOfDaysInMonth = (month: number, year: number): number => {
-    return new Date(year, month, 0).getDate();
+    return new Date(year, month + 1, 0).getDate();
 }
 
 /***
@@ -341,7 +341,7 @@ const generateObjectForEachDayOfMonth = (month: number, year: number): Partial<O
     const objects: Partial<Order>[] = [];
 
     for (let i = 0; i < numberOfDays; i++) {
-        const day: number = i;
+        const day: number = i + 1;
         const dayOfWeekIndex: number = new Date(year, month, day).getDay();
         const dayOfWeek: WeekDayFormat = daysOfWeek[dayOfWeekIndex];
         const date: DateFormat = `${months[month]} ${day} ${year}` as DateFormat;
