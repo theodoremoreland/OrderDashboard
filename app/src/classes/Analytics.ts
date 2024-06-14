@@ -159,23 +159,25 @@ export default class Analytics {
 
     public static getTotalSpendByMonth(month: MonthFormat, year?: number) {
         const data = Analytics.groupByMonth();
-        const result: { [key: string]: number } = {};
+        const validMonths: string[] = Object.keys(data)
+            .filter(monthYear => {
+                if (year) {
+                    return monthYear === `${month} ${year}`;
+                }
 
-        for (const monthYear in data) {
-            result[monthYear] = 0;
+                return monthYear.includes(month);
+            });
+        let sum: number = 0;
 
-            for (const order of data[monthYear]) {
-                result[monthYear] += order.cost;
+        for (const monthYear of validMonths) {
+            const orders: Order[] = data[monthYear];
+
+            for (const order of orders) {
+                sum += order.cost;
             }
-
-            result[monthYear] = Math.ceil(result[monthYear]);
         }
 
-        if (year) {
-            return result[`${month} ${year}`];
-        }
-
-        return result[month];
+        return Math.ceil(sum); 
     }
 
     public static getTotalSpendByYear() {
