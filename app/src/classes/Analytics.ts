@@ -293,7 +293,23 @@ export default class Analytics {
         return Math.ceil(sum / (objectCalendar.length / 7));
     }
 
-    public getAverageSpendPerMonth(startDate: Date, endDate: Date): number {}
+    // TODO: Consider using a more precise method to calculate the average spend per month.
+    public static getAverageSpendPerMonth(startDate: Date, endDate: Date): number {
+        const objectCalendar = generateObjectCalendar(startDate, endDate);
+        const data: {[key: string]: Order[]} = Analytics.groupByDate();
+        let sum: number = 0;
+
+        for (const filler of objectCalendar) {
+            const date: string = filler.date;
+            const orders: Order[] = data[date] || [{ date, cost: 0 }];
+
+            for (const order of orders) {
+                sum += order.cost;
+            }
+        }
+
+        return Math.ceil(sum / (objectCalendar.length / 30.5));
+    }
 
     public getAverageSpendPerYear(startDate: Date, endDate: Date): number {}
 }

@@ -97,6 +97,15 @@ describe("Analytics", () => {
     expect(averageSpendPerDay).toEqual(Math.ceil(61.16 * 7));
   });
 
+  test.only("should return correct average spend per month", () => {
+    const startDate: Date = new Date("Dec 1 2024");
+    const endDate: Date = new Date("Dec 31 2024");
+    const averageSpendPerDay: number = Analytics.getAverageSpendPerMonth(startDate, endDate);
+
+    // TODO: Consider using a more precise method to calculate the average spend per month.
+    expect(averageSpendPerDay).toEqual(Math.ceil(61.16 * 30.5));
+  });
+
   test("should get top 5 droughts between purchases", () => {
     const actualTop5droughts: { startDate: string, endDate: string, days: number }[]
       = Analytics.getTop5DroughtsBetweenPurchases();
@@ -107,5 +116,5 @@ describe("Analytics", () => {
       { startDate: "2020-01-04", endDate: "2020-01-05", days: 1 },
       { startDate: "2020-01-05", endDate: "2020-01-06", days: 1 },
     ]);
-  })
+  });
 });
