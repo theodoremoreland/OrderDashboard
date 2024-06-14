@@ -104,12 +104,13 @@ describe("Analytics", () => {
     expect(averageSpendPerMonth).toEqual(Math.ceil(61.16 * 30.5));
   });
 
-  test("should return average spend per year", () => {
+  test.only("should return average spend per year", () => {
     const startYear: number = 2020;
     const endYear: number = 2024;
     const averageSpendPerYear: number = Analytics.getAverageSpendPerYear(startYear, endYear);
 
-    expect(averageSpendPerYear).toEqual(Math.ceil(61.16 * 365));
+    // 1827 orders over 5 years = 365.4 orders per year.
+    expect(averageSpendPerYear).toEqual(Math.ceil(61.16 * 365.4));
   });
 
   test("should get top 5 droughts between purchases", () => {

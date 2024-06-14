@@ -313,7 +313,6 @@ export default class Analytics {
             });
         let sum: number = 0;
 
-        console.log(validMonths);
         for (const monthYear of validMonths) {
             const orders: Order[] = data[monthYear];
 
@@ -328,7 +327,7 @@ export default class Analytics {
     public static getAverageSpendPerYear(startYear: number, endYear: number): number {
         const data: {[key: number]: Order[]} = Analytics.groupByYear();
         const validYears: string[] = Object.keys(data).filter(year => {
-            return startYear >= Number(year) && endYear <= Number(year);
+            return startYear <= Number(year) && endYear >= Number(year);
         });
         let sum: number = 0;
 
