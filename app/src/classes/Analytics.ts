@@ -269,17 +269,29 @@ export default class Analytics {
             const orders: Order[] = data[date] || [{ date, cost: 0 }];
 
             for (const order of orders) {
-                console.log(date, data[date]);
                 sum += order.cost;
             }
         }
 
-        console.log(Object.keys(data).slice(-31), sum, objectCalendar.length);
-
         return Math.ceil(sum / objectCalendar.length);
     }
 
-    public static getAverageSpendPerWeek(startDate: Date, endDate: Date): number {}
+    public static getAverageSpendPerWeek(startDate: Date, endDate: Date): number {
+        const objectCalendar = generateObjectCalendar(startDate, endDate);
+        const data: {[key: string]: Order[]} = Analytics.groupByDate();
+        let sum: number = 0;
+
+        for (const filler of objectCalendar) {
+            const date: string = filler.date;
+            const orders: Order[] = data[date] || [{ date, cost: 0 }];
+
+            for (const order of orders) {
+                sum += order.cost;
+            }
+        }
+
+        return Math.ceil(sum / (objectCalendar.length / 7));
+    }
 
     public getAverageSpendPerMonth(startDate: Date, endDate: Date): number {}
 
