@@ -1,4 +1,4 @@
-import { Order } from "../types/types";
+import { MonthFormat, Order } from "../types/types";
 import generateObjectCalendar from "../modules/generateObjectCalendar";
 
 export default class Analytics {
@@ -62,23 +62,25 @@ export default class Analytics {
         const data: { [key: string]: Order[] } = {};
 
         for (const order of Analytics.data) {
-            const month = order.date.split(" ")[0];
+            const month: string = order.date.split(" ")[0];
+            const year: string = order.date.split(" ")[2];
+            const monthYear: string = `${month} ${year}`;
 
-            if (!data[month]) {
-                data[month] = [];
+            if (!data[monthYear]) {
+                data[monthYear] = [];
             }
 
-            data[month].push(order);
+            data[monthYear].push(order);
         }
 
         return data;
     }
 
     private static groupByYear() {
-        const data: { [key: string]: Order[] } = {};
+        const data: { [key: number]: Order[] } = {};
 
         for (const order of Analytics.data) {
-            const year = order.date.split(" ")[2];
+            const year = Number(order.date.split(" ")[2]);
 
             if (!data[year]) {
                 data[year] = [];
@@ -155,21 +157,25 @@ export default class Analytics {
         return result;
     }
 
-    public static getTotalSpendByMonth() {
+    public static getTotalSpendByMonth(month: MonthFormat, year?: number) {
         const data = Analytics.groupByMonth();
         const result: { [key: string]: number } = {};
 
-        for (const month in data) {
-            result[month] = 0;
+        for (const monthYear in data) {
+            result[monthYear] = 0;
 
-            for (const order of data[month]) {
-                result[month] += order.cost;
+            for (const order of data[monthYear]) {
+                result[monthYear] += order.cost;
             }
 
-            result[month] = Math.ceil(result[month]);
+            result[monthYear] = Math.ceil(result[monthYear]);
         }
 
-        return result;
+        if (year) {
+            return result[`${month} ${year}`];
+        }
+
+        return result[month];
     }
 
     public static getTotalSpendByYear() {
@@ -311,5 +317,21 @@ export default class Analytics {
         return Math.ceil(sum / (objectCalendar.length / 30.5));
     }
 
-    public getAverageSpendPerYear(startDate: Date, endDate: Date): number {}
+    public static getAverageSpendPerYear(startYear: number, endYear: number): number {
+        const data: {[key: number]: Order[]} = Analytics.groupByYear();
+        const validYears: string[] = Object.keys(data).filter(year => {
+            return startYear >= Number(year) && endYear <= Number(year);
+        });
+        let sum: number = 0;
+
+        for (const year of validYears) {
+            const orders: Order[] = data[Number(year)];
+
+            for (const order of orders) {
+                sum += order.cost;
+            }
+        }
+
+        return Math.ceil(sum / validYears.length);
+    }
 }
