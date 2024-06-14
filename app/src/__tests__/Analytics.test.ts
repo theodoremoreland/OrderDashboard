@@ -99,15 +99,12 @@ describe("Analytics", () => {
   });
 
   test.only("should return correct average spend per month", () => {
-    const startDate: Date = new Date("Dec 1 2024");
-    const endDate: Date = new Date("Dec 31 2024");
-    const averageSpendPerMonth: number = Analytics.getAverageSpendPerMonth(startDate, endDate);
+    const averageSpendPerMonth: number = Analytics.getAverageSpendPerMonth(2024);
 
-    // TODO: Consider using a more precise method to calculate the average spend per month.
     expect(averageSpendPerMonth).toEqual(Math.ceil(61.16 * 30.5));
   });
 
-  test.only("should return average spend per year", () => {
+  test("should return average spend per year", () => {
     const startYear: number = 2020;
     const endYear: number = 2024;
     const averageSpendPerYear: number = Analytics.getAverageSpendPerYear(startYear, endYear);
