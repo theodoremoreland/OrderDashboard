@@ -284,6 +284,21 @@ export default class Analytics {
         return Math.ceil(sum / objectCalendar.length);
     }
 
+    public static getAverageNumberOfPurchasesPerDay(startDate: Date, endDate: Date): number {
+        const objectCalendar = generateObjectCalendar(startDate, endDate);
+        const data: {[key: string]: Order[]} = Analytics.groupByDate();
+        let totalNumberOfPurchases: number = 0;
+
+        for (const filler of objectCalendar) {
+            const date: string = filler.date;
+            const orders: Order[] = data[date] || [];
+
+            totalNumberOfPurchases += orders.length;
+        }
+
+        return Math.ceil(totalNumberOfPurchases / objectCalendar.length);
+    }
+
     public static getAverageSpendPerWeek(startDate: Date, endDate: Date): number {
         const objectCalendar = generateObjectCalendar(startDate, endDate);
         const data: {[key: string]: Order[]} = Analytics.groupByDate();
