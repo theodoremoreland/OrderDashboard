@@ -106,6 +106,14 @@ describe("Analytics", () => {
     expect(averageSpendPerDay).toEqual(Math.ceil(61.16 * 7));
   });
 
+  test.only("should return average number of purchases made per week", () => {
+    const startDate: Date = new Date("Jan 1 2020");
+    const endDate: Date = new Date("Dec 31 2024");
+    const averagePurchasesPerWeek: number = Analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate);
+
+    expect(averagePurchasesPerWeek).toEqual(7);
+  });
+
   test.only("should return correct average spend per month", () => {
     const averageSpendPerMonth: number = Analytics.getAverageSpendPerMonth(2024);
 
