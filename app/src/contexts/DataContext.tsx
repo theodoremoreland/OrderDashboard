@@ -1,22 +1,46 @@
 import {
     ReactElement,
+    useState,
     createContext,
+    Dispatch,
+    SetStateAction,
+    useEffect,
   } from "react";
 
-export const Data = createContext(undefined);
+import Analytics from "../classes/Analytics";
+
+import { Order } from "../types/types";
+
+export const DataContext = createContext({
+    rawData: [] as Order[],
+    setRawData: (() => {}) as Dispatch<SetStateAction<Order[]>>,
+    analytics: undefined as Analytics | undefined,
+});
 
 interface DataProviderProps {
     children: ReactElement;
 }
 
 const DataProvider = ({ children }: DataProviderProps): ReactElement => {
+    const [rawData, setRawData] = useState<Order[]>([]);
+    const [analytics, setAnalytics] = useState<Analytics | undefined>(undefined);
+
+    useEffect(() => {
+        if (rawData.length) {
+            setAnalytics(new Analytics(rawData));
+        }
+    }, [rawData])
 
     return (
-        <Data.Provider
-        value={undefined}
+        <DataContext.Provider
+        value={{
+            rawData,
+            setRawData,
+            analytics,
+        }}
         >
         {children}
-        </Data.Provider>
+        </DataContext.Provider>
     );
 };
 
