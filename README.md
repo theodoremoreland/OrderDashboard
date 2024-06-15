@@ -1,6 +1,6 @@
 # Doordash Dashboard
 
-Scripts to grab and transform doordash order history and a web based dashboard to visualize said data.
+A dashboard for visualizing doordash order history data and scripts to collect and transform aforementioned data into appropriate format.
 
 ## Table of Contents
 
@@ -47,11 +47,7 @@ The key subjects of the file include:
 
 ## Transforming data
 
-A Python program that transforms that data created from the aforementioned web scraping script into a more useable format.
-
-## Video
-
-While writing the code for this project, I will be recording myself in a video. The purpose of the video is to demonstrate what coding up a few simple programs is like. The focus will be on narrating thought process while exposing a few programming and web development concepts without an opinion piece on the nature of programming as a career and without instruction or lecturing on the steps involved. The video becomes too long and "rambly" otherwise. I may or may not publish and link the video(s) somewhere in this repository.
+A Python script that transforms the data created from the aforementioned web scraping script into a more useable format.
 
 ## Dashboard inspiration
 
@@ -76,7 +72,7 @@ Dropdown for switching between line charts
 - Total spent across all of Doordash history (by day) (x)(x)
 - Total purchases across all of Doordash history (by day) (x)(x)
 
-# KPIS
+# KPIs
 
 Radio button lets user alternate between averages vs totals
 

@@ -4,6 +4,7 @@ import { DateFormat } from "../types/types"
  * Create an array of objects with a date property.
  * This can be used to create a calendar of orders wherein
  * some dates may not have orders.
+ * TODO - This needs unit tests.
  */
 export default (startDate: Date, endDate: Date): { date: DateFormat }[] => {  
     const data: { date: DateFormat }[] = [];
