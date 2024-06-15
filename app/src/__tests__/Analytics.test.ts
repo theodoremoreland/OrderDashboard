@@ -179,7 +179,7 @@ describe("Analytics", () => {
       = Analytics.getTop5PurchaseStreaks();
     
     expect(actualTop5PurchaseStreaks).toEqual([
-      { startDate: "Wed Jan 01 2020", endDate: "Mon Dec 30 2024", days: 1827 },
+      { startDate: "Wed Jan 01 2020", endDate: "Tue Dec 31 2024", days: 1827 },
     ]);
   });
 });

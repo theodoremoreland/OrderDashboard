@@ -439,7 +439,7 @@ export default class Analytics {
         const times: number[] = Analytics.getTimeOfOrdersSorted();
         const consecutiveOrderDates: string[][] = [];
 
-        for (let i = 0; i < times.length - 1; i++) {
+        for (let i = 0; i < times.length; i++) {
             if (i === 0) {
                 consecutiveOrderDates.push([new Date(times[i]).toDateString()]);
                 continue;
