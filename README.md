@@ -71,7 +71,10 @@ Checkboxes for showing two pies at a time.
 
 # Line chart
 
+Dropdown for switching between line charts
+
 - Total spent across all of Doordash history (by day)
+- Total purchases across all of Doordash history (by day)
 
 # KPIS
 
@@ -79,8 +82,8 @@ Radio button lets user alternate between averages vs totals
 
 - Average number of purchases per day (x)(x) / Average spend per day (x)(x)
 - Average number of purchases per week (x)(x) / Average spend per week (x)(x)
-- Average number of purchases per month / Average spend per month (x)(x)
-- Average number of purchases per year / Average spend per year (x)(x)
+- Average number of purchases per month (x)(x) / Average spend per month (x)(x)
+- Average number of purchases per year (x)(x) / Average spend per year (x)(x)
 
 - Total spent (x)(x)
 - Total number of purchases (x)(x)
@@ -92,7 +95,7 @@ Radio button lets user alternate between averages vs totals
 
 Ranges display on a conveyor that stops moving when you hover over it.
 
-- Top 5 Longest streak without purchases (x)
+- Top 5 Longest streak without purchases
 - Top 5 Longest purchase streaks
 
 # Lists

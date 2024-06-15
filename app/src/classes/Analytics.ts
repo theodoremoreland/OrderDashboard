@@ -392,4 +392,20 @@ export default class Analytics {
 
         return Math.ceil(sum / validYears.length);
     }
+
+    public static getAverageNumberOfPurchasesPerYear(startYear: number, endYear: number): number {
+        const data: {[key: number]: Order[]} = Analytics.groupByYear();
+        const validYears: string[] = Object.keys(data).filter(year => {
+            return startYear <= Number(year) && endYear >= Number(year);
+        });
+        let totalNumberOfPurchases: number = 0;
+
+        for (const year of validYears) {
+            const orders: Order[] = data[Number(year)];
+
+            totalNumberOfPurchases += orders.length;
+        }
+
+        return totalNumberOfPurchases / validYears.length;
+    }
 }

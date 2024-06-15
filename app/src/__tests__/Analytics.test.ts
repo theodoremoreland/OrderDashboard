@@ -136,6 +136,15 @@ describe("Analytics", () => {
     expect(averageSpendPerYear).toEqual(Math.ceil(61.16 * 365.4));
   });
 
+  test.only("should return average number of purchases made per year", () => {
+    const startYear: number = 2020;
+    const endYear: number = 2024;
+    const averagePurchasesPerYear: number = Analytics.getAverageNumberOfPurchasesPerYear(startYear, endYear);
+
+    // Should be equal to the average number of days.
+    expect(averagePurchasesPerYear).toEqual(365.4);
+  });
+
   test("should get top 5 droughts between purchases", () => {
     const actualTop5droughts: { startDate: string, endDate: string, days: number }[]
       = Analytics.getTop5DroughtsBetweenPurchases();
