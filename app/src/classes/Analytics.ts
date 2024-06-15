@@ -11,7 +11,8 @@ export default class Analytics {
                 cost: parseFloat(order.cost.toFixed(2))
             };
         })
-        .filter(order => !order.wasCancelled);
+        .filter(order => !order.wasCancelled)
+        .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
     }
 
     // ---------- !!!! Groups Bys !!!! ----------
@@ -250,23 +251,8 @@ export default class Analytics {
             .slice(0, limit);
     }
 
-    public static getTop5DroughtsBetweenPurchases() {
-        const times: number[] = Analytics.getTimeOfOrdersSorted();
-        const result: { startDate: string, endDate: string, days: number }[] = [];
-
-        for (let i = 0; i < times.length - 1; i++) {
-            const startDate: Date = new Date(times[i]);
-            const endDate: Date = new Date(times[i + 1]);
-            const days: number = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
-
-            result.push({ startDate: startDate.toDateString(), endDate: endDate.toDateString(), days });
-        }
-
-        return result.sort((a, b) => b.days - a.days).slice(0, 5);
-    }
-
     // ---------- !!!! Averages !!!! ----------
-    // TODO: Implement the following methods
+
     public static getAverageSpendPerDay(startDate: Date, endDate: Date): number {
         const objectCalendar = generateObjectCalendar(startDate, endDate);
         const data: {[key: string]: Order[]} = Analytics.groupByDate();
@@ -407,5 +393,45 @@ export default class Analytics {
         }
 
         return totalNumberOfPurchases / validYears.length;
+    }
+
+    public static getDataMappedToCalendar(): { date: string, totalSpend: number, totalOrders: number, totalItems: number }[] {
+        const startDate: Date = new Date(Analytics.data[0].date);
+        const endDate: Date = new Date(Analytics.data[Analytics.data.length - 1].date);
+        const objectCalendar = generateObjectCalendar(startDate, endDate);
+        const ordersByDate: {[key: string]: Order[]} = Analytics.groupByDate();
+        const data: {date: string, totalSpend: number, totalOrders: number, totalItems: number }[] = [];
+        
+        for (const filler of objectCalendar) {
+            const date: string = filler.date;
+            const _data = { date, totalSpend: 0, totalOrders: 0, totalItems: 0 };
+            
+            for (const order of ordersByDate[date]) {
+                _data.totalSpend += order.cost;
+                _data.totalOrders++;
+                _data.totalItems += order.itemCount;
+            }
+
+            data.push(_data);
+        }
+
+        return data;
+    }
+
+    // ---------- !!!! Streaks !!!! ----------
+
+    public static getTop5DroughtsBetweenPurchases() {
+        const times: number[] = Analytics.getTimeOfOrdersSorted();
+        const result: { startDate: string, endDate: string, days: number }[] = [];
+
+        for (let i = 0; i < times.length - 1; i++) {
+            const startDate: Date = new Date(times[i]);
+            const endDate: Date = new Date(times[i + 1]);
+            const days: number = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+
+            result.push({ startDate: startDate.toDateString(), endDate: endDate.toDateString(), days });
+        }
+
+        return result.sort((a, b) => b.days - a.days).slice(0, 5);
     }
 }

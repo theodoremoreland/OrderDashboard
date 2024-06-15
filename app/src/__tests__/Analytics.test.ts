@@ -145,6 +145,22 @@ describe("Analytics", () => {
     expect(averagePurchasesPerYear).toEqual(365.4);
   });
 
+  test.only("should return totals per day mapped to calendar", () => {
+    const data: { 
+      date: string;
+      totalSpend: number;
+      totalOrders: number;
+      totalItems: number}[] = Analytics.getDataMappedToCalendar();
+    const totalSpend: number = data.reduce((acc, curr) => acc + curr.totalSpend, 0);
+    const totalItems: number = data.reduce((acc, curr) => acc + curr.totalItems, 0);
+    const totalOrders: number = data.reduce((acc, curr) => acc + curr.totalOrders, 0);
+
+    expect(Math.ceil(totalSpend)).toEqual(Math.ceil(61.16 * 1827));
+    expect(totalItems).toEqual(1827 * 5);
+    expect(totalOrders).toEqual(1827);
+    expect(data.length).toEqual(1827);
+  });
+
   test("should get top 5 droughts between purchases", () => {
     const actualTop5droughts: { startDate: string, endDate: string, days: number }[]
       = Analytics.getTop5DroughtsBetweenPurchases();

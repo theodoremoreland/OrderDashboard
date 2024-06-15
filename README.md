@@ -73,8 +73,8 @@ Checkboxes for showing two pies at a time.
 
 Dropdown for switching between line charts
 
-- Total spent across all of Doordash history (by day)
-- Total purchases across all of Doordash history (by day)
+- Total spent across all of Doordash history (by day) (x)
+- Total purchases across all of Doordash history (by day) (x)
 
 # KPIS
 
