@@ -175,13 +175,11 @@ describe("Analytics", () => {
   });
 
   test.only("should get top 5 purchase streaks", () => {
-    const actualTop5PurchaseStreaks: string[][]
+    const actualTop5PurchaseStreaks: { startDate: string, endDate: string, days: number }[]
       = Analytics.getTop5PurchaseStreaks();
-
-      console.log(actualTop5PurchaseStreaks);
     
     expect(actualTop5PurchaseStreaks).toEqual([
-      ["Wed Jan 01 2020", "Thu Jan 02 2020", "Fri Jan 03 2020", "Sat Jan 04 2020", "Sun Jan 05 2020"],
+      { startDate: "Wed Jan 01 2020", endDate: "Mon Dec 30 2024", days: 1827 },
     ]);
   });
 });

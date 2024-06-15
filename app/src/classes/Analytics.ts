@@ -459,8 +459,8 @@ export default class Analytics {
         return consecutiveOrderDates
             .sort((a, b) => b.length - a.length)
             .slice(0, 5)
-            // .map(dates => {
-            //     return { startDate: dates[0], endDate: dates[dates.length - 1], days: dates.length };
-            // });
+            .map(dates => {
+                return { startDate: dates[0], endDate: dates[dates.length - 1], days: dates.length };
+        });
     }
 }
