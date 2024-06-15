@@ -164,12 +164,24 @@ describe("Analytics", () => {
   test.only("should get top 5 droughts between purchases", () => {
     const actualTop5droughts: { startDate: string, endDate: string, days: number }[]
       = Analytics.getTop5DroughtsBetweenPurchases();
+
     expect(actualTop5droughts).toEqual([
       { startDate: "Wed Jan 01 2020", endDate: "Thu Jan 02 2020", days: 1 },
       { startDate: "Thu Jan 02 2020", endDate: "Fri Jan 03 2020", days: 1 },
       { startDate: "Fri Jan 03 2020", endDate: "Sat Jan 04 2020", days: 1 },
       { startDate: "Sat Jan 04 2020", endDate: "Sun Jan 05 2020", days: 1 },
       { startDate: "Sun Jan 05 2020", endDate: "Mon Jan 06 2020", days: 1 },
+    ]);
+  });
+
+  test.only("should get top 5 purchase streaks", () => {
+    const actualTop5PurchaseStreaks: string[][]
+      = Analytics.getTop5PurchaseStreaks();
+
+      console.log(actualTop5PurchaseStreaks);
+    
+    expect(actualTop5PurchaseStreaks).toEqual([
+      ["Wed Jan 01 2020", "Thu Jan 02 2020", "Fri Jan 03 2020", "Sat Jan 04 2020", "Sun Jan 05 2020"],
     ]);
   });
 });

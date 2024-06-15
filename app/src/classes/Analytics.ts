@@ -437,29 +437,30 @@ export default class Analytics {
 
     public static getTop5PurchaseStreaks() {
         const times: number[] = Analytics.getTimeOfOrdersSorted();
-        const result: { startDate: string, endDate: string, days: number }[] = [];
-        let streak: { startDate: string, endDate: string, days: number } = { startDate: "", endDate: "", days: 0 };
+        const consecutiveOrderDates: string[][] = [];
 
         for (let i = 0; i < times.length - 1; i++) {
-            const startDate: Date = new Date(times[i]);
-            const endDate: Date = new Date(times[i + 1]);
-            const days: number = Math.floor((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+            if (i === 0) {
+                consecutiveOrderDates.push([new Date(times[i]).toDateString()]);
+                continue;
+            }
 
-            if (days === 1) {
-                if (streak.startDate === "") {
-                    streak.startDate = startDate.toDateString();
-                }
+            const previousOrderDate: Date = new Date(times[i - 1]);
+            const currentOrderDate: Date = new Date(times[i]);
+            const dayDifference: number = Math.floor((previousOrderDate.getTime() - currentOrderDate.getTime()) / (1000 * 60 * 60 * 24));
 
-                streak.endDate = endDate.toDateString();
-                streak.days += days;
+            if (dayDifference > 1) {
+                consecutiveOrderDates.push([currentOrderDate.toDateString()]);
             } else {
-                if (streak.startDate !== "") {
-                    result.push(streak);
-                    streak = { startDate: "", endDate: "", days: 0 };
-                }
+                consecutiveOrderDates[consecutiveOrderDates.length - 1].push(currentOrderDate.toDateString());
             }
         }
 
-        return result.sort((a, b) => b.days - a.days).slice(0, 5);
+        return consecutiveOrderDates
+            .sort((a, b) => b.length - a.length)
+            .slice(0, 5)
+            // .map(dates => {
+            //     return { startDate: dates[0], endDate: dates[dates.length - 1], days: dates.length };
+            // });
     }
 }
