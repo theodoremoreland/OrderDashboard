@@ -354,6 +354,27 @@ export default class Analytics {
         return Math.ceil(sum / validMonths.length);
     }
 
+    public static getAverageNumberOfPurchasesPerMonth(year?: number): number {
+        const data: {[key: string]: Order[]} = Analytics.groupByMonth();
+        const validMonths: string[] = Object.keys(data)
+            .filter(monthYear => {
+                if (!year) {
+                    return true;
+                }
+
+                return monthYear.includes(year.toString());
+            });
+        let totalNumberOfPurchases: number = 0;
+
+        for (const monthYear of validMonths) {
+            const orders: Order[] = data[monthYear];
+
+            totalNumberOfPurchases += orders.length;
+        }
+
+        return totalNumberOfPurchases / validMonths.length;
+    }
+
     public static getAverageSpendPerYear(startYear: number, endYear: number): number {
         const data: {[key: number]: Order[]} = Analytics.groupByYear();
         const validYears: string[] = Object.keys(data).filter(year => {

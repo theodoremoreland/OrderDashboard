@@ -120,6 +120,13 @@ describe("Analytics", () => {
     expect(averageSpendPerMonth).toEqual(Math.ceil(61.16 * 30.5));
   });
 
+  test.only("should return average number of purchases made per month", () => {
+    const averagePurchasesPerMonth: number = Analytics.getAverageNumberOfPurchasesPerMonth();
+
+    // Should be equal to the average number of days.
+    expect(averagePurchasesPerMonth).toEqual(30.45);
+  });
+
   test.only("should return average spend per year", () => {
     const startYear: number = 2020;
     const endYear: number = 2024;
