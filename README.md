@@ -93,9 +93,9 @@ Radio button lets user alternate between averages vs totals
 - Total number of days a purchase was made (x)(x)
 - (optional / bonus) Total number of items purchased (x)(x)
 
-# Range
+# Conveyor
 
-Ranges display on a conveyor that stops moving when you hover over it.
+Displays on a conveyor that stops moving when you hover over it.
 
 - Top 5 Longest streak without purchases (x)(x)
 - Top 5 Longest purchase streaks (x)(x)

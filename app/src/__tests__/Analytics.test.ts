@@ -33,6 +33,7 @@ describe("Analytics", () => {
     expect(analytics.getTotalSpendByDayOfWeek()["Fri"]).toEqual(Math.ceil(261 * 61.16));
   });
 
+  // TODO: Fix this test.
   test.only("should get accurate total spent by month", () => {
     // 31 days in Jan with $61.16 spent each day for 5 years = 9479.8.
     expect(analytics.getTotalSpendByMonth(MonthFormat.January)).toEqual(Math.ceil(9479.8));

@@ -1,4 +1,4 @@
-import { MonthFormat, Order } from "../types/types";
+import { Order } from "../types/types";
 import generateObjectCalendar from "../modules/generateObjectCalendar";
 
 export default class Analytics {
@@ -158,27 +158,30 @@ export default class Analytics {
         return result;
     }
 
-    public getTotalSpendByMonth(month: MonthFormat, year?: number): number {
+    // TODO: this needs new unit tests
+    public getTotalSpendByMonth(year?: number): { [key: string]: number } {
         const data = this.groupByMonth();
         const validMonths: string[] = Object.keys(data)
             .filter(monthYear => {
                 if (year) {
-                    return monthYear === `${month} ${year}`;
+                    return monthYear.includes(year.toString());
                 }
 
-                return monthYear.includes(month);
+                return true;
             });
-        let sum: number = 0;
+        const result: { [key: string]: number } = {};
 
         for (const monthYear of validMonths) {
             const orders: Order[] = data[monthYear];
+            const month: string = monthYear.split(" ")[0];
+            result[month] = 0;
 
             for (const order of orders) {
-                sum += order.cost;
+                result[month] += order.cost;
             }
         }
 
-        return Math.ceil(sum); 
+        return result; 
     }
 
     public getTotalSpendByYear(): { [key: string]: number } {
