@@ -30,12 +30,14 @@ const App = (): ReactElement => {
       {
         analytics && startDate && endDate && (
           <div className="analytics-container">
-            <h2>Total Spent: {analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</h2>
-            <h2>Total Orders: {analytics.getTotalPurchases()}</h2>
-            <h2>Total Items Purchased: {analytics.getTotalItemsPurchased()}</h2>
-            <h2>Number of Stores Purchased From: {analytics.getNumberOfStoresPurchasedFrom()}</h2>
-            <h2>Total Number of Days a Purchase was Made: {analytics.getTotalNumberOfDaysAPurchaseWasMade()}</h2>
-            <section id="kpis">
+            <section className="kpis">
+              <Kpi id="total-spent" title="Total Spent" value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })} />
+              <Kpi id="total-orders" title="Total Orders" value={analytics.getTotalPurchases()} />
+              <Kpi id="total-items-purchased" title="Total Items Purchased" value={analytics.getTotalItemsPurchased()} />
+              <Kpi id="number-of-stores" title="Number of Stores Purchased From" value={analytics.getNumberOfStoresPurchasedFrom()} />
+              <Kpi id="total-days-a-purchase-was-made" title="Total Number of Days a Purchase was Made" value={analytics.getTotalNumberOfDaysAPurchaseWasMade()} />
+            </section>
+            <section className="kpis">
               <Kpi id="per-day-averages" title="Average Spend / Purchases Per Day" value={`${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`} />
               <Kpi id="per-week-averages" title="Average Spend / Purchases Per Week" value={`${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`} />
               <Kpi id="per-month-averages" title="Average Spend / Purchases Per Month" value={`${analytics.getAverageSpendPerMonth().toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth()}`} />

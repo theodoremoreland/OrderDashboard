@@ -5,7 +5,7 @@ import './Kpi.css';
 interface Props {
     id: string
     title: string
-    value: string
+    value: string | number
 }
 
 const Kpi = ({ id, title, value }: Props): ReactElement => {
