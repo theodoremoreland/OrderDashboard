@@ -158,27 +158,27 @@ export default class Analytics {
         return result;
     }
 
-    // TODO: this needs new unit tests
     public getTotalSpendByMonth(year?: number): { [key: string]: number } {
         const data = this.groupByMonth();
-        const validMonths: string[] = Object.keys(data)
-            .filter(monthYear => {
-                if (year) {
-                    return monthYear.includes(year.toString());
-                }
-
-                return true;
-            });
+        const validMonths: string[] = year
+            ? Object.keys(data)
+                .filter(monthYear => monthYear.includes(year.toString()))
+            : Object.keys(data);
         const result: { [key: string]: number } = {};
 
         for (const monthYear of validMonths) {
             const orders: Order[] = data[monthYear];
             const month: string = monthYear.split(" ")[0];
-            result[month] = 0;
+
+            if (!result[month]) {
+                result[month] = 0;
+            }
 
             for (const order of orders) {
                 result[month] += order.cost;
             }
+
+            result[month] = Math.ceil(result[month]);
         }
 
         return result; 

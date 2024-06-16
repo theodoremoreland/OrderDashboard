@@ -4,7 +4,6 @@ import { expect, test, describe } from 'vitest';
 // Custom
 import Analytics from "../classes/Analytics";
 import mockOrders from '../mocks/mockOrders';
-import { MonthFormat } from '../types/types';
 
 describe("Analytics", () => {
   const analytics: Analytics = new Analytics(mockOrders);
@@ -36,7 +35,37 @@ describe("Analytics", () => {
   // TODO: Fix this test.
   test.only("should get accurate total spent by month", () => {
     // 31 days in Jan with $61.16 spent each day for 5 years = 9479.8.
-    expect(analytics.getTotalSpendByMonth(MonthFormat.January)).toEqual(Math.ceil(9479.8));
+    const actualTotalSpend2024Months = analytics.getTotalSpendByMonth(2024);
+    const actualTotalSpendAllMonths = analytics.getTotalSpendByMonth();
+    
+    expect(actualTotalSpendAllMonths).toEqual({
+      Jan: Math.ceil(61.16 * 31 * 5),
+      Feb: Math.ceil(61.16 * 142), // Testing failing on this. Off by 2.
+      Mar: Math.ceil(61.16 * 31) * 5,
+      Apr: Math.ceil(61.16 * 30) * 5,
+      May: Math.ceil(61.16 * 31) * 5,
+      Jun: Math.ceil(61.16 * 30) * 5,
+      Jul: Math.ceil(61.16 * 31) * 5,
+      Aug: Math.ceil(61.16 * 31) * 5,
+      Sep: Math.ceil(61.16 * 30) * 5,
+      Oct: Math.ceil(61.16 * 31) * 5,
+      Nov: Math.ceil(61.16 * 30) * 5,
+      Dec: Math.ceil(61.16 * 31) * 5,
+    });
+    expect(actualTotalSpend2024Months).toEqual({
+      Jan: Math.ceil(61.16 * 31),
+      Feb: Math.ceil(61.16 * 29),
+      Mar: Math.ceil(61.16 * 31),
+      Apr: Math.ceil(61.16 * 30),
+      May: Math.ceil(61.16 * 31),
+      Jun: Math.ceil(61.16 * 30),
+      Jul: Math.ceil(61.16 * 31),
+      Aug: Math.ceil(61.16 * 31),
+      Sep: Math.ceil(61.16 * 30),
+      Oct: Math.ceil(61.16 * 31),
+      Nov: Math.ceil(61.16 * 30),
+      Dec: Math.ceil(61.16 * 31),
+    });
   });
 
   test.only("should get accurate totals for each year", () => {
