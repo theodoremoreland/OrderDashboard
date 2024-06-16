@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 // Custom contexts
-import DataProvider from './contexts/DataContext.tsx';
+import DataProvider from './contexts/DataContextProvider.tsx';
 
 // Components
 import App from './App.tsx';

@@ -5,16 +5,17 @@ import { ReactElement, useContext, useEffect } from 'react';
 import mockOrders from './__tests__/mocks/mockOrders';
 
 // Contexts
-import { DataContext } from './contexts/DataContext';
+import { DataContext } from './contexts/DataContextProvider';
 
 // Components
+import Kpi from './components/Kpi';
 import List from './components/List';
 
 // Styles
 import './App.css';
 
 const App = (): ReactElement => {
-  const { analytics, setRawData } = useContext(DataContext);
+  const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
 
   useEffect(() => {
     setRawData(mockOrders);
@@ -24,13 +25,19 @@ const App = (): ReactElement => {
     <>
       <h1 id="pp-title" className='title'>Doordash Dashboard</h1>
       {
-        analytics ? (
+        analytics && startDate && endDate && (
           <div className="analytics-container">
-            <h2>Total Purchases: {analytics.getTotalPurchases()}</h2>
-            <h2>Total Spent: ${analytics.getTotalSpent()}</h2>
+            <h2>Total Spent: {analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</h2>
+            <h2>Total Orders: {analytics.getTotalPurchases()}</h2>
             <h2>Total Items Purchased: {analytics.getTotalItemsPurchased()}</h2>
             <h2>Number of Stores Purchased From: {analytics.getNumberOfStoresPurchasedFrom()}</h2>
             <h2>Total Number of Days a Purchase was Made: {analytics.getTotalNumberOfDaysAPurchaseWasMade()}</h2>
+            <section id="kpis">
+              <Kpi id="per-day-averages" title="Average Spend / Purchases Per Day" value={`${analytics.getAverageSpendPerDay(startDate, endDate)} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`} />
+              <Kpi id="per-week-averages" title="Average Spend / Purchases Per Week" value={`${analytics.getAverageSpendPerWeek(startDate, endDate)} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`} />
+              <Kpi id="per-month-averages" title="Average Spend / Purchases Per Month" value={`${analytics.getAverageSpendPerMonth()} / ${analytics.getAverageNumberOfPurchasesPerMonth()}`} />
+              <Kpi id="per-year-averages" title="Average Spend / Purchases Per Year" value={`${analytics.getAverageSpendPerYear(startDate.getFullYear(), endDate.getFullYear())} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate.getFullYear(), endDate.getFullYear())}`} />
+            </section>
             <List
               id="list"
               title="Top Stores by Total Spend"
@@ -56,10 +63,7 @@ const App = (): ReactElement => {
               }
             />
           </div>
-        ) : (
-          <h2>Loading...</h2>
-        )
-      }
+        )}
     </>
   )
 }

@@ -12,7 +12,6 @@ const Kpi = ({ id, title, value }: Props): ReactElement => {
     return (
         <div 
             id={id}
-            data-testid={id}
             className="kpi"
         >
             <span className="title">{title}</span>
