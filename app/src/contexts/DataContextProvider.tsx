@@ -32,7 +32,9 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
     const [analytics, setAnalytics] = useState<Analytics | undefined>(undefined);
 
     useEffect(() => {
-        if (rawData.length) {
+        if (rawData.length > 1) {
+            rawData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+            
             setStartDate(new Date(rawData[0].date));
             setEndDate(new Date(rawData[rawData.length - 1].date));
             setAnalytics(new Analytics(rawData));

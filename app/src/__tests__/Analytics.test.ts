@@ -3,7 +3,7 @@ import { expect, test, describe } from 'vitest';
 
 // Custom
 import Analytics from "../classes/Analytics";
-import mockOrders from './mocks/mockOrders';
+import mockOrders from '../mocks/mockOrders';
 import { MonthFormat } from '../types/types';
 
 describe("Analytics", () => {

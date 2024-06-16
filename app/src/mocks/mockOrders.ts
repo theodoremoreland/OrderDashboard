@@ -1,4 +1,4 @@
-import { Order, WeekDayFormat, MonthFormat, DateFormat } from "../../types/types";
+import { Order, WeekDayFormat, MonthFormat, DateFormat } from "../types/types";
 
 const storeNames: string[] = [
     "Aldi",

@@ -1,11 +1,13 @@
 // React
 import { ReactElement, useContext, useEffect } from 'react';
 
-// Mock data
-import mockOrders from './__tests__/mocks/mockOrders';
+// Data
+// import orders from '../../.secret/orders.json';
+import mockOrders from './mocks/mockOrders';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
+// import { Order } from './types/types';
 
 // Components
 import Kpi from './components/Kpi';
@@ -18,7 +20,8 @@ const App = (): ReactElement => {
   const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
 
   useEffect(() => {
-    setRawData(mockOrders);
+      // setRawData(orders as Order[]);
+      setRawData(mockOrders);
   }, [setRawData]);
 
   return (
@@ -33,10 +36,10 @@ const App = (): ReactElement => {
             <h2>Number of Stores Purchased From: {analytics.getNumberOfStoresPurchasedFrom()}</h2>
             <h2>Total Number of Days a Purchase was Made: {analytics.getTotalNumberOfDaysAPurchaseWasMade()}</h2>
             <section id="kpis">
-              <Kpi id="per-day-averages" title="Average Spend / Purchases Per Day" value={`${analytics.getAverageSpendPerDay(startDate, endDate)} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`} />
-              <Kpi id="per-week-averages" title="Average Spend / Purchases Per Week" value={`${analytics.getAverageSpendPerWeek(startDate, endDate)} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`} />
-              <Kpi id="per-month-averages" title="Average Spend / Purchases Per Month" value={`${analytics.getAverageSpendPerMonth()} / ${analytics.getAverageNumberOfPurchasesPerMonth()}`} />
-              <Kpi id="per-year-averages" title="Average Spend / Purchases Per Year" value={`${analytics.getAverageSpendPerYear(startDate.getFullYear(), endDate.getFullYear())} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate.getFullYear(), endDate.getFullYear())}`} />
+              <Kpi id="per-day-averages" title="Average Spend / Purchases Per Day" value={`${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`} />
+              <Kpi id="per-week-averages" title="Average Spend / Purchases Per Week" value={`${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`} />
+              <Kpi id="per-month-averages" title="Average Spend / Purchases Per Month" value={`${analytics.getAverageSpendPerMonth().toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth()}`} />
+              <Kpi id="per-year-averages" title="Average Spend / Purchases Per Year" value={`${analytics.getAverageSpendPerYear(startDate.getFullYear(), endDate.getFullYear()).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate.getFullYear(), endDate.getFullYear())}`} />
             </section>
             <List
               id="list"
