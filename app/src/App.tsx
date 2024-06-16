@@ -7,6 +7,9 @@ import mockOrders from './__tests__/mocks/mockOrders';
 // Contexts
 import { DataContext } from './contexts/DataContext';
 
+// Components
+import List from './components/List';
+
 // Styles
 import './App.css';
 
@@ -27,11 +30,31 @@ const App = (): ReactElement => {
             <h2>Total Spent: ${analytics.getTotalSpent()}</h2>
             <h2>Total Items Purchased: {analytics.getTotalItemsPurchased()}</h2>
             <h2>Number of Stores Purchased From: {analytics.getNumberOfStoresPurchasedFrom()}</h2>
-            <h2>Total Spent by Day of Week: {JSON.stringify(analytics.getTotalSpendByDayOfWeek())}</h2>
-            <h2>Total Spent by Year: {JSON.stringify(analytics.getTotalSpendByYear())}</h2>
             <h2>Total Number of Days a Purchase was Made: {analytics.getTotalNumberOfDaysAPurchaseWasMade()}</h2>
-            <h2>Top Stores by Total Orders: {JSON.stringify(analytics.getTopStoresByTotalOrders())}</h2>
-            <h2>Top Stores by Total Items Purchased: {JSON.stringify(analytics.getTopStoresByTotalItemsPurchased())}</h2>
+            <List
+              id="list"
+              title="Top Stores by Total Spend"
+              data={analytics
+                .getTopStoresByTotalSpend()
+                .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
+              }
+            />
+            <List
+              id="list"
+              title="Top Stores by Total Orders"
+              data={analytics
+                .getTopStoresByTotalOrders()
+                .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
+              }
+            />
+            <List
+              id="list"
+              title="Top Stores by Total Items Purchased"
+              data={analytics
+                .getTopStoresByTotalItemsPurchased()
+                .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
+              }
+            />
           </div>
         ) : (
           <h2>Loading...</h2>

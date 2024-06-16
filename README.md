@@ -78,6 +78,8 @@ Radio button lets user alternate between averages vs totals
 
 ### Averages
 
+(Each row being a shared KPI)
+
 - Average number of purchases per day (x)(x) / Average spend per day (x)(x)
 - Average number of purchases per week (x)(x) / Average spend per week (x)(x)
 - Average number of purchases per month (x)(x) / Average spend per month (x)(x)
