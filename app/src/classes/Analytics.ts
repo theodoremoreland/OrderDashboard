@@ -95,7 +95,7 @@ export default class Analytics {
 
     // ---------- !!!! Sorts !!!! ----------
 
-    private getTimeOfOrdersSorted() {
+    private getTimeOfOrdersSorted(): number[] {
         return this.data.map(order => new Date(order.date).getTime()).sort((a, b) => a - b);
     }
                         
@@ -141,7 +141,7 @@ export default class Analytics {
         return Object.keys(this.groupByStore()).length;
     }
 
-    public getTotalSpendByDayOfWeek() {
+    public getTotalSpendByDayOfWeek(): { [key: string]: number } {
         const data = this.groupByDayOfWeek();
         const result: { [key: string]: number } = {};
 
@@ -158,7 +158,7 @@ export default class Analytics {
         return result;
     }
 
-    public getTotalSpendByMonth(month: MonthFormat, year?: number) {
+    public getTotalSpendByMonth(month: MonthFormat, year?: number): number {
         const data = this.groupByMonth();
         const validMonths: string[] = Object.keys(data)
             .filter(monthYear => {
@@ -181,7 +181,7 @@ export default class Analytics {
         return Math.ceil(sum); 
     }
 
-    public getTotalSpendByYear() {
+    public getTotalSpendByYear(): { [key: string]: number } {
         const data: { [key: string]: Order[] } = this.groupByYear();
         const result: { [key: string]: number } = {};
 
@@ -198,7 +198,7 @@ export default class Analytics {
         return result;
     }
 
-    public getTopStoresByTotalSpend(limit: number = 5) {
+    public getTopStoresByTotalSpend(limit: number = 5): { storeName: string, totalSpend: number }[] {
         const data = this.groupByStore();
         const result: { storeName: string, totalSpend: number }[] = [];
 
@@ -219,7 +219,7 @@ export default class Analytics {
             .slice(0, limit);
     }
 
-    public getTopStoresByTotalOrders(limit: number = 5) {
+    public getTopStoresByTotalOrders(limit: number = 5): { storeName: string, totalOrders: number }[] {
         const data = this.groupByStore();
         const result: { storeName: string, totalOrders: number }[] = [];
 
@@ -232,7 +232,7 @@ export default class Analytics {
             .slice(0, limit);
     }
 
-    public getTopStoresByTotalItemsPurchased(limit: number = 5) {
+    public getTopStoresByTotalItemsPurchased(limit: number = 5): { storeName: string, totalItemsPurchased: number }[] {
         const data = this.groupByStore();
         const result: { storeName: string, totalItemsPurchased: number }[] = [];
 
@@ -420,7 +420,7 @@ export default class Analytics {
 
     // ---------- !!!! Streaks !!!! ----------
 
-    public getTop5DroughtsBetweenPurchases() {
+    public getTop5DroughtsBetweenPurchases(): { startDate: string, endDate: string, days: number }[] {
         const times: number[] = this.getTimeOfOrdersSorted();
         const result: { startDate: string, endDate: string, days: number }[] = [];
 
@@ -435,7 +435,7 @@ export default class Analytics {
         return result.sort((a, b) => b.days - a.days).slice(0, 5);
     }
 
-    public getTop5PurchaseStreaks() {
+    public getTop5PurchaseStreaks(): { startDate: string, endDate: string, days: number }[] {
         const times: number[] = this.getTimeOfOrdersSorted();
         const consecutiveOrderDates: string[][] = [];
 
