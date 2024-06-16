@@ -181,10 +181,18 @@ describe("Analytics", () => {
       totalSpend: number;
       totalOrders: number;
       totalItems: number}[] = analytics.getDataMappedToCalendar();
+    const dates: string[] = data.map(obj => obj.date);
     const totalSpend: number = data.reduce((acc, curr) => acc + curr.totalSpend, 0);
     const totalItems: number = data.reduce((acc, curr) => acc + curr.totalItems, 0);
     const totalOrders: number = data.reduce((acc, curr) => acc + curr.totalOrders, 0);
 
+    expect(dates.slice(0, 5)).toEqual([
+      "Jan 1 2020",
+      "Jan 2 2020",
+      "Jan 3 2020",
+      "Jan 4 2020",
+      "Jan 5 2020",
+    ]);
     expect(Math.ceil(totalSpend)).toEqual(Math.ceil(61.16 * 1827));
     expect(totalItems).toEqual(1827 * 5);
     expect(totalOrders).toEqual(1827);

@@ -409,6 +409,11 @@ export default class Analytics {
             const date: string = filler.date;
             const _data = { date, totalSpend: 0, totalOrders: 0, totalItems: 0 };
             
+            if (!ordersByDate[date]) {
+                data.push(_data);
+                continue;
+            }
+            
             for (const order of ordersByDate[date]) {
                 _data.totalSpend += order.cost;
                 _data.totalOrders++;
