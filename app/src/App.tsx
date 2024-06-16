@@ -10,6 +10,7 @@ import { DataContext } from './contexts/DataContextProvider';
 // import { Order } from './types/types';
 
 // Components
+import Pie from './components/PieChart';
 import Kpi from './components/Kpi';
 import List from './components/List';
 
@@ -83,6 +84,15 @@ const App = (): ReactElement => {
                 .map(obj => ({ key: obj.days, value: `${obj.startDate} - ${obj.endDate}` }))
               }
             />
+            <Pie data={Object.entries(analytics.getTotalSpendByYear()).map(([key, value]) => {
+              return { label: key, value: value }
+            })} />
+            <Pie data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
+              return { label: key, value: value }
+            })} />
+            <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
+              return { label: key, value: value }
+            })} />
           </div>
         )}
     </>
