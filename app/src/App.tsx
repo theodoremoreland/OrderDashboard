@@ -67,6 +67,22 @@ const App = (): ReactElement => {
                 .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
               }
             />
+            <List
+              id="list"
+              title="Top 5 longest consecutive days of purchases"
+              data={analytics
+                .getTop5PurchaseStreaks()
+                .map(obj => ({ key: obj.days, value: `${obj.startDate} - ${obj.endDate}` }))
+              }
+            />
+            <List
+              id="list"
+              title="Top 5 longest gaps between purchases"
+              data={analytics
+                .getTop5DroughtsBetweenPurchases()
+                .map(obj => ({ key: obj.days, value: `${obj.startDate} - ${obj.endDate}` }))
+              }
+            />
           </div>
         )}
     </>
