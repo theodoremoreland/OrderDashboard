@@ -413,7 +413,7 @@ export default class Analytics {
                 data.push(_data);
                 continue;
             }
-            
+
             for (const order of ordersByDate[date]) {
                 _data.totalSpend += order.cost;
                 _data.totalOrders++;
@@ -455,9 +455,9 @@ export default class Analytics {
 
             const previousOrderDate: Date = new Date(times[i - 1]);
             const currentOrderDate: Date = new Date(times[i]);
-            const dayDifference: number = Math.floor((previousOrderDate.getTime() - currentOrderDate.getTime()) / (1000 * 60 * 60 * 24));
-
-            if (dayDifference > 1) {
+            const dayDifference: number = Math.floor((currentOrderDate.getTime() - previousOrderDate.getTime()) / (1000 * 60 * 60 * 24));
+            
+            if (dayDifference >= 2) {
                 consecutiveOrderDates.push([currentOrderDate.toDateString()]);
             } else {
                 consecutiveOrderDates[consecutiveOrderDates.length - 1].push(currentOrderDate.toDateString());
