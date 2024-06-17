@@ -11,8 +11,9 @@ import { DataContext } from './contexts/DataContextProvider';
 
 // Components
 import Pie from './components/PieChart';
+import Line from './components/LineChart';
 import Kpi from './components/Kpi';
-import List from './components/List';
+import Table from './components/Table';
 
 // Styles
 import './App.css';
@@ -33,9 +34,9 @@ const App = (): ReactElement => {
           <div className="analytics-container">
             <section className="kpis">
               <Kpi id="total-spent" title="Total Spent" value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })} />
-              <Kpi id="total-orders" title="Total Orders" value={analytics.getTotalPurchases()} />
-              <Kpi id="total-items-purchased" title="Total Items Purchased" value={analytics.getTotalItemsPurchased()} />
-              <Kpi id="number-of-stores" title="Number of Stores Purchased From" value={analytics.getNumberOfStoresPurchasedFrom()} />
+              <Kpi id="total-orders" title="Total Orders" value={analytics.getTotalPurchases().toLocaleString()} />
+              <Kpi id="total-items-purchased" title="Total Items Purchased" value={analytics.getTotalItemsPurchased().toLocaleString()} />
+              <Kpi id="number-of-stores" title="Number of Stores Purchased From" value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()} />
               <Kpi id="total-days-a-purchase-was-made" title="Total Number of Days a Purchase was Made" value={analytics.getTotalNumberOfDaysAPurchaseWasMade()} />
             </section>
             <section className="kpis">
@@ -44,44 +45,44 @@ const App = (): ReactElement => {
               <Kpi id="per-month-averages" title="Average Spend / Purchases Per Month" value={`${analytics.getAverageSpendPerMonth().toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth()}`} />
               <Kpi id="per-year-averages" title="Average Spend / Purchases Per Year" value={`${analytics.getAverageSpendPerYear(startDate.getFullYear(), endDate.getFullYear()).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate.getFullYear(), endDate.getFullYear())}`} />
             </section>
-            <List
-              id="list"
+            <Table
+              id="stores-by-total-spend"
               title="Top Stores by Total Spend"
               data={analytics
                 .getTopStoresByTotalSpend()
-                .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
+                .map(obj => ({ key: obj.storeName, value: obj.totalSpend.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }))
               }
             />
-            <List
-              id="list"
+            <Table
+              id="stores-by-total-orders"
               title="Top Stores by Total Orders"
               data={analytics
                 .getTopStoresByTotalOrders()
                 .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
               }
             />
-            <List
-              id="list"
+            <Table
+              id="stores-by-total-items-purchased"
               title="Top Stores by Total Items Purchased"
               data={analytics
                 .getTopStoresByTotalItemsPurchased()
                 .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
               }
             />
-            <List
-              id="list"
-              title="Top 5 longest consecutive days of purchases"
+            <Table
+              id="days-with-purchases"
+              title="Longest consecutive days of purchases"
               data={analytics
                 .getTop5PurchaseStreaks()
-                .map(obj => ({ key: obj.days, value: `${obj.startDate} - ${obj.endDate}` }))
+                .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
               }
             />
-            <List
-              id="list"
-              title="Top 5 longest gaps between purchases"
+            <Table
+              id="days-without-purchases"
+              title="Longest consecutive days without purchases"
               data={analytics
                 .getTop5DroughtsBetweenPurchases()
-                .map(obj => ({ key: obj.days, value: `${obj.startDate} - ${obj.endDate}` }))
+                .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
               }
             />
             <Pie data={Object.entries(analytics.getTotalSpendByYear()).map(([key, value]) => {
@@ -93,6 +94,14 @@ const App = (): ReactElement => {
             <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
               return { label: key, value: value }
             })} />
+            <Line 
+              xAxis={Object.keys(analytics.getDataMappedToCalendar().map(obj => obj.date))}
+              data={Object.values(analytics.getDataMappedToCalendar().map(obj => obj.totalSpend))}
+            />
+            <Line 
+              xAxis={Object.keys(analytics.getDataMappedToCalendar().map(obj => obj.date))}
+              data={Object.values(analytics.getDataMappedToCalendar().map(obj => obj.totalOrders))}
+            />
           </div>
         )}
     </>

@@ -1,13 +1,34 @@
+// React
 import { ReactElement } from "react";
 
-import { LineChart } from "@mui/x-charts";
+// MUI X
+import { LineChart } from '@mui/x-charts/LineChart';
 
-const Line = (): ReactElement => {
+interface Props {
+    xAxis: string[]
+    data: number[]
+}
+
+const SparkLine = ({ xAxis, data }: Props): ReactElement => {
     return (
         <div>
-            <h1>LineGraph</h1>
+            <LineChart
+            
+                series={[
+                    {
+                        data: data.map(val => val === 0 ? null : val)
+                    }
+                ]}
+                xAxis={[{
+                    
+                    data: xAxis,
+                    // valueFormatter: (value) => value.toISOString().slice(0, 10),
+                }]}
+                width={1280}
+                height={300}
+            />
         </div>
     )
 }
 
-export default Line;
+export default SparkLine;
