@@ -285,7 +285,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return totalNumberOfPurchases / objectCalendar.length;
+        return +(totalNumberOfPurchases / objectCalendar.length).toFixed(2);
     }
 
     public getAverageSpendPerWeek(startDate: Date, endDate: Date): number {
@@ -317,7 +317,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return totalNumberOfPurchases / (objectCalendar.length / 7);
+        return +(totalNumberOfPurchases / (objectCalendar.length / 7)).toFixed(2);
     }
 
     public getAverageSpendPerMonth(year?: number): number {
@@ -361,7 +361,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return totalNumberOfPurchases / validMonths.length;
+        return +(totalNumberOfPurchases / validMonths.length).toFixed(2);
     }
 
     public getAverageSpendPerYear(startYear: number, endYear: number): number {
@@ -395,7 +395,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return totalNumberOfPurchases / validYears.length;
+        return +(totalNumberOfPurchases / validYears.length).toFixed(2);
     }
 
     public getDataMappedToCalendar(): { date: string, totalSpend: number, totalOrders: number, totalItems: number }[] {
