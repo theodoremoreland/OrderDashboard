@@ -442,7 +442,7 @@ export default class Analytics {
     }
 
     public getTop5PurchaseStreaks(): { startDate: string, endDate: string, days: number }[] {
-        const times: number[] = this.getTimeOfOrdersSorted();
+        const times: number[] = [...new Set(this.getTimeOfOrdersSorted())]; // Remove duplicates given some days have multiple orders.
         const consecutiveOrderDates: string[][] = [];
 
         for (let i = 0; i < times.length; i++) {

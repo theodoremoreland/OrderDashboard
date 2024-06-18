@@ -1,5 +1,6 @@
 """
-This script is used to transform the data from the raw data to the data that can be used.
+This script is used to transform the JSON collected from the DoorDash order history
+via webScraper.js into a format that is more suitable for analysis.
 """
 
 # First party imports
@@ -53,6 +54,22 @@ MONTH_TO_NUMBER = {
 
 
 def is_valid_date(day_of_week, month, day_of_month, year):
+    """
+    This function is used to validate the given date.
+    A valid date is a date that actually exists in the calendar
+    given the supplied day of the week, month, day of the month, and year.
+    For example, Jan 1st 2020 was on a Wednesday and is therefore valid.
+    Jan 1st 2020 was not on a Thursday and is therefore invalid.
+
+    Args:
+        day_of_week (str): Day of the week
+        month (int): Month
+        day_of_month (int): Day of the month
+        year (int): Year
+
+    Returns:
+        bool: True if the given date is valid, False otherwise.
+    """
     _is_valid_date = False
     # List of days of the week for reference
     days_of_week = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]

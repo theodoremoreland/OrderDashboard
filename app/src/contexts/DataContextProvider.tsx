@@ -1,3 +1,4 @@
+// React
 import {
     ReactElement,
     useState,
@@ -7,23 +8,23 @@ import {
     useEffect,
 } from "react";
 
+// Custom
 import Analytics from "../classes/Analytics";
-
 import { Order } from "../types/types";
-
-export const DataContext = createContext({
-    rawData: [] as Order[],
-    setRawData: (() => {}) as Dispatch<SetStateAction<Order[]>>,
-    startDate: undefined as Date | undefined,
-    setStartDate: (() => {}) as Dispatch<SetStateAction<Date | undefined>>,
-    endDate: undefined as Date | undefined,
-    setEndDate: (() => {}) as Dispatch<SetStateAction<Date | undefined>>,
-    analytics: undefined as Analytics | undefined,
-});
 
 interface DataProviderProps {
     children: ReactElement;
 }
+
+export const DataContext = createContext({
+    rawData: [] as Order[],
+    startDate: undefined as Date | undefined,
+    endDate: undefined as Date | undefined,
+    setRawData: (() => {}) as Dispatch<SetStateAction<Order[]>>,
+    setStartDate: (() => {}) as Dispatch<SetStateAction<Date | undefined>>,
+    setEndDate: (() => {}) as Dispatch<SetStateAction<Date | undefined>>,
+    analytics: undefined as Analytics | undefined,
+});
 
 const DataProvider = ({ children }: DataProviderProps): ReactElement => {
     const [startDate, setStartDate] = useState<Date | undefined>(undefined);
@@ -43,17 +44,17 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
 
     return (
         <DataContext.Provider
-        value={{
-            rawData,
-            setRawData,
-            startDate,
-            setStartDate,
-            endDate,
-            setEndDate,
-            analytics,
-        }}
+            value={{
+                rawData,
+                setRawData,
+                startDate,
+                setStartDate,
+                endDate,
+                setEndDate,
+                analytics,
+            }}
         >
-        {children}
+            {children}
         </DataContext.Provider>
     );
 };

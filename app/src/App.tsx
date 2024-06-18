@@ -2,8 +2,8 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-// import orders from '../../.secret/orders.json';
-import orders from './mocks/mockOrders';
+import orders from '../../.secret/orders.json';
+//import orders from './mocks/mockOrders';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
