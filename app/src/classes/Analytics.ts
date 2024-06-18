@@ -112,9 +112,7 @@ export default class Analytics {
             total += order.cost;
         }
 
-        total = Math.ceil(total);
-
-        return total;
+        return +(total).toFixed(2);
     }
 
     public getTotalNumberOfDaysAPurchaseWasMade(): number {
@@ -152,7 +150,7 @@ export default class Analytics {
                 result[day] += order.cost;
             }
 
-            result[day] = Math.ceil(result[day]);
+            result[day] = +(result[day].toFixed(2));
         }
 
         return result;
@@ -178,7 +176,7 @@ export default class Analytics {
                 result[month] += order.cost;
             }
 
-            result[month] = Math.ceil(result[month]);
+            result[month] = +(result[month].toFixed(2));
         }
 
         return result; 
@@ -195,7 +193,7 @@ export default class Analytics {
                 result[year] += order.cost;
             }
 
-            result[year] = Math.ceil(result[year]);
+            result[year] = +(result[year].toFixed(2));
         }
 
         return result;
@@ -212,7 +210,7 @@ export default class Analytics {
                 total += order.cost;
             }
 
-            total = Math.ceil(total);
+            total = +(total).toFixed(2);
 
             result.push({ storeName: store, totalSpend: total });
         }
@@ -270,7 +268,7 @@ export default class Analytics {
             }
         }
 
-        return Math.ceil(sum / objectCalendar.length);
+        return +(sum / objectCalendar.length).toFixed(2);
     }
 
     public getAverageNumberOfPurchasesPerDay(startDate: Date, endDate: Date): number {
@@ -302,7 +300,7 @@ export default class Analytics {
             }
         }
 
-        return Math.ceil(sum / (objectCalendar.length / 7));
+        return +(sum / (objectCalendar.length / 7)).toFixed(2);
     }
 
     public getAverageNumberOfPurchasesPerWeek(startDate: Date, endDate: Date): number {
@@ -340,7 +338,7 @@ export default class Analytics {
             }
         }
 
-        return Math.ceil(sum / validMonths.length);
+        return +(sum / validMonths.length).toFixed(2);
     }
 
     public getAverageNumberOfPurchasesPerMonth(year?: number): number {
@@ -379,7 +377,7 @@ export default class Analytics {
             }
         }
 
-        return Math.ceil(sum / validYears.length);
+        return +(sum / validYears.length).toFixed(2);
     }
 
     public getAverageNumberOfPurchasesPerYear(startYear: number, endYear: number): number {

@@ -15,7 +15,7 @@ describe("Analytics", () => {
 
   test.only("should get accurate total spent", () => {
     // $61.16 spent each day. Ceiling to nearest integer due to floating point inconsistencies.
-    expect(analytics.getTotalSpent()).toEqual(Math.ceil(61.16 * 1827));
+    expect(analytics.getTotalSpent()).toEqual(+(61.16 * 1827).toFixed(2));
   });
 
   test.only("should get accurate number of total items purchased", () => {
@@ -29,7 +29,7 @@ describe("Analytics", () => {
 
   test.only("should get accurate total spent by day of week", () => {
     // 52 Fridays in 2020, 53 Fridays in 2021, 52 Fridays in 2022, 52 Fridays in 2023, 52 Fridays in 2024.
-    expect(analytics.getTotalSpendByDayOfWeek()["Fri"]).toEqual(Math.ceil(261 * 61.16));
+    expect(analytics.getTotalSpendByDayOfWeek()["Fri"]).toEqual(+(261 * 61.16).toFixed(2));
   });
 
   // TODO: Fix this test.
@@ -70,7 +70,7 @@ describe("Analytics", () => {
 
   test.only("should get accurate totals for each year", () => {
     // 366 days in 2020 (leap year) = 366 * 61.16 = 22384.56.
-    expect(analytics.getTotalSpendByYear()[2020]).toEqual(Math.ceil(22384.56));
+    expect(analytics.getTotalSpendByYear()[2020]).toEqual(+(22384.56).toFixed(2));
   });
 
   test.only("should get accurate number of days a purchase was made", () => {
@@ -104,11 +104,11 @@ describe("Analytics", () => {
   test.only("should get top stores by total spend", () => {
     // 61.16 * number of orders for store in a month * 12 * 5
     expect(analytics.getTopStoresByTotalSpend()).toEqual([
-      { storeName: "Applebee's", totalSpend: Math.ceil(14678.4) },
-      { storeName: "Aldi", totalSpend: Math.ceil(7339.2) },
-      { storeName: "Tony's Donuts", totalSpend: Math.ceil(7339.2) },
-      { storeName: "Panda Express", totalSpend: Math.ceil(7339.2) },
-      { storeName: "Dierbergs", totalSpend: Math.ceil(3669.6) },
+      { storeName: "Applebee's", totalSpend: 14678.4 },
+      { storeName: "Aldi", totalSpend: 7339.2 },
+      { storeName: "Tony's Donuts", totalSpend: 7339.2 },
+      { storeName: "Panda Express", totalSpend: 7339.2 },
+      { storeName: "Dierbergs", totalSpend: 3669.6 },
     ]);
   });
 
@@ -117,7 +117,7 @@ describe("Analytics", () => {
     const endDate: Date = new Date("Dec 31 2024");
     const averageSpendPerDay: number = analytics.getAverageSpendPerDay(startDate, endDate);
 
-    expect(averageSpendPerDay).toEqual(Math.ceil(61.16));
+    expect(averageSpendPerDay).toEqual(61.16);
   });
 
   test.only("should return correct average number of purchases per day", () => {
@@ -133,7 +133,7 @@ describe("Analytics", () => {
     const endDate: Date = new Date("Dec 31 2024");
     const averageSpendPerWeek: number = analytics.getAverageSpendPerWeek(startDate, endDate);
 
-    expect(averageSpendPerWeek).toEqual(Math.ceil(61.16 * 7));
+    expect(averageSpendPerWeek).toEqual(+(61.16 * 7).toFixed(2));
   });
 
   test.only("should return average number of purchases made per week", () => {
@@ -147,7 +147,7 @@ describe("Analytics", () => {
   test.only("should return correct average spend per month", () => {
     const averageSpendPerMonth: number = analytics.getAverageSpendPerMonth(2024);
 
-    expect(averageSpendPerMonth).toEqual(Math.ceil(61.16 * 30.5));
+    expect(averageSpendPerMonth).toEqual(+(61.16 * 30.5).toFixed(2));
   });
 
   test.only("should return average number of purchases made per month", () => {
@@ -163,7 +163,7 @@ describe("Analytics", () => {
     const averageSpendPerYear: number = analytics.getAverageSpendPerYear(startYear, endYear);
 
     // 1827 orders over 5 years = 365.4 orders per year.
-    expect(averageSpendPerYear).toEqual(Math.ceil(61.16 * 365.4));
+    expect(averageSpendPerYear).toEqual(+(61.16 * 365.4).toFixed(2));
   });
 
   test.only("should return average number of purchases made per year", () => {
