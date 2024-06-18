@@ -285,7 +285,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return Math.ceil(totalNumberOfPurchases / objectCalendar.length);
+        return totalNumberOfPurchases / objectCalendar.length;
     }
 
     public getAverageSpendPerWeek(startDate: Date, endDate: Date): number {
@@ -317,7 +317,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return Math.ceil(totalNumberOfPurchases / (objectCalendar.length / 7));
+        return totalNumberOfPurchases / (objectCalendar.length / 7);
     }
 
     public getAverageSpendPerMonth(year?: number): number {

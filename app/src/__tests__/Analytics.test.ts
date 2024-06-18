@@ -33,7 +33,7 @@ describe("Analytics", () => {
   });
 
   // TODO: Fix this test.
-  test.only("should get accurate total spent by month", () => {
+  test("should get accurate total spent by month", () => {
     // 31 days in Jan with $61.16 spent each day for 5 years = 9479.8.
     const actualTotalSpend2024Months = analytics.getTotalSpendByMonth(2024);
     const actualTotalSpendAllMonths = analytics.getTotalSpendByMonth();
@@ -131,9 +131,9 @@ describe("Analytics", () => {
   test.only("should return correct average spend per week", () => {
     const startDate: Date = new Date("Dec 1 2024");
     const endDate: Date = new Date("Dec 31 2024");
-    const averageSpendPerDay: number = analytics.getAverageSpendPerWeek(startDate, endDate);
+    const averageSpendPerWeek: number = analytics.getAverageSpendPerWeek(startDate, endDate);
 
-    expect(averageSpendPerDay).toEqual(Math.ceil(61.16 * 7));
+    expect(averageSpendPerWeek).toEqual(Math.ceil(61.16 * 7));
   });
 
   test.only("should return average number of purchases made per week", () => {
