@@ -3,17 +3,19 @@ import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
 // import orders from '../../.secret/orders.json';
-import mockOrders from './mocks/mockOrders';
+import orders from './mocks/mockOrders';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
-// import { Order } from './types/types';
 
 // Components
 import Pie from './components/PieChart';
 import Line from './components/LineChart';
 import Kpi from './components/Kpi';
 import Table from './components/Table';
+
+// Types
+import { Order } from './types/types';
 
 // Styles
 import './App.css';
@@ -22,8 +24,7 @@ const App = (): ReactElement => {
   const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
 
   useEffect(() => {
-      // setRawData(orders as Order[]);
-      setRawData(mockOrders);
+      setRawData(orders as Order[]);
   }, [setRawData]);
 
   return (
