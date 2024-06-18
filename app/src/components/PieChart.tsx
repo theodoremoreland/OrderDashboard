@@ -16,7 +16,8 @@ const Pie = ({ data }: Props): ReactElement => {
             <PieChart
                 series={[
                     {
-                        data: data
+                        data: data,
+                        valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
                     }
                 ]}
                 width={400}
