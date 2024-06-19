@@ -441,7 +441,7 @@ export default class Analytics {
 
     // ---------- !!!! Streaks !!!! ----------
 
-    public getTop5DroughtsBetweenPurchases(): { startDate: string, endDate: string, days: number }[] {
+    public getTopDroughtsBetweenPurchases(limit: number = 5): { startDate: string, endDate: string, days: number }[] {
         const times: number[] = this.getTimeOfOrdersSorted();
         const result: { startDate: string, endDate: string, days: number }[] = [];
 
@@ -453,10 +453,10 @@ export default class Analytics {
             result.push({ startDate: startDate.toDateString(), endDate: endDate.toDateString(), days });
         }
 
-        return result.sort((a, b) => b.days - a.days).slice(0, 5);
+        return result.sort((a, b) => b.days - a.days).slice(0, limit);
     }
 
-    public getTop5PurchaseStreaks(): { startDate: string, endDate: string, days: number }[] {
+    public getTopPurchaseStreaks(limit: number = 5): { startDate: string, endDate: string, days: number }[] {
         const times: number[] = [...new Set(this.getTimeOfOrdersSorted())]; // Remove duplicates given some days have multiple orders.
         const consecutiveOrderDates: string[][] = [];
 
@@ -479,7 +479,7 @@ export default class Analytics {
 
         return consecutiveOrderDates
             .sort((a, b) => b.length - a.length)
-            .slice(0, 5)
+            .slice(0, limit)
             .map(dates => {
                 return { startDate: dates[0], endDate: dates[dates.length - 1], days: dates.length };
         });

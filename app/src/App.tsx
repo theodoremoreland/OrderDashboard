@@ -74,7 +74,7 @@ const App = (): ReactElement => {
               id="days-with-purchases"
               title="Longest consecutive days of purchases"
               data={analytics
-                .getTop5PurchaseStreaks()
+                .getTopPurchaseStreaks()
                 .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
               }
             />
@@ -82,7 +82,7 @@ const App = (): ReactElement => {
               id="days-without-purchases"
               title="Longest consecutive days without purchases"
               data={analytics
-                .getTop5DroughtsBetweenPurchases()
+                .getTopDroughtsBetweenPurchases()
                 .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
               }
             />
