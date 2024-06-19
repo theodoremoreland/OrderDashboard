@@ -22,12 +22,14 @@ const Table = ({ id, title, data }: Props): ReactElement => {
         >
             <h2 className="table-title">{title}</h2>
             <table>
-                {data.map(({ key, value } : { key: string | number, value: string | number }) => (
-                    <tr key={key}>
-                        <td className="key">{key}</td>
-                        <td className="value">{value}</td>
-                    </tr>
-                ))}
+                <tbody>
+                    {data.map(({ key, value } : { key: string | number, value: string | number }) => (
+                        <tr key={key}>
+                            <td className="key">{key}</td>
+                            <td className="value">{value}</td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         </section>
     )
