@@ -1,6 +1,6 @@
 import { Order } from "../types/types";
 import generateObjectCalendar from "../modules/generateObjectCalendar";
-import getPercentageOfYearPassed from "../modules/getPercentageOfYearPassed";
+import getPercentageOfYearPassedOnDate from "../modules/getPercentageOfYearPassedOnDate";
 
 export default class Analytics {
     private data: Order[];
@@ -319,60 +319,48 @@ export default class Analytics {
         return +(totalNumberOfPurchases / (objectCalendar.length / 7)).toFixed(2);
     }
 
-    public getAverageSpendPerMonth(year?: number): number {
-        const data: {[key: string]: Order[]} = this.groupByMonth();
-        const validMonths: string[] = Object.keys(data)
-            .filter(monthYear => {
-                if (!year) {
-                    return true;
-                }
+    // TODO: Need to update unit tests for this method.
+    public getAverageSpendPerMonth(startDate: Date, endDate: Date): number {
+        const averageSpendPerYear: number = this.getAverageSpendPerYear(startDate, endDate);
+        const averageSpendPerMonth: number = averageSpendPerYear / 12;
 
-                return monthYear.includes(year.toString());
-            });
-        let sum: number = 0;
-
-        for (const monthYear of validMonths) {
-            const orders: Order[] = data[monthYear];
-
-            for (const order of orders) {
-                sum += order.cost;
-            }
-        }
-
-        return +(sum / validMonths.length).toFixed(2);
-    }
-
-    public getAverageNumberOfPurchasesPerMonth(year?: number): number {
-        const data: {[key: string]: Order[]} = this.groupByMonth();
-        const validMonths: string[] = Object.keys(data)
-            .filter(monthYear => {
-                if (!year) {
-                    return true;
-                }
-
-                return monthYear.includes(year.toString());
-            });
-        let totalNumberOfPurchases: number = 0;
-
-        for (const monthYear of validMonths) {
-            const orders: Order[] = data[monthYear];
-
-            totalNumberOfPurchases += orders.length;
-        }
-
-        return +(totalNumberOfPurchases / validMonths.length).toFixed(2);
+        return +(averageSpendPerMonth).toFixed(2);
     }
 
     // TODO: Need to update unit tests for this method.
-    public getAverageSpendPerYear(startYear: number, endYear: number): number {
+    public getAverageNumberOfPurchasesPerMonth(startDate: Date, endDate: Date): number {
+        const averageNumberOfPurchasesPerYear: number = this.getAverageNumberOfPurchasesPerYear(startDate, endDate);
+        const averageNumberOfPurchasesPerMonth: number = averageNumberOfPurchasesPerYear / 12;
+
+        return +(averageNumberOfPurchasesPerMonth).toFixed(2);
+    }
+
+    // TODO: Need to update unit tests for this method.
+    public getAverageSpendPerYear(startDate: Date, endDate: Date): number {
         const data: {[key: number]: Order[]} = this.groupByYear();
-        const isEndYearCurrentYear: boolean = endYear === new Date().getFullYear();
         const validYears: string[] = Object.keys(data).filter(year => {
-            return startYear <= Number(year) && endYear >= Number(year);
+            return startDate.getFullYear() <= Number(year) && endDate.getFullYear() >= Number(year);
         });
-        const numberOfYears: number = isEndYearCurrentYear 
-            ? validYears.length - 1 + (getPercentageOfYearPassed() / 100)
-            : validYears.length;
+        const numberOfYears: number = validYears.reduce((acc, curr) => {
+            if (curr === startDate.getFullYear().toString()) {
+
+                /**
+                 * Subtract the percentage of the year that was skipped since the start date
+                 * from 1 to get the percentage remaining in the year (i.e. 
+                 * the amount of the year actually featuring the order data this function is concerned with).
+                 */
+                return acc + (1 - getPercentageOfYearPassedOnDate(startDate) / 100);
+            } else if (curr === endDate.getFullYear().toString()) {
+                    
+                    /**
+                    * Add the percentage of the year that has passed given the end date
+                    * instead of adding 1 because 1 whole year may not have passed by the end date.
+                    */
+                    return acc + getPercentageOfYearPassedOnDate(endDate) / 100;
+                } else {
+                    return acc + 1;
+                }
+        }, 0);
         let sum: number = 0;
 
         for (const year of validYears) {
@@ -387,15 +375,31 @@ export default class Analytics {
     }
 
     // TODO: Need to update unit tests for this method.
-    public getAverageNumberOfPurchasesPerYear(startYear: number, endYear: number): number {
+    public getAverageNumberOfPurchasesPerYear(startDate: Date, endDate: Date): number {
         const data: {[key: number]: Order[]} = this.groupByYear();
-        const isEndYearCurrentYear: boolean = endYear === new Date().getFullYear();
         const validYears: string[] = Object.keys(data).filter(year => {
-            return startYear <= Number(year) && endYear >= Number(year);
+            return startDate.getFullYear() <= Number(year) && endDate.getFullYear() >= Number(year);
         });
-        const numberOfYears: number = isEndYearCurrentYear 
-            ? validYears.length - 1 + (getPercentageOfYearPassed() / 100)
-            : validYears.length;
+        const numberOfYears: number = validYears.reduce((acc, curr) => {
+            if (curr === startDate.getFullYear().toString()) {
+
+                /**
+                 * Subtract the percentage of the year that was skipped since the start date
+                 * from 1 to get the percentage remaining in the year (i.e. 
+                 * the amount of the year actually featuring the order data this function is concerned with).
+                 */
+                return acc + (1 - getPercentageOfYearPassedOnDate(startDate) / 100);
+            } else if (curr === endDate.getFullYear().toString()) {
+                    
+                    /**
+                    * Add the percentage of the year that has passed given the end date
+                    * instead of adding 1 because 1 whole year may not have passed by the end date.
+                    */
+                    return acc + getPercentageOfYearPassedOnDate(endDate) / 100;
+                } else {
+                    return acc + 1;
+                }
+        }, 0);
         let totalNumberOfPurchases: number = 0;
 
         for (const year of validYears) {
@@ -409,7 +413,7 @@ export default class Analytics {
 
     public getDataMappedToCalendar(): { date: string, totalSpend: number, totalOrders: number, totalItems: number }[] {
         const startDate: Date = new Date(this.data[0].date);
-        const endDate: Date = new Date(this.data[this.data.length - 1].date);
+        const endDate: Date = new Date();
         const objectCalendar = generateObjectCalendar(startDate, endDate);
         const ordersByDate: {[key: string]: Order[]} = this.groupByDate();
         const data: {date: string, totalSpend: number, totalOrders: number, totalItems: number }[] = [];
