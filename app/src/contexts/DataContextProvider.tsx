@@ -37,7 +37,7 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
             rawData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
             
             setStartDate(new Date(rawData[0].date));
-            setEndDate(new Date(rawData[rawData.length - 1].date));
+            setEndDate(new Date(new Date()));
             setAnalytics(new Analytics(rawData));
         }
     }, [rawData]);
@@ -46,10 +46,10 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
         <DataContext.Provider
             value={{
                 rawData,
-                setRawData,
                 startDate,
-                setStartDate,
                 endDate,
+                setRawData,
+                setStartDate,
                 setEndDate,
                 analytics,
             }}
