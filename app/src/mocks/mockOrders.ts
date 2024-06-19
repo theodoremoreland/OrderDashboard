@@ -526,6 +526,7 @@ const mockOrders2024: Order[] = [
     ...generateMonthOfOrders(11, 2024),
 ];
 
+// TODO orders should not go into the future post update to Analytics methods. Tests and KPIs break now + give nonsensical results.
 const mockOrders: Order[] = mockOrders2020
     .concat(mockOrders2021)
     .concat(mockOrders2022)
