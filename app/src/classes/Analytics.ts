@@ -1,5 +1,6 @@
 import { Order } from "../types/types";
 import generateObjectCalendar from "../modules/generateObjectCalendar";
+import getPercentageOfYearPassed from "../modules/getPercentageOfYearPassed";
 
 export default class Analytics {
     private data: Order[];
@@ -362,11 +363,16 @@ export default class Analytics {
         return +(totalNumberOfPurchases / validMonths.length).toFixed(2);
     }
 
+    // TODO: Need to update unit tests for this method.
     public getAverageSpendPerYear(startYear: number, endYear: number): number {
         const data: {[key: number]: Order[]} = this.groupByYear();
+        const isEndYearCurrentYear: boolean = endYear === new Date().getFullYear();
         const validYears: string[] = Object.keys(data).filter(year => {
             return startYear <= Number(year) && endYear >= Number(year);
         });
+        const numberOfYears: number = isEndYearCurrentYear 
+            ? validYears.length - 1 + (getPercentageOfYearPassed() / 100)
+            : validYears.length;
         let sum: number = 0;
 
         for (const year of validYears) {
@@ -377,14 +383,19 @@ export default class Analytics {
             }
         }
 
-        return +(sum / validYears.length).toFixed(2);
+        return +(sum / numberOfYears).toFixed(2);
     }
 
+    // TODO: Need to update unit tests for this method.
     public getAverageNumberOfPurchasesPerYear(startYear: number, endYear: number): number {
         const data: {[key: number]: Order[]} = this.groupByYear();
+        const isEndYearCurrentYear: boolean = endYear === new Date().getFullYear();
         const validYears: string[] = Object.keys(data).filter(year => {
             return startYear <= Number(year) && endYear >= Number(year);
         });
+        const numberOfYears: number = isEndYearCurrentYear 
+            ? validYears.length - 1 + (getPercentageOfYearPassed() / 100)
+            : validYears.length;
         let totalNumberOfPurchases: number = 0;
 
         for (const year of validYears) {
@@ -393,7 +404,7 @@ export default class Analytics {
             totalNumberOfPurchases += orders.length;
         }
 
-        return +(totalNumberOfPurchases / validYears.length).toFixed(2);
+        return +(totalNumberOfPurchases / numberOfYears).toFixed(2);
     }
 
     public getDataMappedToCalendar(): { date: string, totalSpend: number, totalOrders: number, totalItems: number }[] {
