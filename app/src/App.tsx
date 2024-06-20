@@ -2,7 +2,7 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-//import orders from '../../.secret/orders.json';
+// import orders from '../../.secret/orders.json';
 import orders from './mocks/mockOrders';
 
 // Contexts
@@ -10,7 +10,7 @@ import { DataContext } from './contexts/DataContextProvider';
 
 // Components
 import Pie from './components/PieChart';
-import Line from './components/LineChart';
+import Scatter from './components/ScatterChart';
 import Kpi from './components/Kpi';
 import Table from './components/Table';
 
@@ -95,13 +95,15 @@ const App = (): ReactElement => {
             <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
               return { label: key, value: value }
             })} />
-            <Line 
-              xAxis={Object.keys(analytics.getDataMappedToCalendar().map(obj => obj.date))}
-              data={Object.values(analytics.getDataMappedToCalendar().map(obj => obj.totalSpend))}
+            <Scatter 
+              data={analytics.getDataMappedToCalendar().map(obj => {
+                return { x: new Date(obj.date).getTime(), y: obj.totalSpend, id: obj.date }
+              })}
             />
-            <Line 
-              xAxis={Object.keys(analytics.getDataMappedToCalendar().map(obj => obj.date))}
-              data={Object.values(analytics.getDataMappedToCalendar().map(obj => obj.totalOrders))}
+            <Scatter 
+              data={analytics.getDataMappedToCalendar().map(obj => {
+                return { x: new Date(obj.date).getTime(), y: obj.totalItems, id: obj.date }
+              })}
             />
           </div>
         )}

@@ -65,9 +65,9 @@ Checkboxes for showing two pies at a time.
 - Total spend by day of week (x)(x)
 - Total spend by month (x)(x)
 
-# Line chart
+# Scatter
 
-Dropdown for switching between line charts
+Dropdown for switching between scatter6 charts
 
 - Total spent across all of Doordash history (by day) (x)(x)
 - Total purchases across all of Doordash history (by day) (x)(x)
