@@ -47,13 +47,11 @@ const Grid = ({ data }: Props): ReactElement => {
                 initialState={{
                     pagination: {
                     paginationModel: {
-                        pageSize: 5,
+                        pageSize: 25,
                     },
                     },
                 }}
-                pageSizeOptions={[5]}
-                checkboxSelection
-                disableRowSelectionOnClick
+                pageSizeOptions={[10, 25, 50, 100]}
             />
         </div>
     );
