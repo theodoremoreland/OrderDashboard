@@ -20,7 +20,7 @@ export default class Analytics {
         return this.data.map((order, id) => {
             return {
                 ...order,
-                id,
+                id: id + 1,
                 date: new Date(order.date)
             }
         });
