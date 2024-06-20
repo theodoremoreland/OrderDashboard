@@ -6,10 +6,15 @@ import { ScatterValueType } from "@mui/x-charts";
 import { ScatterChart } from "@mui/x-charts/ScatterChart";
 
 interface Props {
+    tooltipFormatter?: (obj: { x: number, y: number }) => string
+    xAxisFormatter?: (value: number) => string
+    yAxisFormatter?: (value: number) => string
     data: ScatterValueType[]
 }
 
-const Scatter = ({ data }: Props): ReactElement => {
+const Scatter = ({ data, tooltipFormatter, xAxisFormatter, yAxisFormatter }: Props): ReactElement => {
+
+    
     return (
         <div>
             <ScatterChart
@@ -19,18 +24,18 @@ const Scatter = ({ data }: Props): ReactElement => {
                 series={[
                     {
                         data,
-                        valueFormatter: ({ x, y }) => `${y.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} (${new Date(x).toLocaleDateString()})`,
+                        valueFormatter: tooltipFormatter,
                     }
                 ]}
                 yAxis={[
                     {
                         min: 1,
-                        valueFormatter: (value) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+                        valueFormatter: yAxisFormatter,
                     }
                 ]}
                 xAxis={[
                     {
-                        valueFormatter: (value) => new Date(value).toLocaleDateString()
+                        valueFormatter: xAxisFormatter
                     }
                 ]}
                 width={1400}

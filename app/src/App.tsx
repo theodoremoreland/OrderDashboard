@@ -96,12 +96,17 @@ const App = (): ReactElement => {
             <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
               return { label: key, value: value }
             })} />
-            <Scatter 
+            <Scatter
+              tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} (${new Date(x).toLocaleDateString()})`}
+              xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
+              yAxisFormatter={(value: number) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
               data={analytics.getDataMappedToCalendar().map(obj => {
                 return { x: new Date(obj.date).getTime(), y: obj.totalSpend, id: obj.date }
               })}
             />
-            <Scatter 
+            <Scatter
+              tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString()} (${new Date(x).toLocaleDateString()})`}
+              xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
               data={analytics.getDataMappedToCalendar().map(obj => {
                 return { x: new Date(obj.date).getTime(), y: obj.totalItems, id: obj.date }
               })}
