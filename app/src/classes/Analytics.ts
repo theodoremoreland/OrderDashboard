@@ -16,6 +16,16 @@ export default class Analytics {
         .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
     }
 
+    public get orders(): (Omit<Order, 'date'> & { id: number, date: Date})[] {
+        return this.data.map((order, id) => {
+            return {
+                ...order,
+                id,
+                date: new Date(order.date)
+            }
+        });
+    }
+
     // ---------- !!!! Groups Bys !!!! ----------
 
     private groupByStore() {
