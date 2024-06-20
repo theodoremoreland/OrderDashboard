@@ -18,6 +18,9 @@ const Pie = ({ data }: Props): ReactElement => {
                     {
                         data: data,
                         valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+                        innerRadius: 75,
+                        paddingAngle: 2,
+                        cornerRadius: 8,
                     }
                 ]}
                 width={400}

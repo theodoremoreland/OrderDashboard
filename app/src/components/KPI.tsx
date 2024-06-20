@@ -14,8 +14,8 @@ const Kpi = ({ id, title, value }: Props): ReactElement => {
             id={id}
             className="Kpi"
         >
-            <span className="title">{title}</span>
             <span className="value">{value}</span>
+            <span className="label">{title}</span>
         </div>
     )
 } 

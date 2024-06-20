@@ -3,4 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  .value {
+    font-family: custom-bold;
+    font-size: 2.5rem;
+    color: #e40000;
+  }
 }
