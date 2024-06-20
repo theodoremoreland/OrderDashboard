@@ -8,41 +8,33 @@ import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { Order } from "../types/types";
 
 interface Props {
-    data: Order[]
+    data: (Omit<Order, 'date'> & { id: number, date: Date})[]
 }
 
-// "storeName": string,
-// /** String of format: Oct 13 2023 */
-// "date": DateFormat,
-// "cost": number,
-// "itemCount": number,
-// "items": string[],
-// "wasCancelled": boolean,
-// "dayOfWeek": WeekDayFormat
-
-const columns: GridColDef<Order>[] = [
-    { field: 'id', headerName: 'ID', width: 90 },
+const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] = [
+    { 
+        field: 'id',
+        headerName: 'ID'
+    },
     {
         field: 'storeName',
         headerName: 'Store',
-        width: 150,
     },
     {
         field: 'cost',
         headerName: 'Cost',
-        width: 150,
+        type: 'number',
+        valueGetter: (_, row) => row.cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
     },
     {
         field: 'itemCount',
         headerName: 'Item Count',
         type: 'number',
-        width: 110,
     },
     {
         field: 'date',
         headerName: 'Date',
         type: 'date',
-        width: 110,
     },
 ];
 

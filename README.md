@@ -107,3 +107,9 @@ List auto scroll until you hover over
 - Top 10, 20, 40 stores (by total spent) (x)(x)
 - Top 10, 20, 40 stores (by number of purchases)(x)(x)
 - Top 10, 20, 40 stores (by number of items purchased) (x)(x)
+
+# Data grid
+
+- Show grid of all orders
+- Sortable by store name, cost, item count, and date
+- Filter based on store and by year

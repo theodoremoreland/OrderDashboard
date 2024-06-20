@@ -2,7 +2,7 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-// import orders from '../../.secret/orders.json';
+//import orders from '../../.secret/orders.json';
 import orders from './mocks/mockOrders';
 
 // Contexts
@@ -13,6 +13,7 @@ import Pie from './components/PieChart';
 import Scatter from './components/ScatterChart';
 import Kpi from './components/Kpi';
 import Table from './components/Table';
+import Grid from './components/DataGrid';
 
 // Types
 import { Order } from './types/types';
@@ -105,6 +106,7 @@ const App = (): ReactElement => {
                 return { x: new Date(obj.date).getTime(), y: obj.totalItems, id: obj.date }
               })}
             />
+            <Grid data={analytics.orders} />
           </div>
         )}
     </>
