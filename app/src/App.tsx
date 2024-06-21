@@ -10,7 +10,7 @@ import { DataContext } from './contexts/DataContextProvider';
 
 // Components
 import Pie from './components/PieChart';
-import Scatter from './components/ScatterChart';
+import Scatters from './components/Scatters/Scatters';
 import Streaks from './components/Streaks/Streaks';
 import Kpis from './components/Kpis/Kpis';
 import TopStores from './components/TopStores/TopStores';
@@ -51,21 +51,7 @@ const App = (): ReactElement => {
             <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
               return { label: key, value: value }
             })} />
-            <Scatter
-              tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} (${new Date(x).toLocaleDateString()})`}
-              xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
-              yAxisFormatter={(value: number) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
-              data={analytics.getDataMappedToCalendar().map(obj => {
-                return { x: new Date(obj.date).getTime(), y: obj.totalSpend, id: obj.date }
-              })}
-            />
-            <Scatter
-              tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString()} (${new Date(x).toLocaleDateString()})`}
-              xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
-              data={analytics.getDataMappedToCalendar().map(obj => {
-                return { x: new Date(obj.date).getTime(), y: obj.totalItems, id: obj.date }
-              })}
-            />
+            <Scatters analytics={analytics} />
             <Grid data={analytics.orders} />
           </div>
         )}
