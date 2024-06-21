@@ -9,7 +9,7 @@ import orders from './mocks/mockOrders';
 import { DataContext } from './contexts/DataContextProvider';
 
 // Components
-import Pie from './components/PieChart';
+import Pies from './components/Pies/Pies';
 import Scatters from './components/Scatters/Scatters';
 import Streaks from './components/Streaks/Streaks';
 import Kpis from './components/Kpis/Kpis';
@@ -42,15 +42,7 @@ const App = (): ReactElement => {
             />
             <TopStores analytics={analytics} />
             <Streaks analytics={analytics} />
-            <Pie data={Object.entries(analytics.getTotalSpendByYear()).map(([key, value]) => {
-              return { label: key, value: value }
-            })} />
-            <Pie data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
-              return { label: key, value: value }
-            })} />
-            <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
-              return { label: key, value: value }
-            })} />
+            <Pies analytics={analytics} />
             <Scatters analytics={analytics} />
             <Grid data={analytics.orders} />
           </div>
