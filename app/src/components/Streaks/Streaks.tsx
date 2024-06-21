@@ -1,6 +1,12 @@
 // React
 import { ReactElement, useState } from "react";
 
+// MUI
+// MUI
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import { NativeSelect } from '@mui/material';
+
 // Custom
 import Analytics from "../../classes/Analytics";
 
@@ -15,10 +21,26 @@ interface Props {
 }
 
 const Streaks = ({ analytics }: Props): ReactElement => {
-    const [tableSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
+    const [tableSelection, setTableSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
 
     return (
         <section className="Streaks">
+            <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                    Streaks
+                </InputLabel>
+                <NativeSelect
+                    value={tableSelection}
+                    onChange={(e) => setTableSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
+                    inputProps={{
+                        name: 'topStoresBy',
+                        id: 'uncontrolled-native',
+                    }}
+                >
+                    <option value="days-with-purchases">Longest consecutive days of purchases</option>
+                    <option value="days-without-purchases">Longest consecutive days without purchases</option>
+                </NativeSelect>
+            </FormControl>
             {
                 tableSelection === "days-with-purchases" &&
                 <Table
