@@ -17,6 +17,11 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
         headerName: 'ID'
     },
     {
+        field: 'date',
+        headerName: 'Date',
+        type: 'date',
+    },
+    {
         field: 'storeName',
         headerName: 'Store',
     },
@@ -32,9 +37,10 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
         type: 'number',
     },
     {
-        field: 'date',
-        headerName: 'Date',
-        type: 'date',
+        field: 'items',
+        headerName: 'Items',
+        flex: 1,
+        sortable: false,
     },
 ];
 
