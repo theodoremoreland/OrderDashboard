@@ -1,6 +1,11 @@
 // React
 import { ReactElement, useState } from 'react';
 
+// MUI
+import InputLabel from '@mui/material/InputLabel';
+import FormControl from '@mui/material/FormControl';
+import { NativeSelect } from '@mui/material';
+
 // Custom
 import Analytics from '../../classes/Analytics';
 
@@ -15,10 +20,27 @@ interface Props {
 }
 
 const TopStores = ({ analytics }: Props): ReactElement => {
-    const [tableSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
+    const [tableSelection, setTableSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
     return (
         <section className="TopStores">
+            <FormControl fullWidth>
+                <InputLabel variant="standard" htmlFor="uncontrolled-native">
+                    Top Stores By
+                </InputLabel>
+                <NativeSelect
+                    value={tableSelection}
+                    onChange={(e) => setTableSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
+                    inputProps={{
+                        name: 'topStoresBy',
+                        id: 'uncontrolled-native',
+                    }}
+                >
+                    <option value="totalSpend">Total Spend</option>
+                    <option value="totalOrders">Total Orders</option>
+                    <option value="totalItemsPurchased">Total Items Purchased</option>
+                </NativeSelect>
+            </FormControl>
             {
                 tableSelection === "totalSpend" &&
                 <Table

@@ -20,8 +20,9 @@ const Table = ({ id, title, data }: Props): ReactElement => {
             data-testid={id} 
             className="Table"
         >
-            <h2 className="table-title">{title}</h2>
-            <table>
+            <table
+                title={title}
+            >
                 <tbody>
                     {data.map(({ key, value } : { key: string | number, value: string | number }) => (
                         <tr key={key}>
