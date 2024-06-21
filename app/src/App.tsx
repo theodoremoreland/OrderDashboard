@@ -31,7 +31,7 @@ const App = (): ReactElement => {
 
   return (
     <>
-      <h1 id="pp-title" className='title'>Doordash Dashboard</h1>
+      <h1 id="app-title" className='title'>Order Dashboard</h1>
       {
         analytics && startDate && endDate && (
           <div className="analytics-container">

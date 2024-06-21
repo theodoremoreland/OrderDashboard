@@ -1,4 +1,4 @@
-# Doordash Dashboard
+# Order Dashboard
 
 A dashboard for visualizing doordash order history data and scripts to collect and transform aforementioned data into appropriate format.
 
