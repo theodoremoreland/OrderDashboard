@@ -27,7 +27,7 @@ const Streaks = ({ analytics }: Props): ReactElement => {
         <section className="Streaks">
             <FormControl fullWidth>
                 <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                    Streaks
+                    Longest consecutive
                 </InputLabel>
                 <NativeSelect
                     value={tableSelection}
@@ -37,8 +37,8 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                         id: 'uncontrolled-native',
                     }}
                 >
-                    <option value="days-with-purchases">Longest consecutive days of purchases</option>
-                    <option value="days-without-purchases">Longest consecutive days without purchases</option>
+                    <option value="days-with-purchases">Days of purchases</option>
+                    <option value="days-without-purchases">Days without purchases</option>
                 </NativeSelect>
             </FormControl>
             {
