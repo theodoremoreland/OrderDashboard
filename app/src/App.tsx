@@ -11,8 +11,9 @@ import { DataContext } from './contexts/DataContextProvider';
 // Components
 import Pie from './components/PieChart';
 import Scatter from './components/ScatterChart';
-import Table from './components/Table';
+import Streaks from './components/Streaks/Streaks';
 import Kpis from './components/Kpis/Kpis';
+import TopStores from './components/TopStores/TopStores';
 import Grid from './components/DataGrid';
 
 // Types
@@ -39,46 +40,8 @@ const App = (): ReactElement => {
               startDate={startDate}
               endDate={endDate}
             />
-            <Table
-              id="stores-by-total-spend"
-              title="Top Stores by Total Spend"
-              data={analytics
-                .getTopStoresByTotalSpend()
-                .map(obj => ({ key: obj.storeName, value: obj.totalSpend.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) }))
-              }
-            />
-            <Table
-              id="stores-by-total-orders"
-              title="Top Stores by Total Orders"
-              data={analytics
-                .getTopStoresByTotalOrders()
-                .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
-              }
-            />
-            <Table
-              id="stores-by-total-items-purchased"
-              title="Top Stores by Total Items Purchased"
-              data={analytics
-                .getTopStoresByTotalItemsPurchased()
-                .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
-              }
-            />
-            <Table
-              id="days-with-purchases"
-              title="Longest consecutive days of purchases"
-              data={analytics
-                .getTopPurchaseStreaks()
-                .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
-              }
-            />
-            <Table
-              id="days-without-purchases"
-              title="Longest consecutive days without purchases"
-              data={analytics
-                .getTopDroughtsBetweenPurchases()
-                .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
-              }
-            />
+            <TopStores analytics={analytics} />
+            <Streaks analytics={analytics} />
             <Pie data={Object.entries(analytics.getTotalSpendByYear()).map(([key, value]) => {
               return { label: key, value: value }
             })} />
