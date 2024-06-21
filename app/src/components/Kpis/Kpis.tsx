@@ -44,11 +44,11 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             title="Stores Purchased From"
                             value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()}
                         />
-                        <Kpi
+                        {/* <Kpi
                             id="total-days-a-purchase-was-made"
                             title="Number of Days a Purchase was Made"
                             value={analytics.getTotalNumberOfDaysAPurchaseWasMade()}
-                        />
+                        /> */}
                     </section>
                 )
                 : (
