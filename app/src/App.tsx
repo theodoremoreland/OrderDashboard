@@ -11,8 +11,8 @@ import { DataContext } from './contexts/DataContextProvider';
 // Components
 import Pie from './components/PieChart';
 import Scatter from './components/ScatterChart';
-import Kpi from './components/Kpi';
 import Table from './components/Table';
+import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
 
 // Types
@@ -34,19 +34,11 @@ const App = (): ReactElement => {
       {
         analytics && startDate && endDate && (
           <div className="analytics-container">
-            <section className="kpis">
-              <Kpi id="total-spent" title="Total Spent" value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })} />
-              <Kpi id="total-orders" title="Total Orders" value={analytics.getTotalPurchases().toLocaleString()} />
-              <Kpi id="total-items-purchased" title="Total Items Purchased" value={analytics.getTotalItemsPurchased().toLocaleString()} />
-              <Kpi id="number-of-stores" title="Number of Stores Purchased From" value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()} />
-              <Kpi id="total-days-a-purchase-was-made" title="Total Number of Days a Purchase was Made" value={analytics.getTotalNumberOfDaysAPurchaseWasMade()} />
-            </section>
-            <section className="kpis">
-              <Kpi id="per-day-averages" title="Average Spend / Purchases Per Day" value={`${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`} />
-              <Kpi id="per-week-averages" title="Average Spend / Purchases Per Week" value={`${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`} />
-              <Kpi id="per-month-averages" title="Average Spend / Purchases Per Month" value={`${analytics.getAverageSpendPerMonth(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth(startDate, endDate)}`} />
-              <Kpi id="per-year-averages" title="Average Spend / Purchases Per Year" value={`${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)}`} />
-            </section>
+            <Kpis 
+              analytics={analytics}
+              startDate={startDate}
+              endDate={endDate}
+            />
             <Table
               id="stores-by-total-spend"
               title="Top Stores by Total Spend"
