@@ -15,10 +15,6 @@
   src: url("./assets/fonts/Urbanist-Thin.ttf");
 }
 
-#root {
-  max-width: 1280px;
-}
-
 .title {
   font-family: custom-bold;
   font-style: oblique;
