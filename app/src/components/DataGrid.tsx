@@ -14,7 +14,7 @@ interface Props {
 const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] = [
     { 
         field: 'id',
-        headerName: 'ID'
+        headerName: 'Id'
     },
     {
         field: 'date',

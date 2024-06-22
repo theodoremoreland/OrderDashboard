@@ -1,3 +1,4 @@
+// React
 import { ReactElement } from "react";
 
 // Third party
@@ -12,7 +13,6 @@ interface Props {
 
 const Pie = ({ data }: Props): ReactElement => {
     return (
-        <div>
             <PieChart
             slotProps={{
                 legend: {
@@ -31,7 +31,6 @@ const Pie = ({ data }: Props): ReactElement => {
                 width={400}
                 height={200}
             />
-        </div>
     )
 }
 
