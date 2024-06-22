@@ -14,6 +14,11 @@ const Pie = ({ data }: Props): ReactElement => {
     return (
         <div>
             <PieChart
+            slotProps={{
+                legend: {
+                    hidden: true
+                }
+            }}
                 series={[
                     {
                         data: data,
