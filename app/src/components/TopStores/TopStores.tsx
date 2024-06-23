@@ -10,7 +10,7 @@ import { NativeSelect } from '@mui/material';
 import Analytics from '../../classes/Analytics';
 
 // Components
-import Table from '../Table';
+import List from '../List';
 
 // Styles
 import './TopStores.css';
@@ -43,7 +43,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
             </FormControl>
             {
                 tableSelection === "totalSpend" &&
-                <Table
+                <List
                     id="stores-by-total-spend"
                     title="Top Stores by Total Spend"
                     data={analytics
@@ -54,7 +54,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
             }
             {
                 tableSelection === "totalOrders" &&
-                <Table
+                <List
                     id="stores-by-total-orders"
                     title="Top Stores by Total Orders"
                     data={analytics
@@ -65,7 +65,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
             }
             {
                 tableSelection === "totalItemsPurchased" &&
-                <Table
+                <List
                     id="stores-by-total-items-purchased"
                     title="Top Stores by Total Items Purchased"
                     data={analytics

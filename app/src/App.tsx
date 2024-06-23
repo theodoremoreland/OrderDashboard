@@ -2,8 +2,8 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-//import orders from '../../.secret/orders.json';
-import orders from './mocks/mockOrders';
+// import orders from '../../.secret/orders.json';
+//import orders from './mocks/mockOrders';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
@@ -31,20 +31,19 @@ const App = (): ReactElement => {
 
   return (
     <>
-      <h1 id="app-title" className='title'>Order Dashboard</h1>
       {
         analytics && startDate && endDate && (
-          <div className="analytics-container">
+          <div id="analytics-container">
             <Kpis 
               analytics={analytics}
               startDate={startDate}
               endDate={endDate}
-            />
+            />                  
+            <Scatters analytics={analytics} />
+            <Pies analytics={analytics} />
+            <Grid data={analytics.orders} />
             <TopStores analytics={analytics} />
             <Streaks analytics={analytics} />
-            <Pies analytics={analytics} />
-            <Scatters analytics={analytics} />
-            <Grid data={analytics.orders} />
           </div>
         )}
     </>

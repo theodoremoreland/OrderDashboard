@@ -15,6 +15,19 @@
   src: url("./assets/fonts/Urbanist-Thin.ttf");
 }
 
+#analytics-container {
+  display: grid;
+  grid-template-areas:
+    "section section section"
+    "section section section"
+    "section section section";
+  grid-template-rows: 1fr 1fr 1fr;
+  /* grid-template-columns: 20% 1fr; */
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin: 0;
+}
+
 .title {
   font-family: custom-bold;
   font-style: oblique;

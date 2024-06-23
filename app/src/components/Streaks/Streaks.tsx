@@ -10,7 +10,7 @@ import { NativeSelect } from '@mui/material';
 import Analytics from "../../classes/Analytics";
 
 // Components
-import Table from "../Table";
+import List from "../List";
 
 // Styles
 import './Streaks.css';
@@ -20,7 +20,7 @@ interface Props {
 }
 
 const Streaks = ({ analytics }: Props): ReactElement => {
-    const [tableSelection, setTableSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
+    const [listSelection, setListSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
 
     return (
         <section className="Streaks">
@@ -29,8 +29,8 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                     Longest consecutive
                 </InputLabel>
                 <NativeSelect
-                    value={tableSelection}
-                    onChange={(e) => setTableSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
+                    value={listSelection}
+                    onChange={(e) => setListSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
                     inputProps={{
                         name: 'topStoresBy',
                         id: 'uncontrolled-native',
@@ -41,8 +41,8 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                 </NativeSelect>
             </FormControl>
             {
-                tableSelection === "days-with-purchases" &&
-                <Table
+                listSelection === "days-with-purchases" &&
+                <List
                     id="days-with-purchases"
                     title="Longest consecutive days of purchases"
                     data={analytics
@@ -52,8 +52,8 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                 />
             }
             {
-                tableSelection === "days-without-purchases" &&
-                <Table
+                listSelection === "days-without-purchases" &&
+                <List
                     id="days-without-purchases"
                     title="Longest consecutive days without purchases"
                     data={analytics

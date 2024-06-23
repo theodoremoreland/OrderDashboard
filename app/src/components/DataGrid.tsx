@@ -46,7 +46,7 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
 
 const Grid = ({ data }: Props): ReactElement => {
     return (
-        <div>
+        <section className="Grid">
             <DataGrid
                 rows={data}
                 columns={columns}
@@ -59,7 +59,7 @@ const Grid = ({ data }: Props): ReactElement => {
                 }}
                 pageSizeOptions={[10, 25, 50, 100]}
             />
-        </div>
+        </section>
     );
 }
 
