@@ -11,10 +11,9 @@ import { DataContext } from './contexts/DataContextProvider';
 // Components
 import Pies from './components/Pies/Pies';
 import Scatters from './components/Scatters/Scatters';
-import Streaks from './components/Streaks/Streaks';
 import Kpis from './components/Kpis/Kpis';
-import TopStores from './components/TopStores/TopStores';
 import Grid from './components/DataGrid';
+import Bar from './components/Bar';
 
 // Types
 import { Order } from './types/types';
@@ -46,8 +45,15 @@ const App = (): ReactElement => {
               pageSize={5}
               pageSizeOptions={[5]}
             />
-            <TopStores analytics={analytics} />
-            <Streaks analytics={analytics} />
+            <Bar
+              id="bar"
+              title='Total Spend by Store'
+              dataset={
+                analytics
+                  .getTopStoresByTotalSpend()
+                  .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
+              }
+            />
           </div>
         )}
     </>

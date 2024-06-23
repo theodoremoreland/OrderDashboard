@@ -12,12 +12,12 @@ interface Props {
     title?: string
     dataset: 
         {   
-            storeName: string
+            key: string
             value: number
         }[]
 }
 
-const Bar = ({ id, dataset }: Props): ReactElement => {
+const Bar = ({ id, dataset, title }: Props): ReactElement => {
     return (
         <section
             id={id}
@@ -25,15 +25,15 @@ const Bar = ({ id, dataset }: Props): ReactElement => {
             className="Bar"
         >
             <BarChart
-                barLabel={() => null}
+
                 dataset={dataset}
-                xAxis={[{ scaleType: 'band', dataKey: 'storeName' }]}
+                yAxis={[{ scaleType: 'band', dataKey: 'key',}]}
                 series={[
-                    { dataKey: 'storeName', color: 'transparent' },
-                    { dataKey: 'value' },
+                    { dataKey: 'value', label: title },
                 ]}
                 layout="horizontal"
                 height={400}
+                margin={{ left: 200 }}
                 
             />
         </section>
