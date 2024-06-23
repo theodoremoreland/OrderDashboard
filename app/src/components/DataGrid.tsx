@@ -9,7 +9,8 @@ import { Order } from "../types/types";
 
 interface Props {
     data: (Omit<Order, 'date'> & { id: number, date: Date})[]
-    shouldDisplayPageSizeOptions?: boolean
+    pageSizeOptions: number[]
+    pageSize: number
 }
 
 const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] = [
@@ -45,7 +46,7 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
     },
 ];
 
-const Grid = ({ data, shouldDisplayPageSizeOptions }: Props): ReactElement => {
+const Grid = ({ data, pageSize, pageSizeOptions }: Props): ReactElement => {
     return (
         <section className="Grid">
             <DataGrid
@@ -54,11 +55,11 @@ const Grid = ({ data, shouldDisplayPageSizeOptions }: Props): ReactElement => {
                 initialState={{
                     pagination: {
                     paginationModel: {
-                        pageSize: 25,
+                        pageSize,
                     },
                     },
                 }}
-                pageSizeOptions={shouldDisplayPageSizeOptions ? [10, 25, 50, 100] : []}
+                pageSizeOptions={pageSizeOptions}
             />
         </section>
     );

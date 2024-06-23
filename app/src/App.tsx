@@ -2,8 +2,8 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-// import orders from '../../.secret/orders.json';
-//import orders from './mocks/mockOrders';
+//import orders from '../../.secret/orders.json';
+import orders from './mocks/mockOrders';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
@@ -41,7 +41,11 @@ const App = (): ReactElement => {
             />                  
             <Scatters analytics={analytics} />
             <Pies analytics={analytics} />
-            <Grid data={analytics.orders} />
+            <Grid
+              data={analytics.orders}
+              pageSize={5}
+              pageSizeOptions={[5]}
+            />
             <TopStores analytics={analytics} />
             <Streaks analytics={analytics} />
           </div>
