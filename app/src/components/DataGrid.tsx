@@ -41,6 +41,7 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
     {
         field: 'items',
         headerName: 'Items',
+        valueGetter: (_, row) => row.items.join(', '),
         flex: 1,
         sortable: false,
     },
