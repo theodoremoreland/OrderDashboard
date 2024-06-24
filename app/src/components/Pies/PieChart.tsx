@@ -16,7 +16,7 @@ const Pie = ({ data }: Props): ReactElement => {
             <PieChart
             slotProps={{
                 legend: {
-                    hidden: true
+                    hidden: true,
                 }
             }}
                 series={[
@@ -28,8 +28,9 @@ const Pie = ({ data }: Props): ReactElement => {
                         cornerRadius: 0,
                     }
                 ]}
-                width={400}
-                height={200}
+                width={300}
+                height={400}
+                margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
     )
 }

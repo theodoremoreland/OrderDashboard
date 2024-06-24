@@ -17,7 +17,7 @@ interface Props {
         }[]
 }
 
-const Bar = ({ id, dataset, title }: Props): ReactElement => {
+const Bar = ({ id, dataset}: Props): ReactElement => {
     return (
         <section
             id={id}
@@ -25,15 +25,14 @@ const Bar = ({ id, dataset, title }: Props): ReactElement => {
             className="Bar"
         >
             <BarChart
-
                 dataset={dataset}
                 yAxis={[{ scaleType: 'band', dataKey: 'key',}]}
                 series={[
-                    { dataKey: 'value', label: title },
+                    { dataKey: 'value' },
                 ]}
                 layout="horizontal"
                 height={400}
-                margin={{ left: 200 }}
+                margin={{ left: 150 }}
                 
             />
         </section>

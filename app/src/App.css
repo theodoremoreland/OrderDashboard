@@ -16,11 +16,29 @@
 }
 
 #analytics-container {
-  /* pass */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
 }
 
 .title {
   font-family: custom-bold;
   font-style: oblique;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+}
+
+.row {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.row,
+section {
+  border: 1px solid #000;
 }

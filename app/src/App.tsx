@@ -2,8 +2,8 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-//import orders from '../../.secret/orders.json';
-import orders from './mocks/mockOrders';
+import orders from '../../.secret/orders.json';
+//import orders from './mocks/mockOrders';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
@@ -13,7 +13,7 @@ import Pies from './components/Pies/Pies';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
-import Bar from './components/Bar';
+import { TopStoresBar } from './components/TopStores/TopStores';
 
 // Types
 import { Order } from './types/types';
@@ -37,23 +37,19 @@ const App = (): ReactElement => {
               analytics={analytics}
               startDate={startDate}
               endDate={endDate}
-            />                  
-            <Scatters analytics={analytics} />
-            <Pies analytics={analytics} />
-            <Grid
-              data={analytics.orders}
-              pageSize={5}
-              pageSizeOptions={[5]}
-            />
-            <Bar
-              id="bar"
-              title='Total Spend by Store'
-              dataset={
-                analytics
-                  .getTopStoresByTotalSpend()
-                  .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
-              }
-            />
+            />   
+            <div className='row'>
+              <Scatters analytics={analytics} />
+              <Pies analytics={analytics} />
+            </div>
+            <div className='row'>
+              <Grid
+                data={analytics.orders}
+                pageSize={5}
+                pageSizeOptions={[5]}
+              />
+              <TopStoresBar analytics={analytics} />
+            </div>
           </div>
         )}
     </>
