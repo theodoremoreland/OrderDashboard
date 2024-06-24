@@ -62,9 +62,12 @@ const Grid = ({ data, pageSize, pageSizeOptions }: Props): ReactElement => {
                 columns={columns}
                 initialState={{
                     pagination: {
-                    paginationModel: {
-                        pageSize,
+                        paginationModel: {
+                            pageSize,
+                        },
                     },
+                    sorting: {
+                        sortModel: [{ field: 'date', sort: 'desc' }],
                     },
                 }}
                 pageSizeOptions={pageSizeOptions}

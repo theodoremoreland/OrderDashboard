@@ -43,12 +43,13 @@ const App = (): ReactElement => {
               <Pies analytics={analytics} />
             </div>
             <div className='row'>
+              <TopStoresBar analytics={analytics} />
+              <TopStoresBar analytics={analytics} />
               <Grid
                 data={analytics.orders}
-                pageSize={5}
-                pageSizeOptions={[5]}
+                pageSize={6}
+                pageSizeOptions={[6]}
               />
-              <TopStoresBar analytics={analytics} />
             </div>
           </div>
         )}
