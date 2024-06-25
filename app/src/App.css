@@ -21,6 +21,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
 }
 
 .title {
@@ -40,5 +41,5 @@
 
 .row,
 section {
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }

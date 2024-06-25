@@ -19,23 +19,19 @@ interface Props {
 
 const Bar = ({ id, dataset}: Props): ReactElement => {
     return (
-        <section
-            id={id}
+        <BarChart
             data-testid={id} 
             className="Bar"
-        >
-            <BarChart
-                dataset={dataset}
-                yAxis={[{ scaleType: 'band', dataKey: 'key',}]}
-                series={[
-                    { dataKey: 'value' },
-                ]}
-                layout="horizontal"
-                height={400}
-                margin={{ left: 150 }}
-                
-            />
-        </section>
+            dataset={dataset}
+            yAxis={[{ scaleType: 'band', dataKey: 'key',}]}
+            series={[
+                { dataKey: 'value' },
+            ]}
+            layout="horizontal"
+            height={400}
+            margin={{ left: 150 }}
+            
+        />
     )
 }
 

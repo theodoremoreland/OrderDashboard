@@ -16,22 +16,19 @@ interface Props {
 
 const List = ({ id, title, data }: Props): ReactElement => {
     return (
-        <section
+        <ul
             id={id}
-            data-testid={id} 
+            data-testid={id}
+            title={title}
             className="List"
         >
-            <ul
-                title={title}
-            >
-                {data.map(({ key, value } : { key: string | number, value: string | number }) => (
-                    <li key={key}>
-                        <span className="key">{key}</span>
-                        <span className="value">{value}</span>
-                    </li>
-                ))}
-            </ul>
-        </section>
+            {data.map(({ key, value } : { key: string | number, value: string | number }) => (
+                <li key={key}>
+                    <span className="key">{key}</span>
+                    <span className="value">{value}</span>
+                </li>
+            ))}
+        </ul>
     )
 }
 

@@ -2,7 +2,6 @@
 import { ReactElement, useState } from "react";
 
 // MUI
-import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import { NativeSelect } from '@mui/material';
 
@@ -25,9 +24,6 @@ const Streaks = ({ analytics }: Props): ReactElement => {
     return (
         <section className="Streaks">
             <FormControl fullWidth>
-                <InputLabel variant="standard" htmlFor="uncontrolled-native">
-                    Longest consecutive
-                </InputLabel>
                 <NativeSelect
                     value={listSelection}
                     onChange={(e) => setListSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
