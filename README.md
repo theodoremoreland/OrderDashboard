@@ -1,6 +1,6 @@
 # Order Dashboard
 
-A dashboard for visualizing doordash order history data and scripts to collect and transform aforementioned data into appropriate format.
+I grew concerned about how much money I was spending on DoorDash, but DoorDash didn't have tools that made it easy for me to get insight into my spending habits. So, I wrote some scripts to get my order history data and dashboard to visualize my order history.
 
 ## Table of Contents
 
@@ -54,62 +54,3 @@ A Python script that transforms the data created from the aforementioned web scr
 - https://dribbble.com/shots/23589425-Oplata-Admin-Dashboard
 - https://dribbble.com/shots/18018508-Financial-Web-App-Dashboard-page-concept
 - https://apexcharts.com/javascript-chart-demos/
-
-## Dashboard metrics
-
-# Pies
-
-Checkboxes for showing two pies at a time.
-
-- Total spend by year (x)(x)
-- Total spend by day of week (x)(x)
-- Total spend by month (x)(x)
-
-# Scatter
-
-Dropdown for switching between scatter6 charts
-
-- Total spent across all of Doordash history (by day) (x)(x)
-- Total purchases across all of Doordash history (by day) (x)(x)
-
-# KPIs
-
-Radio button lets user alternate between averages vs totals
-
-### Averages
-
-(Each row being a shared KPI)
-
-- Average number of purchases per day (x)(x) / Average spend per day (x)(x)
-- Average number of purchases per week (x)(x) / Average spend per week (x)(x)
-- Average number of purchases per month (x)(x) / Average spend per month (x)(x)
-- Average number of purchases per year (x)(x) / Average spend per year (x)(x)
-
-### Totals
-
-- Total spent (x)(x)
-- Total number of purchases (x)(x)
-- Total number of stores purchased from (x)(x)
-- Total number of days a purchase was made (x)(x)
-- (optional / bonus) Total number of items purchased (x)(x)
-
-# Conveyor
-
-Displays on a conveyor that stops moving when you hover over it.
-
-- Top 5 Longest streak without purchases (x)(x)
-- Top 5 Longest purchase streaks (x)(x)
-
-# Lists
-
-List auto scroll until you hover over
-
-- Top 10, 20, 40 stores (by total spent) (x)(x)
-- Top 10, 20, 40 stores (by number of purchases)(x)(x)
-- Top 10, 20, 40 stores (by number of items purchased) (x)(x)
-
-# Data grid
-
-- Show grid of all orders
-- Sortable by store name, cost, item count, and date
-- Filter based on store and by year
