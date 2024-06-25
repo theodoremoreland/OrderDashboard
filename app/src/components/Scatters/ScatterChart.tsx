@@ -38,7 +38,7 @@ const Scatter = ({ data, tooltipFormatter, xAxisFormatter, yAxisFormatter }: Pro
                         valueFormatter: xAxisFormatter
                     }
                 ]}
-                height={400}
+                height={325}
                 margin={{ left: 75 }}
             />
         </div>

@@ -46,7 +46,9 @@ const App = (): ReactElement => {
             <div className='row'>
               <TopStoresBar analytics={analytics} />
               {/* <Streaks analytics={analytics} /> */}
-              <Grid
+            </div>
+            <div className='row'>
+            <Grid
                 data={analytics.orders}
                 pageSize={6}
                 pageSizeOptions={[6]}

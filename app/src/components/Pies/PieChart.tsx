@@ -28,8 +28,8 @@ const Pie = ({ data }: Props): ReactElement => {
                         cornerRadius: 0,
                     }
                 ]}
-                width={375}
-                height={400}
+                width={300}
+                height={325}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
     )
