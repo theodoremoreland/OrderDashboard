@@ -37,7 +37,7 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
         field: 'cost',
         headerName: 'Cost',
         type: 'number',
-        valueGetter: (_, row) => row.cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
+        valueFormatter: (_, row) => row.cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
         flex: 1,
     },
     // {
@@ -48,7 +48,7 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
     // {
     //     field: 'items',
     //     headerName: 'Items',
-    //     valueGetter: (_, row) => row.items.join(', '),
+    //     valueFormatter: (_, row) => row.items.join(', '),
     //     flex: 1,
     //     sortable: false,
     // },
