@@ -1,4 +1,8 @@
-import { ReactElement, useState } from 'react';
+// React
+import { ReactElement, useState, ChangeEvent } from 'react';
+
+// Material UI
+import Switch from '@mui/material/Switch';
 
 // Custom
 import Analytics from '../../classes/Analytics';
@@ -16,14 +20,35 @@ interface Props {
 }
 
 const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
-    const [kpiSet] = useState<"totals" | "averages">("totals");
+    const [checked, setChecked] = useState(false);
+    const [kpiSet, setKpiSet] = useState<"totals" | "averages">("totals");
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const { checked: _checked } = event.target;
+
+        if (_checked) {
+            setKpiSet("averages");
+        } else {
+            setKpiSet("totals");
+        }
+
+        setChecked(_checked);
+    };
 
     return (
-        <>
+        <section className={`Kpis ${kpiSet}`}>
+            <Switch
+                sx={{
+                    transform: 'rotate(90deg)'
+                }}
+                checked={checked}
+                onChange={handleChange}
+                inputProps={{ 'aria-label': 'controlled' }}
+            />
             {
                 kpiSet === "totals"
                 ? (
-                    <section className="Kpis totals">
+                    <>
                         <Kpi
                             id="total-spent"
                             title="Spent"
@@ -49,10 +74,10 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             title="Number of Days a Purchase was Made"
                             value={analytics.getTotalNumberOfDaysAPurchaseWasMade()}
                         /> */}
-                    </section>
+                    </>
                 )
                 : (
-                    <section className="Kpis averages">
+                    <>
                         <Kpi
                             id="per-day-averages"
                             title="Average Spend / Purchases Per Day"
@@ -73,10 +98,10 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             title="Average Spend / Purchases Per Year"
                             value={`${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)}`}
                         />
-                    </section>
+                    </>
                 )
             }
-        </>
+        </section>
     );
 }
 

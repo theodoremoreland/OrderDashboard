@@ -13,7 +13,7 @@ import Pies from './components/Pies/Pies';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
-import Streaks from './components/Streaks/Streaks';
+// import Streaks from './components/Streaks/Streaks';
 import { TopStoresBar } from './components/TopStores/TopStores';
 
 // Types
