@@ -9,6 +9,7 @@ import orders from '../../.secret/orders.json';
 import { DataContext } from './contexts/DataContextProvider';
 
 // Components
+import NavBar from './components/NavBar';
 import Pies from './components/Pies/Pies';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
@@ -31,6 +32,7 @@ const App = (): ReactElement => {
 
   return (
     <>
+      <NavBar />
       {
         analytics && startDate && endDate && (
           <div id="analytics-container">

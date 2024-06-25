@@ -1,0 +1,25 @@
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+
+  .app-title {
+    font-size: 1.5rem;
+    font-style: oblique;
+  }
+
+  > ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      font-size: 1rem;
+    }
+  }
+}
