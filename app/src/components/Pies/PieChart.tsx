@@ -23,13 +23,13 @@ const Pie = ({ data }: Props): ReactElement => {
                     {
                         data: data,
                         valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-                        innerRadius: 120,
+                        innerRadius: 90,
                         paddingAngle: 0,
                         cornerRadius: 0,
                     }
                 ]}
-                width={300}
-                height={325}
+                width={240}
+                height={240}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
     )

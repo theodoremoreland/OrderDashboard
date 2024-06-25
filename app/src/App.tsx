@@ -13,7 +13,7 @@ import Pies from './components/Pies/Pies';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
-// import Streaks from './components/Streaks/Streaks';
+import Streaks from './components/Streaks/Streaks';
 import { TopStoresBar } from './components/TopStores/TopStores';
 
 // Types
@@ -41,18 +41,19 @@ const App = (): ReactElement => {
             />   
             <div className='row'>
               <Scatters analytics={analytics} />
-              <Pies analytics={analytics} />
+              <Streaks analytics={analytics} />
             </div>
             <div className='row'>
               <TopStoresBar analytics={analytics} />
-              {/* <Streaks analytics={analytics} /> */}
+              <Pies analytics={analytics} />
+              <Pies analytics={analytics} />
             </div>
             <div className='row'>
-            <Grid
-                data={analytics.orders}
-                pageSize={6}
-                pageSizeOptions={[6]}
-              />
+              <Grid
+                  data={analytics.orders}
+                  pageSize={6}
+                  pageSizeOptions={[6]}
+                />
             </div>
           </div>
         )}
