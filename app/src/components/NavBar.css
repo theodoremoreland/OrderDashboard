@@ -2,13 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 1rem;
+  padding: 1rem 2rem;
 
   .app-title {
     font-family: custom-bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-style: oblique;
-    letter-spacing: 0.1758rem;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+    padding: 0;
+    margin: 0;
   }
 
   > ul {

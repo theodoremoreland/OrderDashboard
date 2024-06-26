@@ -1,10 +1,6 @@
 // React
 import { ReactElement, useState } from "react";
 
-// MUI
-import FormControl from '@mui/material/FormControl';
-import { NativeSelect } from '@mui/material';
-
 // Custom
 import Analytics from "../../classes/Analytics";
 
@@ -23,19 +19,20 @@ const Streaks = ({ analytics }: Props): ReactElement => {
 
     return (
         <section className="Streaks">
-            <FormControl fullWidth>
-                <NativeSelect
-                    value={listSelection}
-                    onChange={(e) => setListSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
-                    inputProps={{
-                        name: 'topStoresBy',
-                        id: 'uncontrolled-native',
-                    }}
+            <ul className="title-selector">
+                <li
+                    className={listSelection === "days-with-purchases" ? "selected" : ""}
+                    onClick={() => setListSelection("days-with-purchases")}
                 >
-                    <option value="days-with-purchases">Days of purchases</option>
-                    <option value="days-without-purchases">Days without purchases</option>
-                </NativeSelect>
-            </FormControl>
+                        Days of purchase
+                </li>
+                <li
+                    className={listSelection === "days-without-purchases" ? "selected" : ""}
+                    onClick={() => setListSelection("days-without-purchases")}
+                >
+                        Days without purchase
+                </li>
+            </ul>
             {
                 listSelection === "days-with-purchases" &&
                 <List
