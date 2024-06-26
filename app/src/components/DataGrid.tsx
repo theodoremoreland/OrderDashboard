@@ -40,18 +40,18 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
         valueFormatter: (_, row) => row.cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
         flex: 1,
     },
-    // {
-    //     field: 'itemCount',
-    //     headerName: 'Item Count',
-    //     type: 'number',
-    // },
-    // {
-    //     field: 'items',
-    //     headerName: 'Items',
-    //     valueFormatter: (_, row) => row.items.join(', '),
-    //     flex: 1,
-    //     sortable: false,
-    // },
+    {
+        field: 'itemCount',
+        headerName: 'Item Count',
+        type: 'number',
+    },
+    {
+        field: 'items',
+        headerName: 'Items',
+        valueFormatter: (_, row) => row.items.join(', '),
+        flex: 1,
+        sortable: false,
+    },
 ];
 
 const Grid = ({ data, pageSize, pageSizeOptions }: Props): ReactElement => {
