@@ -1,4 +1,38 @@
 .Scatters {
   position: relative;
   width: 100%;
+
+  .title-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    order: 2;
+    background-color: transparent;
+    border: none;
+    opacity: 0.4;
+    font-size: 0.9rem;
+    transition: font-size 0.3s linear;
+  }
+
+  li.selected {
+    order: 1;
+    color: #09b993;
+    font-family: custom-bold;
+    font-size: 1.5rem;
+    font-style: oblique;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+  }
+
+  li:hover {
+    cursor: pointer;
+  }
 }

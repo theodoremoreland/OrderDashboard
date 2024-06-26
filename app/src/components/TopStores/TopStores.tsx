@@ -1,10 +1,6 @@
 // React
 import { ReactElement, useState } from 'react';
 
-// MUI
-import FormControl from '@mui/material/FormControl';
-import { NativeSelect } from '@mui/material';
-
 // Custom
 import Analytics from '../../classes/Analytics';
 
@@ -23,44 +19,24 @@ const TopStores = ({ analytics }: Props): ReactElement => {
 
     return (
         <section className="TopStores">
-            {/* <FormControl fullWidth>
-                <NativeSelect
-                    value={barSelection}
-                    onChange={(e) => setBarSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
-                    inputProps={{
-                        name: 'topStoresBy',
-                        id: 'uncontrolled-native',
-                    }}
-                >
-                    <option value="totalSpend">Total Spend</option>
-                    <option value="totalOrders">Total Orders</option>
-                    <option value="totalItemsPurchased">Total Items Purchased</option>
-                </NativeSelect>
-            </FormControl> */}
             <ul className="title-selector">
-                <li>
-                    <button
-                        className={barSelection === "totalSpend" ? "selected" : ""}
-                        onClick={() => setBarSelection("totalSpend")}
-                    >
+                <li
+                    className={barSelection === "totalSpend" ? "selected" : ""}
+                    onClick={() => setBarSelection("totalSpend")}
+                >
                         Total Spend
-                    </button>
                 </li>
-                <li>
-                    <button
-                        className={barSelection === "totalOrders" ? "selected" : ""}
-                        onClick={() => setBarSelection("totalOrders")}
-                    >
+                <li
+                    className={barSelection === "totalOrders" ? "selected" : ""}
+                    onClick={() => setBarSelection("totalOrders")}
+                >
                         Total Orders
-                    </button>
                 </li>
-                <li>
-                    <button
-                        className={barSelection === "totalItemsPurchased" ? "selected" : ""}
-                        onClick={() => setBarSelection("totalItemsPurchased")}
-                    >
+                <li
+                    className={barSelection === "totalItemsPurchased" ? "selected" : ""}
+                    onClick={() => setBarSelection("totalItemsPurchased")}
+                >
                         Total Items Purchased
-                    </button>
                 </li>
             </ul>
             {
