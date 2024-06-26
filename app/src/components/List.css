@@ -6,7 +6,8 @@
   align-items: flex-start;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 0;
+  box-sizing: border-box;
+  padding: 1rem;
   margin: 0;
   list-style: none;
   width: 100%;
@@ -14,12 +15,18 @@
   li {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
     padding: 0.35rem 0;
     width: 100%;
 
-    span {
-      width: 50%;
+    .key {
+      width: 30%;
+    }
+
+    .value {
+      width: 70%;
+      text-align: right;
     }
   }
 }

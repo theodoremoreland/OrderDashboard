@@ -47,11 +47,11 @@ const App = (): ReactElement => {
             </div>
             <div className='row'>
               <TopStores analytics={analytics} />
-              <Pie data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
-                    return { label: key, value: value }
-              })} />
-              <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
+              <Pie metricLabel="Total Spend" dimensionLabel='by Month' data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
                   return { label: key, value: value }
+              })} />
+              <Pie metricLabel="Total Spend" dimensionLabel='by Weekday' data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
+                    return { label: key, value: value }
               })} />
             </div>
             <div className='order-history'>

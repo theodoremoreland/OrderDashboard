@@ -1,8 +1,25 @@
 .Pie {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background-color: #333;
-  color: white;
+
+  h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: custom-bold;
+    font-size: 1.25rem;
+    font-style: oblique;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+  }
 }

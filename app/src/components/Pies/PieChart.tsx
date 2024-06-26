@@ -8,15 +8,21 @@ import { PieChart } from '@mui/x-charts/PieChart';
 import './PieChart.css';
 
 interface Props {
+    metricLabel: string,
+    dimensionLabel: string,
     data: {
         label: string,
         value: number
     }[]
 }
 
-const Pie = ({ data }: Props): ReactElement => {
+const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
     return (
         <div className="Pie">
+            <h2>
+                <span>{metricLabel}</span>
+                <span>{dimensionLabel}</span>
+            </h2>
             <PieChart
                 slotProps={{
                     legend: {
@@ -27,12 +33,13 @@ const Pie = ({ data }: Props): ReactElement => {
                     {
                         data: data,
                         valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-                        innerRadius: 90,
-                        paddingAngle: 0,
-                        cornerRadius: 0,
+                        innerRadius: 110,
+                        paddingAngle: 2,
+                        cornerRadius: 12,
+                        startAngle: 0,
                     }
                 ]}
-                width={240}
+                width={300}
                 height={240}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
