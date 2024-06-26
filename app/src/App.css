@@ -17,9 +17,13 @@
 
 /* ___________________ GLOBAL ____________________________ */
 :root {
-  --primary-color: #09b993;
-  --secondary-color: #e40000;
-  --tertiary-color: #f2f2f2;
+  --color: #fc3e74;
+  --color: #d71c60;
+  --color: #19122d;
+  --color: #4aa7f1;
+  --color: #2265c1;
+  --color: #5845ba;
+  --color: #feffff;
 
   --border: 1px solid black;
   --border-radius: 4px;
