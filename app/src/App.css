@@ -15,6 +15,16 @@
   src: url("./assets/fonts/Urbanist-Thin.ttf");
 }
 
+/* ___________________ GLOBAL ____________________________ */
+:root {
+  --primary-color: #09b993;
+  --secondary-color: #e40000;
+  --tertiary-color: #f2f2f2;
+
+  --border: 1px solid black;
+  --border-radius: 4px;
+}
+
 #analytics-container {
   display: flex;
   flex-direction: column;
@@ -35,14 +45,9 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   gap: 3rem;
-}
-
-.row,
-section {
-  /* border: 1px solid #000; */
 }
 
 .order-history {

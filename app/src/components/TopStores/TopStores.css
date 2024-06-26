@@ -1,5 +1,8 @@
 .TopStores {
   width: 70%;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 16px;
 
   .title-selector {
     display: flex;

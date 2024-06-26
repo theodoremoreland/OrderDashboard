@@ -2,7 +2,7 @@
 import { ReactElement } from "react";
 
 // Third party
-import { PieChart } from '@mui/x-charts/PieChart';
+import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
 
 // Styles
 import './PieChart.css';
@@ -31,16 +31,22 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                 }}
                 series={[
                     {
+                        arcLabel: (item) => `${item.label}`,
                         data: data,
                         valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-                        innerRadius: 110,
+                        innerRadius: 80,
                         paddingAngle: 2,
-                        cornerRadius: 12,
+                        cornerRadius: 2,
                         startAngle: 0,
                     }
                 ]}
+                sx={{
+                    [`& .${pieArcLabelClasses.root}`]: {
+                        fill: 'white',
+                    },
+                }}
                 width={300}
-                height={240}
+                height={260}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
         </div>
