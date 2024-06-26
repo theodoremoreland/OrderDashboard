@@ -45,7 +45,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     id="stores-by-total-spend"
                     title="Top Stores by Total Spend"
                     dataset={analytics
-                        .getTopStoresByTotalSpend(10)
+                        .getTopStoresByTotalSpend(7)
                         .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
                     }
                 />
@@ -56,7 +56,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     id="stores-by-total-orders"
                     title="Top Stores by Total Orders"
                     dataset={analytics
-                        .getTopStoresByTotalOrders(10)
+                        .getTopStoresByTotalOrders(7)
                         .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
                     }
                 />
@@ -67,7 +67,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     id="stores-by-total-items-purchased"
                     title="Top Stores by Total Items Purchased"
                     dataset={analytics
-                        .getTopStoresByTotalItemsPurchased(10)
+                        .getTopStoresByTotalItemsPurchased(7)
                         .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
                     }
                 />
