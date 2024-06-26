@@ -13,13 +13,10 @@ const NavBar = (): ReactElement => {
                     <a href="#kpis">Orders</a>
                 </li>
                 <li>
-                    <a href="#scatters">Scatters</a>
+                    <a href="#scatters">Cycle Data</a>
                 </li>
                 <li>
-                    <a href="#streaks">Streaks</a>
-                </li>
-                <li>
-                    <a href="#top-stores">Top Stores</a>
+                    <a href="#streaks">Download Report</a>
                 </li>
             </ul>
         </nav>

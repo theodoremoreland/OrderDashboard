@@ -18,15 +18,15 @@ interface Props {
     analytics: Analytics
 }
 
-export const TopStoresBar = ({ analytics }: Props): ReactElement => {
-    const [tableSelection, setTableSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
+const TopStores = ({ analytics }: Props): ReactElement => {
+    const [barSelection, setBarSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
     return (
         <section className="TopStores">
-            <FormControl fullWidth>
+            {/* <FormControl fullWidth>
                 <NativeSelect
-                    value={tableSelection}
-                    onChange={(e) => setTableSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
+                    value={barSelection}
+                    onChange={(e) => setBarSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
                     inputProps={{
                         name: 'topStoresBy',
                         id: 'uncontrolled-native',
@@ -36,9 +36,35 @@ export const TopStoresBar = ({ analytics }: Props): ReactElement => {
                     <option value="totalOrders">Total Orders</option>
                     <option value="totalItemsPurchased">Total Items Purchased</option>
                 </NativeSelect>
-            </FormControl>
+            </FormControl> */}
+            <ul className="title-selector">
+                <li>
+                    <button
+                        className={barSelection === "totalSpend" ? "selected" : ""}
+                        onClick={() => setBarSelection("totalSpend")}
+                    >
+                        Total Spend
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className={barSelection === "totalOrders" ? "selected" : ""}
+                        onClick={() => setBarSelection("totalOrders")}
+                    >
+                        Total Orders
+                    </button>
+                </li>
+                <li>
+                    <button
+                        className={barSelection === "totalItemsPurchased" ? "selected" : ""}
+                        onClick={() => setBarSelection("totalItemsPurchased")}
+                    >
+                        Total Items Purchased
+                    </button>
+                </li>
+            </ul>
             {
-                tableSelection === "totalSpend" &&
+                barSelection === "totalSpend" &&
                 <Bar
                     id="stores-by-total-spend"
                     title="Top Stores by Total Spend"
@@ -49,7 +75,7 @@ export const TopStoresBar = ({ analytics }: Props): ReactElement => {
                 />
             }
             {
-                tableSelection === "totalOrders" &&
+                barSelection === "totalOrders" &&
                 <Bar
                     id="stores-by-total-orders"
                     title="Top Stores by Total Orders"
@@ -60,7 +86,7 @@ export const TopStoresBar = ({ analytics }: Props): ReactElement => {
                 />
             }
             {
-                tableSelection === "totalItemsPurchased" &&
+                barSelection === "totalItemsPurchased" &&
                 <Bar
                     id="stores-by-total-items-purchased"
                     title="Top Stores by Total Items Purchased"
@@ -73,3 +99,5 @@ export const TopStoresBar = ({ analytics }: Props): ReactElement => {
         </section>
     );
 }
+
+export default TopStores;

@@ -44,3 +44,12 @@
 section {
   /* border: 1px solid #000; */
 }
+
+.order-history {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}

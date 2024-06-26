@@ -10,12 +10,12 @@ import { DataContext } from './contexts/DataContextProvider';
 
 // Components
 import NavBar from './components/NavBar';
-import Pies from './components/Pies/Pies';
+import Pie from './components/Pies/PieChart';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
 import Streaks from './components/Streaks/Streaks';
-import { TopStoresBar } from './components/TopStores/TopStores';
+import TopStores from './components/TopStores/TopStores';
 
 // Types
 import { Order } from './types/types';
@@ -46,11 +46,16 @@ const App = (): ReactElement => {
               <Streaks analytics={analytics} />
             </div>
             <div className='row'>
-              <TopStoresBar analytics={analytics} />
-              <Pies analytics={analytics} />
-              <Pies analytics={analytics} />
+              <TopStores analytics={analytics} />
+              <Pie data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
+                    return { label: key, value: value }
+              })} />
+              <Pie data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
+                  return { label: key, value: value }
+              })} />
             </div>
-            <div className='row'>
+            <div className='order-history'>
+              <h2>Order History</h2>
               <Grid
                   data={analytics.orders}
                   pageSize={6}

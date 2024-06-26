@@ -5,8 +5,10 @@
   padding: 0rem 1rem;
 
   .app-title {
+    font-family: custom-bold;
     font-size: 1.5rem;
     font-style: oblique;
+    letter-spacing: 0.1758rem;
   }
 
   > ul {
