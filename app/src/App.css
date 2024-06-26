@@ -25,7 +25,7 @@
   --color: #5845ba;
   --color: #feffff;
 
-  --border: 1px solid black;
+  --border: 1px solid rgba(0, 0, 0, 0.199);
   --border-radius: 4px;
 }
 

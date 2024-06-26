@@ -24,13 +24,13 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                     className={listSelection === "days-with-purchases" ? "selected" : ""}
                     onClick={() => setListSelection("days-with-purchases")}
                 >
-                        Days of purchase
+                        Purchase Streaks
                 </li>
                 <li
                     className={listSelection === "days-without-purchases" ? "selected" : ""}
                     onClick={() => setListSelection("days-without-purchases")}
                 >
-                        Days without purchase
+                        Non Purchase Streaks
                 </li>
             </ul>
             {
@@ -40,7 +40,7 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                     title="Longest consecutive days of purchases"
                     data={analytics
                         .getTopPurchaseStreaks(7)
-                        .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
+                        .map(obj => ({ key: `${obj.days} consecutive days`, value: `${obj.startDate} - ${obj.endDate}` }))
                     }
                 />
             }
@@ -51,7 +51,7 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                     title="Longest consecutive days without purchases"
                     data={analytics
                         .getTopDroughtsBetweenPurchases(7)
-                        .map(obj => ({ key: `${obj.days} days`, value: `${obj.startDate} - ${obj.endDate}` }))
+                        .map(obj => ({ key: `${obj.days} consecutive days`, value: `${obj.startDate} - ${obj.endDate}` }))
                     }
                 />
             }

@@ -17,15 +17,16 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    padding: 0.35rem 0;
+    padding: 0.4rem 0;
     width: 100%;
+    font-size: 0.9rem;
 
     .key {
-      width: 30%;
+      flex-grow: 1;
     }
 
     .value {
-      width: 70%;
+      flex-grow: 1;
       text-align: right;
     }
   }
