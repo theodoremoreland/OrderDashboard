@@ -49,7 +49,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     {
                         Object.keys(analytics.getTotalSpendByYear()).sort((a, b) => Number(b) - Number(a)).map(year => {
                             return (
-                                <option value={year}>{year}</option>
+                                <option key={year} value={year}>{year}</option>
                             )
                         })
                     }
