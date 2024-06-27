@@ -28,8 +28,8 @@ const Bar = ({ id, dataset}: Props): ReactElement => {
                 { dataKey: 'value' },
             ]}
             layout="horizontal"
-            height={215}
-            margin={{ left: 150, top: 15, right: 35 }}
+            height={165}
+            margin={{ left: 150, top: 0, right: 35 }}
         />
     )
 }

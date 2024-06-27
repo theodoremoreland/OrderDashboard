@@ -1,6 +1,13 @@
 // React
 import { ReactElement, useState } from 'react';
 
+// MUI
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+
 // Custom
 import Analytics from '../../classes/Analytics';
 
@@ -17,9 +24,13 @@ interface Props {
 const TopStores = ({ analytics }: Props): ReactElement => {
     const [barSelection, setBarSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setBarSelection((event.target as HTMLInputElement).value as "totalSpend" | "totalOrders" | "totalItemsPurchased");
+    };
+
     return (
         <section className="TopStores">
-            <ul className="title-selector">
+            {/* <ul className="title-selector">
                 <li
                     className={barSelection === "totalSpend" ? "selected" : ""}
                     onClick={() => setBarSelection("totalSpend")}
@@ -38,7 +49,21 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                 >
                         Total Items
                 </li>
-            </ul>
+            </ul> */}
+            <FormControl>
+                <FormLabel id="demo-row-radio-buttons-group-label">Top Stores by</FormLabel>
+                <RadioGroup
+                    row
+                    aria-labelledby="demo-row-radio-buttons-group-label"
+                    name="row-radio-buttons-group"
+                    value={barSelection}
+                    onChange={handleChange}
+                >
+                    <FormControlLabel value="totalSpend" control={<Radio />} label="Total Spend" />
+                    <FormControlLabel value="totalOrders" control={<Radio />} label="Total Orders" />
+                    <FormControlLabel value="totalItemsPurchased" control={<Radio />} label="Total Items" />
+                </RadioGroup>
+            </FormControl>
             {
                 barSelection === "totalSpend" &&
                 <Bar
