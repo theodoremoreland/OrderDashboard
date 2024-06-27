@@ -1,6 +1,11 @@
 // React
 import { ReactElement } from "react";
 
+// Images
+import TableViewIcon from "../assets/images/icons/table-view.svg"
+import DownloadIcon from "../assets/images/icons/download.svg"
+import FindReplaceIcon from "../assets/images/icons/find-replace.svg"
+
 // Styles
 import './NavBar.css';
 
@@ -10,13 +15,13 @@ const NavBar = (): ReactElement => {
             <h1 className="app-title">Order Dashboard</h1>
             <ul>
                 <li>
-                    <a href="#kpis">Orders</a>
+                    <img src={TableViewIcon} className="icon" alt="Table View"/>
                 </li>
                 <li>
-                    <a href="#scatters">Cycle Data</a>
+                    <img src={FindReplaceIcon} className="icon" alt="Find Replace"/>
                 </li>
                 <li>
-                    <a href="#streaks">Download Report</a>
+                    <img src={DownloadIcon} className="icon" alt="Download"/>
                 </li>
             </ul>
         </nav>
