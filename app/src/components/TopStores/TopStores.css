@@ -1,5 +1,5 @@
 .TopStores {
-  width: 70%;
+  flex-grow: 1;
   height: 100%;
   box-sizing: border-box;
   padding: 16px;

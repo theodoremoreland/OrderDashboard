@@ -34,7 +34,7 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                         arcLabel: (item) => `${item.label}`,
                         data: data,
                         valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
-                        innerRadius: 80,
+                        innerRadius: 70,
                         paddingAngle: 2,
                         cornerRadius: 2,
                         startAngle: 0,
@@ -46,7 +46,7 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                     },
                 }}
                 width={290}
-                height={235}
+                height={215}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
         </div>
