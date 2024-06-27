@@ -37,26 +37,25 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     <DownloadIcon className="icon" />
                 </li>
                 <FormControl>
-                <NativeSelect
-                    value={selectedYear}
-                    onChange={(e) => setSelectedYear(e.target.value)}
-                    inputProps={{
-                        name: 'year',
-                        id: 'uncontrolled-native',
-                    }}
-                >
-                    <option value="All">All</option>
-                    {
-                        Object.keys(analytics.getTotalSpendByYear()).sort((a, b) => Number(b) - Number(a)).map(year => {
-                            return (
-                                <option key={year} value={year}>{year}</option>
-                            )
-                        })
-                    }
-                </NativeSelect>
-            </FormControl>
+                    <NativeSelect
+                        value={selectedYear}
+                        onChange={(e) => setSelectedYear(e.target.value)}
+                        inputProps={{
+                            name: 'year',
+                            id: 'uncontrolled-native',
+                        }}
+                    >
+                        <option value="All">All</option>
+                        {
+                            Object.keys(analytics.getTotalSpendByYear()).sort((a, b) => Number(b) - Number(a)).map(year => {
+                                return (
+                                    <option key={year} value={year}>{year}</option>
+                                )
+                            })
+                        }
+                    </NativeSelect>
+                </FormControl>
             </ul>
-
         </nav>
     )
 }

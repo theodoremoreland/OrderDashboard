@@ -2,11 +2,8 @@
 import { ReactElement, useState } from 'react';
 
 // MUI
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
+import { NativeSelect } from '@mui/material';
 
 // Custom
 import Analytics from '../../classes/Analytics';
@@ -24,66 +21,25 @@ interface Props {
 const TopStores = ({ analytics }: Props): ReactElement => {
     const [barSelection, setBarSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setBarSelection((event.target as HTMLInputElement).value as "totalSpend" | "totalOrders" | "totalItemsPurchased");
-    };
-
     return (
         <section className="TopStores">
-            {/* <ul className="title-selector">
-                <li
-                    className={barSelection === "totalSpend" ? "selected" : ""}
-                    onClick={() => setBarSelection("totalSpend")}
-                >
-                        Total Spend
-                </li>
-                <li
-                    className={barSelection === "totalOrders" ? "selected" : ""}
-                    onClick={() => setBarSelection("totalOrders")}
-                >
-                        Total Orders
-                </li>
-                <li
-                    className={barSelection === "totalItemsPurchased" ? "selected" : ""}
-                    onClick={() => setBarSelection("totalItemsPurchased")}
-                >
-                        Total Items
-                </li>
-            </ul> */}
-            <FormControl
-                sx={
-                    {
-                        display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "flex-start",
-                        alignItems: "center",
-                        gap: "16px",
-                        width: "100%",
-                    }
-                }
-            >
-                <FormLabel
-                    id="demo-row-radio-buttons-group-label"
-                    sx={{
-                        fontSize: "1.3rem",
-                        fontStyle: "oblique",
-                        fontWeight: "bold",
-                    }}
-                >
-                    Top Stores
-                </FormLabel>
-                <RadioGroup
-                    row
-                    aria-labelledby="demo-row-radio-buttons-group-label"
-                    name="row-radio-buttons-group"
-                    value={barSelection}
-                    onChange={handleChange}
-                >
-                    <FormControlLabel value="totalSpend" control={<Radio />} label="Total Spend" />
-                    <FormControlLabel value="totalOrders" control={<Radio />} label="Total Orders" />
-                    <FormControlLabel value="totalItemsPurchased" control={<Radio />} label="Total Items" />
-                </RadioGroup>
-            </FormControl>
+            <div className='heading'>
+                <h2>Top Stores</h2>
+                <FormControl>
+                    <NativeSelect
+                        value={barSelection}
+                        onChange={(e) => setBarSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
+                        inputProps={{
+                            name: 'Top Stores by',
+                            id: 'uncontrolled-native',
+                        }}
+                    >
+                        <option value="totalSpend">by Total Spend</option>
+                        <option value="totalOrders">by Total Orders</option>
+                        <option value="totalItemsPurchased">by Total Items</option>
+                    </NativeSelect>
+                </FormControl>
+            </div>
             {
                 barSelection === "totalSpend" &&
                 <Bar
