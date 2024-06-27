@@ -27,6 +27,7 @@
 
   --border: 1px solid rgba(0, 0, 0, 0.199);
   --border-radius: 4px;
+  --section-gap: 8px;
 }
 
 #analytics-container {
@@ -34,7 +35,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
+  gap: var(--section-gap);
   padding: 0.5rem 2rem;
 }
 
@@ -52,7 +53,7 @@
   align-items: center;
   width: 100%;
   height: 234px;
-  gap: 8px;
+  gap: var(--section-gap);
 }
 
 .order-history {
@@ -62,7 +63,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  gap: 10px;
+  gap: var(--section-gap);
 
   h2 {
     font-family: custom-bold;
