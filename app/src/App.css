@@ -34,7 +34,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 16px;
   padding: 0.5rem 2rem;
 }
 

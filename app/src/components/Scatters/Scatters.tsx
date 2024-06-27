@@ -30,7 +30,7 @@ const Scatters = ({ analytics }: Props): ReactElement => {
                     className={scatterSelection === "totalItemsPurchased" ? "selected" : ""}
                     onClick={() => setScatterSelection("totalItemsPurchased")}
                 >
-                        Total Items Purchased
+                        Total Items
                 </li>
             </ul>
             {

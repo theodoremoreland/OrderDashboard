@@ -36,7 +36,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     className={barSelection === "totalItemsPurchased" ? "selected" : ""}
                     onClick={() => setBarSelection("totalItemsPurchased")}
                 >
-                        Total Items Purchased
+                        Total Items
                 </li>
             </ul>
             {

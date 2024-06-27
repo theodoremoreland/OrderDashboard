@@ -1,8 +1,10 @@
 .Streaks {
   width: 45%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
   border: var(--border);
   border-radius: var(--border-radius);
-  padding: 16px;
 
   .title-selector {
     display: flex;
