@@ -32,37 +32,39 @@ const App = (): ReactElement => {
 
   return (
     <>
-      <NavBar />
       {
         analytics && startDate && endDate && (
-          <div id="analytics-container">
-            <Kpis 
-              analytics={analytics}
-              startDate={startDate}
-              endDate={endDate}
-            />   
-            <div className='row'>
-              <Scatters analytics={analytics} />
-              <Streaks analytics={analytics} />
-            </div>
-            <div className='row'>
-              <TopStores analytics={analytics} />
-              <Pie metricLabel="Total Spend" dimensionLabel='by Month' data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
-                  return { label: key, value: value }
-              })} />
-              <Pie metricLabel="Total Spend" dimensionLabel='by Weekday' data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
+          <>
+            <NavBar analytics={analytics} />
+            <div id="analytics-container">
+              <Kpis 
+                analytics={analytics}
+                startDate={startDate}
+                endDate={endDate}
+              />   
+              <div className='row'>
+                <Scatters analytics={analytics} />
+                <Streaks analytics={analytics} />
+              </div>
+              <div className='row'>
+                <TopStores analytics={analytics} />
+                <Pie metricLabel="Total Spend" dimensionLabel='by Month' data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
                     return { label: key, value: value }
-              })} />
+                })} />
+                <Pie metricLabel="Total Spend" dimensionLabel='by Weekday' data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
+                      return { label: key, value: value }
+                })} />
+              </div>
+              <div className='order-history'>
+                <h2>Order History</h2>
+                <Grid
+                    data={analytics.orders}
+                    pageSize={6}
+                    pageSizeOptions={[6]}
+                  />
+              </div>
             </div>
-            <div className='order-history'>
-              <h2>Order History</h2>
-              <Grid
-                  data={analytics.orders}
-                  pageSize={6}
-                  pageSizeOptions={[6]}
-                />
-            </div>
-          </div>
+          </>
         )}
     </>
   )
