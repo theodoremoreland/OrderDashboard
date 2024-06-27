@@ -46,7 +46,7 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                     },
                 }}
                 width={300}
-                height={260}
+                height={230}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
         </div>

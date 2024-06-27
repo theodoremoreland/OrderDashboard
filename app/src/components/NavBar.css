@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 8px 32px;
 
   .app-title {
     font-family: custom-bold;
