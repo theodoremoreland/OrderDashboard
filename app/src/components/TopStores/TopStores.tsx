@@ -50,8 +50,28 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                         Total Items
                 </li>
             </ul> */}
-            <FormControl>
-                <FormLabel id="demo-row-radio-buttons-group-label">Top Stores by</FormLabel>
+            <FormControl
+                sx={
+                    {
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "flex-start",
+                        alignItems: "center",
+                        gap: "16px",
+                        width: "100%",
+                    }
+                }
+            >
+                <FormLabel
+                    id="demo-row-radio-buttons-group-label"
+                    sx={{
+                        fontSize: "1.3rem",
+                        fontStyle: "oblique",
+                        fontWeight: "bold",
+                    }}
+                >
+                    Top Stores
+                </FormLabel>
                 <RadioGroup
                     row
                     aria-labelledby="demo-row-radio-buttons-group-label"
