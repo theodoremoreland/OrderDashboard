@@ -2,9 +2,9 @@
 import { ReactElement } from "react";
 
 // Images
-import TableViewIcon from "../assets/images/icons/table-view.svg"
-import DownloadIcon from "../assets/images/icons/download.svg"
-import FindReplaceIcon from "../assets/images/icons/find-replace.svg"
+import TableViewIcon from "../assets/images/icons/table-view.svg?react"
+import DownloadIcon from "../assets/images/icons/download.svg?react"
+import FindReplaceIcon from "../assets/images/icons/find-replace.svg?react"
 
 // Styles
 import './NavBar.css';
@@ -15,13 +15,13 @@ const NavBar = (): ReactElement => {
             <h1 className="app-title">Order Dashboard</h1>
             <ul>
                 <li>
-                    <img src={TableViewIcon} className="icon" alt="Table View"/>
+                    <TableViewIcon className="icon" />
                 </li>
                 <li>
-                    <img src={FindReplaceIcon} className="icon" alt="Find Replace"/>
+                    <FindReplaceIcon className="icon" />
                 </li>
                 <li>
-                    <img src={DownloadIcon} className="icon" alt="Download"/>
+                    <DownloadIcon className="icon" />
                 </li>
             </ul>
         </nav>

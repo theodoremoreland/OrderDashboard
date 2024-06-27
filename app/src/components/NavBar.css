@@ -25,5 +25,9 @@
     > li {
       font-size: 1rem;
     }
+
+    .icon {
+      fill: black;
+    }
   }
 }
