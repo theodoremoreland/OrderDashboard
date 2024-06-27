@@ -46,7 +46,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         id: 'uncontrolled-native',
                     }}
                 >
-                    <option value="All">All</option>
+                    <option value="All">All years</option>
                     {
                         Object.keys(analytics.getTotalSpendByYear()).sort((a, b) => Number(b) - Number(a)).map(year => {
                             return (

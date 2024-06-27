@@ -27,7 +27,7 @@
 
   --border: 1px solid rgba(0, 0, 0, 0.199);
   --border-radius: 4px;
-  --section-gap: 8px;
+  --section-gap: 16px;
 }
 
 #analytics-container {
