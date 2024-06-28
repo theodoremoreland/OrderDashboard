@@ -4,18 +4,20 @@ import './Kpi.css';
 
 interface Props {
     id: string
-    title: string
+    label: string
     value: string | number
+    title?: string
 }
 
-const Kpi = ({ id, title, value }: Props): ReactElement => {
+const Kpi = ({ id, label, value, title }: Props): ReactElement => {
     return (
         <div 
             id={id}
             className="Kpi"
+            title={title}
         >
             <span className="value">{value}</span>
-            <span className="label">{title}</span>
+            <span className="label">{label}</span>
             <div className="overlay"></div>
         </div>
     )

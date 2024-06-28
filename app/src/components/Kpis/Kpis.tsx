@@ -51,27 +51,31 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     <>
                         <Kpi
                             id="total-spent"
-                            title="Spent"
+                            title='Total amount spent on all purchases.'
+                            label="Spent"
                             value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                         />
                         <Kpi
                             id="total-orders"
-                            title="Orders"
+                            title='Total number of orders made.'
+                            label="Orders"
                             value={analytics.getTotalPurchases().toLocaleString()}
                         />
                         <Kpi
                             id="total-items-purchased"
-                            title="Items Purchased"
+                            title='Total number of items purchased.'
+                            label="Items Purchased"
                             value={analytics.getTotalItemsPurchased().toLocaleString()}
                         />
                         <Kpi
                             id="number-of-stores"
-                            title="Stores Purchased From"
+                            title='Total number of stores purchases were made from.'
+                            label="Stores Purchased From"
                             value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()}
                         />
                         {/* <Kpi
                             id="total-days-a-purchase-was-made"
-                            title="Number of Days a Purchase was Made"
+                            label="Number of Days a Purchase was Made"
                             value={analytics.getTotalNumberOfDaysAPurchaseWasMade()}
                         /> */}
                     </>
@@ -80,22 +84,22 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     <>
                         <Kpi
                             id="per-day-averages"
-                            title="Average Spend / Purchases Per Day"
+                            label="Average Spend / Purchases Per Day"
                             value={`${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`}
                         />
                         <Kpi
                             id="per-week-averages"
-                            title="Average Spend / Purchases Per Week"
+                            label="Average Spend / Purchases Per Week"
                             value={`${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`}
                         />
                         <Kpi
                             id="per-month-averages"
-                            title="Average Spend / Purchases Per Month"
+                            label="Average Spend / Purchases Per Month"
                             value={`${analytics.getAverageSpendPerMonth(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth(startDate, endDate)}`}
                         />
                         <Kpi
                             id="per-year-averages"
-                            title="Average Spend / Purchases Per Year"
+                            label="Average Spend / Purchases Per Year"
                             value={`${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)}`}
                         />
                     </>
