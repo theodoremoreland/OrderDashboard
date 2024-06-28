@@ -42,7 +42,9 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 sx={{ minWidth: 95 }}
             >
                 <NativeSelect
-                    sx={{ color: '#feffff' }}
+                    sx={{ 
+                        color: '#feffff',
+                    }}
                     value={selectedYear}
                     onChange={(e) => setSelectedYear(e.target.value)}
                     inputProps={{

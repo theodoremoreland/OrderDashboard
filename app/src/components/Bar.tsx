@@ -23,14 +23,6 @@ const Bar = ({ id, dataset}: Props): ReactElement => {
             data-testid={id} 
             className="Bar"
             dataset={dataset}
-            sx={{
-                '& .MuiChartsAxis-tickLabel': {
-                    fill: 'var(--primary-font-color)',
-                },
-                '& .MuiChartsAxis-line, & .MuiChartsAxis-tick': {
-                    stroke: 'var(--border-color)'
-                },
-            }}
             yAxis={[
                 { 
                     scaleType: 'band',

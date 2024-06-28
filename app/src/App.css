@@ -50,3 +50,30 @@
   border: var(--border);
   border-radius: var(--border-radius);
 }
+
+/* Material UI !important overrides */
+
+.MuiNativeSelect-root {
+  &::before {
+    border-color: var(--primary-highlight-color) !important;
+  }
+
+  &::after {
+    border-color: var(--tertiary-highlight-color) !important;
+  }
+}
+
+/* SELECT */
+.MuiNativeSelect-icon {
+  color: var(--primary-highlight-color) !important;
+}
+
+/* CHARTS */
+.MuiChartsAxis-tickLabel {
+  fill: var(--primary-font-color) !important;
+}
+
+.MuiChartsAxis-line,
+.MuiChartsAxis-tick {
+  stroke: var(--border-color) !important;
+}
