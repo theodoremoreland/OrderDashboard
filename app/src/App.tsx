@@ -68,6 +68,7 @@ const App = (): ReactElement => {
                     pageSize={6}
                     pageSizeOptions={[6]}
                   />
+                  <div className='overlay'></div>
               </div>
             </div>
           </>

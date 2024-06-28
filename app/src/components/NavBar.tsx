@@ -64,6 +64,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     }
                 </NativeSelect>
             </FormControl>
+            <div className="overlay"></div>
         </nav>
     )
 }

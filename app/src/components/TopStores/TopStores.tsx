@@ -77,6 +77,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     }
                 />
             }
+            <div className="overlay"></div>
         </section>
     );
 }

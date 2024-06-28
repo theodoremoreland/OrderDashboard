@@ -75,6 +75,7 @@ const Scatters = ({ analytics }: Props): ReactElement => {
                     })}
                 />
             }
+            <div className="overlay"></div>
         </section>
     );
 }
