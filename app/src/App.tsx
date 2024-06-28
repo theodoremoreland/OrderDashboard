@@ -70,7 +70,9 @@ const App = (): ReactElement => {
                   />
                   <div className='overlay'></div>
               </div>
+              <div className='overlay-2'></div>
             </div>
+            
           </>
         )}
     </>
