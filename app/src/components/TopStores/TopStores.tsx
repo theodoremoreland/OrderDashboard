@@ -25,7 +25,10 @@ const TopStores = ({ analytics }: Props): ReactElement => {
         <section className="TopStores">
             <div className='heading'>
                 <h2>Top Stores</h2>
-                <FormControl>
+                <FormControl
+                    size="small"
+                    sx={{ minWidth: 150 }}
+                >
                     <NativeSelect
                         sx={{ color: '#feffff' }}
                         value={barSelection}

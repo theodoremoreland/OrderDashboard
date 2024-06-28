@@ -25,7 +25,10 @@ const Streaks = ({ analytics }: Props): ReactElement => {
         <section className="Streaks">
             <div className='heading'>
                 <h2>Top Streaks</h2>
-                <FormControl>
+                <FormControl
+                    size="small"
+                    sx={{ minWidth: 110 }}
+                >
                     <NativeSelect
                         sx={{ color: '#feffff' }}
                         value={listSelection}

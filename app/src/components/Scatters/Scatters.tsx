@@ -25,7 +25,10 @@ const Scatters = ({ analytics }: Props): ReactElement => {
         <section className='Scatters'>
             <div className='heading'>
                 <h2>Activity</h2>
-                <FormControl>
+                <FormControl
+                    size="small"
+                    sx={{ minWidth: 150 }}
+                >
                     <NativeSelect
                         sx={{ color: '#feffff' }}
                         value={scatterSelection}
