@@ -37,7 +37,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     <DownloadIcon className="icon" />
                 </li>
             </ul>
-            <FormControl>
+            <FormControl
+                size="small"
+                sx={{ minWidth: 95 }}
+            >
                 <NativeSelect
                     sx={{ color: '#feffff' }}
                     value={selectedYear}
