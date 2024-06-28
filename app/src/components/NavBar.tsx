@@ -39,6 +39,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             </ul>
             <FormControl>
                 <NativeSelect
+                    sx={{ color: '#feffff' }}
                     value={selectedYear}
                     onChange={(e) => setSelectedYear(e.target.value)}
                     inputProps={{

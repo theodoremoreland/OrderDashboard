@@ -27,6 +27,7 @@ const Scatters = ({ analytics }: Props): ReactElement => {
                 <h2>Activity</h2>
                 <FormControl>
                     <NativeSelect
+                        sx={{ color: '#feffff' }}
                         value={scatterSelection}
                         onChange={(e) => setScatterSelection(e.target.value as "totalSpend" | "totalOrders"  | "totalItemsPurchased")}
                         inputProps={{

@@ -1,6 +1,55 @@
+/* ___________________ FONTS ____________________________ */
+@font-face {
+  font-family: custom-bold;
+  src: url("./assets/fonts/Urbanist-Bold.ttf");
+}
+
+@font-face {
+  font-family: custom-regular;
+  src: url("./assets/fonts/Urbanist-Regular.ttf");
+}
+
+@font-face {
+  font-family: custom-thin;
+  src: url("./assets/fonts/Urbanist-Thin.ttf");
+}
+
+/* ___________________ GLOBAL ____________________________ */
+:root {
+  --color: #fc3e74;
+  --color: #d71c60;
+  --color: #071c31;
+  --color: #070c10;
+  --color: #4aa7f1;
+  --color: #2265c1;
+  --color: #5845ba;
+  --color: #19122d;
+  --color: #feffff;
+
+  --border-color: #feffff36;
+  --border: 1px solid var(--border-color);
+  --border-radius: 4px;
+  --section-gap: 20px;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  color: #feffff;
+  font-family: custom-regular;
+  background: rgb(7, 28, 49);
+  background: linear-gradient(
+    180deg,
+    rgba(7, 28, 49, 1) 0%,
+    rgba(7, 12, 16, 1) 100%
+  );
+}
+
 body {
-  margin: 0;
+  width: 100%;
+  height: 100%;
   padding: 0;
+  margin: 0;
 }
 
 h2 {

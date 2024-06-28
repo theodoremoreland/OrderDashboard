@@ -27,6 +27,7 @@ const Streaks = ({ analytics }: Props): ReactElement => {
                 <h2>Top Streaks</h2>
                 <FormControl>
                     <NativeSelect
+                        sx={{ color: '#feffff' }}
                         value={listSelection}
                         onChange={(e) => setListSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
                         inputProps={{

@@ -27,6 +27,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                 <h2>Top Stores</h2>
                 <FormControl>
                     <NativeSelect
+                        sx={{ color: '#feffff' }}
                         value={barSelection}
                         onChange={(e) => setBarSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
                         inputProps={{

@@ -45,7 +45,7 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                 ]}
                 sx={{
                     [`& .${pieArcLabelClasses.root}`]: {
-                        fill: 'white',
+                        fill: '#feffff',
                     },
                     [`& .${pieArcClasses.root}`]: {
                         stroke: 'transparent'
