@@ -41,7 +41,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             </div>
             <FormControl
                 size="small"
-                sx={{ minWidth: 95 }}
+                sx={{ minWidth: 95, zIndex: 2}}
             >
                 <NativeSelect
                     sx={{ 
