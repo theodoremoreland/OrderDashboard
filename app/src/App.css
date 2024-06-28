@@ -45,6 +45,15 @@
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
 }
 
+/* Heading for charts */
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .row {
   position: relative;
   display: flex;
