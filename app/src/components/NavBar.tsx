@@ -26,17 +26,19 @@ const NavBar = ({ analytics }: Props): ReactElement => {
     return (
         <nav className="NavBar">
             <h1 className="app-title">Order Dashboard</h1>
-            <ul>
-                <li>
-                    <TableViewIcon className="icon" />
-                </li>
-                <li>
-                    <FindReplaceIcon className="icon" />
-                </li>
-                <li>
-                    <DownloadIcon className="icon" />
-                </li>
-            </ul>
+            <div className="center">
+                <ul>
+                    <li>
+                        <TableViewIcon className="icon" />
+                    </li>
+                    <li>
+                        <FindReplaceIcon className="icon" />
+                    </li>
+                    <li>
+                        <DownloadIcon className="icon" />
+                    </li>
+                </ul>
+            </div>
             <FormControl
                 size="small"
                 sx={{ minWidth: 95 }}
