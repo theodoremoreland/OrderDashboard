@@ -65,6 +65,8 @@
   opacity: 0.45;
   mix-blend-mode: overlay;
   pointer-events: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .row {
@@ -122,10 +124,10 @@
 /* DATA GRID */
 .grid-header {
   color: var(--primary-font-color) !important;
-  background: rgb(21, 43, 65);
+  background: rgb(17, 34, 52);
   background: linear-gradient(
     180deg,
-    rgba(21, 43, 65, 1) 0%,
+    rgb(17, 34, 52) 0%,
     rgba(7, 28, 49, 1) 100%
   );
 
