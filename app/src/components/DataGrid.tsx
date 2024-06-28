@@ -25,17 +25,20 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
     {
         field: 'date',
         headerName: 'Date',
+        headerClassName: 'grid-header',
         type: 'date',
         flex: 1,
     },
     {
         field: 'storeName',
         headerName: 'Store',
+        headerClassName: 'grid-header',
         flex: 1,
     },
     {
         field: 'cost',
         headerName: 'Cost',
+        headerClassName: 'grid-header',
         type: 'number',
         valueFormatter: (_, row) => row.cost.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
         flex: 1,
@@ -43,12 +46,14 @@ const columns: GridColDef<(Omit<Order, 'date'> & { id: number, date: Date})>[] =
     {
         field: 'itemCount',
         headerName: 'Item Count',
+        headerClassName: 'grid-header',
         type: 'number',
     },
     {
         field: 'items',
         headerName: 'Items',
-        valueFormatter: (_, row) => row.items.join(', '),
+        headerClassName: 'grid-header',
+        valueFormatter: (_, row) => row.items.join(' • '),
         flex: 1,
         sortable: false,
     },
@@ -60,6 +65,7 @@ const Grid = ({ data, pageSize, pageSizeOptions }: Props): ReactElement => {
             <DataGrid
                 sx={{
                     border: 'none',
+                    color: 'white'
                 }}
                 rows={data}
                 columns={columns}

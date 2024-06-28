@@ -16,15 +16,17 @@
 
 /* ___________________ GLOBAL ____________________________ */
 :root {
-  /* --color: #fc3e74;
+  --color: #fc3e74;
   --color: #d71c60;
   --color: #071c31;
   --color: #070c10;
   --color: #4aa7f1;
   --color: #2265c1;
+  --color: #214263;
+  --color: #263951;
   --color: #5845ba;
   --color: #19122d;
-  --color: #feffff; */
+  --color: #feffff;
 
   --primary-font-color: #feffff;
   --primary-highlight-color: #fc3e74;

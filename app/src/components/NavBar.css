@@ -3,6 +3,13 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 32px;
+  background: rgb(21, 43, 65);
+  background: linear-gradient(
+    60deg,
+    rgba(21, 43, 65, 1) 0%,
+    rgb(9, 36, 63) 100%
+  );
+  box-shadow: rgba(0, 0, 0, 0.842) 0px 25px 20px -20px;
 
   .app-title {
     font-family: custom-bold;

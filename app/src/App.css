@@ -53,6 +53,7 @@
 
 /* Material UI !important overrides */
 
+/* SELECT */
 .MuiNativeSelect-root {
   &::before {
     border-color: var(--primary-highlight-color) !important;
@@ -63,7 +64,6 @@
   }
 }
 
-/* SELECT */
 .MuiNativeSelect-icon {
   color: var(--primary-highlight-color) !important;
 }
@@ -76,4 +76,32 @@
 .MuiChartsAxis-line,
 .MuiChartsAxis-tick {
   stroke: var(--border-color) !important;
+}
+
+/* DATA GRID */
+.grid-header {
+  color: var(--primary-font-color) !important;
+  background: rgb(21, 43, 65);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 43, 65, 1) 0%,
+    rgba(7, 28, 49, 1) 100%
+  );
+
+  .MuiSvgIcon-root {
+    color: var(--primary-font-color) !important;
+  }
+}
+
+.MuiDataGrid-footerContainer,
+.MuiTablePagination-displayedRows {
+  color: var(--primary-font-color) !important;
+}
+
+.MuiButtonBase-root {
+  color: var(--primary-font-color) !important;
+}
+
+.MuiButtonBase-root.Mui-disabled {
+  color: var(--border-color) !important;
 }
