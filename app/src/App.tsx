@@ -20,6 +20,9 @@ import TopStores from './components/TopStores/TopStores';
 // Types
 import { Order } from './types/types';
 
+// Images
+import FullScreenIcon from './assets/images/icons/fullscreen.svg?react';
+
 // Styles
 import './App.css';
 
@@ -56,7 +59,10 @@ const App = (): ReactElement => {
                 })} />
               </div>
               <div className='order-history'>
-                <h2>Order History</h2>
+                <div className='heading'>
+                  <h2>Order History</h2>
+                  <FullScreenIcon className="icon" /> 
+                </div>
                 <Grid
                     data={analytics.orders}
                     pageSize={6}

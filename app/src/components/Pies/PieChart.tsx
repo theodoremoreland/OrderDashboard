@@ -36,7 +36,7 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                         valueFormatter: (obj) =>  obj.value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }),
                         innerRadius: 70,
                         paddingAngle: 2,
-                        cornerRadius: 2,
+                        cornerRadius: 4,
                         startAngle: 0,
                     }
                 ]}
@@ -46,7 +46,7 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                     },
                 }}
                 width={260}
-                height={215}
+                height={220}
                 margin={{ top: 0, right: 10, bottom: 0, left: 10 }}
             />
         </div>

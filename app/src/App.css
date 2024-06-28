@@ -39,6 +39,10 @@
   padding: 0.5rem 2rem;
 }
 
+.icon {
+  fill: black;
+}
+
 .title {
   font-family: custom-bold;
   font-style: oblique;
