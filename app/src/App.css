@@ -136,9 +136,22 @@
   }
 }
 
+.MuiDataGrid-root div[role="row"] {
+  background-color: transparent !important;
+}
+
+.MuiDataGrid-root ::after {
+  background-color: var(--border-color) !important;
+}
+
+.MuiDataGrid-root .MuiDataGrid-cell {
+  border-color: var(--border-color) !important;
+}
+
 .MuiDataGrid-footerContainer,
 .MuiTablePagination-displayedRows {
   color: var(--primary-font-color) !important;
+  border-color: var(--border-color) !important;
 }
 
 .MuiButtonBase-root {
