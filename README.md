@@ -54,3 +54,4 @@ A Python script that transforms the data created from the aforementioned web scr
 - https://dribbble.com/shots/23589425-Oplata-Admin-Dashboard
 - https://dribbble.com/shots/18018508-Financial-Web-App-Dashboard-page-concept
 - https://apexcharts.com/javascript-chart-demos/
+- https://www.pexels.com/photo/grey-wall-2117937/
