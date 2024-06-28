@@ -18,13 +18,20 @@ const Scatter = ({ data, tooltipFormatter, xAxisFormatter, yAxisFormatter }: Pro
     return (
         <div>
             <ScatterChart
+                sx={{
+                    '& .MuiChartsAxis-tickLabel, & .MuiChartsAxis-line, & .MuiChartsAxis-tick': {
+                        fill: 'var(--primary-font-color)',
+                        stroke: 'var(--border-color)'
+                    }
+                }}
                 grid={{
-                    horizontal: true
+                    horizontal: true,
                 }}
                 series={[
                     {
                         data,
                         valueFormatter: tooltipFormatter,
+                        color: '#d71c60',
                     }
                 ]}
                 yAxis={[

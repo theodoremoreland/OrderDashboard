@@ -23,7 +23,28 @@ const Bar = ({ id, dataset}: Props): ReactElement => {
             data-testid={id} 
             className="Bar"
             dataset={dataset}
-            yAxis={[{ scaleType: 'band', dataKey: 'key',}]}
+            sx={{
+                '& .MuiChartsAxis-tickLabel, & .MuiChartsAxis-line, & .MuiChartsAxis-tick': {
+                    fill: 'var(--primary-font-color)',
+                    stroke: 'var(--border-color)'
+                }
+            }}
+            yAxis={[
+                { 
+                    scaleType: 'band',
+                    dataKey: 'key',
+                },
+            ]}
+            xAxis={[
+                {
+                    colorMap: {
+                        type: 'continuous',
+                        min: dataset[dataset.length - 1].value,
+                        max: dataset[0].value,
+                        color: ['#fc3e74', '#d71c60']
+                    }
+                }
+            ]}
             series={[
                 { dataKey: 'value' },
             ]}
