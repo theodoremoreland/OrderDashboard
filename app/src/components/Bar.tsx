@@ -24,10 +24,12 @@ const Bar = ({ id, dataset}: Props): ReactElement => {
             className="Bar"
             dataset={dataset}
             sx={{
-                '& .MuiChartsAxis-tickLabel, & .MuiChartsAxis-line, & .MuiChartsAxis-tick': {
+                '& .MuiChartsAxis-tickLabel': {
                     fill: 'var(--primary-font-color)',
+                },
+                '& .MuiChartsAxis-line, & .MuiChartsAxis-tick': {
                     stroke: 'var(--border-color)'
-                }
+                },
             }}
             yAxis={[
                 { 
