@@ -2,3 +2,12 @@ body {
   margin: 0;
   padding: 0;
 }
+
+h2 {
+  font-family: custom-bold;
+  font-style: oblique;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+  padding: 0;
+  margin: 0;
+}

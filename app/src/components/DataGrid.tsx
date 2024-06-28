@@ -58,6 +58,9 @@ const Grid = ({ data, pageSize, pageSizeOptions }: Props): ReactElement => {
     return (
         <section className="Grid">
             <DataGrid
+                sx={{
+                    border: 'none',
+                }}
                 rows={data}
                 columns={columns}
                 initialState={{
