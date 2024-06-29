@@ -11,10 +11,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 6px;
+    gap: 3px;
 
     .switch-label {
-      font-size: 0.8rem;
+      cursor: pointer;
+      font-size: 0.9rem;
       color: var(--primary-font-color);
       opacity: 0.9;
       transition: all 0.3s ease-in-out;
