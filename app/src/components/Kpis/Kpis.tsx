@@ -15,6 +15,10 @@ import PaymentsIcon from '../../assets/images/icons/payments.svg?react';
 import OrdersIcon from '../../assets/images/icons/orders.svg?react';
 import ShoppingCartIcon from '../../assets/images/icons/shopping-cart.svg?react';
 import StoreIcon from '../../assets/images/icons/store.svg?react';
+import DayIcon from '../../assets/images/icons/today.svg?react';
+import WeekIcon from '../../assets/images/icons/date_range.svg?react';
+import MonthIcon from '../../assets/images/icons/calendar_month.svg?react';
+import YearIcon from '../../assets/images/icons/ad_group.svg?react';
 
 // Styles
 import './Kpis.css';
@@ -112,21 +116,25 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                         <Kpi
                             id="per-day-averages"
                             label="Average Orders Per Day"
+                            icon={<DayIcon className="icon" />}
                             value={`${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)} @ ${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                         <Kpi
                             id="per-week-averages"
                             label="Average Orders Per Week"
+                            icon={<WeekIcon className="icon" />}
                             value={`${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)} @ ${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                         <Kpi
                             id="per-month-averages"
                             label="Average Orders Per Month"
+                            icon={<MonthIcon className="icon" />}
                             value={`${analytics.getAverageNumberOfPurchasesPerMonth(startDate, endDate)} @ ${analytics.getAverageSpendPerMonth(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                         <Kpi
                             id="per-year-averages"
                             label="Average Orders Per Year"
+                            icon={<YearIcon className="icon" />}
                             value={`${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)} @ ${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                     </>

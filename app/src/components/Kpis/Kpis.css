@@ -16,15 +16,15 @@
       cursor: pointer;
       font-size: 0.9rem;
       color: var(--primary-font-color);
-      opacity: 0.3;
+      opacity: 0.4;
       transition: all 0.3s ease-in-out;
 
       &:first-of-type {
-        margin-bottom: -7px;
+        margin-bottom: -8px;
       }
 
       &:last-of-type {
-        margin-top: -7px;
+        margin-top: -8px;
       }
     }
 
