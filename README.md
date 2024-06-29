@@ -1,6 +1,6 @@
 # Order Dashboard
 
-I grew concerned about how much money I was spending on DoorDash, but DoorDash didn't have tools that made it easy for me to get insight into my spending habits. So, I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
+I knew my DoorDash spending habits were bad, I wanted an exact measure of how bad my spending habits had become. DoorDash didn't have tools that made it easy for me to analyze said spending habits, perhaps the ignorance of customers like me is within their company's best interest. I rather enjoy being referred to as a "DoorDash VIP" when I can their customer support, but that's probably not a good thing. So, I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
 
 ## Table of Contents
 
@@ -11,14 +11,16 @@ I grew concerned about how much money I was spending on DoorDash, but DoorDash d
 
 ## Technologies Used
 
+- React
 - TypeScript
 - JavaScript
 - Firefox
   - Firefox Developer Tools
 - Python
-- React
 - HTML
 - CSS
+- Material UI (for inputs)
+- Material UI X Charts (for charts and data grid)
 
 ## How it works
 
@@ -48,10 +50,3 @@ The key subjects of the file include:
 ## Transforming data
 
 A Python script that transforms the data created from the aforementioned web scraping script into a more useable format.
-
-## Dashboard inspiration
-
-- https://dribbble.com/shots/23589425-Oplata-Admin-Dashboard
-- https://dribbble.com/shots/18018508-Financial-Web-App-Dashboard-page-concept
-- https://apexcharts.com/javascript-chart-demos/
-- https://www.pexels.com/photo/grey-wall-2117937/
