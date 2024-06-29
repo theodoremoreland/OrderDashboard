@@ -5,4 +5,24 @@
   align-items: center;
   width: 100%;
   gap: 0.7rem;
+
+  .switch-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    .switch-label {
+      font-size: 0.8rem;
+      color: var(--primary-font-color);
+      opacity: 0.9;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .selected {
+      color: var(--primary-highlight-color);
+      opacity: 1;
+    }
+  }
 }

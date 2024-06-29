@@ -43,14 +43,19 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
 
     return (
         <section className={`Kpis ${kpiSet}`}>
-            <Switch
-                sx={{
-                    transform: 'rotate(90deg)'
-                }}
-                checked={checked}
-                onChange={handleChange}
-                inputProps={{ 'aria-label': 'controlled' }}
-            />
+            <div className='switch-wrapper'>
+                <span className={`switch-label ${kpiSet === 'totals' ? 'selected' : ''}`}>Totals</span>
+                <Switch
+                    sx={{
+                        transform: 'rotate(90deg)'
+                    }}
+                    size='small'
+                    checked={checked}
+                    onChange={handleChange}
+                    inputProps={{ 'aria-label': 'controlled' }}
+                />
+                <span className={`switch-label ${kpiSet === 'averages' ? 'selected' : ''}`}>Averages</span>
+            </div>
             {
                 kpiSet === "totals"
                 ? (

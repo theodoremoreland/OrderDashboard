@@ -118,6 +118,11 @@
   color: var(--primary-highlight-color) !important;
 }
 
+/* SWITCH */
+.MuiSwitch-track {
+  background-color: #2265c1 !important;
+}
+
 /* CHARTS */
 .MuiChartsAxis-tickLabel {
   fill: var(--primary-font-color) !important;
