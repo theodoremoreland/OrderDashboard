@@ -1,6 +1,6 @@
 # Order Dashboard
 
-I grew concerned about how much money I was spending on DoorDash, but DoorDash didn't have tools that made it easy for me to get insight into my spending habits. So, I wrote some scripts to get my order history data and dashboard to visualize my order history.
+I grew concerned about how much money I was spending on DoorDash, but DoorDash didn't have tools that made it easy for me to get insight into my spending habits. So, I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
 
 ## Table of Contents
 
