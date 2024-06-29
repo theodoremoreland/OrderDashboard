@@ -15,6 +15,11 @@
     cursor: pointer;
     fill: var(--primary-highlight-color);
   }
+
+  &:active {
+    scale: 0.95;
+    fill: var(--tertiary-highlight-color);
+  }
 }
 
 .title {
