@@ -66,3 +66,7 @@ h2 {
   padding: 0;
   margin: 0;
 }
+
+option {
+  color: var(--primary-highlight-color) !important;
+}
