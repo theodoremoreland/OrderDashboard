@@ -57,7 +57,7 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     <>
                         <Kpi
                             id="total-spent"
-                            title='Total amount spent on all purchases.'
+                            title='Total amount spent on all orders.'
                             label="Spent"
                             icon={<PaymentsIcon className="icon" />}
                             value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
@@ -71,15 +71,15 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                         />
                         <Kpi
                             id="total-items-purchased"
-                            title='Total number of items purchased.'
-                            label="Items Purchased"
+                            title='Total number of items ordered.'
+                            label="Items Ordered"
                             icon={<ShoppingCartIcon className="icon" />}
                             value={analytics.getTotalItemsPurchased().toLocaleString()}
                         />
                         <Kpi
                             id="number-of-stores"
-                            title='Total number of stores purchases were made from.'
-                            label="Stores Purchased From"
+                            title='Total number of stores ordered from.'
+                            label="Stores Ordered From"
                             icon={<StoreIcon className="icon" />}
                             value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()}
                         />
@@ -94,22 +94,22 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     <>
                         <Kpi
                             id="per-day-averages"
-                            label="Average Spend / Purchases Per Day"
+                            label="Average Spend / Orders Per Day"
                             value={`${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`}
                         />
                         <Kpi
                             id="per-week-averages"
-                            label="Average Spend / Purchases Per Week"
+                            label="Average Spend / Orders Per Week"
                             value={`${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`}
                         />
                         <Kpi
                             id="per-month-averages"
-                            label="Average Spend / Purchases Per Month"
+                            label="Average Spend / Orders Per Month"
                             value={`${analytics.getAverageSpendPerMonth(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth(startDate, endDate)}`}
                         />
                         <Kpi
                             id="per-year-averages"
-                            label="Average Spend / Purchases Per Year"
+                            label="Average Spend / Orders Per Year"
                             value={`${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)}`}
                         />
                     </>
