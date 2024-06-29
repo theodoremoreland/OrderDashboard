@@ -69,7 +69,7 @@ const App = (): ReactElement => {
               <div className='order-history'>
                 <div className='heading'>
                   <h2>Order History</h2>
-                  <FullScreenIcon className="icon" /> 
+                  <FullScreenIcon className="icon clickable" /> 
                 </div>
                 <Grid
                     data={analytics.orders}

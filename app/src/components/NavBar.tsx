@@ -29,13 +29,13 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             <div className="center">
                 <ul>
                     <li>
-                        <TableViewIcon className="icon" />
+                        <TableViewIcon className="icon clickable" />
                     </li>
                     <li>
-                        <FindReplaceIcon className="icon" />
+                        <FindReplaceIcon className="icon clickable" />
                     </li>
                     <li>
-                        <DownloadIcon className="icon" />
+                        <DownloadIcon className="icon clickable" />
                     </li>
                 </ul>
             </div>

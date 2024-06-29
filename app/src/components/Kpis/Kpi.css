@@ -9,6 +9,14 @@
   border: var(--border);
   border-radius: var(--border-radius);
 
+  .label-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+
   .label {
     font-family: custom-regular;
     font-size: 1rem;
@@ -17,5 +25,9 @@
   .value {
     font-family: custom-bold;
     font-size: 1.3rem;
+  }
+
+  .icon {
+    width: 1.3rem;
   }
 }

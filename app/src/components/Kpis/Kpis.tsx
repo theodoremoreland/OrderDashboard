@@ -10,6 +10,12 @@ import Analytics from '../../classes/Analytics';
 // Components
 import Kpi from './Kpi';
 
+// Images
+import PaymentsIcon from '../../assets/images/icons/payments.svg?react';
+import OrdersIcon from '../../assets/images/icons/orders.svg?react';
+import ShoppingCartIcon from '../../assets/images/icons/shopping-cart.svg?react';
+import StoreIcon from '../../assets/images/icons/store.svg?react';
+
 // Styles
 import './Kpis.css';
 
@@ -53,24 +59,28 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             id="total-spent"
                             title='Total amount spent on all purchases.'
                             label="Spent"
+                            icon={<PaymentsIcon className="icon" />}
                             value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                         />
                         <Kpi
                             id="total-orders"
                             title='Total number of orders made.'
                             label="Orders"
+                            icon={<OrdersIcon className="icon" />}
                             value={analytics.getTotalPurchases().toLocaleString()}
                         />
                         <Kpi
                             id="total-items-purchased"
                             title='Total number of items purchased.'
                             label="Items Purchased"
+                            icon={<ShoppingCartIcon className="icon" />}
                             value={analytics.getTotalItemsPurchased().toLocaleString()}
                         />
                         <Kpi
                             id="number-of-stores"
                             title='Total number of stores purchases were made from.'
                             label="Stores Purchased From"
+                            icon={<StoreIcon className="icon" />}
                             value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()}
                         />
                         {/* <Kpi

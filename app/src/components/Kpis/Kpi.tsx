@@ -7,9 +7,10 @@ interface Props {
     label: string
     value: string | number
     title?: string
+    icon?: ReactElement
 }
 
-const Kpi = ({ id, label, value, title }: Props): ReactElement => {
+const Kpi = ({ id, label, value, title, icon }: Props): ReactElement => {
     return (
         <div 
             id={id}
@@ -17,7 +18,10 @@ const Kpi = ({ id, label, value, title }: Props): ReactElement => {
             title={title}
         >
             <span className="value">{value}</span>
-            <span className="label">{label}</span>
+            <div className="label-row">
+                {icon && icon}
+                <span className="label">{label}</span>
+            </div>
             <div className="overlay"></div>
         </div>
     )

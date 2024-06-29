@@ -9,8 +9,10 @@
 }
 
 .icon {
-  fill: #feffff;
+  fill: var(--primary-font-color);
+}
 
+.icon.clickable {
   &:hover {
     cursor: pointer;
     fill: var(--primary-highlight-color);
