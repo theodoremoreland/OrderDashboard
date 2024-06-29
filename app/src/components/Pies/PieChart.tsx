@@ -24,15 +24,21 @@ const Pie = ({ data, metricLabel, dimensionLabel }: Props): ReactElement => {
                 <span>{dimensionLabel}</span>
             </h2>
             <PieChart
-                colors={[ "#d71c60"
-                    ,"#071c31"
-                    , "#070c10"
+                colors={[
+                    "#d71c60"
+                    ,"#3a3b59"
+                    , "#b14d68"
                     , "#4aa7f1"
                     , "#2265c1"
                     , "#214263"
                     , "#263951"
                     , "#5845ba"
-                    , "#19122d"]}
+                    , "#19122d"
+                    ,"#1164c1"
+                    , "#445454"
+                    , "#72505c"
+                    , "#6a9ec7"
+                ]}
                 slotProps={{
                     legend: {
                         hidden: true,
