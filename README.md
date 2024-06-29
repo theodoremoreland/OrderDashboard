@@ -1,6 +1,6 @@
 # Order Dashboard
 
-I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, but being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status? DoorDash didn't have the tools for analyzing my spending habits, so my curiosity led me to leveraging my programming skills for insight. So, I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
+I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, but being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status? DoorDash didn't have the tools for analyzing my spending, so my curiosity led me to leveraging my programming skills for insight. I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
 
 ## Table of Contents
 
