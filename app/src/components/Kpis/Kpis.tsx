@@ -94,23 +94,23 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     <>
                         <Kpi
                             id="per-day-averages"
-                            label="Average Spend / Orders Per Day"
-                            value={`${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)}`}
+                            label="Average Orders Per Day"
+                            value={`${analytics.getAverageNumberOfPurchasesPerDay(startDate, endDate)} @ ${analytics.getAverageSpendPerDay(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                         <Kpi
                             id="per-week-averages"
-                            label="Average Spend / Orders Per Week"
-                            value={`${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)}`}
+                            label="Average Orders Per Week"
+                            value={`${analytics.getAverageNumberOfPurchasesPerWeek(startDate, endDate)} @ ${analytics.getAverageSpendPerWeek(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                         <Kpi
                             id="per-month-averages"
-                            label="Average Spend / Orders Per Month"
-                            value={`${analytics.getAverageSpendPerMonth(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerMonth(startDate, endDate)}`}
+                            label="Average Orders Per Month"
+                            value={`${analytics.getAverageNumberOfPurchasesPerMonth(startDate, endDate)} @ ${analytics.getAverageSpendPerMonth(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                         <Kpi
                             id="per-year-averages"
-                            label="Average Spend / Orders Per Year"
-                            value={`${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })} / ${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)}`}
+                            label="Average Orders Per Year"
+                            value={`${analytics.getAverageNumberOfPurchasesPerYear(startDate, endDate)} @ ${analytics.getAverageSpendPerYear(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`}
                         />
                     </>
                 )
