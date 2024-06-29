@@ -11,19 +11,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3px;
 
     .switch-label {
       cursor: pointer;
       font-size: 0.9rem;
       color: var(--primary-font-color);
-      opacity: 0.9;
+      opacity: 0.3;
       transition: all 0.3s ease-in-out;
+
+      &:first-of-type {
+        margin-bottom: -7px;
+      }
+
+      &:last-of-type {
+        margin-top: -7px;
+      }
     }
 
     .selected {
-      color: var(--primary-highlight-color);
       opacity: 1;
+    }
+  }
+
+  .MuiSwitch-thumb {
+    position: relative;
+  }
+
+  .MuiSwitch-thumb:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90%;
+    background-image: url("../../assets/images/icons/sum.svg");
+  }
+
+  .Mui-checked {
+    .MuiSwitch-thumb:before {
+      background-image: url("../../assets/images/icons/avg_pace.svg");
     }
   }
 }

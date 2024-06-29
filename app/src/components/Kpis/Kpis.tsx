@@ -54,10 +54,6 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                         Totals
                 </span>
                 <Switch
-                    sx={{
-                        transform: 'rotate(90deg)'
-                    }}
-                    size='small'
                     checked={checked}
                     onChange={handleChange}
                     inputProps={{ 'aria-label': 'controlled' }}
