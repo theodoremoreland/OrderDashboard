@@ -1,6 +1,6 @@
 # Order Dashboard
 
-I knew my DoorDash spending habits were bad, I wanted an exact measure of how bad my spending habits had become. DoorDash didn't have tools that made it easy for me to analyze said spending habits, perhaps the ignorance of customers like me is within their company's best interest. I rather enjoy being referred to as a "DoorDash VIP" when I can their customer support, but that's probably not a good thing. So, I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
+I rather enjoy being referred to as a "DoorDash VIP" when I can their customer support, but that's probably not a good thing.I knew my DoorDash spending habits were bad, but how bad did they have to be in order to become a DoorDash VIP? DoorDash didn't have tools for analyzing my spending habits, so my curiosity led me to leveraging my programming skills to answer the question. This was also a great opportunity to practice. So, I wrote some scripts to get my order history data. Then I created my own analytics dashboard to visualize my spending habits in various ways.
 
 ## Table of Contents
 
