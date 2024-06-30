@@ -13,8 +13,6 @@ interface Props {
 }
 
 const Scatter = ({ data, tooltipFormatter, xAxisFormatter, yAxisFormatter }: Props): ReactElement => {
-
-    
     return (
         <div>
             <ScatterChart

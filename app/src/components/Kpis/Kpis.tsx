@@ -81,28 +81,28 @@ const Kpis = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             title='Total amount spent on all orders.'
                             label="Spent"
                             icon={<PaymentsIcon className="icon" />}
-                            value={analytics.getTotalSpent().toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
+                            value={analytics.getTotalSpent(startDate, endDate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                         />
                         <Kpi
                             id="total-orders"
                             title='Total number of orders made.'
                             label="Orders"
                             icon={<OrdersIcon className="icon" />}
-                            value={analytics.getTotalPurchases().toLocaleString()}
+                            value={analytics.getTotalPurchases(startDate, endDate).toLocaleString()}
                         />
                         <Kpi
                             id="total-items-purchased"
                             title='Total number of items ordered.'
                             label="Items Ordered"
                             icon={<ShoppingCartIcon className="icon" />}
-                            value={analytics.getTotalItemsPurchased().toLocaleString()}
+                            value={analytics.getTotalItemsPurchased(startDate, endDate).toLocaleString()}
                         />
                         <Kpi
                             id="number-of-stores"
                             title='Total number of stores ordered from.'
                             label="Stores Ordered From"
                             icon={<StoreIcon className="icon" />}
-                            value={analytics.getNumberOfStoresPurchasedFrom().toLocaleString()}
+                            value={analytics.getNumberOfStoresPurchasedFrom(startDate, endDate).toLocaleString()}
                         />
                         {/* <Kpi
                             id="total-days-a-purchase-was-made"

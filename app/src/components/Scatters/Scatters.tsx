@@ -16,9 +16,11 @@ import './Scatters.css';
 
 interface Props {
     analytics: Analytics
+    startDate: Date
+    endDate: Date
 }
 
-const Scatters = ({ analytics }: Props): ReactElement => {
+const Scatters = ({ analytics, startDate, endDate }: Props): ReactElement => {
     const [scatterSelection, setScatterSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
     return (
@@ -50,7 +52,7 @@ const Scatters = ({ analytics }: Props): ReactElement => {
                     tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString('en-US', { style: 'currency', currency: 'USD' })} (${new Date(x).toLocaleDateString()})`}
                     xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
                     yAxisFormatter={(value: number) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
-                    data={analytics.getDataMappedToCalendar().map(obj => {
+                    data={analytics.getDataMappedToCalendar(startDate, endDate).map(obj => {
                         return { x: new Date(obj.date).getTime(), y: obj.totalSpend, id: obj.date }
                     })}
                 />
@@ -60,7 +62,7 @@ const Scatters = ({ analytics }: Props): ReactElement => {
                 <Scatter
                     tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString()} (${new Date(x).toLocaleDateString()})`}
                     xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
-                    data={analytics.getDataMappedToCalendar().map(obj => {
+                    data={analytics.getDataMappedToCalendar(startDate, endDate).map(obj => {
                         return { x: new Date(obj.date).getTime(), y: obj.totalOrders, id: obj.date }
                     })}
                 />
@@ -70,7 +72,7 @@ const Scatters = ({ analytics }: Props): ReactElement => {
                 <Scatter
                     tooltipFormatter={({ x, y }: { x: number, y: number }) => `${y.toLocaleString()} (${new Date(x).toLocaleDateString()})`}
                     xAxisFormatter={(value: number) => new Date(value).toLocaleDateString()}
-                    data={analytics.getDataMappedToCalendar().map(obj => {
+                    data={analytics.getDataMappedToCalendar(startDate, endDate).map(obj => {
                         return { x: new Date(obj.date).getTime(), y: obj.totalItems, id: obj.date }
                     })}
                 />

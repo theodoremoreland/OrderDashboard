@@ -46,22 +46,22 @@ const App = (): ReactElement => {
                 endDate={endDate}
               />   
               <div className='row'>
-                <Scatters analytics={analytics} />
-                <Streaks analytics={analytics} />
+                <Scatters analytics={analytics} startDate={startDate} endDate={endDate} />
+                <Streaks analytics={analytics} startDate={startDate} endDate={endDate} />
               </div>
               <div className='row'>
-                <TopStores analytics={analytics} />
+                <TopStores analytics={analytics} startDate={startDate} endDate={endDate} />
                 <Pie
                   metricLabel="Total Spend"
                   dimensionLabel='by Month'
-                  data={Object.entries(analytics.getTotalSpendByMonth()).map(([key, value]) => {
+                  data={Object.entries(analytics.getTotalSpendByMonth(startDate, endDate)).map(([key, value]) => {
                     return { label: key, value: value }
                   })}
                 />
                 <Pie
                   metricLabel="Total Spend"
                   dimensionLabel='by Weekday'
-                  data={Object.entries(analytics.getTotalSpendByDayOfWeek()).map(([key, value]) => {
+                  data={Object.entries(analytics.getTotalSpendByDayOfWeek(startDate, endDate)).map(([key, value]) => {
                       return { label: key, value: value }
                   })}
                 />
@@ -72,7 +72,7 @@ const App = (): ReactElement => {
                   <FullScreenIcon className="icon clickable" /> 
                 </div>
                 <Grid
-                    data={analytics.orders}
+                    data={analytics.getOrdersBetweenDates(startDate, endDate)}
                     pageSize={6}
                     pageSizeOptions={[6]}
                   />

@@ -16,9 +16,11 @@ import './TopStores.css';
 
 interface Props {
     analytics: Analytics
+    startDate: Date
+    endDate: Date
 }
 
-const TopStores = ({ analytics }: Props): ReactElement => {
+const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
     const [barSelection, setBarSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
     return (
@@ -50,7 +52,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     id="stores-by-total-spend"
                     title="Top Stores by Total Spend"
                     dataset={analytics
-                        .getTopStoresByTotalSpend(5)
+                        .getTopStoresByTotalSpend(startDate, endDate, 5)
                         .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) || ""}
@@ -62,7 +64,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     id="stores-by-total-orders"
                     title="Top Stores by Total Orders"
                     dataset={analytics
-                        .getTopStoresByTotalOrders(5)
+                        .getTopStoresByTotalOrders(startDate, endDate, 5)
                         .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US') || ""}
@@ -74,7 +76,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                     id="stores-by-total-items-purchased"
                     title="Top Stores by Total Items Purchased"
                     dataset={analytics
-                        .getTopStoresByTotalItemsPurchased(5)
+                        .getTopStoresByTotalItemsPurchased(startDate, endDate, 5)
                         .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US') || ""}
