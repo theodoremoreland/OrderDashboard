@@ -35,11 +35,11 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
     const [analytics, setAnalytics] = useState<Analytics | undefined>(undefined);
 
     const resetDates = useCallback(() => {
-        if (analytics?.orders.length) {
-            setStartDate(new Date(analytics.orders[0].date));
+        if (rawData.length) {
+            setStartDate(new Date(rawData[0].date));
             setEndDate(new Date(new Date()));
         }
-    }, [analytics]);
+    }, [rawData]);
 
     useEffect(() => {
         if (rawData.length) {
