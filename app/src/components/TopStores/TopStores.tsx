@@ -53,6 +53,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                         .getTopStoresByTotalSpend(5)
                         .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
                     }
+                    xAxisFormatter={(value) => value.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}
                 />
             }
             {
@@ -64,6 +65,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                         .getTopStoresByTotalOrders(5)
                         .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
                     }
+                    xAxisFormatter={(value) => value.toLocaleString('en-US')}
                 />
             }
             {
@@ -75,6 +77,7 @@ const TopStores = ({ analytics }: Props): ReactElement => {
                         .getTopStoresByTotalItemsPurchased(5)
                         .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
                     }
+                    xAxisFormatter={(value) => value.toLocaleString('en-US')}
                 />
             }
             <div className="overlay"></div>

@@ -15,9 +15,10 @@ interface Props {
             key: string
             value: number
         }[]
+    xAxisFormatter?: (value: number) => string
 }
 
-const Bar = ({ id, dataset}: Props): ReactElement => {
+const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
     return (
         <BarChart
             data-testid={id} 
@@ -36,7 +37,8 @@ const Bar = ({ id, dataset}: Props): ReactElement => {
                         min: dataset[dataset.length - 1].value,
                         max: dataset[0].value,
                         color: ['#fc3e74', '#d71c60']
-                    }
+                    },
+                    valueFormatter: xAxisFormatter
                 }
             ]}
             series={[
