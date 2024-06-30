@@ -42,7 +42,7 @@ const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
                 }
             ]}
             series={[
-                { dataKey: 'value', valueFormatter: xAxisFormatter},
+                { dataKey: 'value', valueFormatter: xAxisFormatter },
             ]}
             layout="horizontal"
             height={190}

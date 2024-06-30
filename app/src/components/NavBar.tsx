@@ -12,9 +12,8 @@ import { DataContext } from "../contexts/DataContextProvider";
 import Analytics from "../classes/Analytics";
 
 // Images
-import TableViewIcon from "../assets/images/icons/table-view.svg?react"
-import DownloadIcon from "../assets/images/icons/download.svg?react"
-import FindReplaceIcon from "../assets/images/icons/find-replace.svg?react"
+import TableViewIcon from "../assets/images/icons/table-view.svg?react";
+import FindReplaceIcon from "../assets/images/icons/find-replace.svg?react";
 
 // Styles
 import './NavBar.css';
@@ -47,9 +46,6 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     </li>
                     <li>
                         <FindReplaceIcon className="icon clickable" />
-                    </li>
-                    <li>
-                        <DownloadIcon className="icon clickable" />
                     </li>
                 </ul>
             </div>
