@@ -6,6 +6,7 @@ import {
     Dispatch,
     SetStateAction,
     useEffect,
+    useCallback,
 } from "react";
 
 // Custom
@@ -24,6 +25,7 @@ export const DataContext = createContext({
     setStartDate: (() => {}) as Dispatch<SetStateAction<Date | undefined>>,
     setEndDate: (() => {}) as Dispatch<SetStateAction<Date | undefined>>,
     analytics: undefined as Analytics | undefined,
+    resetDates: (() => {}) as () => void,
 });
 
 const DataProvider = ({ children }: DataProviderProps): ReactElement => {
@@ -32,8 +34,15 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
     const [rawData, setRawData] = useState<Order[]>([]);
     const [analytics, setAnalytics] = useState<Analytics | undefined>(undefined);
 
+    const resetDates = useCallback(() => {
+        if (analytics?.orders.length) {
+            setStartDate(new Date(analytics.orders[0].date));
+            setEndDate(new Date(new Date()));
+        }
+    }, [analytics]);
+
     useEffect(() => {
-        if (rawData.length > 1) {
+        if (rawData.length) {
             rawData.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
             
             setStartDate(new Date(rawData[0].date));
@@ -52,6 +61,7 @@ const DataProvider = ({ children }: DataProviderProps): ReactElement => {
                 setStartDate,
                 setEndDate,
                 analytics,
+                resetDates
             }}
         >
             {children}

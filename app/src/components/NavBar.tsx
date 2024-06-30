@@ -1,9 +1,12 @@
 // React
-import { ReactElement, useState } from "react";
+import { ReactElement, useContext, useEffect, useState } from "react";
 
 // MUI
 import FormControl from '@mui/material/FormControl';
 import { NativeSelect } from '@mui/material';
+
+// Context
+import { DataContext } from "../contexts/DataContextProvider";
 
 // Custom
 import Analytics from "../classes/Analytics";
@@ -21,7 +24,18 @@ interface Props {
 }
 
 const NavBar = ({ analytics }: Props): ReactElement => {
+    const { setStartDate, setEndDate, resetDates } = useContext(DataContext);
     const [selectedYear, setSelectedYear] = useState<string>("All");
+
+    useEffect(() => {
+        if (selectedYear === "All") {
+            resetDates();
+        } else {
+            const year = Number(selectedYear);
+            setStartDate(new Date(year, 0, 1));
+            setEndDate(new Date(year, 11, 31));
+        }
+    }, [selectedYear, setStartDate, setEndDate, resetDates]);
 
     return (
         <nav className="NavBar">
