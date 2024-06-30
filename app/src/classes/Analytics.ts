@@ -2,6 +2,9 @@ import { Order } from "../types/types";
 import generateObjectCalendar from "../modules/generateObjectCalendar";
 import getPercentageOfYearPassedOnDate from "../modules/getPercentageOfYearPassedOnDate";
 
+// TODO many of the methods in this class seem incredibly inefficient, namely the reuse of object calendar, repeated filters, and repeated iterations.
+// TODO (cont.) Refactoring these in a vacuum would be trivial, however refactoring them to accommodate the needs of the React app requires more thought.
+// TODO (cont.) Specifically, how can this be refactored such that a React state change to startDate and endDate triggers a re-calculation of the data?
 export default class Analytics {
     private data: Order[];
 
