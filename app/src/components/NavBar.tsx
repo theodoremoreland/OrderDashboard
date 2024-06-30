@@ -12,7 +12,7 @@ import { DataContext } from "../contexts/DataContextProvider";
 import Analytics from "../classes/Analytics";
 
 // Images
-import TableViewIcon from "../assets/images/icons/table-view.svg?react";
+import DisplaySettingsIcon from "../assets/images/icons/display_settings.svg?react";
 import FindReplaceIcon from "../assets/images/icons/find-replace.svg?react";
 
 // Styles
@@ -42,7 +42,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             <div className="center">
                 <ul>
                     <li>
-                        <TableViewIcon className="icon clickable" />
+                        <DisplaySettingsIcon className="icon clickable" />
                     </li>
                     <li>
                         <FindReplaceIcon className="icon clickable" />
