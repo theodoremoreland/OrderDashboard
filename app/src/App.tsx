@@ -10,7 +10,7 @@ import { DataContext } from './contexts/DataContextProvider';
 
 // Components
 import NavBar from './components/NavBar';
-import Pie from './components/Pies/PieChart';
+import Pie from './components/PieChart';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
