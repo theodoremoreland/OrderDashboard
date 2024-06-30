@@ -15,7 +15,7 @@ interface Props {
             key: string
             value: number
         }[]
-    xAxisFormatter?: (value: number) => string
+    xAxisFormatter?: (value: number | null) => string
 }
 
 const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
@@ -42,7 +42,7 @@ const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
                 }
             ]}
             series={[
-                { dataKey: 'value' },
+                { dataKey: 'value', valueFormatter: xAxisFormatter},
             ]}
             layout="horizontal"
             height={190}
