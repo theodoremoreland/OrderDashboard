@@ -50,6 +50,7 @@ const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                 <List
                     id="days-with-purchases"
                     title="Longest consecutive days of purchases"
+                    key={`${startDate} - ${endDate}`}
                     data={analytics
                         .getTopPurchaseStreaks(startDate, endDate, 5)
                         .map(obj => ({ key: `${obj.days} days`, value: `${new Date(obj.startDate).toLocaleDateString()} - ${new Date(obj.endDate).toLocaleDateString()}` }))
@@ -61,6 +62,7 @@ const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                 <List
                     id="days-without-purchases"
                     title="Longest consecutive days without purchases"
+                    key={`${startDate} - ${endDate}`}
                     data={analytics
                         .getTopDroughtsBetweenPurchases(startDate, endDate, 5)
                         .map(obj => ({ key: `${obj.days} days`, value: `${new Date(obj.startDate).toLocaleDateString()} - ${new Date(obj.endDate).toLocaleDateString()}` }))

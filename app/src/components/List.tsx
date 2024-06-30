@@ -7,11 +7,10 @@ import './List.css';
 interface Props {
     id: string
     title: string
-    data: 
-        {
-            key: string | number,
-            value: string | number
-        }[]
+    data: {
+        key: string | number,
+        value: string | number
+    }[]
 }
 
 const List = ({ id, title, data }: Props): ReactElement => {
@@ -23,7 +22,7 @@ const List = ({ id, title, data }: Props): ReactElement => {
             className="List"
         >
             {data.map(({ key, value } : { key: string | number, value: string | number }) => (
-                <li key={key}>
+                <li key={`${key} ${value}`}>
                     <span className="key">{key}</span>
                     <span className="value">{value}</span>
                 </li>
