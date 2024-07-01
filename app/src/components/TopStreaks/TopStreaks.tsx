@@ -15,7 +15,7 @@ import { DisplaySettingsContext } from "../../contexts/DisplaySettingsProvider";
 import List from "../List";
 
 // Styles
-import './Streaks.css';
+import './TopStreaks.css';
 
 interface Props {
     analytics: Analytics
@@ -23,12 +23,12 @@ interface Props {
     endDate: Date
 }
 
-const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
+const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
     const { topStreaksCount } = useContext(DisplaySettingsContext);
     const [listSelection, setListSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
 
     return (
-        <section className="Streaks">
+        <section className="TopStreaks">
             <div className='heading'>
                 <h2>Top Streaks</h2>
                 <FormControl
@@ -78,4 +78,4 @@ const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
     );
 }
 
-export default Streaks;
+export default TopStreaks;

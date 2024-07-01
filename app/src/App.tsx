@@ -14,7 +14,7 @@ import Pie from './components/PieChart';
 import Scatters from './components/Scatters/Scatters';
 import Kpis from './components/Kpis/Kpis';
 import Grid from './components/DataGrid';
-import Streaks from './components/Streaks/Streaks';
+import TopStreaks from './components/TopStreaks/TopStreaks';
 import TopStores from './components/TopStores/TopStores';
 
 // Types
@@ -44,7 +44,7 @@ const App = (): ReactElement => {
               />   
               <div className='row'>
                 <Scatters analytics={analytics} startDate={startDate} endDate={endDate} />
-                <Streaks analytics={analytics} startDate={startDate} endDate={endDate} />
+                <TopStreaks analytics={analytics} startDate={startDate} endDate={endDate} />
               </div>
               <div className='row'>
                 <TopStores analytics={analytics} startDate={startDate} endDate={endDate} />
