@@ -1,7 +1,8 @@
 .DisplaySettingsDialog {
   .MuiDialog-paper {
+    font-family: custom-regular !important;
     color: var(--primary-font-color);
-    background-color: #071c31;
+    background-color: #070c10f4;
     border: var(--border);
     border-radius: var(--border-radius);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
@@ -9,14 +10,19 @@
   }
 
   p {
-    padding-bottom: 8px !important;
+    padding-bottom: 6px !important;
     border-bottom: var(--border) !important;
+  }
+
+  .form-title {
+    font-family: custom-bold !important;
+    font-size: 1.3rem !important;
   }
 
   .settings {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
     padding-top: 16px;

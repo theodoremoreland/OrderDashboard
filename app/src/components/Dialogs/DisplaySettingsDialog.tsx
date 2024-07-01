@@ -42,11 +42,11 @@ const DisplaySettingsModal = ({ open, handleClose }: Props): ReactElement => {
             <DialogTitle className="form-title">Display Settings</DialogTitle>
             <DialogContent>
                 <DialogContentText sx={{ color: 'white' }}>
-                    Adjust the number of items displayed in the Top Streaks list and/or Top Stores bar graph.
+                    Adjust the number of items displayed for bar charts and lists.
                 </DialogContentText>
                 <div className='settings'>
                         <FormControl>
-                            <FormLabel id="top-streaks-count" className='form-label'>Top Streaks</FormLabel>
+                            <FormLabel id="top-streaks-count" className='form-label'>Lists</FormLabel>
                             <RadioGroup
                                 row
                                 aria-labelledby="top-streaks-count"
@@ -60,7 +60,7 @@ const DisplaySettingsModal = ({ open, handleClose }: Props): ReactElement => {
                             </RadioGroup>
                         </FormControl>
                         <FormControl>
-                            <FormLabel id="top-stores-count" className='form-label'>Top Stores</FormLabel>
+                            <FormLabel id="top-stores-count" className='form-label'>Bar Charts</FormLabel>
                             <RadioGroup
                                 row
                                 aria-labelledby="top-stores-count"
