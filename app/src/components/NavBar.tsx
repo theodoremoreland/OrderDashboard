@@ -8,6 +8,9 @@ import { NativeSelect } from '@mui/material';
 // Context
 import { DataContext } from "../contexts/DataContextProvider";
 
+// Components
+import DisplaySettingsDialog from './Dialogs/DisplaySettingsDialog';
+
 // Custom
 import Analytics from "../classes/Analytics";
 
@@ -25,6 +28,7 @@ interface Props {
 const NavBar = ({ analytics }: Props): ReactElement => {
     const { setStartDate, setEndDate, resetDates } = useContext(DataContext);
     const [selectedYear, setSelectedYear] = useState<string>("All");
+    const [displaySettingsOpen, setDisplaySettingsOpen] = useState<boolean>(false);
 
     useEffect(() => {
         if (selectedYear === "All") {
@@ -42,7 +46,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             <div className="center">
                 <ul>
                     <li>
-                        <DisplaySettingsIcon className="icon clickable" />
+                        <DisplaySettingsIcon
+                            onClick={() => setDisplaySettingsOpen(true)}
+                            className="icon clickable"
+                        />
                     </li>
                     <li>
                         <FindReplaceIcon className="icon clickable" />
@@ -75,6 +82,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 </NativeSelect>
             </FormControl>
             <div className="overlay"></div>
+            <DisplaySettingsDialog
+                open={displaySettingsOpen} 
+                handleClose={() => setDisplaySettingsOpen(false)}
+            />
         </nav>
     )
 }

@@ -1,0 +1,23 @@
+.DisplaySettingsDialog {
+  .MuiDialog-paper {
+    color: var(--primary-font-color);
+    background-color: #071c31;
+    border: var(--border);
+    border-radius: var(--border-radius);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+
+  .settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 16px;
+
+    .form-label {
+      color: var(--primary-font-color) !important;
+    }
+  }
+}
