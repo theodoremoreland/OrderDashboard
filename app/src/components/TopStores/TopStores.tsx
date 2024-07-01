@@ -1,5 +1,5 @@
 // React
-import { ReactElement, useState } from 'react';
+import { ReactElement, useState, useContext } from 'react';
 
 // MUI
 import FormControl from '@mui/material/FormControl';
@@ -7,6 +7,9 @@ import { NativeSelect } from '@mui/material';
 
 // Custom
 import Analytics from '../../classes/Analytics';
+
+// Context
+import { DisplaySettingsContext } from '../../contexts/DisplaySettingsProvider';
 
 // Components
 import Bar from '../Bar';
@@ -21,6 +24,7 @@ interface Props {
 }
 
 const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
+    const { topStoresCount } = useContext(DisplaySettingsContext);
     const [barSelection, setBarSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
     return (
@@ -52,7 +56,7 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     id="stores-by-total-spend"
                     title="Top Stores by Total Spend"
                     dataset={analytics
-                        .getTopStoresByTotalSpend(startDate, endDate, 5)
+                        .getTopStoresByTotalSpend(startDate, endDate, topStoresCount)
                         .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) || ""}
@@ -64,7 +68,7 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     id="stores-by-total-orders"
                     title="Top Stores by Total Orders"
                     dataset={analytics
-                        .getTopStoresByTotalOrders(startDate, endDate, 5)
+                        .getTopStoresByTotalOrders(startDate, endDate, topStoresCount)
                         .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US') || ""}
@@ -76,7 +80,7 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     id="stores-by-total-items-purchased"
                     title="Top Stores by Total Items Purchased"
                     dataset={analytics
-                        .getTopStoresByTotalItemsPurchased(startDate, endDate, 5)
+                        .getTopStoresByTotalItemsPurchased(startDate, endDate, topStoresCount)
                         .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US') || ""}

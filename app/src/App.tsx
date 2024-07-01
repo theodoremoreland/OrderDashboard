@@ -7,6 +7,7 @@ import orders from '../../.secret/orders.json';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
+import { DisplaySettingsContext } from './contexts/DisplaySettingsProvider';
 
 // Components
 import NavBar from './components/NavBar';
@@ -25,6 +26,7 @@ import './App.css';
 
 const App = (): ReactElement => {
   const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
+  const { orderHistoryCount } = useContext(DisplaySettingsContext);
 
   useEffect(() => {
       setRawData(orders as Order[]);
@@ -69,8 +71,8 @@ const App = (): ReactElement => {
                 </div>
                 <Grid
                     data={analytics.getOrdersBetweenDates(startDate, endDate)}
-                    pageSize={6}
-                    pageSizeOptions={[6]}
+                    pageSize={orderHistoryCount}
+                    pageSizeOptions={[orderHistoryCount]}
                   />
                   <div className='overlay'></div>
               </div>

@@ -1,5 +1,5 @@
 // React
-import { ReactElement, useState } from "react";
+import { ReactElement, useState, useContext } from "react";
 
 // MUI
 import FormControl from '@mui/material/FormControl';
@@ -7,6 +7,9 @@ import { NativeSelect } from '@mui/material';
 
 // Custom
 import Analytics from "../../classes/Analytics";
+
+// Context
+import { DisplaySettingsContext } from "../../contexts/DisplaySettingsProvider";
 
 // Components
 import List from "../List";
@@ -21,6 +24,7 @@ interface Props {
 }
 
 const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
+    const { topStreaksCount } = useContext(DisplaySettingsContext);
     const [listSelection, setListSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
 
     return (
@@ -52,7 +56,7 @@ const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     title="Longest consecutive days of purchases"
                     key={`${startDate} - ${endDate}`}
                     data={analytics
-                        .getTopPurchaseStreaks(startDate, endDate, 5)
+                        .getTopPurchaseStreaks(startDate, endDate, topStreaksCount)
                         .map(obj => ({ key: `${obj.days} days`, value: `${new Date(obj.startDate).toLocaleDateString()} - ${new Date(obj.endDate).toLocaleDateString()}` }))
                     }
                 />
@@ -64,7 +68,7 @@ const Streaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     title="Longest consecutive days without purchases"
                     key={`${startDate} - ${endDate}`}
                     data={analytics
-                        .getTopDroughtsBetweenPurchases(startDate, endDate, 5)
+                        .getTopDroughtsBetweenPurchases(startDate, endDate, topStreaksCount)
                         .map(obj => ({ key: `${obj.days} days`, value: `${new Date(obj.startDate).toLocaleDateString()} - ${new Date(obj.endDate).toLocaleDateString()}` }))
                     }
                 />
