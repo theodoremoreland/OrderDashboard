@@ -8,6 +8,11 @@
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 
+  p {
+    padding-bottom: 8px !important;
+    border-bottom: var(--border) !important;
+  }
+
   .settings {
     display: flex;
     flex-direction: row;

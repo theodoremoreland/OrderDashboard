@@ -39,7 +39,7 @@ const DisplaySettingsModal = ({ open, handleClose }: Props): ReactElement => {
             onClose={handleClose}
             className='DisplaySettingsDialog'
         >
-            <DialogTitle>Display Settings</DialogTitle>
+            <DialogTitle className="form-title">Display Settings</DialogTitle>
             <DialogContent>
                 <DialogContentText sx={{ color: 'white' }}>
                     Adjust the number of items displayed in the Top Streaks list and/or Top Stores bar graph.
