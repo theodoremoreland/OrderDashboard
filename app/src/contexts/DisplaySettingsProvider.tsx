@@ -5,14 +5,15 @@ import {
     createContext,
     Dispatch,
     SetStateAction,
+    useEffect,
 } from "react";
 
 interface Props {
     children: ReactElement;
 }
 
-const topStoresCountDefault = 5;
-const topStreaksCountDefault = 5;
+const topStoresCountDefault = Number(localStorage?.getItem('top-stores-display-count')) || 5;
+const topStreaksCountDefault = Number(localStorage?.getItem('top-streaks-display-count')) || 5;
 const orderHistoryCountDefault = 5;
 
 export const DisplaySettingsContext = createContext({
@@ -25,9 +26,21 @@ export const DisplaySettingsContext = createContext({
 });
 
 const DisplaySettingsProvider = ({ children }: Props): ReactElement => {
-    const [topStoresCount, setTopStoresCount] = useState<5 | 7 | 10>(topStoresCountDefault);
-    const [topStreaksCount, setTopStreaksCount] = useState<5 | 7 | 10>(topStreaksCountDefault);
+    const [topStoresCount, setTopStoresCount] = useState<5 | 7 | 10>(topStoresCountDefault as 5 | 7 | 10);
+    const [topStreaksCount, setTopStreaksCount] = useState<5 | 7 | 10>(topStreaksCountDefault as 5 | 7 | 10);
     const [orderHistoryCount, setOrderHistoryCount] = useState<5 | 15 | 25>(orderHistoryCountDefault);
+
+    useEffect(() => {
+        if (topStoresCount !== topStoresCountDefault) {
+            localStorage.setItem('top-stores-display-count', topStoresCount.toString());
+        }
+    }, [topStoresCount]);
+
+    useEffect(() => {
+        if (topStreaksCount !== topStreaksCountDefault) {
+            localStorage.setItem('top-streaks-display-count', topStreaksCount.toString());
+        }
+    }, [topStreaksCount]);
 
     return (
         <DisplaySettingsContext.Provider
