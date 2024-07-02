@@ -16,6 +16,9 @@ import { z } from 'zod';
 // Context
 import { DataContext } from '../../contexts/DataContextProvider';
 
+// Images
+import AttachFileAddIcon from '../../assets/images/icons/attach_file_add.svg?react';
+
 // Styles
 import './DataUploadDialog.css';
 
@@ -55,25 +58,48 @@ const DataUploadDialog = ({ open, handleClose }: Props): ReactElement => {
             onClose={handleClose}
             className='DataUploadDialog'
         >
-            <DialogTitle className="form-title"></DialogTitle>
+            <DialogTitle className="form-title">Attach File</DialogTitle>
             <DialogContent>
-                <DialogContentText sx={{ color: 'white' }}>
-                    Upload your own data and see it visualized!
+                <DialogContentText>
+                    Visualize your own data by attaching a JSON file. The JSON must feature order data in the following format:
                 </DialogContentText>
+                <pre>
+                    {`
+[
+    {
+        "storeName": "Store 1",
+        "date": "Oct 13 2023",
+        "cost": 121.67,
+        "itemCount": 3,
+        "items": ["item1", "item2", "item3"],
+        "wasCancelled": false,
+        "dayOfWeek": "Mon"
+    },
+    ...
+]
+                    `}
+                </pre>
                 <div className='settings'>
                     <Button
                         component="label"
                         role={undefined}
+                        id='attach-file-button'
                         variant="contained"
                         tabIndex={-1}
+                        startIcon={<AttachFileAddIcon className="icon"/>}
                         >
-                            Upload file
+                            Attach file
                         <VisuallyHiddenInput type="file" onChange={(e) => {
                             const fileList: FileList | null = e.target.files;
                             const file: File | undefined = fileList?.[0];
                             const reader = new FileReader();
 
                             if (!file) {
+                                return;
+                            }
+
+                            if (file.type !== 'application/json') {
+                                alert('Invalid file type. Please upload a JSON file.');
                                 return;
                             }
 
