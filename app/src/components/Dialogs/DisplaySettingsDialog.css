@@ -1,4 +1,9 @@
 .DisplaySettingsDialog {
+  p {
+    padding-bottom: 6px !important;
+    border-bottom: var(--border) !important;
+  }
+
   .MuiDialog-paper {
     font-family: custom-regular !important;
     color: var(--primary-font-color);
@@ -7,11 +12,6 @@
     border-radius: var(--border-radius);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  }
-
-  p {
-    padding-bottom: 6px !important;
-    border-bottom: var(--border) !important;
   }
 
   .form-title {

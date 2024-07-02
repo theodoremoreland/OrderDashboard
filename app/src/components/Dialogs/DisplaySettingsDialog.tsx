@@ -27,10 +27,10 @@ interface Props {
 
 const DisplaySettingsModal = ({ open, handleClose }: Props): ReactElement => {
     const {
-        topStoresCount,
-        setTopStoresCount,
-        topStreaksCount,
-        setTopStreaksCount,
+        barChartsCount,
+        setBarChartsCount,
+        listsCount,
+        setListsCount,
     } = useContext(DisplaySettingsContext);
 
     return (
@@ -46,13 +46,13 @@ const DisplaySettingsModal = ({ open, handleClose }: Props): ReactElement => {
                 </DialogContentText>
                 <div className='settings'>
                         <FormControl>
-                            <FormLabel id="top-streaks-count" className='form-label'>Lists</FormLabel>
+                            <FormLabel id="lists-display-count" className='form-label'>Lists</FormLabel>
                             <RadioGroup
                                 row
-                                aria-labelledby="top-streaks-count"
-                                name="controlled-top-streaks-count"
-                                value={topStreaksCount}
-                                onChange={(e) => setTopStreaksCount(parseInt(e.target.value) as 5 | 7 | 10)}
+                                aria-labelledby="lists-display-count"
+                                name="controlled-lists-display-count"
+                                value={listsCount}
+                                onChange={(e) => setListsCount(parseInt(e.target.value) as 5 | 7 | 10)}
                             >
                                 <FormControlLabel value={5} control={<Radio />} label="5" />
                                 <FormControlLabel value={7} control={<Radio />} label="7" />
@@ -60,13 +60,13 @@ const DisplaySettingsModal = ({ open, handleClose }: Props): ReactElement => {
                             </RadioGroup>
                         </FormControl>
                         <FormControl>
-                            <FormLabel id="top-stores-count" className='form-label'>Bar Charts</FormLabel>
+                            <FormLabel id="bar-charts-display-count" className='form-label'>Bar Charts</FormLabel>
                             <RadioGroup
                                 row
-                                aria-labelledby="top-stores-count"
-                                name="controlled-top-stores-count"
-                                value={topStoresCount}
-                                onChange={(e) => setTopStoresCount(parseInt(e.target.value) as 5 | 7 | 10)}
+                                aria-labelledby="bar-charts-display-count"
+                                name="controlled-bar-charts-display-count"
+                                value={barChartsCount}
+                                onChange={(e) => setBarChartsCount(parseInt(e.target.value) as 5 | 7 | 10)}
                             >
                                 <FormControlLabel value={5} control={<Radio />} label="5" />
                                 <FormControlLabel value={7} control={<Radio />} label="7" />

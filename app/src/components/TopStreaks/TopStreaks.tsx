@@ -24,7 +24,7 @@ interface Props {
 }
 
 const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
-    const { topStreaksCount } = useContext(DisplaySettingsContext);
+    const { listsCount } = useContext(DisplaySettingsContext);
     const [listSelection, setListSelection] = useState<"days-with-purchases" | "days-without-purchases">("days-with-purchases");
 
     return (
@@ -56,7 +56,7 @@ const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     title="Longest consecutive days of purchases"
                     key={`${startDate} - ${endDate}`}
                     data={analytics
-                        .getTopPurchaseStreaks(startDate, endDate, topStreaksCount)
+                        .getTopPurchaseStreaks(startDate, endDate, listsCount)
                         .map(obj => ({ key: `${obj.days} days`, value: `${new Date(obj.startDate).toLocaleDateString()} - ${new Date(obj.endDate).toLocaleDateString()}` }))
                     }
                 />
@@ -68,7 +68,7 @@ const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     title="Longest consecutive days without purchases"
                     key={`${startDate} - ${endDate}`}
                     data={analytics
-                        .getTopDroughtsBetweenPurchases(startDate, endDate, topStreaksCount)
+                        .getTopDroughtsBetweenPurchases(startDate, endDate, listsCount)
                         .map(obj => ({ key: `${obj.days} days`, value: `${new Date(obj.startDate).toLocaleDateString()} - ${new Date(obj.endDate).toLocaleDateString()}` }))
                     }
                 />

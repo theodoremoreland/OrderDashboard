@@ -24,7 +24,7 @@ interface Props {
 }
 
 const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
-    const { topStoresCount } = useContext(DisplaySettingsContext);
+    const { barChartsCount } = useContext(DisplaySettingsContext);
     const [barSelection, setBarSelection] = useState<"totalSpend" | "totalOrders" | "totalItemsPurchased">("totalSpend");
 
     return (
@@ -56,7 +56,7 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     id="stores-by-total-spend"
                     title="Top Stores by Total Spend"
                     dataset={analytics
-                        .getTopStoresByTotalSpend(startDate, endDate, topStoresCount)
+                        .getTopStoresByTotalSpend(startDate, endDate, barChartsCount)
                         .map(obj => ({ key: obj.storeName, value: obj.totalSpend }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US', { style: 'currency', currency: 'USD' }) || ""}
@@ -68,7 +68,7 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     id="stores-by-total-orders"
                     title="Top Stores by Total Orders"
                     dataset={analytics
-                        .getTopStoresByTotalOrders(startDate, endDate, topStoresCount)
+                        .getTopStoresByTotalOrders(startDate, endDate, barChartsCount)
                         .map(obj => ({ key: obj.storeName, value: obj.totalOrders }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US') || ""}
@@ -80,7 +80,7 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                     id="stores-by-total-items-purchased"
                     title="Top Stores by Total Items Purchased"
                     dataset={analytics
-                        .getTopStoresByTotalItemsPurchased(startDate, endDate, topStoresCount)
+                        .getTopStoresByTotalItemsPurchased(startDate, endDate, barChartsCount)
                         .map(obj => ({ key: obj.storeName, value: obj.totalItemsPurchased }))
                     }
                     xAxisFormatter={(value) => value?.toLocaleString('en-US') || ""}
