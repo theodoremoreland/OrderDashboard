@@ -42,29 +42,29 @@ const App = (): ReactElement => {
                 startDate={startDate}
                 endDate={endDate}
               />   
-              <div className='row'>
+              <div className="row">
                 <Scatters analytics={analytics} startDate={startDate} endDate={endDate} />
                 <TopStreaks analytics={analytics} startDate={startDate} endDate={endDate} />
               </div>
-              <div className='row'>
+              <div className="row">
                 <TopStores analytics={analytics} startDate={startDate} endDate={endDate} />
                 <Pie
                   metricLabel="Total Spend"
-                  dimensionLabel='by Month'
+                  dimensionLabel="by Month"
                   data={Object.entries(analytics.getTotalSpendByMonth(startDate, endDate)).map(([key, value]) => {
                     return { label: key, value: value }
                   })}
                 />
                 <Pie
                   metricLabel="Total Spend"
-                  dimensionLabel='by Weekday'
+                  dimensionLabel="by Weekday"
                   data={Object.entries(analytics.getTotalSpendByDayOfWeek(startDate, endDate)).map(([key, value]) => {
                       return { label: key, value: value }
                   })}
                 />
               </div>
-              <div className='order-history'>
-                <div className='heading'>
+              <div className="order-history">
+                <div className="heading">
                   <h2>Order History</h2>
                 </div>
                 <Grid
@@ -72,9 +72,9 @@ const App = (): ReactElement => {
                     pageSize={5}
                     pageSizeOptions={[5]}
                   />
-                  <div className='overlay'></div>
+                  <div className="overlay"></div>
               </div>
-              <div className='overlay-2'></div>
+              <div className="overlay-2"></div>
             </div>
           </>
         )}

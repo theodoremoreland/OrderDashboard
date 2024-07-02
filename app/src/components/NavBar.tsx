@@ -10,13 +10,14 @@ import { DataContext } from "../contexts/DataContextProvider";
 
 // Components
 import DisplaySettingsDialog from './Dialogs/DisplaySettingsDialog';
+import DataUploadDialog from "./Dialogs/DataUploadDialog";
 
 // Custom
 import Analytics from "../classes/Analytics";
 
 // Images
+import AttachFileAddIcon from "../assets/images/icons/attach_file_add.svg?react";
 import DisplaySettingsIcon from "../assets/images/icons/display_settings.svg?react";
-import FindReplaceIcon from "../assets/images/icons/find-replace.svg?react";
 
 // Styles
 import './NavBar.css';
@@ -29,6 +30,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
     const { setStartDate, setEndDate, resetDates } = useContext(DataContext);
     const [selectedYear, setSelectedYear] = useState<string>("All");
     const [displaySettingsOpen, setDisplaySettingsOpen] = useState<boolean>(false);
+    const [dataUploadOpen, setDataUploadOpen] = useState<boolean>(false);
 
     useEffect(() => {
         if (selectedYear === "All") {
@@ -52,7 +54,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         />
                     </li>
                     <li>
-                        <FindReplaceIcon className="icon clickable" />
+                        <AttachFileAddIcon
+                            onClick={() => setDataUploadOpen(true)}
+                            className="icon clickable"
+                        />
                     </li>
                 </ul>
             </div>
@@ -85,6 +90,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             <DisplaySettingsDialog
                 open={displaySettingsOpen} 
                 handleClose={() => setDisplaySettingsOpen(false)}
+            />
+            <DataUploadDialog
+                open={dataUploadOpen}
+                handleClose={() => setDataUploadOpen(false)}
             />
         </nav>
     )
