@@ -2,8 +2,7 @@
 import { ReactElement, useContext, useEffect } from 'react';
 
 // Data
-import orders from '../../.secret/orders.json';
-//import orders from './mocks/mockOrders';
+import { generateRandomOrderData } from './modules/randomizeData';
 
 // Contexts
 import { DataContext } from './contexts/DataContextProvider';
@@ -23,11 +22,13 @@ import { Order } from './types/types';
 // Styles
 import './App.css';
 
+const ordersData = generateRandomOrderData();
+
 const App = (): ReactElement => {
   const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
 
   useEffect(() => {
-      setRawData(orders as Order[]);
+      setRawData(ordersData as Order[]);
   }, [setRawData]);
 
   return (
