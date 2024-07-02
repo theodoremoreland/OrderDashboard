@@ -24,8 +24,12 @@
   }
 
   #attach-file-button {
+    .icon {
+      color: var(--primary-font-color) !important;
+    }
+
     color: var(--primary-font-color) !important;
-    background-color: var(--primary-highlight-color) !important;
+    background-color: #2265c1 !important;
 
     &:hover {
       background-color: var(--tertiary-highlight-color) !important;
