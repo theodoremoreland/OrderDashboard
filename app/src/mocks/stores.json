@@ -1,0 +1,1272 @@
+{
+  "McDonald's": {
+    "items": [
+      "Sausage Egg Biscuit",
+      "Sausage Egg Cheese McGriddle",
+      "Sausage Egg Cheese McGriddle Meal",
+      "McCafé Cinnamon Roll",
+      "Hash Browns",
+      "Minute Maid® Orange Juice",
+      "Apple Slices",
+      "Glazed Pull Apart Donut",
+      "Powerade®",
+      "Bacon Egg Cheese McGriddle Meal",
+      "McCafe Cheese Danish",
+      "3 Pack Of Cookies",
+      "Strawberry Banana Smoothie",
+      "2 Half Strips Bacon",
+      "POWERADE®",
+      "13 Cookie Tote",
+      "10 Piece McNuggets",
+      "Big Mac Meal",
+      "Double Quarter Pounder with Cheese Meal",
+      "10 pc. Chicken McNuggets®",
+      "2 Cheeseburger Meal",
+      "Coke®",
+      "Basket of Fries",
+      "Sausage, Egg and Cheese McGriddles® Meal",
+      "Big Breakfast® with Hotcakes"
+    ]
+  },
+  "First Watch": {
+    "items": [
+      "The Trifecta",
+      "Fresh Seasoned Potatoes",
+      "Farmhouse Hash",
+      "Million Dollar Bacon",
+      "Hardwood Smoked Bacon",
+      "French Toast",
+      "Tri-Fecta",
+      "Side Two Eggs",
+      "Two Multigrain Pancakes"
+    ]
+  },
+  "Tony's Donuts": {
+    "items": [
+      "Dozen Donuts (You Pick)",
+      "BLT Deluxe Sandwich",
+      "Single Donut",
+      "Turkey + Cheese Sandwich"
+    ]
+  },
+  "Panda Express": {
+    "items": [
+      "Veggie Spring Roll",
+      "Plate",
+      "Bigger Plate",
+      "Bowl",
+      "Minute Maid Lemonade",
+      "Napkins & Utensils",
+      "Diet Coke",
+      "Broccoli Beef Panda Cub Meal™",
+      "Sprite"
+    ]
+  },
+  "Chick-fil-A": {
+    "items": [
+      "Chick-fil-A Waffle Potato Fries®",
+      "Chick-fil-A® Nuggets",
+      "8oz Honey Mustard Sauce",
+      "8oz Chick-fil-A® Sauce",
+      "Chocolate Chunk Cookie",
+      "Chick-fil-A® Lemonade",
+      "Mac & Cheese",
+      "Hash Brown Scramble Bowl",
+      "Bacon, Egg & Cheese Biscuit",
+      "Simply Orange®",
+      "Gallon Beverages",
+      "30 ct Chick-fil-A® Nuggets",
+      "Fruit Cup",
+      "Gallon Chick-fil-A® Lemonade",
+      "Chick-fil-A® Nuggets Meal",
+      "Chick-fil-A® Diet Lemonade",
+      "Cobb Salad",
+      "Chocolate Fudge Brownie",
+      "Egg White Grill Meal",
+      "Grilled Nuggets"
+    ]
+  },
+  "Applebee's Grill & Bar": {
+    "items": [
+      "Blackened Cajun Salmon",
+      "6 oz. Top Sirloin*",
+      "Classic Cheeseburger",
+      "8 oz. Top Sirloin*",
+      "Chicken Tenders Plate",
+      "Side Garlic Mashed Potatoes",
+      "Add Breadstick (1)",
+      "Chicken Wonton Tacos",
+      "Mozzarella Sticks",
+      "Hand-Battered Fish & Chips",
+      "NEW Cinnabon® Mini Swirls",
+      "Side Crunchy Onion Rings",
+      "Bourbon Street Steak*",
+      "Brew Pub Pretzels & Beer Cheese Dip",
+      "Lemonade - Serves 6-8",
+      "Applebee's® Riblets Plate",
+      "Boneless Wings",
+      "Three Cheese Chicken Penne",
+      "Chicken Tenders Platter",
+      "Breadstick (1)",
+      "Garlic Mashed Potatoes",
+      "Steamed Broccoli",
+      "Three-Cheese Chicken Penne",
+      "Grilled Chicken Breast",
+      "Crispy Cheese Bites"
+    ]
+  },
+  "Burger King": {
+    "items": [
+      "Have-sies™",
+      "12 Pc. Chicken Fries",
+      "Double Cheeseburger",
+      "French Fries",
+      "Cheeseburger",
+      "Onion Rings",
+      "Original Chicken Sandwich",
+      "Whopper"
+    ]
+  },
+  "Dierbergs": {
+    "items": [
+      "Hostess Ding Dong Chocolate Cakes with Creamy Filling (12.7 oz)",
+      "Little Debbie Fudge Rounds Cookie Sandwich (24.1 oz)",
+      "Imperial 53% Vegetable Oil Spread (16 oz)",
+      "Prairie Farms Dairy Whole Milk (1 gal)",
+      "Tyson Buffalo Style Chicken Strips (25 oz)",
+      "Tyson Blackened Flavored Chicken Breast Strips (20 oz)",
+      "Lunchables Cracker Stackers Turkey and American (3.4 oz)",
+      "Cap'n Crunch Breakfast Cereal Crunch Berries (11.7 oz)",
+      "Golden Grahams Breakfast Cereal (11.7 oz)",
+      "Langers 100% Apple Juice (101.4 oz)",
+      "Pepperidge Farm Charleston Cookies Birthday Cake (8.6 oz)",
+      "Lunchables Ham and Cheddar Cracker Stackers (3.5 oz)",
+      "Bakehouse Gooey Butter Cake 8\" (26 oz)",
+      "Little Debbie Swiss Cake Rolls (12 ct)",
+      "Ruffles Flamin' Hot Cheddar & Sour Cream Potato Chips (8 oz)",
+      "Sara Lee Honey Wheat Bread (20 oz)",
+      "Yoplait Original Low Fat Yogurt Strawberry & Strawberry Banana (6 oz x 8 ct)",
+      "Stouffer's Classic Large Size Macaroni & Cheese (20 oz)",
+      "Ruffles Potato Chips Flamin' Hot BBQ (8 oz)",
+      "Kraft Mayonnaise Real Mayo Squeeze Bottle (12 oz)",
+      "Marie Callender's Chicken Bowl Roasted Garlic (11.5 oz)",
+      "Dole 100% Juice Beverage Orange Peach Mango (59 oz)",
+      "Prairie Farms Whole Milk (1 gal)",
+      "Uncrustables Peanut Butter & Grape Jelly Sandwich (10 ct)",
+      "Totino's Pepperoni Pizza Rolls (50 ct)",
+      "Healthy Choice Café Steamers Grilled Chicken Pesto With Vegetables (9.9 oz)",
+      "Honey Nut Cheerios Breakfast Cereal (10.8 oz)",
+      "Kellogg's Sandwich Crackers Cheese & Cheddar (1.38 oz x 8 ct)",
+      "Yoplait Original Strawberry & Strawberry Banana Yogurt (6 oz x 8 pk)",
+      "Tide PODS Ultra Oxi Liquid Laundry Detergent Pacs (32 ct)",
+      "Evian Natural Spring Water (16.9 oz x 6 ct)",
+      "Bounty 123 Sheets per Roll Paper Towels (2 ct)",
+      "Crest 3D White Arctic Fresh Teeth Whitening Toothpaste (2.7 oz)",
+      "Bakehouse Mini Gooey Butter Cookies (18 ct)",
+      "Hillshire Farm Ultra Thin Oven Roasted Turkey Breast (9 oz)",
+      "Nabisco Nilla Wafers (11 oz)",
+      "Knorr Asian Sides Teriyaki Rice (5.4 oz)",
+      "Pop Tarts Frosted Brown Sugar Cinnamon Toaster Pastries (8 ct)",
+      "Cap'n Crunch Crunch Berries Breakfast Cereal (11.7 oz)",
+      "Tyson Grilled & Ready Chicken Breast Fully Cooked Strips (22 oz)",
+      "Kraft Original Macaroni & Cheese (7.25 oz x 5 ct)",
+      "Pillsbury Flaky Layers Biscuits Original (16.3 oz)",
+      "Imperial Quarters Spread (16 oz)",
+      "Oscar Mayer Lunchables Turkey & American Cracker Stackers (3.4 oz)",
+      "Dasani Purified Water Bottle (16.9 oz x 24 ct)",
+      "Kellogg's Froot Loops Breakfast Cereal Large Size (14.7 oz)",
+      "Welch's Fruit Snacks Fruit Punch and Berries N Cherries (19.8 oz)",
+      "Stouffers Macaroni & Cheese Large Size (20 oz)",
+      "Lunchables Turkey & Cheddar Cracker Stackers (3.2 oz)",
+      "Pringles Sour Cream & Onion Potato Crisps (5.5 oz)",
+      "Cheez-It Original Baked Snack Crackers (12.4 oz)",
+      "Pop-Tarts Frosted Strawberry Breakfast Toaster Pastries (8 ct)",
+      "North Star Mini Original Ice Cream Sandwiches Vanilla Between Chocolate Wafers (40 oz x 16 ct)",
+      "Yoplait Original Strawberry & Strawberry Banana Yogurt (8 ct)",
+      "Little Debbie Oatmeal Creme Pies Sandwich Cookies Big Pack (12 ct)",
+      "Simply Pulp Free Juice Orange Bottle (2.63 L)",
+      "Dixie 8.5\" Disposable Plates (48 ct)",
+      "Kellogg's Cheese & Cheddar Sandwich Crackers (1.38 oz x 8 ct)",
+      "Amy's Kitchen Gluten Free Broccoli and Cheddar Bake Bowls (9.5 oz)",
+      "Marie Callender's Aged Cheddar Cheesy Chicken and Rice Bowl (12 oz)",
+      "Clorox Crisp Lemon Disinfecting Wipes (75 ct)",
+      "Tide Pods Ultra Oxi Liquid Laundry Detergent Pacs (32 ct)",
+      "Hostess Ding Dongs Snack Chocolate Cake (10 ct)",
+      "North Star Strawberry Shortcake Ice Cream Bars (6 ct)",
+      "Yoplait Original Low Fat Strawberry Banana Yogurt Cups (6 oz x 8 ct)",
+      "Fiji Natural Artesian Water Bottles (16.9 oz x 6 ct)",
+      "Light + Fit Nonfat Blueberry Greek Yogurt Cups (5.3 oz x 4 ct)",
+      "Marie Callender's Creamy Chicken & Dumplings Bowl (12 oz)",
+      "Hostess Ding Dongs Chocolate Snack Cakes (10 ct)",
+      "Dannon Light & Fit Original Greek Nonfat Strawberry Cheesecake Yogurt (5.3 oz x 4 ct)",
+      "Dixie 8.5\" Everyday Disposable Plates (48 ct)",
+      "Dannon Light & Fit Original Strawberry Nonfat Greek Yogurts (5.3 oz x 4 ct)",
+      "Charmin Essentials Strong Mega Roll 451 Sheets Toilet Paper (6 ct)",
+      "Pringles BBQ Potato Crisps (5.5 oz)",
+      "Dawn Ultra Dish Soap (28 oz)",
+      "Keebler Chips Deluxe M&M's Cookies (14.6 oz)",
+      "Simply All Natural Lemonade Juice Bottle (89 oz)",
+      "Little Debbie Glazed Donut Sticks (6 ct)",
+      "Cheetos Puffs Party Size Cheese Flavored Snacks (13.5 oz)",
+      "Dixie Ultra 20 Ounce Disposable Paper Bowls (56 ct)",
+      "Dasani Purified Water Plastic Bottles (16.9 oz x 24 ct)",
+      "Pringles Cheddar Cheese Party Stack Potato Crisps Chips (7.1 oz)",
+      "Kellogg's Cheez-It Cheese Crackers Original Reduced Fat (19 oz)",
+      "Welchs Fruit Snacks Berries & Cherries (40 ct)",
+      "Dole No Sugar Added Cherry Mixed Fruit Cups (4 oz x 4 ct)",
+      "Dole No Sugar Added Mandarin Oranges (4 oz x 4 ct)",
+      "Ritz Cheese Cracker Sandwiches (1.35 oz x 8 ct)",
+      "Dare Cabaret Crisp & Buttery Crackers (6.1 oz)",
+      "Tyson Grilled & Ready Fully Cooked Chicken Breast Strips (22 oz)",
+      "Marie Callender's Aged Cheddar Cheesy Chicken & Rice Bowl (12 oz)",
+      "Prairie Farms Whole Milk (1/2 gal)",
+      "Oreo Golden Double Stuff Cookies (15.25 oz)",
+      "Keebler Cheese & Cheddar Sandwich Crackers (1.38 oz x 8 ct)",
+      "Kahiki Stir Fresh Beef & Broccoli (22 oz)",
+      "Kahiki Stir Fresh General Tso's Chicken (22 oz)",
+      "New York Bakery 3 Cheese Cheese Sticks (5 ct)",
+      "New York Bakery The Original Texas Toast with Real Garlic (8 ct)",
+      "Oreo Thins Golden Sandwich Cookies Family Size (13.1 oz)",
+      "Welchs Berries N Cherries Fruit Snacks Pouches (10 ct)",
+      "Dannon Light + Fit Nonfat Original Strawberry Greek Yogurt Cups (5.3 oz x 4 ct)",
+      "Jays Ridges Smoky BBQ Flavored Potato Chips (10 oz)",
+      "Crest Pro-Health Intense Clean Mint Mouthwash (33.8 oz)",
+      "Amy's Kitchen Organic Gluten Free Broccoli and Cheddar Bake Bowl (9.5 oz)",
+      "Welch's Gluten Free Reduced Sugar Mixed Fruit Snacks (8 ct)",
+      "Oreo Thins Family Size Golden Sandwich Cookies (13.1 oz)",
+      "Raid Flying Insect Outdoor Fresh 7 Killer Spray (15 oz)",
+      "Bounty Select-A-Size 2-ply Paper Towels 123 Sheets per Roll (2 ct)",
+      "Murry's Original French Toast Sticks (14 oz)",
+      "Langers 100% Pure Juice Apple Orange Pineapple (64 oz)",
+      "Evian Natural Spring Water Bottles (16.9 oz x 6 ct)",
+      "Little Debbie Cosmic Brownies (6 ct)",
+      "Pringles Cheddar Cheese Party Stack Potato Crisps (7.1 oz)",
+      "Little Debbie Strawberry Shortcake Rolls (6 ct)",
+      "Crest Pro-Health Clean Mint Multi Protection Mouthwash (8.4 oz)",
+      "Windex Original Glass Cleaner (23 oz)",
+      "Colgate Extra Clean Medium Full Head Value Pack Toothbrushes (3 pk x 4 ct)",
+      "Colgate Optic White Fresh Mint Stain Fighter Gel Toothpaste (4.2 oz)",
+      "Clorox Bleach Free Crisp Lemon Disinfecting Wipes (75 ct)",
+      "Glad ForceFlex with Gain Lemon Zest Scent Tall 13 gal Kitchen Drawstring Trash Bags (40 ct)",
+      "Yoplait Original Low Fat Strawberry & Strawberry Banana Yogurt Cups (6 oz x 8 ct)",
+      "FIJI Natural Artesian Water Bottles (16.9 fl oz x 6 ct)",
+      "Frito Lay Variety Pack Family Fun Mix Snacks (18 ct)"
+    ]
+  },
+  "Red Lobster": {
+    "items": [
+      "Garlic Linguini Alfredo",
+      "One Dozen Cheddar Bay Biscuits®",
+      "Fish and Chips",
+      "Half Dozen Cheddar Bay Biscuits®",
+      "Stuffed Flounder",
+      "Atlantic Salmon**"
+    ]
+  },
+  "Denny's": {
+    "items": [
+      "Build Your Own Grand Slam®",
+      "French Toast Slam®",
+      "Original Grand Slam®",
+      "Hash Browns",
+      "Double Cheeseburger"
+    ]
+  },
+  "ALDI": {
+    "items": [
+      "Boulder Heavy Duty Cutlery Assorted Clear (96 ct)",
+      "Boulder Party Cups (50 ct)",
+      "Nature's Nectar Pulp Free Premium Orange Juice (52 oz)",
+      "Pop-Tarts S'mores Toaster Pastries (12 ct)",
+      "Pop-Tarts Snacks Strawberry (12 ct)",
+      "PurAqua Natural Spring Water Bottles (16.9 oz x 24 ct)",
+      "Nature's Nectar Strawberry and Kiwi Drink Juice Carton (59 oz)",
+      "Nature's Nectar 100% Apple Juice Bottle (64 oz)",
+      "Frito-Lay Chips Flavor Mix Variety Pack (18 oz)",
+      "Black Forest Juicy Burst Fruit Snacks Mixed Fruit (28.8 oz)",
+      "Boulder Multi-Size 2-Ply 158 Sheets per Roll Paper Towels (2 ct)",
+      "Boulder Flex Odor Control Trash Bags Lavender Scent",
+      "Old Spice Bearglove Body Wash (24 oz)",
+      "Tandil Concentrated Liquid Bleach (121 oz)",
+      "Little Debbie Oatmeal Creme Pies (12 ct)",
+      "Baker's Treat Swiss Rolls (13 oz)",
+      "Bake Shop Strawberry Cheese Danish (14 oz)",
+      "Nabisco Oreo Sandwich Cookies Double Stuffed Party Size (26.7 oz)",
+      "Pop-Tarts Pastry Bites Brown Sugar Cinnamon (12 ct)",
+      "Pringles Potato Chips Cheddar Cheese Party Size (7.1 oz)",
+      "Nature's Nectar Homestyle Lemonade Bottle (52 oz)",
+      "YoCrunch Lowfat Yogurt Variety Pack Oreo and M&M (6 oz x 8 ct)",
+      "Lunch Buddies Strawberry Fruit Snack (28 ct x 0.9 oz)",
+      "Twizzlers Snacks Strawberry (16 oz)",
+      "Friendly Farms Whole Milk (1/2 gal)",
+      "Lunch buddies Vanilla Pudding Cups (4 ct)",
+      "Boulder White 116 Sheets per Roll Paper Towel",
+      "Lacura Sensitive Skin Body Wash (22 oz)",
+      "Secret Deodorant Shower Fresh (2.6 oz)",
+      "Lacura Aquarium Liquid Hand Soap (7.5 oz)",
+      "Willow So Soft 2-Ply Jumbo Bath Tissue",
+      "Benton's Fudge Striped Shortbread Cookies (13 oz)",
+      "Boulder Flex Odor Control Lavender Scent Trash Bags (40 ct)",
+      "Dawn Ultra Dishwashing Liquid Soap Original (28 oz)",
+      "Nabisco Oreo Double Stuf Golden Cookies (26.7 oz)",
+      "Bake Shop Cinnamon Sweet Rolls (18 oz)",
+      "Baker's Treat Cherry Cheese Danish (16.5 oz)",
+      "Nature's Nectar Strawberry Lemonade Juice (52 oz)",
+      "Bake Shop Lemon Sliced Loaf Cake (12.1 oz)",
+      "Pop-Tarts Snacks Frosted Strawberry (12 ct)",
+      "Caprisun Juice Drink Fruit Punch Pouches (6 oz x 10 ct)",
+      "Danimals Strawberry Explosion Smoothie Drink Bottles (3.1 oz x 6 ct)",
+      "Nabisco Oreo Sandwich Cookies Party Size (25.5 oz)",
+      "Nature's Nectar 100% Apple Juice (6.75 oz x 8 ct)",
+      "Benton's Mini Iced Oatmeal Cookies (12 ct)",
+      "Sundae Shoppe Strawberry Shortcake Crunch Ice Cream Bars (6 ct)",
+      "Oreo Cookies Chocolate Party Size (24.16 oz)",
+      "Garelick Farms DairyPure Whole Milk Jug (0.5 gal)"
+    ]
+  },
+  "Culver's ButterBurgers and Frozen Custard": {
+    "items": [
+      "Onion Rings",
+      "North Atlantic Cod Sandwich",
+      "Original Chicken Tenders"
+    ]
+  },
+  "IHOP": {
+    "items": [
+      "2 x 2 x 2",
+      "Our Original French Toast",
+      "Original Buttermilk Pancakes - (Short Stack)",
+      "Silver 5",
+      "Split Decision Breakfast",
+      "Funny Face® Pancake Combo",
+      "Hash Browns",
+      "Fruit Juices",
+      "Create Your Own French Toast Combo",
+      "NEW! Split Decision Breakfast",
+      "NEW! Thick 'N Fluffy French Toast Combo",
+      "New! Thick 'N Fluffy French Toast Combo",
+      "Strawberries & Cream Crepes",
+      "Thick 'N Fluffy French Toast Combo",
+      "Thick 'N Fluffy Classic French Toast"
+    ]
+  },
+  "Panera Bread": {
+    "items": [
+      "Strawberry Banana Smoothie",
+      "Sandwich and Soup/Mac",
+      "Broccoli Cheddar Soup",
+      "NEW The Signature Take Chicken Sandwich",
+      "Classic Grilled Cheese Sandwich",
+      "Homestyle Chicken Noodle Soup",
+      "Green Passion Smoothie",
+      "Classic Grilled Cheese & Creamy Tomato Soup",
+      "Broccoli Cheddar Mac & Cheese",
+      "Agave Lemonade",
+      "Kids Roasted Turkey & Avocado BLT",
+      "Candy Cookie",
+      "Chocolate Chipper Cookie",
+      "Classic Grilled Cheese Sandwich & Creamy Tomato Soup",
+      "Strawberry Smoothie",
+      "Cream of Chicken & Wild Rice Soup",
+      "Grilled Cheese",
+      "Mango Smoothie",
+      "Mac & Cheese"
+    ]
+  },
+  "Taco Bell": {
+    "items": [
+      "Taco & Burrito Cravings Pack",
+      "Cinnamon Twists",
+      "Mountain Dew Baja Blast®",
+      "Variety Taco Party Pack",
+      "Cheesy Fiesta Potatoes",
+      "Nacho Cheese Doritos® Locos Tacos",
+      "Soft Taco",
+      "3 Doritos® Locos Tacos Combo",
+      "Chicken Quesadilla",
+      "Chips and Nacho Cheese Sauce",
+      "Nacho Fries",
+      "Cinnabon Delights® 2 Pack",
+      "Cantina Chicken Quesadilla",
+      "Nacho Cheese Doritos® Locos Tacos Supreme®"
+    ]
+  },
+  "Chicken Salad Chick": {
+    "items": [
+      "The Chick",
+      "Buttercream Frosted Flower Cookie (Single)",
+      "Mac N' Cheese",
+      "Chicken Salad BLT",
+      "Fresh Fruit",
+      "Turkey Club",
+      "Chicken Salad Melt",
+      "Strawberry Lemonade"
+    ]
+  },
+  "Wok Express": {
+    "items": ["Choice of Fried Rice", "Crab Rangoon (6 pcs)", "Orange Chicken"]
+  },
+  "Seoul Taco": {
+    "items": [
+      "Burrito",
+      "Waffle Fries",
+      "Gogi Bowl",
+      "Kimchi Fried Rice",
+      "Quesadilla",
+      "3 Tacos"
+    ]
+  },
+  "7-Eleven": {
+    "items": [
+      "Reese's PB King Size 2.8oz",
+      "Twix Caramel King Size 3.02oz",
+      "Gatorade Cool Blue 28oz",
+      "Lipton Brisk H&H Watermelon Lemon 1L",
+      "7-Select Iced Honey Bun 5oz",
+      "Body Armor Orange Mango (28 oz)",
+      "Body Armor Strawberry (28 oz)",
+      "Core Hydration Water Bottle (30.4 oz)",
+      "Smartwater Vapor Distilled Water Bottle (50.7 oz)",
+      "Bodyarmor SuperDrink Orange Mango Sports Drink Bottle (28 oz)",
+      "Life Savers Collisions 2 Flavors in 1 Gummies (7 oz)"
+    ]
+  },
+  "Papa Johns Pizza": {
+    "items": [
+      "Create Your Own",
+      "Cheesesticks",
+      "Epic Pepperoni-Stuffed Crust Pepperoni Pizza",
+      "Knots",
+      "Chicken Poppers",
+      "Papa Wings",
+      "Pepperoni Pizza",
+      "Create Your Own Pizza",
+      "Cheese Pizza",
+      "Cinnamon Pull Aparts"
+    ]
+  },
+  "Five Guys Burgers & Fries": {
+    "items": [
+      "Cheeseburger",
+      "Large Cajun Fries",
+      "Kosher Style Hot Dog",
+      "Little Fries",
+      "Regular Fries",
+      "Simply Lemonade",
+      "Little Cheeseburger"
+    ]
+  },
+  "Walgreens": {
+    "items": [
+      "Black Forest Organic Worms Cherry Apple Cherry Pineapple Orange Lemon (8 oz)",
+      "Gatorade Cool Blue 20 oz Bottle (4 pk)",
+      "Black Forest Organic Forest Critters Apple Mango Strawberry Peach Watermelon (8 oz)",
+      "Gatorade G Series Perform 02 Thirst Quenc Lemon Lime 20 oz Bottle (4 pk)",
+      "Fiji Natural Artesian Water 11 oz Bottle (6 pk)",
+      "Nice! On The Move Toothbrush Holder (1 ct)",
+      "Complete Home Jar Candle Home Linen (1 ct)",
+      "Tide Pods Liquid Detergent Pacs Spring Meadow (42 ct)",
+      "Reese's Peanut Butter Cups Milk Chocolate (2 oz)",
+      "Ruffles Chips Cheddar & Sour Cream (1 ct)",
+      "Gillette Fusion ProShield 5 Chill Mens Razor Handle (1 ct)",
+      "Degree Men Original Protection Antiperspirant Deodorant Cool Rush 2.7 oz each (2 pk)",
+      "Ice Mountain 100% Natural Spring Water 16.9 oz Bottle (6 ct)",
+      "Gatorade G Series Perform 02 Thirst Quenc Fruit Punch (20 oz)",
+      "Complete Home Plastic Bowl (20 ct)",
+      "Nice! Heavy Duty Party Cups Red (64 ct)",
+      "Purell Advanced Hand Sanitizer, Pump Aloe (8 oz)",
+      "Suave Essentials Body Wash Ocean Breeze (15 oz)",
+      "Complete Home Fragrance Jar Candle Black Amber (15 oz)",
+      "Nice! Heavy Duty Plastic Forks White (48 ct)",
+      "Peeps Bunnies Yellow (8 ct)",
+      "Angel Soft 2 Ply Bathroom Tissue (234.0 ea x 9 pack)",
+      "Bounty Select-A-Size Paper towels (2 ct)",
+      "Jif Creamy Peanut Butter (16 oz)",
+      "Glad OdorShield Tall Kitchen Drawstring Trash Bags Mediterranean Lavender (40 ct)",
+      "Life Savers 5 Flavors Gummies Candy Sharing Size Bag (14.5 oz)",
+      "Nice! Plastic Spoons White (48 ct)",
+      "Complete Home Plastic Plates (14 ct)",
+      "Gain Flings Laundry Detergent Packs Original (16 ct)",
+      "Hostess Twinkies Cake Family Pack (16 ct)",
+      "Head & Shoulders Classic Clean Anti-Dandruff Paraben Free Shampoo (13.5 oz)",
+      "Belkin USB-A to USB-C Cable 1M Black (1 ct)",
+      "Dasani Purified Water Enhanced with Minerals Bottles (16.9 oz x 24 ct )",
+      "Ben & Jerry's Ice Cream Chocolate Chip Cookie Dough (1 pt)",
+      "Lysol Disinfecting Wipes Lemon and Lime Blossom (3 ct x 80 ct)",
+      "Softsoap Antibacterial Crisp Clean Hand Soap Pump (11 oz)",
+      "Scott ComfortPlus Toilet Paper Big Roll (12 ct)",
+      "Dawn Ultra Dishwashing Liquid Dish Soap (19.4 oz)",
+      "Mott's 100% Apple Juice (64 oz)",
+      "Old Spice Moisturize Body Wash for Men with Shea Butter (16 oz)",
+      "Mott's Apple Juice (64 oz)",
+      "Tide PODS Ultra Oxi Liquid Laundry Detergent Pacs (32 ct)",
+      "Life Savers Gummy Candy (14.5 oz)",
+      "Gatorade Thirst Quencher Sports Drink Fruit Punch (20 oz x 4 ct)",
+      "Reese's Peanut Butter Cups Milk Chocolate King Size (2.8 oz)",
+      "Ruffles Potato Chips Cheddar & Sour Cream (8 oz)",
+      "Nice! White Plastic Spoons (48 ct)",
+      "Dixie Ultra Paper Plates 10.062\" (44 ct)",
+      "Vicks Non-Contact Infrared Thermometer (1 ct)",
+      "Libman Toilet Brush & Plunger Combo",
+      "Fiji Natural Artesian Water (16.9 oz x 6 ct)",
+      "Bounty Paper Towels 123 Sheets per Roll (2 ct)",
+      "Hostess Donettes Powdered Mini Donuts (10 oz)",
+      "Complete Home Combo Plastic Cutlery (1 ct)",
+      "Elmer's School Glue Stick Washable Purple (0.21 oz x 6 ct)",
+      "Complete Home Ultra Strong Paper Plates 10.16\" (20 ct)",
+      "Complete Home Baltic Sea Candle (15 oz)",
+      "Lysol Spray Disinfectant Spray Early Morning Breeze (12.5 oz)",
+      "Cheez-It Baked Snack Crackers Original Grab Bag (7 oz)",
+      "Bic Flex 4 Sensitive Razors (3 ct)",
+      "Welch's Mixed Fruit Snacks (22 ct)",
+      "Mott's 100% Apple Juice Bottle (64 oz)",
+      "Complete Home Plastic Bowls (20 ct)",
+      "Amy's Kitchen Bowls Broccoli and Cheddar Bake (9.5 oz)",
+      "Ruffles Flamin Hot Cheddar & Sour Cream Potato Chips (2.5 oz)",
+      "Fiji Natural Artesian Water (11 oz x 6 ct)",
+      "Simply Lemonade Juice Drink Original Bottle (52 oz)",
+      "Walgreens Cough Drops Honey Lemon (30 ct)",
+      "Charmin 2-Ply 242 Sheets per Roll Ultra Strong Toilet Paper (6 ct)",
+      "Reese's Peanut Butter Cups Milk Chocolate (1.5 oz)",
+      "Fiji Natural Artesian Water Bottle (11.15 oz x 6 ct)",
+      "Kellogg's Pop-Tarts Breakfast Toaster Pastries Cookies & Crème (8 ct)",
+      "Old Spice Swagger Men's Body Wash Scent of Confidence (21 oz)",
+      "Simply Original Lemonade Juice (52 oz)",
+      "Fiji Natural Artesian Water (11.15 oz x 6 ct)",
+      "Life Savers Gummies Collisions (7 oz)",
+      "Life Savers Gummies Exotics (7 oz)",
+      "Crest 3D White Fluoride Anticavity Toothpaste Radiant Mint (0.85 oz)",
+      "Degree Cool Rush Antiperspirant Deodorant (2.7 oz)",
+      "Simply Lemonade (52 oz)",
+      "Kellogg's Pop-Tarts Cookies & Crème Breakfast Toaster Pastries (8 ct)",
+      "Arm & Hammer Pure Baking Soda (1 lb)",
+      "Core Hydration Nutrient Enhanced Water Bottles (16.9 oz x 6 ct)",
+      "Black Forest Organic Gummy Bears (8 oz)",
+      "Amy's Kitchen Organic Gluten Free Broccoli and Cheddar Bake Bowl (9.5 oz)",
+      "Glaceau Smartwater Vapor Distilled Water Bottles (16.9 oz x 6 ct)",
+      "Reese's Peanut Butter Lovers Cups King Size (2.8 oz)",
+      "Complete Home Combo Plastic Cutlery",
+      "Welch's Berries & Cherries Fruit Snacks (0.9 oz x 10 ct)",
+      "Degree Cool Rush 48HR Antiperspirant Deodorant (2.7 oz)",
+      "Hostess Donettes Chocolate Frosted Mini Donuts (10.75 oz)",
+      "Mott's 100% Apple White Grape Juice (8 oz x 6 ct)",
+      "Healthy Choice Cafe Steamers Grilled Chicken Marinara with Parmesan Frozen Meal (9.5 oz)",
+      "Mott's 100% Apple Juice Bottles (8 oz x 6 ct)",
+      "Bounty Select-A-Size 2-Ply White Paper Towels (2 ct)",
+      "Purell Advanced Naturals Hand Sanitizer (2 oz)",
+      "Tide Pods Ultra Oxi Liquid Laundry Detergent Pacs (32 ct)"
+    ]
+  },
+  "Bandana's Bar-B-Q": {
+    "items": [
+      "Choose 2 (6 Oz of Each Meat)",
+      "Donut Holes",
+      "Sierra Mist",
+      "Grilled Cheese",
+      "Fried Okra",
+      "Gallon Lemonade",
+      "Smoked Brisket",
+      "Potato Salad",
+      "Brisket",
+      "20oz Diet Dr. Pepper Bottle"
+    ]
+  },
+  "Cecil Whittaker's Pizzeria": {
+    "items": [
+      "14\" 2 Topping Pizza",
+      "9\" Cheese Pizza",
+      "Cheese Garlic Bread",
+      "Potato Skins",
+      "Cavatelli Alfredo",
+      "Large Cheese Pizza (Add Your Own Toppings)",
+      "Small Cheese Pizza (Add Your Own Toppings)",
+      "Toasted Ravioli"
+    ]
+  },
+  "The Cheesecake Factory": {
+    "items": [
+      "Fresh Strawberry Cheesecake",
+      "Lunch Fettuccini Alfredo",
+      "Fried Macaroni and Cheese",
+      "Kids' Fried Chicken Strips",
+      "Cheeseburger Spring Rolls",
+      "Kids' Mini Corn Dogs",
+      "Korean Fried Cauliflower",
+      "Chicken “Littles”"
+    ]
+  },
+  "Freddy's Frozen Custard & Steakburgers": {
+    "items": [
+      "#1 Freddy's Original Double Combo",
+      "#1 Single Steakburger Combo",
+      "Chili Cheese Dog"
+    ]
+  },
+  "Cinnabon": {
+    "items": [
+      "MiniBon® CinnaPacks™",
+      "Center of the Roll",
+      "Center of the Roll™",
+      "Classic CinnaPacks™"
+    ]
+  },
+  "Fresh Thyme": {
+    "items": [
+      "Meurer Assorted Mini Danish (12 oz)",
+      "Mott's 100% Apple Juice Bottle (64 oz)",
+      "Natalie's Juice Strawberry Lemonade (64 oz)",
+      "Aquafina Purified Drinking Water (16.9 oz x 24 ct)",
+      "Solely Organic Whole Fruit Gummies Mango & Orange (3.5 oz)",
+      "Crest 3D White Radiant Mint Teeth Whitening Toothpaste (2.7 oz)"
+    ]
+  },
+  "Sarku Japan": {
+    "items": ["CHICKEN TERIYAKI", "BEEF TERIYAKI"]
+  },
+  "Subway": {
+    "items": [
+      "#10 All-American Club®",
+      "6 Pack Cookie Box (0 Cals)",
+      "Oven-Roasted Turkey"
+    ]
+  },
+  "Wendy's": {
+    "items": ["Baconator® Combo", "10 PC. Crispy Chicken Nuggets"]
+  },
+  "Buffalo Wild Wings": {
+    "items": ["Boneless Wings", "Hand-Breaded Tenders"]
+  },
+  "Noodles & Company": {
+    "items": [
+      "Kids Wisconsin Mac & Cheese",
+      "Wisconsin Mac & Cheese",
+      "BBQ Chicken Mac",
+      "Spaghetti & Meatballs"
+    ]
+  },
+  "Pei Wei": {
+    "items": [
+      "NEW! Grilled Bourbon Chicken",
+      "NEW! Firecracker Chicken",
+      "New! Honey Sriracha Wings",
+      "Beef & Broccoli",
+      "NEW! Sesame Chicken",
+      "Kid's Orange Chicken",
+      "Thai Donuts"
+    ]
+  },
+  "Wild Burger": {
+    "items": ["All-American Cheeseburger", "Single Burger"]
+  },
+  "3 Bay Bbq & Bakery": {
+    "items": ["Mac Attack", "Grilled Big Dog (All Beef)", "Potato Salad"]
+  },
+  "Chipotle Mexican Grill": {
+    "items": ["Keto Salad Bowl", "Paleo Salad Bowl", "Burrito Bowl"]
+  },
+  "Raising Cane's": {
+    "items": ["Caniac Combo", "3 Finger Combo"]
+  },
+  "Tropical Smoothie Cafe": {
+    "items": [
+      "CARIBBEAN JERK CHICKEN",
+      "BLUEBERRY BLISS™",
+      "SUNRISE SUNSET™",
+      "THREE CHEESE CHICKEN",
+      "BAJA CHICKEN",
+      "THREE CHEESE CHICKEN 'DILLA",
+      "CHIPOTLE CHICKEN CLUB"
+    ]
+  },
+  "Chili's Grill & Bar": {
+    "items": [
+      "Triple Dipper™",
+      "Chili's Chili Burger*",
+      "Awesome Blossom Petals",
+      "Oldtimer® w/Cheese*",
+      "Alex's Santa Fe Burger*",
+      "Crispy Cheddar Bites",
+      "Big Mouth® Bites",
+      "Classic Sirloin* - 6oz",
+      "Crispy Chicken Crispers®",
+      "Gallon of Strawberry Lemonade",
+      "Ancho Salmon",
+      "Cajun Chicken Pasta",
+      "Bacon Ranch Chicken Quesadillas",
+      "Cheesecake",
+      "Pepper Pals® Cheesy Chicken Pasta",
+      "Pepper Pals® Cheese Burger Bites",
+      "Skillet Queso",
+      "Kraft® Macaroni & Cheese",
+      "Pepper Pals® Crispy Crispers®",
+      "Chicken Crisper® Combo",
+      "Chicken Bacon Ranch Quesadillas"
+    ]
+  },
+  "Dollar General": {
+    "items": [
+      "Brisk Juice Drink Fruit Punch Bottle (1 L)",
+      "Hawaiaan Punch Juice Drink Polar Blast Bottle (24 oz)",
+      "Dasani Water Bottles (16.9 oz x 24 ct)",
+      "Reese's Ultimate Peanut Butter Cups King Size (2.8 oz)",
+      "Schick Hydro Skin Comfort Sensitive 3-Blade Razor Handle + 4 Refills (1 ct)",
+      "Simply Lemonade Juice Bottle (32 oz)",
+      "Hawaiaan Punch Juice Drink Green Berry Rush Bottle (1 gal)",
+      "Aquafina Purified Drinking Water 16.9 oz (16.9 oz x 24 ct)",
+      "Snapple All Natural Juice Watermelon Lemonade (16 oz)",
+      "LIttle Debbie Buns Honey Big Pack (21.25 oz)",
+      "3 Musketeers Chocolate Candy Bar (1.92 oz)",
+      "Scott Toilet Paper Bath Tissue 1000 Sheets per Roll (4 ct)",
+      "Old Spice For Men Moisturize with Shea Butter Body Wash (16 oz)",
+      "Old Spice Hydro Wash Body Wash Pure Sport Plus Scent (16 oz)",
+      "Gain Flings Liquid Laundry Detergent Spring Dream (81 ct)",
+      "Snickers M&M's & Twix Fun Size Chocolate Candy Variety Mix (6.9 oz)",
+      "Clorox Disinfecting Bleach Free Wipes Crisp Lemon (75 ct)",
+      "Dawn Ultra Antibacterial Dishwashing Liquid Dish Soap Orange Scent (7 oz)",
+      "TrueLiving Scented Candle Twilight Forest (1 ct)",
+      "Scented Candle - Frosted Cinnamon, 18 oz (18 oz)",
+      "TrueLiving All Purpose Scissors (1 ct)",
+      "LIttle Debbie Nutty Buddy Wafers with Peanut Butter (12 oz x 12 ct)",
+      "Oral-B Glide Pro Health Dental Floss 50 m (1 ct)",
+      "Listerine Cool Mint Mouthwash Travel Size (3.2 oz)",
+      "Colgate Optic White Advanced Teeth Whitening Toothpaste Vibrant Clean (3.2 oz)",
+      "Colgate Optic White Stain Fighter Toothpaste (4.2 oz x 2 ct)",
+      "Fabuloso All Purpose Cleaner Lavender (128 oz)",
+      "Crest Pro Health Alcohol Free Multi-Protection Mouth Wash Clint Mint (1 L)",
+      "Oreo Golden Sandwich Cookies Family Size (19.1 oz)",
+      "Mott's for Tots Apple Juice (64 oz)",
+      "Simply Orange Juice Pulp Free Plastic Bottle (52 oz)",
+      "Aunt Jemima Pearl Milling Company Syrup (24 oz)",
+      "TrueLiving Liquid Dish Soap (18 oz)",
+      "Minute Maid Lemonade Juice with Real Lemons (2 L)",
+      "Little Debbie Iced Honey Bun Single Serve (4 oz)",
+      "Trolli Squiggles Gummi Candy (4 oz)",
+      "Funables Fruit Snack Mixed Berry (8 oz x 10 ct)",
+      "LIttle Debbie Zebra Snack Cakes (10 ct)",
+      "TrueLiving Scented Candle Jar Vanilla Sugar (1 ct)",
+      "Bounty Select-a-Size Paper Towels Tissue White Double Rolls (4 ct)",
+      "Angel Soft Ultra Toilet Paper Mega Rolls (6 ct)",
+      "Little Debbie Honey Buns Big Pack (21.25 oz)",
+      "Little Debbie Shortcake Rolls Strawberry (6 ct)",
+      "Clover Valley Whole Milk (1/2 gal)",
+      "Minute Maid Lemonade Juice (2 L)",
+      "Mott's 100% Apple Juice (64 oz)",
+      "Minute Maid Tropical Punch Juice (59 oz)",
+      "Listerine Cool Mint Antiseptic Mouthwash (1 L)",
+      "Colgate Extra Clean Toothbrush Soft (3 ct)",
+      "Clover Valley Entertainment Vegetable Crackers (6 oz)",
+      "Little Debbie Oatmeal Creme Pies Sandwich Cookies Big Pack (12 ct)",
+      "Dole Mandarins in Orange Gel (4.3 oz)",
+      "Simply Pulp Free Juice Drink Orange (52 oz)",
+      "Frito-Lay Flavor Mix Chips Variety Pack (18 ct)",
+      "Aquafina Purified Drinking Water Bottles (16.9 oz x 24 ct)",
+      "Minute Maid Fruit Juice Punch (59 oz)",
+      "Black Forest Gummy Worms Candy (9 oz)",
+      "Little Debbie Zebra Snack Cakes (10 ct)",
+      "Glad 13 gal ForceFlex Tall Kitchen Drawstring Trash Bags Gain Lavender Scent with Febreze Freshness",
+      "Simply All Natural Lemonade (32 oz)",
+      "Tide Ultra Oxi Power Pods Laundry Detergent with Odor Eliminators (54 oz)",
+      "Sprite Soda Lemon Lime Bottles (16.9 oz x 6 ct)",
+      "Kellogg's Rice Krispies Treats Crispy Marshmallow Squares Cookies 'N' Creme (0.78 oz x 7 ct)",
+      "Tastykake Powdered Sugar Donuts Mini Bag (10 oz)",
+      "Pop-Tarts Breakfast Toaster Pastries Frosted Strawberry (12 ct)",
+      "Frito-Lay 2Go Snack Chips Family Fun Mix (20 ct)",
+      "Little Debbie Swiss Cake Rolls (12 ct)",
+      "Mott's Applesauce Original (4 oz x 6 ct)",
+      "Hawaiian Punch Juice Polar Blast (1 gal)",
+      "Mott's 100% Apple Juice Bottle (1 gallon)",
+      "Simply Lemonade Juice Drink (52 oz)",
+      "Simply Orange Juice Drink Pulp Free (52 oz)",
+      "Clover Valley 100% Apple Juice (64 oz)",
+      "Halls Relief Cough Drops Honey Lemon Flavor (30 ct)",
+      "Dasani Purified Water (16.9 oz x 24 ct)",
+      "Colgate 360 Advanced Optic White Soft Toothbrush Value Pack (2 ct)",
+      "Hefty Party Perfect 18 oz Cups (24 ct)",
+      "Little Debbie Cosmic Brownies with Chocolate Chip Candy (6 ct)",
+      "Little Debbie Honey Buns (6 ct)",
+      "Lysol Disinfecting Wipes Lemon & Lime Blossom Scent (35 ct)",
+      "Glad 13 gal Bags Gray (20 ct)",
+      "Softsoap Clean & Protect Antibacterial Liquid Hand Soap Pump Cool Splash (11.25 oz)",
+      "Purell Advanced Hand Sanitizer Refreshing Gel in Pump Bottle (8 oz)",
+      "Simply Lemonade Juice Drink Original (52 oz)",
+      "Funables Sour Fruit Snacks Mixed Berry (0.8 oz x 10 ct)",
+      "Crest Pro-Health Multi-Protection Mouthwash Clean Mint (33.8 oz)",
+      "Colgate 360 Optic White Platinum Toothbrushes (2 ct)",
+      "Little Debbie Glazed Donut Sticks (10 oz)",
+      "Ruffles Potato Chips Cheddar & Sour Cream (8 oz)",
+      "Doritos Tortilla Chips Cool Ranch (9.75 oz)",
+      "Aquafina Purified Drinking Water Bottle (16.9 oz x 24 ct)",
+      "Simply Orange Juice Pulp Free (52 oz)",
+      "Black Forest Gummy Worms (9 oz)",
+      "Dial Coconut Water & Mango Hand Soap With Moisturizer (7.5 oz)",
+      "Hefty Soak Proof Everyday Plates 8.75 (20 ct)"
+    ]
+  },
+  "Wingstop": {
+    "items": [
+      "Fresh Baked Rolls",
+      "Large 5 pc Crispy Tender Combo",
+      "Cajun Fried Corn",
+      "Medium 8 pc Wing Combo",
+      "Dips",
+      "Simply Lemonade®",
+      "8 pc Meal for 2 - Crispy Tenders",
+      "Triple Chocolate Chunk Brownie",
+      "DASANI® Bottled Water",
+      "Veggie Sticks"
+    ]
+  },
+  "O'Charley's Restaurant & Bar": {
+    "items": [
+      "Grilled Atlantic Salmon*",
+      "Hand-Breaded Catfish Dinner",
+      "O'Charley's Famous Chicken Tenders & Fries",
+      "Strawberry Cheesecake",
+      "Fresh Corn-On-The-Cob (Premium Side)",
+      "Side Items",
+      "Kids Mashed Potatoes & Chicken Tender Bowl",
+      "Balsamic Glazed Chicken",
+      "Kids Mac & Cheese",
+      "Gallon Hi-C Orange Lava Burst®",
+      "New Orleans Cajun Chicken Pasta",
+      "Loaded Mac & Tender Bowl"
+    ]
+  },
+  "Rush Bowls": {
+    "items": ["Beach Bowl", "Paradise Bowl", "Super Protein", "Green RX"]
+  },
+  "Captain D's Seafood": {
+    "items": [
+      "3 Piece Batter Dipped Fish Meal",
+      "Funnel Cake Stix",
+      "2 Piece Batter Dipped Fish",
+      "4 Piece Batter Dipped Fish Meal",
+      "6 Hush Puppies",
+      "Cheesecake",
+      "2 Piece Batter Dipped Fish Meal",
+      "Grilled Tilapia Meal"
+    ]
+  },
+  "McAlister's Deli": {
+    "items": [
+      "Spicy Turkey Melt",
+      "French Dip",
+      "Justaspud®",
+      "Rachel",
+      "Potato Salad",
+      "Nacho Basket",
+      "BLT + Avocado",
+      "Sugar Cookie",
+      "Gallons To Go",
+      "Mac & Cheese",
+      "Kids Spud",
+      "McAlister's Club",
+      "Kids Mac & Cheese",
+      "Brookie"
+    ]
+  },
+  "INACTIVE BIZ DO NOT CHANGE": {
+    "items": [
+      "Mixed Box (4 Pack)",
+      "Handcrafted Tender Combo (5 Pcs)",
+      "Two Fish Meal",
+      "Mashed Potatoes with Cajun Gravy",
+      "Handcrafted Tender Combo (3 Pcs)",
+      "Biscuits",
+      "Apple Pie",
+      "6PC Nuggets Kids Meal",
+      "Homestyle Mac & Cheese",
+      "Cinnamon Apple Pie",
+      "5Pc Handcrafted Tenders Combo",
+      "8Pc Nuggets Combo"
+    ]
+  },
+  "Target": {
+    "items": [
+      "Prairie Farms Milk Whole (1 gal)",
+      "Pop-TaReady-to-Serve Breakfast Toaster Pastries Variety Pack (12 ct)",
+      "Dasani Purified Water Bottles (16.9 oz x 24 ct)",
+      "Amy's Kitchen Broccoli & Cheddar Bake Bowl Meal (9.5 oz)",
+      "Simply Lemonade Bottle (52 oz)",
+      "Stouffer's Macaroni & Cheese (40 oz)",
+      "Lucky Charms Cereal (18.6 oz)",
+      "Frito Lay Snacks Flavor Mix Variety Pack (18 ct)",
+      "Pop-Tart Ready to Serve Breakfast Toaster Pastries Cookies & Creme (8 ct)",
+      "Pop-TaReady-to-Serve Breakfast Toaster Pastries Frosted Brown Sugar Cinnamon (8 ct)",
+      "Ball Park Franks Beef (15 oz)",
+      "Lunchables Turkey & American Cheese Cracker Stackers Meal Kit with Capri Sun Pacific Cooler Drink &",
+      "Yoplait Original Strawberry Banana Fridge Pack (6 oz x 8 ct)",
+      "Mott's Fruit Flavored Snacks Assorted Fruit Value Pack (0.8 oz x 22 ct)",
+      "Welch's Juicefuls Fruit Snacks Mixed (6 oz)",
+      "Good & Gather Whole Milk Jug (128 oz)",
+      "Strawberries (32 oz)",
+      "Bounty Select-A-Size Paper Towels (8 ct)",
+      "Softsoap Antibacterial Clean & Protect Liquid Hand Soap Cool Splash (11.25 oz)",
+      "Axe Body Wash Apollo Clean + Fresh Body Wash Sage & Cedarwood (16 oz)",
+      "Funables Fruity Snacks Mixed Berry Value Pack (17.6 oz)",
+      "Tropicana 100% Pure Premium No Pulp Juice Orange Original Bottle (52 oz)",
+      "Dasani Purified Water Enhanced with Minerals Bottles (16.9 oz x 24 ct )",
+      "Mott's 100% Apple Juice Original (128 oz)",
+      "Keebler Fudge Stripe Cookies (11.5 oz)",
+      "Entenmanns Bites Mini Muffins Chocolate Chip, Pouches (8.25 oz)",
+      "Lunchables Turkey and American Cheese Cracker Snack Kit with Chocolate Sandwich Cookies (3.4 oz)",
+      "Welch's Fruit Snacks Berries 'N Cherries Value Pack (0.9 oz x 22 ct)",
+      "Prairie Farms Dairy Vitamin D Whole Milk (1/2 gal)",
+      "Nabisco Teddy Grahams Snacks Chocolate (10 oz)",
+      "Oreo Chocolate Sandwich Cookies Family Size (19.1 oz)",
+      "Entenmann's Brands Little Bites Muffins Blueberry (8.25 oz)",
+      "Hiland Dairy Vitamin D Chocolate Milk (1/2 gal)",
+      "Zevo Fly Gnat & Fruit Fly Flying Insect Spray (10 oz)",
+      "Zevo Flying Insect Trap Starter Kit (2 ct)",
+      "Cheez-It Baked Snack Crackers Original (12.4 oz)",
+      "Lay's Smooth Ranch Dip (15 oz)",
+      "Ruffles Potato Chips Original (8.5 oz)",
+      "Sargento Reduced Fat Light Natural Mozzarella Cheese Strings (12 ct)",
+      "Raid Fruit Fly Trap (2 ct)",
+      "Simply Lemonade (52 oz)",
+      "Simply Orange Pulp Free Juice Bottle (3 L)",
+      "Welch's Mixed Fruit Snacks (10 ct)",
+      "Tyson All Natural Chicken Nuggets (32 oz)",
+      "Banquet Frozen Microwavable Chicken Pot Pie",
+      "Pringles Potato Crisps Chips Sour Cream & Onion (5.5 oz)",
+      "Uncrustables Sandwiches Peanut Butter & Grape Jelly (4 ct)",
+      "Jimmy Dean Frozen Meat Lovers Breakfast Meal (7 oz)",
+      "Totino's Frozen Pepperoni Pizza Rolls (24.8 oz)",
+      "Mott's 100% Apple Juice Bottle (1 gallon)",
+      "Maruchan Instant Lunch Ramen Noodle Soup Chicken Flavor (2.25 oz)",
+      "Pringles Potato Crisps Chips Cheddar Cheese (5.5 oz)",
+      "Hostess Donettes Frosted Mini Donuts (10.75 oz)",
+      "Little Debbie Cosmic Brownies (28 oz)",
+      "Axe Apollo Refreshing Scent Body Wash Sage & Cedarwood (16 oz)",
+      "Softsoap Clean & Protect Antibacterial Liquid Hand Soap Cool Splash (11.25 oz)",
+      "Degree Dry Protection Antiperspirant Deodorant Cool Rush (2.7 oz)",
+      "Scott Comfort Plus Toilet Paper 1-Ply 425 Sheets per Roll (12 ct)",
+      "Colgate Optic White Stain Fighter Teeth Whitening Toothpaste Fresh Mint Gel",
+      "Crest Pro-Health Advanced Mouthwash Fresh Mint (33.8 oz)",
+      "Fiji Natural Artesian Water (16.9 oz x 6 ct)",
+      "Glaceau Antioxidant Vapor Distilled Water (16.9 oz x 6 ct)",
+      "Cheez-It Baked Snack Crackers Original (21 oz)",
+      "Bounty Select-A-Size Paper Towels 2-Ply Sheets Triple Rolls",
+      "Entenmanns Bites Mini Muffins Blueberry, Pouches (8.25 oz)",
+      "Simply Pulp Free Juice Orange Bottle (3 L)",
+      "Lay's Dip Smooth Ranch (15 oz)",
+      "Lil Debbie Oatmeal Creme Pie Big Pack (31.7 oz)",
+      "Ruffles Potato Chips Flamin' Hot BBQ (8.5 oz)",
+      "Stonyfield Organic Kids Whole Milk Yogurt Strawberry Banana (4 oz x 6 ct)",
+      "Chobani Low Fat Greek Yogurt Strawberry Banana Value Pack (5.3 oz x 4 ct)",
+      "Good & Gather Santa Fe-Style Salad Bowl (6.3 oz)",
+      "Dixie Ultra Plates 6 7/8\" (44 ct)",
+      "Dasani Purified Water (16.9 oz x 24 ct)",
+      "Keebler Fudge Stripes Cookies Original (11.5 oz)",
+      "Prairie Farms Dairy Whole Milk (0.5 gal)",
+      "Favorite Day White Frosted Sugar Cookies (13.5 oz)",
+      "Up & Up Premium Plastic Forks Spoons and Knives 72-Piece (1 ct)",
+      "Hefty 16 oz Cups (80 ct)",
+      "Tropicana No Pulp 100% Orange Juice with Calcium & Vitamin D (52 oz)",
+      "Smartwater Vapor Distilled Water (1 L x 6 ct)",
+      "Frosted Flakes Breakfast Cereal Family Size (24 oz)",
+      "Lucky Charms Cereal Family Size (18.6 oz)",
+      "Cap'n Crunch Breakfast Cereal Crunch Berries (11.7 oz)",
+      "Lunchables Snacking Plate Turkey and Cheddar (3.2 oz)",
+      "Glacéau Smartwater Vapor Distilled Water (16.9 oz x 6 ct)",
+      "Mott's 100% Apple Juice (64 oz)",
+      "V8 Splash Antioxidant Juice Berry Blend Bottle (64 oz)",
+      "Keebler Fudge Stripes Cookies (11.5 oz)",
+      "V8 Splash Tropical Blend Juice (64 oz)"
+    ]
+  },
+  "Great American Cookies": {
+    "items": [
+      "Buy 10, Get 3 Free Regular Cookies",
+      "Buy 5, Get 1 Free Regular Cookie",
+      "Buy 3, Get 1 Free Cookie Cake Slice"
+    ]
+  },
+  "Asian Corner": {
+    "items": [
+      "Fried Rice",
+      "Veggie Egg Roll",
+      "Crab Rangoon",
+      "Drunken Noodle",
+      "Panang Curry"
+    ]
+  },
+  "Maggiano's Italian Classics": {
+    "items": [
+      "Garlic Butter Broccoli",
+      "Fettucine Alfredo",
+      "Traditional Mac & Cheese",
+      "Cinnamon Apple Hand Pie"
+    ]
+  },
+  "White Castle": {
+    "items": [
+      "BELGIAN WAFFLE SLIDER COMBO CAL 730-860",
+      "PANKO FISH SLIDER CAL 340-350",
+      "CHEESE SLIDER CAL 170-180",
+      "DOUBLE CHEESE SLIDER CAL 300-330",
+      "ONION RINGS CAL 340/660",
+      "CHICKEN RINGS CAL 320/470/1050",
+      "COCA-COLA Freestyle® Drinks"
+    ]
+  },
+  "Cracker Barrel": {
+    "items": ["Biscuit Beignets", "Roast Beef"]
+  },
+  "Crazy Bowls & Wraps": {
+    "items": [
+      "Teriyaki Bowl",
+      "Lobster Rangoon (3)",
+      "Chicken Tex Mex Egg Roll (3ct)",
+      "Buffalo Wrap",
+      "Lobster Rangoon (5)",
+      "Sweet & Sour",
+      "Caesar Wrap"
+    ]
+  },
+  "Qdoba Mexican Eats": {
+    "items": ["Chocolate Chunk Cookie", "Steak Fajita Quesadilla", "Bowl"]
+  },
+  "TGI Fridays": {
+    "items": [
+      "Fridays Signature Whiskey-Glazed Burger",
+      "Center-cut Sirloin",
+      "Center-cut Sirloin topped with Whiskey Glaze",
+      "Cheddar Mac & Cheese",
+      "Simply Grilled Salmon",
+      "Bacon Cheeseburger",
+      "Strawberry Lemonade 1/2 Gallon Jug",
+      "Kid's Cheddar Mac & Cheese",
+      "Giant Onion Rings",
+      "Fish & Chips",
+      "Cheeseburger",
+      "Mozzarella Sticks"
+    ]
+  },
+  "Krispy Kreme": {
+    "items": ["Original Glazed® Dozen", "Classic Assorted Dozen"]
+  },
+  "Popeyes Louisiana Kitchen": {
+    "items": ["6PC Nuggets Kids Meal", "Handcrafted Tender Combo (5 Pcs)"]
+  },
+  "Office Depot OfficeMax": {
+    "items": [
+      "Gorilla Glue™ Fast Cure, 2 Oz. [SKU:287825]",
+      "Elmer's® Clear Washable School Glue, 5 Oz. [SKU:436660]"
+    ]
+  },
+  "INACTIVE BUSINESSES - DO NOT EDIT!": {
+    "items": [
+      "Strawberry Cheesecake",
+      "Classic Cheeseburger*",
+      "O'Charley's Famous Chicken Tenders & Fries",
+      "Spicy Jack Cheese Wedges",
+      "Hand-Breaded Catfish Dinner",
+      "O'Charley's Famous Chicken Tenders Dinner",
+      "Side Items",
+      "Campfire Potatoes (Premium Side)",
+      "Cedar-Planked Salmon*",
+      "Hand-Battered Fish & Chips",
+      "Grilled Atlantic Salmon*"
+    ]
+  },
+  "Steak 'n Shake": {
+    "items": ["Triple Steakburger (3x cheese) Combo"]
+  },
+  "Crumbl Cookies": {
+    "items": ["6-Pack Box", "Milk - Chocolate", "Chocolate Milk", "6-Pack"]
+  },
+  "China King": {
+    "items": [
+      "38a. Egg Fried Rice",
+      "37. Vegetable Fried Rice",
+      "6. Crab Rangoon (8)",
+      "39. Plain Fried Rice"
+    ]
+  },
+  "Shogun Japanese Steakhouse": {
+    "items": ["TR1. Chicken Teriyaki"]
+  },
+  "Ruby Tuesday": {
+    "items": [
+      "Crispy Fish & Chips",
+      "Top Sirloin (6oz)",
+      "Kid Grilled Chicken",
+      "Mozzarella Sticks"
+    ]
+  },
+  "Church's Texas Chicken": {
+    "items": ["5 Piece Tenders", "Apple Pies", "Baked Mac & Cheese"]
+  },
+  "Virtual Dining Concepts (Perm Deactivations)": {
+    "items": [
+      "Seasoned Crinkle Fries",
+      "Chandler Style",
+      "Karl's Grilled Cheese",
+      "Chocolate Chip Cookie"
+    ]
+  },
+  "Graveyard Smoothie King Corporate": {
+    "items": [
+      "The Shredder® Strawberry",
+      "Metabolism Boost® Banana Passionfruit"
+    ]
+  },
+  "Cold Stone Creamery": {
+    "items": [
+      "Ice Cream Cookie Sandwich Variety 4-Pack - Ready for Pick-Up Now"
+    ]
+  },
+  "Dockside Charlie's": {
+    "items": [
+      "Herb Superb Grilled Salmon",
+      "Good Ol' Fish & Chips",
+      "Delta Catfish & Fries",
+      "Oh My Cod Sandwich"
+    ]
+  },
+  "Tumerico": {
+    "items": ["Taco Salad", "Vegan Tacos", "Vegan Burrito", "Vegan Enchiladas"]
+  },
+  "Menya Rui": {
+    "items": ["Tonkotsu Ramen", "Shoyu Ramen", "Spicy Miso Ramen", "Miso Ramen"]
+  },
+  "Sunny Side Kitchen": {
+    "items": [
+      "Biscuits & Gravy",
+      "Pancakes",
+      "French Toast",
+      "Breakfast Burrito"
+    ]
+  },
+  "GS Cafe and Ethiopian Cuisine": {
+    "items": ["Doro Wot", "Kitfo", "Vegetarian Combo", "Tibs"]
+  },
+  "Fratellino": {
+    "items": [
+      "Margherita Pizza",
+      "Pasta Carbonara",
+      "Pasta Bolognese",
+      "Pasta Alfredo"
+    ]
+  },
+  "BROKEN MOUTH | Lee's Homestyle": {
+    "items": ["Fried Chicken Sandwich", "Pork Belly Adobo", "Pancit Canton"]
+  },
+  "Adela's Country Eatery": {
+    "items": [
+      "Chicken Fried Steak",
+      "Chicken Fried Chicken",
+      "Chicken Fried Pork Chop",
+      "Chicken Fried Pork Steak"
+    ]
+  },
+  "Sierra Subs and Salads": {
+    "items": [
+      "Turkey & Cheese Sub",
+      "Italian Sub",
+      "Chicken Caesar Salad",
+      "Greek Salad"
+    ]
+  },
+  "Gino's Deli Stop N Buy": {
+    "items": [
+      "Turkey & Cheese Sub",
+      "Italian Sub",
+      "Chicken Caesar Salad",
+      "Greek Salad"
+    ]
+  },
+  "Uncle Af's": {
+    "items": [
+      "Chicken & Waffles",
+      "Shrimp & Grits",
+      "Fried Catfish",
+      "Fried Chicken"
+    ]
+  },
+  "Haywood Smokehouse": {
+    "items": [
+      "Pulled Pork Plate",
+      "Brisket Plate",
+      "Ribs Plate",
+      "Chicken Plate"
+    ]
+  },
+  "Mio's Grill & Cafe": {
+    "items": [
+      "Chicken Shawarma Plate",
+      "Beef Shawarma Plate",
+      "Falafel Plate",
+      "Kofta Plate"
+    ]
+  },
+  "Express Deli": {
+    "items": [
+      "Turkey & Cheese Sub",
+      "Italian Sub",
+      "Chicken Caesar Salad",
+      "Greek Salad"
+    ]
+  },
+  "De Babel": {
+    "items": [
+      "Chicken Shawarma Plate",
+      "Beef Shawarma Plate",
+      "Falafel Plate",
+      "Kofta Plate"
+    ]
+  },
+  "Porky's Kaua'i": {
+    "items": [
+      "Pulled Pork Plate",
+      "Brisket Plate",
+      "Ribs Plate",
+      "Chicken Plate"
+    ]
+  },
+  "Crafted Greens": {
+    "items": ["Chicken Caesar Salad", "Greek Salad", "Cobb Salad", "Chef Salad"]
+  },
+  "Aperitivo Wine Bar": {
+    "items": [
+      "Cheese Plate",
+      "Charcuterie Plate",
+      "Cheese & Charcuterie Plate",
+      "Cheese & Fruit Plate"
+    ]
+  },
+  "Guy's for Lunch": {
+    "items": [
+      "Turkey & Cheese Sub",
+      "Italian Sub",
+      "Chicken Caesar Salad",
+      "Greek Salad"
+    ]
+  },
+  "Little India": {
+    "items": [
+      "Chicken Tikka Masala",
+      "Lamb Curry",
+      "Vegetable Korma",
+      "Saag Paneer"
+    ]
+  },
+  "Ekiben": {
+    "items": ["Chicken Bao", "Pork Bao", "Tofu Bao", "Beef Bao"]
+  },
+  "BOOMCHIA": {
+    "items": ["Chicken Bao", "Pork Bao", "Tofu Bao", "Beef Bao"]
+  },
+  "Milpa": {
+    "items": ["Chicken Bao", "Pork Bao", "Tofu Bao", "Beef Bao"]
+  },
+  "Pizzeria Luba": {
+    "items": [
+      "Margherita Pizza",
+      "Pepperoni Pizza",
+      "Sausage Pizza",
+      "Vegetarian Pizza"
+    ]
+  }
+}
