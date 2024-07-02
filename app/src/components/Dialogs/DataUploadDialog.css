@@ -1,7 +1,6 @@
 .DataUploadDialog {
   p {
     color: var(--primary-font-color) !important;
-    padding-bottom: 6px !important;
   }
 
   pre {
@@ -9,8 +8,12 @@
     letter-spacing: 1px;
     color: var(--primary-font-color);
     background-color: #0f346180;
-    padding: 4px 16px;
-    margin: 0;
+    padding: 0 16px;
+    margin: 6px 0;
+  }
+
+  a {
+    color: var(--primary-highlight-color) !important;
   }
 
   .MuiDialog-paper {
@@ -41,16 +44,12 @@
     font-size: 1.3rem !important;
   }
 
-  .settings {
+  .content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
     padding-top: 16px;
-
-    .form-label {
-      color: var(--primary-font-color) !important;
-    }
   }
 }

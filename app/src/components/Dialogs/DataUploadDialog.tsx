@@ -61,7 +61,7 @@ const DataUploadDialog = ({ open, handleClose }: Props): ReactElement => {
             <DialogTitle className="form-title">Attach File</DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    Visualize your own data by attaching a JSON file. The JSON must feature order data in the following format:
+                    Visualize your own data by attaching a JSON file. The JSON must feature order data in following format:   
                 </DialogContentText>
                 <pre>
                     {`
@@ -79,7 +79,10 @@ const DataUploadDialog = ({ open, handleClose }: Props): ReactElement => {
 ]
                     `}
                 </pre>
-                <div className='settings'>
+                <DialogContentText>
+                    See <a href="https://github.com/theodoremoreland/OrderDashboard" target="_blank" rel="noreferrer">instructions</a> for information on how to get and format your order data.  
+                </DialogContentText>
+                <div className='content'>
                     <Button
                         component="label"
                         role={undefined}
