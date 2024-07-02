@@ -1,4 +1,4 @@
-import { DateFormat } from "../types/types"
+import { DateFormat, WeekDayFormat } from "../types/types"
 
 /**
  * Create an array of objects with a date property.
@@ -6,8 +6,8 @@ import { DateFormat } from "../types/types"
  * some dates may not have orders.
  * TODO - This needs unit tests.
  */
-export default (startDate: Date, endDate: Date): { date: DateFormat }[] => {  
-    const data: { date: DateFormat }[] = [];
+export default (startDate: Date, endDate: Date): { date: DateFormat, dayOfWeek: WeekDayFormat }[] => {  
+    const data: { date: DateFormat, dayOfWeek: WeekDayFormat }[] = [];
 
     // new Date(startDate.getTime()) is used to clone the startDate object as to not mutate it.
     for (let d = new Date(startDate.getTime()); d <= endDate; d.setDate(d.getDate() + 1)) {
@@ -19,6 +19,7 @@ export default (startDate: Date, endDate: Date): { date: DateFormat }[] => {
 
         data.push({
             date: formattedDate,
+            dayOfWeek: dateUnits[0] as WeekDayFormat,
         });
     }
 
