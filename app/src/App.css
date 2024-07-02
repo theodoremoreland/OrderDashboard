@@ -10,6 +10,7 @@
 
 .icon {
   fill: var(--primary-font-color);
+  transition: all 0.2s ease-in-out;
 }
 
 .icon.clickable {
