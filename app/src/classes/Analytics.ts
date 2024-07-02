@@ -2,9 +2,10 @@ import { Order } from "../types/types";
 import generateObjectCalendar from "../modules/generateObjectCalendar";
 import getPercentageOfYearPassedOnDate from "../modules/getPercentageOfYearPassedOnDate";
 
-// TODO many of the methods in this class seem incredibly inefficient, namely the reuse of object calendar, repeated filters, and repeated iterations.
+// TODO many of the methods in this class seem incredibly inefficient, namely the reuse of object calendar and redundant use of loops and iterators.
 // TODO (cont.) Refactoring these in a vacuum would be trivial, however refactoring them to accommodate the needs of the React app requires more thought.
 // TODO (cont.) Specifically, how can this be refactored such that a React state change to startDate and endDate triggers a re-calculation of the data?
+// TODO (cont.) One possible solution is to group related calculations into a single method (e.g. sums and averages).
 export default class Analytics {
     private data: Order[];
 
@@ -383,7 +384,6 @@ export default class Analytics {
         return +(totalNumberOfPurchases / (objectCalendar.length / 7)).toFixed(2);
     }
 
-    // TODO: Need to update unit tests for this method.
     public getAverageSpendPerMonth(startDate: Date, endDate: Date): number {
         const averageSpendPerYear: number = this.getAverageSpendPerYear(startDate, endDate);
         const averageSpendPerMonth: number = averageSpendPerYear / 12;
@@ -391,7 +391,6 @@ export default class Analytics {
         return +(averageSpendPerMonth).toFixed(2);
     }
 
-    // TODO: Need to update unit tests for this method.
     public getAverageNumberOfPurchasesPerMonth(startDate: Date, endDate: Date): number {
         const averageNumberOfPurchasesPerYear: number = this.getAverageNumberOfPurchasesPerYear(startDate, endDate);
         const averageNumberOfPurchasesPerMonth: number = averageNumberOfPurchasesPerYear / 12;
@@ -399,7 +398,6 @@ export default class Analytics {
         return +(averageNumberOfPurchasesPerMonth).toFixed(2);
     }
 
-    // TODO: Need to update unit tests for this method.
     public getAverageSpendPerYear(startDate: Date, endDate: Date): number {
         const data: {[key: number]: Order[]} = this.groupByYear();
         const validYears: string[] = Object.keys(data).filter(year => {
@@ -438,7 +436,6 @@ export default class Analytics {
         return +(sum / numberOfYears).toFixed(2);
     }
 
-    // TODO: Need to update unit tests for this method.
     public getAverageNumberOfPurchasesPerYear(startDate: Date, endDate: Date): number {
         const data: {[key: number]: Order[]} = this.groupByYear();
         const validYears: string[] = Object.keys(data).filter(year => {
