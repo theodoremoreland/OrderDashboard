@@ -21,6 +21,7 @@ I rather enjoy being referred to as a "DoorDash VIP" when I call their customer 
 - CSS
 - Material UI (for inputs)
 - Material UI X Charts (for charts and data grid)
+- Zod
 
 ## How it works
 
