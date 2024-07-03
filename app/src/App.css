@@ -59,7 +59,7 @@
   /* display: none; */
 }
 
-.overlay-2 {
+.app-overlay {
   z-index: -2;
   position: absolute;
   top: 0;
@@ -74,7 +74,6 @@
   opacity: 0.45;
   mix-blend-mode: overlay;
   pointer-events: none;
-  /* display: none; */
 }
 
 .row {
