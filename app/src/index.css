@@ -38,9 +38,15 @@
   --section-gap: 20px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   color: var(--primary-font-color);
   font-family: custom-regular;
   background: rgb(7, 28, 49);
@@ -55,8 +61,11 @@ body,
 #root {
   width: 100%;
   height: 100%;
-  padding: 0;
-  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
 }
 
 h2 {
