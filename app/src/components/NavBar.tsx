@@ -14,7 +14,7 @@ import DataUploadDialog from "./Dialogs/DataUploadDialog";
 
 // Custom
 import Analytics from "../classes/Analytics";
-import { generateRandomOrderData } from "../modules/randomizeData";
+import { generateRandomOrderData, generateRandomStartDate } from "../modules/randomizeData";
 
 // Types
 import { Order } from "../types/types";
@@ -69,7 +69,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         <RefreshIcon
                             onClick={() => {
                                 setSelectedYear("All");
-                                setRawData(generateRandomOrderData() as Order[])
+                                setRawData(generateRandomOrderData(generateRandomStartDate()) as Order[])
                             }}
                             className="icon clickable"
                         />

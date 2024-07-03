@@ -5,14 +5,13 @@ import _storeData from "../mocks/stores.json";
 const storeData = _storeData as { [storeName: string]: { items: string[] }};
 const storeNames: string[] = Object.keys(storeData);
 
-const randomDay: number = Math.floor(Math.random() * 28) + 1;
-const randomMonth: number = Math.floor(Math.random() * 12) + 1;
-const randomYear: number = Math.floor(Math.random() * 10) + 2013;
+export const generateRandomStartDate = (): Date => {
+    const randomDay: number = Math.floor(Math.random() * 28) + 1;
+    const randomMonth: number = Math.floor(Math.random() * 12) + 1;
+    const randomYear: number = Math.floor(Math.random() * 10) + 2013;
 
-const randomStartDate: Date = new Date(randomYear, randomMonth, randomDay);
-const endDate: Date = new Date();
-
-const objectCalendar = generateObjectCalendar(randomStartDate, endDate);
+    return new Date(randomYear, randomMonth, randomDay);
+}
 
 const generateRandomOrderCost = (min: number, max: number, numberOfItems: number): number => {
     return +(((Math.random() * (max - min + 1)) + min) * numberOfItems).toFixed(2);
@@ -54,7 +53,8 @@ const shouldGenerateThirdOrder = (): boolean => {
     return Math.random() < 0.078;
 }
 
-export const generateRandomOrderData = (): Order | { date: string, dayOfWeek: string }[] => {
+export const generateRandomOrderData = (startDate: Date = generateRandomStartDate(), endDate: Date = new Date()): Order | { date: string, dayOfWeek: string }[] => {
+    const objectCalendar = generateObjectCalendar(startDate, endDate);
     const orders: Order[] = [];
 
     for (const orderSlot of objectCalendar) {
