@@ -53,19 +53,19 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             <h1 className="app-title">Order Dashboard</h1>
             <div className="center">
                 <ul>
-                    <li>
+                    <li title="Adjust display settings">
                         <DisplaySettingsIcon
                             onClick={() => setDisplaySettingsOpen(true)}
                             className="icon clickable"
                         />
                     </li>
-                    <li>
+                    <li title="Visualize your own data by attaching a JSON file">
                         <AttachFileAddIcon
                             onClick={() => setDataUploadOpen(true)}
                             className="icon clickable"
                         />
                     </li>
-                    <li>
+                    <li title="Replace randomized data">
                         <RefreshIcon
                             onClick={() => {
                                 setSelectedYear("All");
