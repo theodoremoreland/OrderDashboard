@@ -104,7 +104,8 @@
 /* Material UI !important overrides */
 
 /* SELECT */
-.MuiNativeSelect-root {
+.MuiNativeSelect-root,
+.MuiInput-root {
   &::before {
     border-color: var(--primary-highlight-color) !important;
   }
@@ -114,7 +115,8 @@
   }
 }
 
-.MuiNativeSelect-icon {
+.MuiNativeSelect-icon,
+.MuiSelect-icon {
   color: var(--primary-highlight-color) !important;
 }
 

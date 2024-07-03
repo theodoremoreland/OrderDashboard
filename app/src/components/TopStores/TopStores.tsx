@@ -3,7 +3,8 @@ import { ReactElement, useState, useContext } from 'react';
 
 // MUI
 import FormControl from '@mui/material/FormControl';
-import { NativeSelect } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 // Custom
 import Analytics from '../../classes/Analytics';
@@ -32,10 +33,11 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
             <div className='heading'>
                 <h2>Top Stores</h2>
                 <FormControl
+                    variant="standard"
                     size="small"
                     sx={{ minWidth: 150 }}
                 >
-                    <NativeSelect
+                    <Select
                         sx={{ color: '#feffff' }}
                         value={barSelection}
                         onChange={(e) => setBarSelection(e.target.value as "totalSpend" | "totalOrders" | "totalItemsPurchased")}
@@ -44,10 +46,10 @@ const TopStores = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             id: 'uncontrolled-native',
                         }}
                     >
-                        <option value="totalSpend">by Total Spend</option>
-                        <option value="totalOrders">by Total Orders</option>
-                        <option value="totalItemsPurchased">by Total Items</option>
-                    </NativeSelect>
+                        <MenuItem value="totalSpend">by Total Spend</MenuItem>
+                        <MenuItem value="totalOrders">by Total Orders</MenuItem>
+                        <MenuItem value="totalItemsPurchased">by Total Items</MenuItem>
+                    </Select>
                 </FormControl>
             </div>
             {

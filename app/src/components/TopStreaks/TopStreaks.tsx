@@ -3,7 +3,8 @@ import { ReactElement, useState, useContext } from "react";
 
 // MUI
 import FormControl from '@mui/material/FormControl';
-import { NativeSelect } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 // Custom
 import Analytics from "../../classes/Analytics";
@@ -32,10 +33,11 @@ const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
             <div className='heading'>
                 <h2>Top Streaks</h2>
                 <FormControl
+                    variant="standard"
                     size="small"
                     sx={{ minWidth: 110 }}
                 >
-                    <NativeSelect
+                    <Select
                         sx={{ color: '#feffff' }}
                         value={listSelection}
                         onChange={(e) => setListSelection(e.target.value as "days-with-purchases" | "days-without-purchases")}
@@ -44,9 +46,9 @@ const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             id: 'uncontrolled-native',
                         }}
                     >
-                        <option value="days-with-purchases">Orders</option>
-                        <option value="days-without-purchases">No Orders</option>
-                    </NativeSelect>
+                        <MenuItem value="days-with-purchases">Orders</MenuItem>
+                        <MenuItem value="days-without-purchases">No Orders</MenuItem>
+                    </Select>
                 </FormControl>
             </div>
             {

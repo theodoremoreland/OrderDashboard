@@ -3,7 +3,8 @@ import { ReactElement, useContext, useEffect, useState } from "react";
 
 // MUI
 import FormControl from '@mui/material/FormControl';
-import { NativeSelect } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 // Context
 import { DataContext } from "../contexts/DataContextProvider";
@@ -77,10 +78,14 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 </ul>
             </div>
             <FormControl
+                variant="standard"
                 size="small"
-                sx={{ minWidth: 95, zIndex: 2}}
+                sx={{ 
+                    minWidth: 95,
+                    zIndex: 2,
+                }}
             >
-                <NativeSelect
+                <Select
                     sx={{ 
                         color: '#feffff',
                     }}
@@ -91,15 +96,15 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         id: 'uncontrolled-native',
                     }}
                 >
-                    <option value="All">All years</option>
+                    <MenuItem className="menu-item" value="All">All years</MenuItem>
                     {
                         Object.keys(analytics.getTotalSpendByYear()).sort((a, b) => Number(b) - Number(a)).map(year => {
                             return (
-                                <option key={year} value={year}>{year}</option>
+                                <MenuItem className="menu-item" key={year} value={year}>{year}</MenuItem>
                             )
                         })
                     }
-                </NativeSelect>
+                </Select>
             </FormControl>
             <div className="overlay"></div>
             <DisplaySettingsDialog

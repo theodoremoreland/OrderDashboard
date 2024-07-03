@@ -3,7 +3,8 @@ import { ReactElement, useState } from 'react';
 
 // MUI
 import FormControl from '@mui/material/FormControl';
-import { NativeSelect } from '@mui/material';
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 // Custom
 import Analytics from '../../classes/Analytics';
@@ -28,10 +29,11 @@ const Scatters = ({ analytics, startDate, endDate }: Props): ReactElement => {
             <div className='heading'>
                 <h2>Activity</h2>
                 <FormControl
+                    variant="standard"
                     size="small"
                     sx={{ minWidth: 150 }}
                 >
-                    <NativeSelect
+                    <Select
                         sx={{ color: '#feffff' }}
                         value={scatterSelection}
                         onChange={(e) => setScatterSelection(e.target.value as "totalSpend" | "totalOrders"  | "totalItemsPurchased")}
@@ -40,10 +42,10 @@ const Scatters = ({ analytics, startDate, endDate }: Props): ReactElement => {
                             id: 'uncontrolled-native',
                         }}
                     >
-                        <option value="totalSpend">by Total Spend</option>
-                        <option value="totalOrders">by Total Orders</option>
-                        <option value="totalItemsPurchased">by Total Items</option>
-                    </NativeSelect>
+                        <MenuItem value="totalSpend">by Total Spend</MenuItem>
+                        <MenuItem value="totalOrders">by Total Orders</MenuItem>
+                        <MenuItem value="totalItemsPurchased">by Total Items</MenuItem>
+                    </Select>
                 </FormControl>
             </div>
             {
