@@ -14,10 +14,15 @@ import DataUploadDialog from "./Dialogs/DataUploadDialog";
 
 // Custom
 import Analytics from "../classes/Analytics";
+import { generateRandomOrderData } from "../modules/randomizeData";
+
+// Types
+import { Order } from "../types/types";
 
 // Images
 import AttachFileAddIcon from "../assets/images/icons/attach_file_add.svg?react";
 import DisplaySettingsIcon from "../assets/images/icons/display_settings.svg?react";
+import RefreshIcon from "../assets/images/icons/refresh.svg?react";
 
 // Styles
 import './NavBar.css';
@@ -27,7 +32,7 @@ interface Props {
 }
 
 const NavBar = ({ analytics }: Props): ReactElement => {
-    const { setStartDate, setEndDate, resetDates } = useContext(DataContext);
+    const { setStartDate, setEndDate, resetDates, setRawData } = useContext(DataContext);
     const [selectedYear, setSelectedYear] = useState<string>("All");
     const [displaySettingsOpen, setDisplaySettingsOpen] = useState<boolean>(false);
     const [dataUploadOpen, setDataUploadOpen] = useState<boolean>(false);
@@ -37,6 +42,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             resetDates();
         } else {
             const year = Number(selectedYear);
+
             setStartDate(new Date(year, 0, 1));
             setEndDate(new Date(year, 11, 31));
         }
@@ -56,6 +62,15 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     <li>
                         <AttachFileAddIcon
                             onClick={() => setDataUploadOpen(true)}
+                            className="icon clickable"
+                        />
+                    </li>
+                    <li>
+                        <RefreshIcon
+                            onClick={() => {
+                                setSelectedYear("All");
+                                setRawData(generateRandomOrderData() as Order[])
+                            }}
                             className="icon clickable"
                         />
                     </li>

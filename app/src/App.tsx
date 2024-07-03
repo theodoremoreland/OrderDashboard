@@ -22,13 +22,11 @@ import { Order } from './types/types';
 // Styles
 import './App.css';
 
-const ordersData = generateRandomOrderData();
-
 const App = (): ReactElement => {
   const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
 
   useEffect(() => {
-      setRawData(ordersData as Order[]);
+      setRawData(generateRandomOrderData() as Order[]);
   }, [setRawData]);
 
   return (

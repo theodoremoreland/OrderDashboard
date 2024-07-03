@@ -2,19 +2,16 @@
   "McDonald's": {
     "items": [
       "Sausage Egg Biscuit",
-      "Sausage Egg Cheese McGriddle",
       "Sausage Egg Cheese McGriddle Meal",
       "McCafé Cinnamon Roll",
       "Hash Browns",
       "Minute Maid® Orange Juice",
       "Apple Slices",
       "Glazed Pull Apart Donut",
-      "Powerade®",
       "Bacon Egg Cheese McGriddle Meal",
       "McCafe Cheese Danish",
       "3 Pack Of Cookies",
       "Strawberry Banana Smoothie",
-      "2 Half Strips Bacon",
       "POWERADE®",
       "13 Cookie Tote",
       "10 Piece McNuggets",
@@ -1233,7 +1230,8 @@
       "Cheese Plate",
       "Charcuterie Plate",
       "Cheese & Charcuterie Plate",
-      "Cheese & Fruit Plate"
+      "Cheese & Fruit Plate",
+      "Charcuterie & Fruit Plate"
     ]
   },
   "Guy's for Lunch": {
@@ -1249,7 +1247,8 @@
       "Chicken Tikka Masala",
       "Lamb Curry",
       "Vegetable Korma",
-      "Saag Paneer"
+      "Saag Paneer",
+      "Chicken Biryani"
     ]
   },
   "Ekiben": {
@@ -1259,14 +1258,16 @@
     "items": ["Chicken Bao", "Pork Bao", "Tofu Bao", "Beef Bao"]
   },
   "Milpa": {
-    "items": ["Chicken Bao", "Pork Bao", "Tofu Bao", "Beef Bao"]
+    "items": ["Chicken Bao", "Pork Bao", "Tofu Bao", "Beef Bao", "Shrimp Bao"]
   },
   "Pizzeria Luba": {
     "items": [
       "Margherita Pizza",
       "Pepperoni Pizza",
       "Sausage Pizza",
-      "Vegetarian Pizza"
+      "Vegetarian Pizza",
+      "Cheese Pizza",
+      "Meat Lovers Pizza"
     ]
   }
 }
