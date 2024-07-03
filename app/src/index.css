@@ -1,17 +1,17 @@
 /* ___________________ FONTS ____________________________ */
 @font-face {
   font-family: custom-bold;
-  src: url("./assets/fonts/Urbanist-Bold.ttf");
+  src: url("./fonts/Urbanist-Bold.ttf");
 }
 
 @font-face {
   font-family: custom-regular;
-  src: url("./assets/fonts/Urbanist-Regular.ttf");
+  src: url("./fonts/Urbanist-Regular.ttf");
 }
 
 @font-face {
   font-family: custom-thin;
-  src: url("./assets/fonts/Urbanist-Thin.ttf");
+  src: url("./fonts/Urbanist-Thin.ttf");
 }
 
 /* ___________________ GLOBAL ____________________________ */
