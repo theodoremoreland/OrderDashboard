@@ -1,8 +1,10 @@
 .NavBar {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 7.8rem;
   padding: 8px 32px;
   box-shadow: rgba(0, 0, 0, 0.98) 0px 25px 20px -20px;
 
@@ -41,5 +43,12 @@
         font-size: 1rem;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .NavBar {
+    flex-direction: row;
+    height: auto;
   }
 }

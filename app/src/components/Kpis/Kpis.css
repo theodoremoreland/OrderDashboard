@@ -1,6 +1,6 @@
 .Kpis {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -54,5 +54,11 @@
     .MuiSwitch-thumb:before {
       background-image: url("../../assets/images/icons/avg_pace.svg");
     }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .Kpis {
+    flex-direction: row;
   }
 }

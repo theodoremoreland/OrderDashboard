@@ -1,9 +1,16 @@
 .TopStores {
   position: relative;
   flex-grow: 1;
+  width: 100%;
   height: 100%;
   box-sizing: border-box;
   padding: 16px;
   border: var(--border);
   border-radius: var(--border-radius);
+}
+
+@media screen and (min-width: 1080px) {
+  .TopStores {
+    width: auto;
+  }
 }
