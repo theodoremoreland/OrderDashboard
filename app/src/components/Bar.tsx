@@ -23,7 +23,7 @@ const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
 
     const handleResize = useCallback((): void => {
         if (window.innerWidth < 1080) {
-            setMargins({ left: 100, top: 15, right: 5 });
+            setMargins({ left: 100, top: 15, right: 0 });
         }
     }, []);
 
