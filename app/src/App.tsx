@@ -1,5 +1,5 @@
 // React
-import { ReactElement, useContext, useEffect } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 
 // Data
 import { generateRandomOrderData } from './modules/randomizeData';
@@ -24,6 +24,19 @@ import './App.css';
 
 const App = (): ReactElement => {
   const { analytics, startDate, endDate, setRawData } = useContext(DataContext);
+  const [pageSize, setPageSize] = useState<number | undefined>(undefined);
+
+  useEffect(() => {
+    if (window.innerWidth < 1080) {
+      setPageSize(10);
+    } else if (window.innerHeight > 1600) {
+      setPageSize(20);
+    } else if (window.innerHeight === 1080) {
+      setPageSize(4);
+    } else {
+      setPageSize(5);
+    }
+  }, []);
 
   useEffect(() => {
       setRawData(generateRandomOrderData() as Order[]);
@@ -66,11 +79,12 @@ const App = (): ReactElement => {
                 <div className="heading">
                   <h2>Order History</h2>
                 </div>
-                <Grid
+                {pageSize && <Grid
                     data={analytics.getOrdersBetweenDates(startDate, endDate)}
-                    pageSize={5}
-                    pageSizeOptions={[5]}
+                    pageSize={pageSize}
+                    pageSizeOptions={[pageSize]}
                   />
+                }
                   <div className="overlay"></div>
               </div>
             </div>
