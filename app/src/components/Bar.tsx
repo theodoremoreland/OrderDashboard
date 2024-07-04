@@ -1,5 +1,5 @@
 // React
-import { ReactElement } from "react";
+import { ReactElement, useEffect, useCallback, useState } from "react";
 
 // MUI X
 import { BarChart } from '@mui/x-charts/BarChart';
@@ -19,6 +19,22 @@ interface Props {
 }
 
 const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
+    const [margins, setMargins] = useState({ left: 150, top: 15, right: 35 } as { left: number, top: number, right: number } );
+
+    const handleResize = useCallback((): void => {
+        if (window.innerWidth < 1080) {
+            setMargins({ left: 100, top: 15, right: 5 });
+        }
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
+    }, [handleResize]);
+
     return (
         <BarChart
             data-testid={id} 
@@ -46,7 +62,7 @@ const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
             ]}
             layout="horizontal"
             height={190}
-            margin={{ left: 150, top: 15, right: 35 }}
+            margin={margins}
         />
     )
 }
