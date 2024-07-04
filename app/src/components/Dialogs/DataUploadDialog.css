@@ -5,7 +5,8 @@
 
   pre {
     font-family: custom-regular;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    letter-spacing: 0;
     color: var(--primary-font-color);
     background-color: #0f346180;
     padding: 0 16px;
@@ -51,5 +52,14 @@
     align-items: flex-start;
     gap: 8px;
     padding-top: 16px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .DataUploadDialog {
+    pre {
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
   }
 }
