@@ -61,7 +61,7 @@ Two scripts were used to get my order data. One script parses the data (`webScra
 #### After toggling KPIs from Totals to Averages
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/2.png" width="800">
 
-
+#### Dropdown for switching between years for visualizations
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/3.png" width="800">
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="800">
