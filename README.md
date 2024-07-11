@@ -55,9 +55,12 @@ Two scripts were used to get my order data. One script parses the data (`webScra
 
 ### Desktop
 
+#### Default view
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/1.png" width="800">
 
+#### After toggling KPIs from Totals to Averages
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/2.png" width="800">
+
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/3.png" width="800">
 
