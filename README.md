@@ -64,13 +64,16 @@ Two scripts were used to get my order data. One script parses the data (`webScra
 #### Dropdown for switching between years for visualizations
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/3.png" width="650">
 
-#### 
+#### After switching to the year 2018
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="650">
 
+#### Dropdown for Activity scatter chart
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/5.png" width="650">
 
+#### After clicking Total Items option for scatter chart dropdown 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/6.png" width="650">
 
+#### Dropdown for Top Streaks list
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/7.png" width="650">
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/8.png" width="650">
