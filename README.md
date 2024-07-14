@@ -56,43 +56,44 @@ Two scripts were used to get my order data. One script parses the data (`webScra
 ### Desktop
 
 #### Default view
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/1.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/1.png" width="650">
 
 #### After toggling KPIs from Totals to Averages
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/2.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/2.png" width="650">
 
 #### Dropdown for switching between years for visualizations
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/3.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/3.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="800">
+#### 
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/5.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/5.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/6.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/6.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/7.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/7.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/8.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/8.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/9.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/9.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/10.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/10.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/11.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/11.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/12.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/12.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/13.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/13.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/14.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/14.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/15.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/15.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/16.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/16.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/17.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/17.png" width="650">
 
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/18.png" width="800">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/18.png" width="650">
 
 ### Mobile
 
