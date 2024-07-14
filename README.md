@@ -1,8 +1,10 @@
 # Order Dashboard
 
-I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status? DoorDash didn't have the tools for analyzing my spending, curiosity led me to leveraging my programming skills for insight. I wrote some scripts to get my order history data, then I created my own analytics dashboard.
+I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
 
-*Note: The dashboard is initialized with random data (not my actual order history). Said data can be shuffled by clicking the refresh icon in the navbar. Anyone can supply a valid JSON to the dashboard and it will visualize that data instead via clicking on the attach/add icon in the navbar.*
+I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard and the dashboard will display analytics for said JSON file.
+
+The dashboard is initialized with random data. The data can be shuffled by clicking the refresh icon in the navbar or real data can be supplied via clicking the attach/add icon in the navbar.
 
 The dashboard is deployed [here](https://main.d1rdpoich583rp.amplifyapp.com/)
 
