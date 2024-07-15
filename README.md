@@ -103,10 +103,10 @@ Two scripts were used to get my order data. One script parses the data (`webScra
 ### Mobile
 
 #### Top of the page (mobile)
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/19.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/19.png" width="250">
 
 #### Middle of the page (mobile)
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/20.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/20.png" width="250">
 
 #### Bottom of the page (mobile)
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/21.png" width="300">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/21.png" width="250">
