@@ -68,8 +68,6 @@
     return orderElement.innerText.includes(`Order Cancelled`);
   };
 
-  // * ---- Functions for getting the order data from the HTML/DOM. ----
-
   /**
    * Returns the store name of the given storeName HTML/DOM element.
    * @param {HTMLElement} storeNameElement
@@ -126,10 +124,15 @@
    * to developer tools console.
    */
   const main = () => {
+    let clickCountLimit = Infinity;
+    let clickCount = 0;
+
     intervalId = setInterval(() => {
       const loadMoreDeliveriesButton = grabLoadMoreDeliveriesButton();
 
-      if (loadMoreDeliveriesButton) {
+      if (loadMoreDeliveriesButton && clickCount < clickCountLimit) {
+        clickCount += 1;
+
         loadMoreDeliveriesButton.click();
       } else {
         clearInterval(intervalId);
