@@ -2,9 +2,9 @@
 
 I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
 
-I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard and the dashboard will display analytics for said JSON file.
+I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard.
 
-The dashboard is initialized with random data. The data can be shuffled by clicking the refresh icon in the navbar or real data can be supplied via clicking the attach/add icon in the navbar.
+The dashboard is initialized with random data. The randomized data can be shuffled by clicking the refresh icon in the navbar. Actual data in the form of a properly formatted JSON file can be supplied to the dashboard via clicking the attach/add icon in the navbar.
 
 The dashboard is deployed [here](https://main.d1rdpoich583rp.amplifyapp.com/)
 
