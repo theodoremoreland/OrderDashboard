@@ -36,18 +36,18 @@ The dashboard is deployed [here](https://main.d1rdpoich583rp.amplifyapp.com/)
 
 ## Getting the order data
 
-The method I used to get my order data is relatively primitive and volatile, considering it isn't fully automated and is based on a particular version of the DoorDash website. If DoorDash updates the order history page, the script used to grab the order history will likely fail. This was sufficient for the scope of the project as I didn't anticipate much value in repeating this process. The value being to recognizes spending habits, not to monitor changes to those habits.
+If you're interested, you can use my scripts to follow the method I used to grab my order history data. However, the method I used is relatively primitive and volatile, considering it isn't fully automated and is based on a particular version of the DoorDash website. If DoorDash updates the order history page, the script used to grab the order history will likely fail. This was sufficient for the scope of the project as I didn't anticipate much value in repeating this process (I wanted to identify trends but not monitor them).
 
-Two scripts were used to get my order data. One script parses the data [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js). The other script transforms that data into a format better suited for performing analysis [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py). The exact steps for using the scripts can be found below:
+Two scripts are used to get the order history and prepare the data for analysis. One script parses the data [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js). The other script transforms that data into a format better suited for performing analysis [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py).
 
 ### Web scraping
 
 1. Log in to your DoorDash account via the DoorDash website.
-2. Visit the order history page on the DoorDash website.
-3. Open the developer tools from the order history page.
-4. Copy and paste the JavaScript from `webScraper.js` into the dev console.
+2. Visit the Order History page on the DoorDash website.
+3. Open the "developer tools" from the Order History page.
+4. Copy and paste the JavaScript from [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js) into the dev console.
 5. Press Enter key and wait for script to finish running.
-6. Once the script is complete, copy the message printed in the dev console into a JSON file.
+6. Once the script is complete, copy the message printed in the dev console into an empty JSON file.
 
 ### Transforming data
 
