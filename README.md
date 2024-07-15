@@ -38,7 +38,7 @@ The dashboard is deployed [here](https://main.d1rdpoich583rp.amplifyapp.com/)
 
 The method I used to get my order data is relatively primitive and volatile, considering it isn't fully automated and is based on a particular version of the DoorDash website. If DoorDash updates the order history page, the script used to grab the order history will likely fail. This was sufficient for the scope of the project as I didn't anticipate much value in repeating this process. The value being to recognizes spending habits, not to monitor changes to those habits.
 
-Two scripts were used to get my order data. One script parses the data (`webScraper.js`). The other script transforms that data into a format better suited for performing analysis (`transform_data.py`). The exact steps for using the scripts can be found below:
+Two scripts were used to get my order data. One script parses the data [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js). The other script transforms that data into a format better suited for performing analysis [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py). The exact steps for using the scripts can be found below:
 
 ### Web scraping
 
@@ -50,6 +50,10 @@ Two scripts were used to get my order data. One script parses the data (`webScra
 6. Once the script is complete, copy the message printed in the dev console into a JSON file.
 
 ### Transforming data
+
+The data created from the [web scraping](#web-scraping) steps need to be transformed before performing analytics. The file @ [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py) is used to transform the data.
+
+**Note: Python is required to run the `transform_data.py` script.**
 
 1. Run the `transform_data.py` script and point it to the JSON file created of the order data printed from `webScraper.js`.
 
