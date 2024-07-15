@@ -68,36 +68,6 @@
     return orderElement.innerText.includes(`Order Cancelled`);
   };
 
-  // * ---- Functions for masking/altering order data in the HTML/DOM. ----
-
-  /**
-   * Masks/alters the store name of given order HTML/DOM element to hide information from viewer.
-   * @param {HTMLElement} storeNameElement
-   * @returns {void}
-   */
-  const maskStoreName = (storeNameElement) => {
-    storeNameElement.innerText = `Bob's Burgers`;
-  };
-
-  /**
-   * Masks/alters the date, cost, and quantity of items of given order
-   * HTML/DOM element to hide information from viewer.
-   * @param {HTMLElement} metadataElement
-   * @returns {void}
-   */
-  const maskMetadata = (metadataElement) => {
-    metadataElement.innerText = `Fri, Oct 13 • $9000.01 • 0 items`;
-  };
-
-  /**
-   * Masks/alters items of given element to hide information from viewer.
-   * @param {HTMLElement} itemsElement
-   * @returns {void}
-   */
-  const maskItems = (itemsElement) => {
-    itemsElement.innerText = `Chemical X • Brain Blast`;
-  };
-
   // * ---- Functions for getting the order data from the HTML/DOM. ----
 
   /**
@@ -151,39 +121,6 @@
     return itemsElement.innerText.split(DELIMITER);
   };
 
-  // * ---- Functions for running code. ----
-
-  /**
-   * Prompts the execution of the web scraper and automatic masking without
-   * clicking on the load more deliveries button.
-   * @returns {void}
-   */
-  const test = () => {
-    const data = [];
-    const orderElements = grabOrderElements();
-
-    orderElements.forEach((orderElement) => {
-      const storeNameElement = grabStoreNameElement(orderElement);
-      const metadataElement = grabMetadataElement(orderElement);
-      const itemsElement = grabItemsElement(orderElement);
-
-      maskStoreName(storeNameElement);
-      maskMetadata(metadataElement);
-      maskItems(itemsElement);
-
-      data.push({
-        storeName: getStoreName(storeNameElement),
-        date: getDate(metadataElement),
-        cost: getCost(metadataElement),
-        itemCount: getItemCount(metadataElement),
-        items: getItems(itemsElement),
-        wasCancelled: wasOrderCancelled(orderElement),
-      });
-    });
-
-    console.info(data);
-  };
-
   /**
    * Prompts the execution of the web scraper prints out the order data
    * to developer tools console.
@@ -220,6 +157,5 @@
     }, 3_500);
   };
 
-  // test();
   main();
 })();
