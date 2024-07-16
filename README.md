@@ -14,6 +14,7 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 
 [View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
 - [Technologies Used](#technologies-used)
+- [How to run](#how-to-run)
 - [Getting the order data](#getting-the-order-data)
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
@@ -32,6 +33,21 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 - Material UI (for inputs)
 - Material UI X Charts (for charts and data grid)
 - Zod
+
+## How to run
+
+[Node](https://nodejs.org/en) is required to run the dashboard locally.
+
+**It is assumed all command line commands will be executed in a UNIX based command line environment**
+
+1. git clone this repository
+
+2. Run the following commands from the root of this project on your local machine
+```
+cd app/
+npm i
+npm run start
+```
 
 ## Getting the order data
 
