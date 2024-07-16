@@ -87,20 +87,28 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/10.png" width="650">
 
+#### Hovering over Totals by Month pie chart
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/11.png" width="650">
 
+#### Hovering over Totals by Weekday pie chart
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/12.png" width="650">
 
+#### After clicking arrow on data grid to view items 11-15
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/13.png" width="650">
 
+#### Hovering over randomize button
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/14.png" width="650">
 
+#### After randomizing data via clicking randomize button
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/15.png" width="650">
 
+#### Dialog for supplying JSON file to dashboard
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/16.png" width="650">
 
+#### Setting List to display 7 items and Bar Chart to display 10 items
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/17.png" width="650">
 
+#### After setting List to display 7 items and Bar Chart to display 10 items
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/18.png" width="650">
 
 ### Mobile
