@@ -36,9 +36,9 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 
 ## How to run
 
-[Node](https://nodejs.org/en) is required to run the dashboard locally.
+[Node](https://nodejs.org/en) is required to run the dashboard locally. [git](https://git-scm.com/) is used to download this repository in the steps below.
 
-**It is assumed all command line commands will be executed in a UNIX based command line environment**
+**It is assumed all command line commands will be executed in a UNIX based command line environment.**
 
 1. git clone this repository
 
