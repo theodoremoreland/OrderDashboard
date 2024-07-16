@@ -6,14 +6,13 @@ I wrote a couple scripts to web scrape and transform my order history data from 
 
 The dashboard is initialized with random data. The randomized data can be shuffled by clicking the refresh icon in the navbar. Actual data in the form of a properly formatted JSON file can be supplied to the dashboard via clicking the attach/add icon in the navbar.
 
-The dashboard is deployed [here](https://main.d1rdpoich583rp.amplifyapp.com/)
+[View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
 
 <img src="presentation/thumbnail.webp" width="700">
 
-[Visit the website](https://main.d1rdpoich583rp.amplifyapp.com/)
-
 ## Table of Contents
 
+[View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
 - [Technologies Used](#technologies-used)
 - [Getting the order data](#getting-the-order-data)
 - [Screenshots](#screenshots)
