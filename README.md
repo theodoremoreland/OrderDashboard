@@ -97,6 +97,7 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 #### Dropdown for Top Streaks list
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/7.png" width="650">
 
+#### After switching to No Orders for Top Streaks list
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/8.png" width="650">
 
 #### Hovering over dropdown for Top Stores bar chart
