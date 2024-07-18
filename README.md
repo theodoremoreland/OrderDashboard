@@ -99,8 +99,10 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/8.png" width="650">
 
+#### Hovering over dropdown for Top Stores bar chart
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/9.png" width="650">
 
+#### After selecting "by Total Items" for Top Stores bar chart
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/10.png" width="650">
 
 #### Hovering over Totals by Month pie chart
