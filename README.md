@@ -76,7 +76,7 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 
 ### Desktop
 
-#### Default view
+#### Default view (data for all years)
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/1.png" width="650">
 
 #### After toggling KPIs from Totals to Averages
