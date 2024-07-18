@@ -8,7 +8,7 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 
 [View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
 
-<img src="presentation/thumbnail.webp" width="700">
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="700">
 
 ## Table of Contents
 
