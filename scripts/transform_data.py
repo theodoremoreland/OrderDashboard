@@ -139,7 +139,7 @@ def main():
         raw_data[i]["cost"] = float(cost.replace("$", ""))
         raw_data[i]["dayOfWeek"] = day_of_week
         raw_data[i]["itemCount"] = int(item_count.replace("items", ""))
-        raw_data[i]["date"] = f'{month} {day} {str(processing["year_in_processing"])}'
+        raw_data[i]["date"] = f'{month} {day} {processing["year_in_processing"]}'
 
         if VERBOSE:
             pprint(raw_data[i])
