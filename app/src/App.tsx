@@ -79,7 +79,8 @@ const App = (): ReactElement => {
                 <div className="heading">
                   <h2>Order History</h2>
                 </div>
-                {pageSize && <Grid
+                {pageSize && 
+                  <Grid
                     data={analytics.getOrdersBetweenDates(startDate, endDate)}
                     pageSize={pageSize}
                     pageSizeOptions={[pageSize]}
