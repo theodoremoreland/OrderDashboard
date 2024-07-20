@@ -14,7 +14,7 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 
 [View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
 - [Technologies Used](#technologies-used)
-- [How to run](#how-to-run)
+- [How to run locally](#how-to-run-locally)
 - [Getting the order data](#getting-the-order-data)
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
@@ -34,13 +34,13 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 - Material UI X Charts (for charts and data grid)
 - Zod
 
-## How to run
+## How to run locally
 
-[Node](https://nodejs.org/en) is required to run the dashboard locally. [git](https://git-scm.com/) is used to download this repository in the steps below.
+**Note: [Node](https://nodejs.org/en) is required to run the dashboard locally. This was developed using Node version `v20.3.0`. [git](https://git-scm.com/) is used to download this repository in the steps below. It is assumed you are already familiar with both.**
 
 **It is assumed all command line commands will be executed in a UNIX based command line environment.**
 
-1. git clone this repository
+1. "git clone" this repository
 
 2. Run the following commands from the root of this project on your local machine
 ```
