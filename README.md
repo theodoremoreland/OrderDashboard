@@ -51,7 +51,7 @@ npm run start
 
 ## Getting the order data
 
-If you're interested, you can use my scripts to follow the method I used to grab my order history data. However, the method I used is relatively primitive and volatile, considering it isn't fully automated and is based on a particular version of the DoorDash website. If DoorDash updates the order history page, the script used to grab the order history will likely fail. This was sufficient for the scope of the project as I didn't anticipate much value in repeating this process (I wanted to identify trends but not monitor them).
+If you're interested, you can use my scripts and follow the method I used to grab my order history data (for your order history data). However, the method I used is relatively primitive and volatile, considering it isn't fully automated and is based on a particular version of the DoorDash website. If DoorDash updates the order history page, the script used to grab the order history will likely fail. This was sufficient for the scope of the project as I didn't anticipate much value in repeating this process (I wanted to identify trends but not monitor them).
 
 Two scripts are used to get the order history and prepare the data for analysis. One script parses the data [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js). The other script transforms that data into a format better suited for performing analysis [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py).
 
