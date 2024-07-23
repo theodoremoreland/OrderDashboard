@@ -38,6 +38,8 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 
 ## How to run locally
 
+**It is assumed all command line commands will be executed in a UNIX based command line environment.**
+
 #### With Docker
 
 Note: Confirm that Docker is running prior to proceeding and that port `8080` is not being used by another program.
@@ -60,8 +62,6 @@ docker compose up --build
 #### With Windows (no Docker)
 
 **Note: [Node](https://nodejs.org/en) is required to run the dashboard locally. This was developed using Node version `v20.3.0`. [git](https://git-scm.com/) is used to download this repository in the steps below. It is assumed you are already familiar with both.**
-
-**It is assumed all command line commands will be executed in a UNIX based command line environment.**
 
 1. Clone this repository
 
