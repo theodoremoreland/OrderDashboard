@@ -13,6 +13,7 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 ## Table of Contents
 
 [View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
+
 - [Technologies Used](#technologies-used)
 - [How to run locally](#how-to-run-locally)
 - [Getting the order data](#getting-the-order-data)
@@ -33,20 +34,43 @@ The dashboard is initialized with random data. The randomized data can be shuffl
 - Material UI (for inputs)
 - Material UI X Charts (for charts and data grid)
 - Zod
+- Docker
 
 ## How to run locally
+
+#### With Docker
+
+Note: Confirm that Docker is running prior to proceeding and that port `8080` is not being used by another program.
+
+1. Clone this repository.
+2. cd into `docker` directory
+
+```
+cd docker/
+```
+
+3. Build docker image and start container
+
+```
+docker compose up --build
+```
+
+4. Visit http://localhost:8080
+
+#### With Windows (no Docker)
 
 **Note: [Node](https://nodejs.org/en) is required to run the dashboard locally. This was developed using Node version `v20.3.0`. [git](https://git-scm.com/) is used to download this repository in the steps below. It is assumed you are already familiar with both.**
 
 **It is assumed all command line commands will be executed in a UNIX based command line environment.**
 
-1. "git clone" this repository
+1. Clone this repository
 
 2. Run the following commands from the root of this project on your local machine
+
 ```
 cd app/
 npm i
-npm run start
+npm run dev
 ```
 
 ## Getting the order data
@@ -77,66 +101,87 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 ### Desktop
 
 #### Default view (data for all years)
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/1.png" width="650">
 
 #### After toggling KPIs from Totals to Averages
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/2.png" width="650">
 
 #### Dropdown for switching between years for visualizations
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/3.png" width="650">
 
 #### After switching to the year 2018
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="650">
 
 #### Dropdown for Activity scatter chart
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/5.png" width="650">
 
-#### After clicking Total Items option for scatter chart dropdown 
+#### After clicking Total Items option for scatter chart dropdown
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/6.png" width="650">
 
 #### Dropdown for Top Streaks list
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/7.png" width="650">
 
 #### After switching to No Orders for Top Streaks list
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/8.png" width="650">
 
 #### Hovering over dropdown for Top Stores bar chart
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/9.png" width="650">
 
 #### After selecting "by Total Items" for Top Stores bar chart
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/10.png" width="650">
 
 #### Hovering over Totals by Month pie chart
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/11.png" width="650">
 
 #### Hovering over Totals by Weekday pie chart
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/12.png" width="650">
 
 #### After clicking arrow on data grid to view items 11-15
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/13.png" width="650">
 
 #### Hovering over randomize button
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/14.png" width="650">
 
 #### After randomizing data via clicking randomize button
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/15.png" width="650">
 
 #### Dialog for supplying JSON file to dashboard
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/16.png" width="650">
 
 #### Setting List to display 7 items and Bar Chart to display 10 items
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/17.png" width="650">
 
 #### After setting List to display 7 items and Bar Chart to display 10 items
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/18.png" width="650">
 
 ### Mobile
 
 #### Top of the page (mobile)
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/19.png" width="250">
 
 #### Middle of the page (mobile)
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/20.png" width="250">
 
 #### Bottom of the page (mobile)
+
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/21.png" width="250">
