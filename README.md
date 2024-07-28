@@ -6,6 +6,22 @@ I wrote a couple scripts to web scrape and transform my order history data from 
 
 The dashboard is initialized with random data. The randomized data can be shuffled by clicking the refresh icon in the navbar. Actual data in the form of a properly formatted JSON file can be supplied to the dashboard via clicking the attach/add icon in the navbar.
 
+JSON data should be of the following format:
+```
+[
+    {
+        "storeName": "Store 1",
+        "date": "Oct 13 2023",
+        "cost": 121.67,
+        "itemCount": 3,
+        "items": ["item1", "item2", "item3"],
+        "wasCancelled": false,
+        "dayOfWeek": "Mon"
+    },
+    ...
+]
+```
+
 [View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="700">
