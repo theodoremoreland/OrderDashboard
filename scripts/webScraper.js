@@ -124,7 +124,7 @@
    * to developer tools console.
    */
   const main = () => {
-    let clickCountLimit = Infinity;
+    const clickCountLimit = Infinity;
     let clickCount = 0;
 
     intervalId = setInterval(() => {
