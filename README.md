@@ -1,5 +1,7 @@
 # Order Dashboard
 
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="700">
+
 I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
 
 I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard.
@@ -23,8 +25,6 @@ JSON data should be of the following format:
 ```
 
 [View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
-
-<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="700">
 
 ## Table of Contents
 
