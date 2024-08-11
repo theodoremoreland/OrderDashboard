@@ -32,6 +32,8 @@ JSON data should be of the following format:
 
 - [Technologies Used](#technologies-used)
 - [How to run locally](#how-to-run-locally)
+    - [With Docker](#with-docker)
+    - [With Windows](#with-windows)
 - [Getting the order data](#getting-the-order-data)
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
@@ -75,7 +77,7 @@ docker compose up --build
 
 4. Visit http://localhost:8080
 
-#### With Windows (no Docker)
+#### With Windows
 
 **Note: [Node](https://nodejs.org/en) is required to run the dashboard locally. This was developed using Node version `v20.3.0`. [git](https://git-scm.com/) is used to download this repository in the steps below. It is assumed you are already familiar with both.**
 
