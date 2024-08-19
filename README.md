@@ -44,8 +44,6 @@ JSON data should be of the following format:
 - React
 - TypeScript
 - JavaScript
-- Firefox
-  - Firefox Developer Tools
 - Python
 - HTML
 - CSS
