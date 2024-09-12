@@ -51,6 +51,7 @@ JSON data should be of the following format:
 - Material UI (for inputs)
 - Material UI X Charts (for charts and data grid)
 - Zod
+- Jest
 - Docker
 
 ## How to run locally
