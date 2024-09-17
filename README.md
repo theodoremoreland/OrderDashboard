@@ -53,6 +53,7 @@ JSON data should be of the following format:
 - Zod
 - Jest
 - Docker
+- Vite
 
 ## How to run locally
 
