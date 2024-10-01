@@ -1,10 +1,12 @@
 // React
-import { ReactElement, useContext, useEffect, useState } from "react";
+import { ReactElement, useContext, useEffect, useState, useCallback } from "react";
 
 // MUI
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import Menu from '@mui/material/Menu';
+import IconButton from '@mui/material/IconButton';
 
 // Context
 import { DataContext } from "../contexts/DataContextProvider";
@@ -24,6 +26,7 @@ import { Order } from "../types/types";
 import AttachFileAddIcon from "../assets/images/icons/attach_file_add.svg?react";
 import DisplaySettingsIcon from "../assets/images/icons/display_settings.svg?react";
 import RefreshIcon from "../assets/images/icons/refresh.svg?react";
+import MenuIcon from "../assets/images/icons/menu.svg?react";
 
 // Styles
 import './NavBar.css';
@@ -37,6 +40,16 @@ const NavBar = ({ analytics }: Props): ReactElement => {
     const [selectedYear, setSelectedYear] = useState<string>("All");
     const [displaySettingsOpen, setDisplaySettingsOpen] = useState<boolean>(false);
     const [dataUploadOpen, setDataUploadOpen] = useState<boolean>(false);
+    const [mobileMenuAnchorEl, setMobileMenuAnchorEl] = useState<null | HTMLElement>(null);
+    const isMobileMenuOpen = Boolean(mobileMenuAnchorEl);
+
+    const handleMobileMenuOpen = useCallback((event: React.MouseEvent<HTMLElement>) => {
+        setMobileMenuAnchorEl(event.currentTarget);
+    }, []);
+
+    const handleMobileMenuClose = useCallback(() => {
+        setMobileMenuAnchorEl(null);
+    }, []);
 
     useEffect(() => {
         if (selectedYear === "All") {
@@ -52,7 +65,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
     return (
         <nav className="NavBar">
             <h1 className="app-title">Order Dashboard</h1>
-            <div className="center">
+            <div id="desktop-menu" className="center">
                 <ul>
                     <li title="Adjust display settings">
                         <DisplaySettingsIcon
@@ -107,6 +120,44 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 </Select>
             </FormControl>
             <div className="overlay"></div>
+            <IconButton
+                id="mobile-menu-icon"
+                aria-label="menu"
+                aria-controls={isMobileMenuOpen ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={isMobileMenuOpen ? 'true' : undefined}
+                onClick={handleMobileMenuOpen}
+            >
+                <MenuIcon />
+            </IconButton>
+            <Menu
+                id="mobile-menu"
+                anchorEl={mobileMenuAnchorEl}
+                open={isMobileMenuOpen}
+                onClose={handleMobileMenuClose}
+            >
+                <MenuItem title="Adjust display settings">
+                    <DisplaySettingsIcon
+                        onClick={() => setDisplaySettingsOpen(true)}
+                        className="icon clickable"
+                    />
+                </MenuItem>
+                <MenuItem title="Visualize your own data by attaching a JSON file">
+                    <AttachFileAddIcon
+                        onClick={() => setDataUploadOpen(true)}
+                        className="icon clickable"
+                    />
+                </MenuItem>
+                <MenuItem title="Replace randomized data">
+                    <RefreshIcon
+                        onClick={() => {
+                            setSelectedYear("All");
+                            setRawData(generateRandomOrderData(generateRandomStartDate()) as Order[])
+                        }}
+                        className="icon clickable"
+                    />
+                </MenuItem>   
+            </Menu>
             <DisplaySettingsDialog
                 open={displaySettingsOpen} 
                 handleClose={() => setDisplaySettingsOpen(false)}
