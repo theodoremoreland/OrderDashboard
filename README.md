@@ -9,13 +9,13 @@
 - [Overview](#overview)
 - [Technologies Used](#technologies-used)
 - [How to run locally](#how-to-run-locally)
-    - [With Docker](#with-docker)
-    - [With Windows](#with-windows)
+  - [With Docker](#with-docker)
+  - [With Windows](#with-windows)
 - [Getting the order data](#getting-the-order-data)
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
   - [Mobile](#mobile)
- 
+
 ## Overview
 
 I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
@@ -25,6 +25,7 @@ I wrote a couple scripts to web scrape and transform my order history data from 
 The dashboard is initialized with random data. The randomized data can be shuffled by clicking the refresh icon in the navbar. Actual data in the form of a properly formatted JSON file can be supplied to the dashboard via clicking the attach/add icon in the navbar.
 
 JSON data should be of the following format:
+
 ```
 [
     {
@@ -197,10 +198,34 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/19.png" width="250">
 
-#### Middle of the page (mobile)
+#### Menu (mobile)
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/20.png" width="250">
 
-#### Bottom of the page (mobile)
+#### Display settings (mobile)
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/21.png" width="250">
+
+#### Attach file (mobile)
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/22.png" width="250">
+
+#### Years dropdown (mobile)
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/23.png" width="250">
+
+#### After changing year and toggling to Averages instead of totals (mobile)
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/24.png" width="250">
+
+#### Top Stores and Top Streaks (mobile)
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/25.png" width="250">
+
+#### Total Spend by Month and Total Spend by Weekday (mobile)
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/26.png" width="250">
+
+#### Order History table (mobile)
+
+<img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/27.png" width="250">
