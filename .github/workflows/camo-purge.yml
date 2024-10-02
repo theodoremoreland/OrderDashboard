@@ -1,0 +1,15 @@
+name: Camo Purge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Camo-Purge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+
+    steps:
+      - name: Use camo purge action
+        uses: kevincobain2000/action-camo-purge@v1
