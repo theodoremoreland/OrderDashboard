@@ -2,7 +2,7 @@
 
 <img src="https://dj8eg5xs13hf6.cloudfront.net/order-dashboard/4.png" width="700">
 
-[View the web application](https://main.d1rdpoich583rp.amplifyapp.com/)
+[View the web application](https://order-dashboard.theodoremoreland.dev)
 
 ## Table of Contents
 
