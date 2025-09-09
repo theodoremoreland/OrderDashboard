@@ -55,6 +55,7 @@ html {
     rgba(7, 28, 49, 1) 0%,
     rgba(7, 12, 16, 1) 100%
   );
+  overscroll-behavior: none;
 }
 
 body,
