@@ -1,93 +1,105 @@
 .NavBar {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  height: 5.8rem;
-  padding: 8px 32px;
-  box-shadow: rgba(0, 0, 0, 0.98) 0px 25px 20px -20px;
-
-  .app-title {
-    z-index: 2;
-    font-family: custom-bold;
-    font-size: 1.55rem;
-    letter-spacing: -1px;
-    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
-    padding: 0;
-    margin: 0;
-  }
-
-  .center {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    gap: 10px;
+    height: 5.8rem;
+    padding: 8px 32px;
+    box-shadow: rgba(0, 0, 0, 0.98) 0px 25px 20px -20px;
 
-    > ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-
-      > li {
-        font-size: 1rem;
-      }
+    @media screen and (min-width: 1080px) {
+        & {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 0;
+            height: auto;
+        }
     }
-  }
+
+    .app-title {
+        z-index: 2;
+        font-family: custom-bold;
+        font-size: 1.55rem;
+        letter-spacing: -1px;
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+        padding: 0;
+        margin: 0;
+    }
+
+    #desktop-menu {
+        position: relative;
+        display: none;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @media screen and (min-width: 1080px) {
+            & {
+                display: flex;
+            }
+        }
+
+        > ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    }
 }
+
+/* ---- The mobile menu is handled by MUI and does not render inside of the NavBar component despite the code and visual placement. ---- */
 
 #mobile-menu-icon {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 3;
-}
-
-#desktop-menu {
-  display: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 3;
 }
 
 #mobile-menu {
-  display: initial;
+    display: initial;
 
-  .MuiPaper-root {
-    outline: transparent;
-    border: none;
-    background-color: #0f2f59;
-  }
+    .MuiPaper-root {
+        outline: transparent;
+        border: none;
+        background-color: #0f2f59;
+    }
 }
 
 @media screen and (min-width: 1080px) {
-  .NavBar {
-    flex-direction: row;
-    justify-content: space-between;
-    gap: auto;
-    height: auto;
-  }
+    #mobile-menu-icon {
+        display: none;
+    }
 
-  #mobile-menu-icon {
-    display: none;
-  }
+    #mobile-menu {
+        display: none;
+    }
+}
 
-  #desktop-menu {
-    display: flex;
-  }
+.menu-button {
+    color: var(--primary-font-color);
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
 
-  #mobile-menu {
-    display: none;
-  }
+.menu-button:hover {
+    color: var(--primary-highlight-color);
+}
+
+.menu-button:hover .icon {
+    fill: var(--primary-highlight-color);
 }

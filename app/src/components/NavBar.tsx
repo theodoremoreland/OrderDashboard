@@ -1,5 +1,11 @@
 // React
-import { ReactElement, useContext, useEffect, useState, useCallback } from "react";
+import {
+    ReactElement,
+    useContext,
+    useEffect,
+    useState,
+    useCallback,
+} from 'react';
 
 // MUI
 import FormControl from '@mui/material/FormControl';
@@ -9,24 +15,27 @@ import Menu from '@mui/material/Menu';
 import IconButton from '@mui/material/IconButton';
 
 // Context
-import { DataContext } from "../contexts/DataContextProvider";
+import { DataContext } from '../contexts/DataContextProvider';
 
 // Components
 import DisplaySettingsDialog from './Dialogs/DisplaySettingsDialog';
-import DataUploadDialog from "./Dialogs/DataUploadDialog";
+import DataUploadDialog from './Dialogs/DataUploadDialog';
 
 // Custom
-import Analytics from "../classes/Analytics";
-import { generateRandomOrderData, generateRandomStartDate } from "../modules/randomizeData";
+import Analytics from '../classes/Analytics';
+import {
+    generateRandomOrderData,
+    generateRandomStartDate,
+} from '../modules/randomizeData';
 
 // Types
-import { Order } from "../types/types";
+import { Order } from '../types/types';
 
 // Images
-import AttachFileAddIcon from "../assets/images/icons/attach_file_add.svg?react";
-import DisplaySettingsIcon from "../assets/images/icons/display_settings.svg?react";
-import RefreshIcon from "../assets/images/icons/refresh.svg?react";
-import MenuIcon from "../assets/images/icons/menu.svg?react";
+import AttachFileAddIcon from '../assets/images/icons/attach_file_add.svg?react';
+import DisplaySettingsIcon from '../assets/images/icons/display_settings.svg?react';
+import RefreshIcon from '../assets/images/icons/refresh.svg?react';
+import MenuIcon from '../assets/images/icons/menu.svg?react';
 
 // Styles
 import './NavBar.css';
@@ -36,23 +45,29 @@ interface Props {
 }
 
 const NavBar = ({ analytics }: Props): ReactElement => {
-    const { setStartDate, setEndDate, resetDates, setRawData } = useContext(DataContext);
-    const [selectedYear, setSelectedYear] = useState<string>("All");
-    const [displaySettingsOpen, setDisplaySettingsOpen] = useState<boolean>(false);
+    const { setStartDate, setEndDate, resetDates, setRawData } =
+        useContext(DataContext);
+    const [selectedYear, setSelectedYear] = useState<string>('All');
+    const [displaySettingsOpen, setDisplaySettingsOpen] =
+        useState<boolean>(false);
     const [dataUploadOpen, setDataUploadOpen] = useState<boolean>(false);
-    const [mobileMenuAnchorEl, setMobileMenuAnchorEl] = useState<null | HTMLElement>(null);
+    const [mobileMenuAnchorEl, setMobileMenuAnchorEl] =
+        useState<null | HTMLElement>(null);
     const isMobileMenuOpen = Boolean(mobileMenuAnchorEl);
 
-    const handleMobileMenuOpen = useCallback((event: React.MouseEvent<HTMLElement>) => {
-        setMobileMenuAnchorEl(event.currentTarget);
-    }, []);
+    const handleMobileMenuOpen = useCallback(
+        (event: React.MouseEvent<HTMLElement>) => {
+            setMobileMenuAnchorEl(event.currentTarget);
+        },
+        []
+    );
 
     const handleMobileMenuClose = useCallback(() => {
         setMobileMenuAnchorEl(null);
     }, []);
 
     useEffect(() => {
-        if (selectedYear === "All") {
+        if (selectedYear === 'All') {
             resetDates();
         } else {
             const year = Number(selectedYear);
@@ -65,41 +80,16 @@ const NavBar = ({ analytics }: Props): ReactElement => {
     return (
         <nav className="NavBar">
             <h1 className="app-title">Order Dashboard</h1>
-            <div id="desktop-menu" className="center">
-                <ul>
-                    <li title="Adjust display settings">
-                        <DisplaySettingsIcon
-                            onClick={() => setDisplaySettingsOpen(true)}
-                            className="icon clickable"
-                        />
-                    </li>
-                    <li title="Visualize your own data by attaching a JSON file">
-                        <AttachFileAddIcon
-                            onClick={() => setDataUploadOpen(true)}
-                            className="icon clickable"
-                        />
-                    </li>
-                    <li title="Replace randomized data">
-                        <RefreshIcon
-                            onClick={() => {
-                                setSelectedYear("All");
-                                setRawData(generateRandomOrderData(generateRandomStartDate()) as Order[])
-                            }}
-                            className="icon clickable"
-                        />
-                    </li>
-                </ul>
-            </div>
             <FormControl
                 variant="standard"
                 size="small"
-                sx={{ 
+                sx={{
                     minWidth: 95,
                     zIndex: 2,
                 }}
             >
                 <Select
-                    sx={{ 
+                    sx={{
                         color: '#feffff',
                     }}
                     value={selectedYear}
@@ -109,16 +99,68 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         id: 'uncontrolled-native',
                     }}
                 >
-                    <MenuItem className="menu-item" value="All">All years</MenuItem>
-                    {
-                        Object.keys(analytics.getTotalSpendByYear()).sort((a, b) => Number(b) - Number(a)).map(year => {
+                    <MenuItem className="menu-item" value="All">
+                        All years
+                    </MenuItem>
+                    {Object.keys(analytics.getTotalSpendByYear())
+                        .sort((a, b) => Number(b) - Number(a))
+                        .map((year) => {
                             return (
-                                <MenuItem className="menu-item" key={year} value={year}>{year}</MenuItem>
-                            )
-                        })
-                    }
+                                <MenuItem
+                                    className="menu-item"
+                                    key={year}
+                                    value={year}
+                                >
+                                    {year}
+                                </MenuItem>
+                            );
+                        })}
                 </Select>
             </FormControl>
+            <div id="desktop-menu" className="center">
+                <ul>
+                    <li>
+                        <button
+                            type="button"
+                            title="Adjust display settings"
+                            onClick={() => setDisplaySettingsOpen(true)}
+                            className="menu-button"
+                        >
+                            <DisplaySettingsIcon className="icon" />
+                            <p className="icon-label">Display</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            title="Visualize your own data by attaching a JSON file"
+                            onClick={() => setDataUploadOpen(true)}
+                            className="menu-button"
+                        >
+                            <AttachFileAddIcon className="icon" />
+                            <p className="icon-label">Upload</p>
+                        </button>
+                    </li>
+                    <li>
+                        <button
+                            type="button"
+                            title="Replace randomized data"
+                            onClick={() => {
+                                setSelectedYear('All');
+                                setRawData(
+                                    generateRandomOrderData(
+                                        generateRandomStartDate()
+                                    ) as Order[]
+                                );
+                            }}
+                            className="menu-button"
+                        >
+                            <RefreshIcon className="icon" />
+                            <p className="icon-label">Refresh</p>
+                        </button>
+                    </li>
+                </ul>
+            </div>
             <div className="overlay"></div>
             <IconButton
                 id="mobile-menu-icon"
@@ -136,30 +178,49 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 open={isMobileMenuOpen}
                 onClose={handleMobileMenuClose}
             >
-                <MenuItem title="Adjust display settings">
-                    <DisplaySettingsIcon
+                <MenuItem>
+                    <button
+                        type="button"
+                        title="Adjust display settings"
                         onClick={() => setDisplaySettingsOpen(true)}
-                        className="icon clickable"
-                    />
+                        className="menu-button"
+                    >
+                        <DisplaySettingsIcon className="icon" />
+                        <p className="icon-label">Display</p>
+                    </button>
                 </MenuItem>
-                <MenuItem title="Visualize your own data by attaching a JSON file">
-                    <AttachFileAddIcon
+                <MenuItem>
+                    <button
+                        type="button"
+                        title="Visualize your own data by attaching a JSON file"
                         onClick={() => setDataUploadOpen(true)}
-                        className="icon clickable"
-                    />
+                        className="menu-button"
+                    >
+                        <AttachFileAddIcon className="icon" />
+                        <p className="icon-label">Upload</p>
+                    </button>
                 </MenuItem>
-                <MenuItem title="Replace randomized data">
-                    <RefreshIcon
+                <MenuItem>
+                    <button
+                        type="button"
+                        title="Replace randomized data"
                         onClick={() => {
-                            setSelectedYear("All");
-                            setRawData(generateRandomOrderData(generateRandomStartDate()) as Order[])
+                            setSelectedYear('All');
+                            setRawData(
+                                generateRandomOrderData(
+                                    generateRandomStartDate()
+                                ) as Order[]
+                            );
                         }}
-                        className="icon clickable"
-                    />
-                </MenuItem>   
+                        className="menu-button"
+                    >
+                        <RefreshIcon className="icon" />
+                        <p className="icon-label">Refresh</p>
+                    </button>
+                </MenuItem>
             </Menu>
             <DisplaySettingsDialog
-                open={displaySettingsOpen} 
+                open={displaySettingsOpen}
                 handleClose={() => setDisplaySettingsOpen(false)}
             />
             <DataUploadDialog
@@ -167,7 +228,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 handleClose={() => setDataUploadOpen(false)}
             />
         </nav>
-    )
-}
+    );
+};
 
 export default NavBar;

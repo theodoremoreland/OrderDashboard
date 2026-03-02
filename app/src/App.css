@@ -1,111 +1,111 @@
 #analytics-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: var(--section-gap);
-  padding: 16px 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--section-gap);
+    padding: 16px 32px;
 }
 
 .icon {
-  fill: var(--primary-font-color);
-  transition: all 0.2s ease-in-out;
+    fill: var(--primary-font-color);
+    transition: all 0.2s ease-in-out;
 }
 
 .icon.clickable {
-  &:hover {
-    cursor: pointer;
-    fill: var(--primary-highlight-color);
-  }
+    &:hover {
+        cursor: pointer;
+        fill: var(--primary-highlight-color);
+    }
 
-  &:active {
-    scale: 0.95;
-    fill: var(--tertiary-highlight-color);
-  }
+    &:active {
+        scale: 0.95;
+        fill: var(--tertiary-highlight-color);
+    }
 }
 
 .title {
-  font-family: custom-bold;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+    font-family: custom-bold;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
 }
 
 /* Heading for charts */
 .heading {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .overlay {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgb(7, 28, 49);
-  background: linear-gradient(
-    180deg,
-    rgba(7, 28, 49, 1) 0%,
-    rgba(10, 17, 23, 0.8) 100%
-  );
-  opacity: 0.7;
-  pointer-events: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  /* display: none; */
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(7, 28, 49);
+    background: linear-gradient(
+        180deg,
+        rgba(7, 28, 49, 1) 0%,
+        rgba(10, 17, 23, 0.8) 100%
+    );
+    opacity: 0.7;
+    pointer-events: none;
+    box-shadow:
+        rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    /* display: none; */
 }
 
 .app-overlay {
-  z-index: -2;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* background-image: url("https://images.pexels.com/photos/2117937/pexels-photo-2117937.jpeg"); */
-  background-color: #000;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.45;
-  mix-blend-mode: overlay;
-  pointer-events: none;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.45;
+    mix-blend-mode: overlay;
+    pointer-events: none;
 }
 
 .row {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  gap: var(--section-gap);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    gap: var(--section-gap);
 }
 
 @media screen and (min-width: 1080px) {
-  .row {
-    flex-direction: row;
-    height: 234px;
-  }
+    .row {
+        flex-direction: row;
+        height: 234px;
+    }
 }
 
 .order-history {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 8px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 16px;
-  border: var(--border);
-  border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    border: var(--border);
+    border-radius: var(--border-radius);
 }
 
 /* Material UI !important overrides */
@@ -113,73 +113,73 @@
 /* SELECT */
 .MuiNativeSelect-root,
 .MuiInput-root {
-  &::before {
-    border-color: var(--primary-highlight-color) !important;
-  }
+    &::before {
+        border-color: var(--primary-highlight-color) !important;
+    }
 
-  &::after {
-    border-color: var(--tertiary-highlight-color) !important;
-  }
+    &::after {
+        border-color: var(--tertiary-highlight-color) !important;
+    }
 }
 
 .MuiNativeSelect-icon,
 .MuiSelect-icon {
-  color: var(--primary-highlight-color) !important;
+    color: var(--primary-highlight-color) !important;
 }
 
 /* SWITCH */
 .MuiSwitch-track {
-  background-color: #2265c1 !important;
+    background-color: #2265c1 !important;
 }
 
 /* CHARTS */
 .MuiChartsAxis-tickLabel {
-  fill: var(--primary-font-color) !important;
+    fill: var(--primary-font-color) !important;
 }
 
 .MuiChartsGrid-line,
 .MuiChartsAxis-line,
 .MuiChartsAxis-tick {
-  stroke: var(--border-color) !important;
+    stroke: var(--border-color) !important;
 }
 
 /* DATA GRID */
 .grid-header {
-  color: var(--primary-font-color) !important;
-  background: rgb(17, 34, 52);
-  background: linear-gradient(
-    180deg,
-    rgb(17, 34, 52) 0%,
-    rgba(7, 28, 49, 1) 100%
-  );
+    color: var(--primary-font-color) !important;
+    background: rgb(17, 34, 52);
+    background: linear-gradient(
+        180deg,
+        rgb(17, 34, 52) 0%,
+        rgba(7, 28, 49, 1) 100%
+    );
 
-  .MuiSvgIcon-root {
-    color: var(--primary-highlight-color) !important;
-  }
+    .MuiSvgIcon-root {
+        color: var(--primary-highlight-color) !important;
+    }
 }
 
-.MuiDataGrid-root div[role="row"] {
-  background-color: transparent !important;
+.MuiDataGrid-root div[role='row'] {
+    background-color: transparent !important;
 }
 
 .MuiDataGrid-root ::after {
-  background-color: var(--border-color) !important;
+    background-color: var(--border-color) !important;
 }
 
 .MuiDataGrid-root .MuiDataGrid-cell {
-  border-color: var(--border-color) !important;
+    border-color: var(--border-color) !important;
 }
 
 .MuiDataGrid-footerContainer,
 .MuiTablePagination-displayedRows {
-  color: var(--primary-font-color) !important;
-  border-color: var(--border-color) !important;
+    color: var(--primary-font-color) !important;
+    border-color: var(--border-color) !important;
 }
 
 .MuiButtonBase-root {
-  color: var(--primary-highlight-color) !important;
+    color: var(--primary-highlight-color) !important;
 }
 
 .MuiButtonBase-root.Mui-disabled {
-  color: var(--border-color) !important;
+    color: var(--border-color) !important;
 }
