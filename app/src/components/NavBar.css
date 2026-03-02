@@ -92,14 +92,36 @@
     background-color: transparent;
     border: none;
     outline: transparent;
+}
+
+.menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    color: var(--primary-font-color);
+    text-decoration: none;
+}
+
+.menu-button,
+.menu-link {
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
 
-.menu-button:hover {
+.menu-button:hover,
+.menu-link:hover {
     color: var(--primary-highlight-color);
 }
 
-.menu-button:hover .icon {
+.menu-button:hover .icon,
+.menu-link:hover .icon {
     fill: var(--primary-highlight-color);
+}
+
+.menu-button:active,
+.menu-link:active {
+    scale: 0.95;
+    fill: var(--tertiary-highlight-color);
 }

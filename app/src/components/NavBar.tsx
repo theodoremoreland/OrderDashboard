@@ -36,6 +36,7 @@ import AttachFileAddIcon from '../assets/images/icons/attach_file_add.svg?react'
 import DisplaySettingsIcon from '../assets/images/icons/display_settings.svg?react';
 import RefreshIcon from '../assets/images/icons/refresh.svg?react';
 import MenuIcon from '../assets/images/icons/menu.svg?react';
+import GitHubIcon from '../assets/images/icons/github.svg?react';
 
 // Styles
 import './NavBar.css';
@@ -159,6 +160,18 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                             <p className="icon-label">Refresh</p>
                         </button>
                     </li>
+                    <li>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Open GitHub repository"
+                            href="https://github.com/theodoremoreland/OrderDashboard"
+                            className="menu-link"
+                        >
+                            <GitHubIcon className="icon" />
+                            <p className="icon-label">GitHub</p>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div className="overlay"></div>
@@ -217,6 +230,18 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         <RefreshIcon className="icon" />
                         <p className="icon-label">Refresh</p>
                     </button>
+                </MenuItem>
+                <MenuItem>
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Open GitHub repository"
+                        href="https://github.com/theodoremoreland/OrderDashboard"
+                        className="menu-link"
+                    >
+                        <GitHubIcon className="icon" />
+                        <p className="icon-label">GitHub</p>
+                    </a>
                 </MenuItem>
             </Menu>
             <DisplaySettingsDialog

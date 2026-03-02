@@ -13,16 +13,8 @@
     transition: all 0.2s ease-in-out;
 }
 
-.icon.clickable {
-    &:hover {
-        cursor: pointer;
-        fill: var(--primary-highlight-color);
-    }
-
-    &:active {
-        scale: 0.95;
-        fill: var(--tertiary-highlight-color);
-    }
+.icon-label {
+    font-size: 0.8rem;
 }
 
 .title {
