@@ -120,7 +120,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
             </FormControl>
             <div id="desktop-menu" className="center">
                 <ul>
-                    <li>
+                    <li className="menu-item">
                         <button
                             type="button"
                             title="Adjust display settings"
@@ -131,7 +131,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                             <p className="icon-label">Display</p>
                         </button>
                     </li>
-                    <li>
+                    <li className="menu-item">
                         <button
                             type="button"
                             title="Visualize your own data by attaching a JSON file"
@@ -139,13 +139,13 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                             className="menu-button"
                         >
                             <AttachFileAddIcon className="icon" />
-                            <p className="icon-label">Upload</p>
+                            <p className="icon-label">Attach</p>
                         </button>
                     </li>
-                    <li>
+                    <li className="menu-item">
                         <button
                             type="button"
-                            title="Replace randomized data"
+                            title="Reset randomized data"
                             onClick={() => {
                                 setSelectedYear('All');
                                 setRawData(
@@ -157,10 +157,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                             className="menu-button"
                         >
                             <RefreshIcon className="icon" />
-                            <p className="icon-label">Refresh</p>
+                            <p className="icon-label">Reset</p>
                         </button>
                     </li>
-                    <li>
+                    <li className="menu-item">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -191,7 +191,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 open={isMobileMenuOpen}
                 onClose={handleMobileMenuClose}
             >
-                <MenuItem>
+                <MenuItem className="menu-item">
                     <button
                         type="button"
                         title="Adjust display settings"
@@ -202,7 +202,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         <p className="icon-label">Display</p>
                     </button>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem className="menu-item">
                     <button
                         type="button"
                         title="Visualize your own data by attaching a JSON file"
@@ -210,13 +210,13 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         className="menu-button"
                     >
                         <AttachFileAddIcon className="icon" />
-                        <p className="icon-label">Upload</p>
+                        <p className="icon-label">Attach</p>
                     </button>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem className="menu-item">
                     <button
                         type="button"
-                        title="Replace randomized data"
+                        title="Reset randomized data"
                         onClick={() => {
                             setSelectedYear('All');
                             setRawData(
@@ -228,10 +228,10 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         className="menu-button"
                     >
                         <RefreshIcon className="icon" />
-                        <p className="icon-label">Refresh</p>
+                        <p className="icon-label">Reset</p>
                     </button>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem className="menu-item">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"

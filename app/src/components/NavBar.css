@@ -95,17 +95,17 @@
 }
 
 .menu-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
     color: var(--primary-font-color);
     text-decoration: none;
 }
 
 .menu-button,
 .menu-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
@@ -124,4 +124,11 @@
 .menu-link:active {
     scale: 0.95;
     fill: var(--tertiary-highlight-color);
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
