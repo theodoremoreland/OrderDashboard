@@ -11,13 +11,60 @@
     border: var(--border);
     border-radius: var(--border-radius);
 
+    @media screen and (min-width: 1080px) {
+        & {
+            width: 45%;
+        }
+    }
+
     .heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
         width: 100%;
+
+        @media screen and (min-width: 355px) {
+            & {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                gap: initial;
+            }
+        }
+    }
+
+    #info-menu-icon-button {
+        margin-top: -0.7em;
+    }
+
+    .info-icon {
+        width: 0.7em;
+        height: 0.7em;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+        fill: var(--primary-highlight-color);
+    }
+
+    .info-icon:hover {
+        filter: brightness(1.4);
+    }
+
+    .info-icon:active {
+        transform: scale(0.95);
+        fill: var(--tertiary-highlight-color);
     }
 }
 
-@media screen and (min-width: 1080px) {
-    .TopStreaks {
-        width: 45%;
+#top-streaks-info-menu {
+    .MuiPaper-root {
+        font-size: 1em;
+        color: var(--primary-font-color);
+        padding: 8px;
+        outline: transparent;
+        border: none;
+        background-color: #0f2f59;
     }
 }

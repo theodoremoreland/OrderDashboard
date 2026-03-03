@@ -1,10 +1,12 @@
 // React
-import { ReactElement, useState, useContext } from 'react';
+import { ReactElement, useState, useContext, useCallback } from 'react';
 
 // MUI
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import Menu from '@mui/material/Menu';
+import IconButton from '@mui/material/IconButton';
 
 // Custom
 import Analytics from '../../classes/Analytics';
@@ -14,6 +16,9 @@ import { DisplaySettingsContext } from '../../contexts/DisplaySettingsProvider';
 
 // Components
 import List from '../List';
+
+// Images
+import InfoHollowIcon from '../../assets/images/icons/info_hollow.svg?react';
 
 // Styles
 import './TopStreaks.css';
@@ -29,11 +34,48 @@ const TopStreaks = ({ analytics, startDate, endDate }: Props): ReactElement => {
     const [listSelection, setListSelection] = useState<
         'days-with-purchases' | 'days-without-purchases'
     >('days-with-purchases');
+    const [infoMenuAnchorEl, setInfoMenuAnchorEl] =
+        useState<null | HTMLElement>(null);
+    const isInfoMenuOpen = Boolean(infoMenuAnchorEl);
+
+    const handleInfoMenuOpen = useCallback(
+        (event: React.MouseEvent<HTMLElement>) => {
+            setInfoMenuAnchorEl(event.currentTarget);
+        },
+        []
+    );
+
+    const handleInfoMenuClose = useCallback(() => {
+        setInfoMenuAnchorEl(null);
+    }, []);
 
     return (
         <section className="TopStreaks">
             <div className="heading">
-                <h2>Top Streaks</h2>
+                <h2>
+                    Top Streaks
+                    <IconButton
+                        id="info-menu-icon-button"
+                        aria-label="menu"
+                        aria-controls={isInfoMenuOpen ? 'info-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={isInfoMenuOpen ? 'true' : undefined}
+                        onClick={handleInfoMenuOpen}
+                    >
+                        <InfoHollowIcon className="info-icon" />
+                    </IconButton>
+                    <Menu
+                        id="top-streaks-info-menu"
+                        anchorEl={infoMenuAnchorEl}
+                        open={isInfoMenuOpen}
+                        onClose={handleInfoMenuClose}
+                    >
+                        <p>
+                            This data represents the most consecutive days with
+                            or without purchases.
+                        </p>
+                    </Menu>
+                </h2>
                 <FormControl
                     variant="standard"
                     size="small"
