@@ -1,19 +1,23 @@
 .TopStreaks {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 16px 16px 0 16px;
-  border: var(--border);
-  border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 16px 16px 0 16px;
+    border: var(--border);
+    border-radius: var(--border-radius);
+
+    .heading {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 1080px) {
-  .TopStreaks {
-    width: 45%;
-  }
+    .TopStreaks {
+        width: 45%;
+    }
 }
