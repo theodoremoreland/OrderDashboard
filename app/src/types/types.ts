@@ -23,19 +23,25 @@ export enum MonthFormat {
     December = 'Dec',
 }
 
-type RegexMatchedString<Pattern extends string> = 
+type RegexMatchedString<Pattern extends string> =
     `${string & { __brand: Pattern }}`;
 
 /** String of format: Oct 13 2023 */
-export type DateFormat = RegexMatchedString<`^(${MonthFormat}) \\d{1,2} \\d{4}$`>;
+export type DateFormat =
+    RegexMatchedString<`^(${MonthFormat}) \\d{1,2} \\d{4}$`>;
 
 export interface Order {
-    "storeName": string,
+    storeName: string;
     /** String of format: Oct 13 2023 */
-    "date": DateFormat,
-    "cost": number,
-    "itemCount": number,
-    "items": string[],
-    "wasCancelled": boolean,
-    "dayOfWeek": WeekDayFormat
+    date: DateFormat;
+    cost: number;
+    itemCount: number;
+    items: string[];
+    wasCancelled: boolean;
+    dayOfWeek: WeekDayFormat;
+}
+
+export enum LocalStorageKeys {
+    DONT_SHOW_INFO_BANNER = 'dontShowInfoBanner',
+    INFO_BANNER_LAST_SHOWN_DATE = 'infoBannerLastShownDate',
 }
