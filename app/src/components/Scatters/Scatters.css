@@ -1,9 +1,21 @@
 .Scatters {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 16px;
-  border: var(--border);
-  border-radius: var(--border-radius);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    border-radius: var(--border-radius);
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        pointer-events: none;
+        border-radius: inherit;
+        border: 1px solid transparent;
+        background: var(--pseudo-border-background);
+        mask: var(--pseudo-border-mask);
+        mask-composite: subtract;
+    }
 }

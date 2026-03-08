@@ -1,40 +1,53 @@
 .Kpi {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  flex-grow: 1;
-  width: 100%;
-  padding: 0.5rem 1rem;
-  border: var(--border);
-  border-radius: var(--border-radius);
-
-  .label-row {
+    position: relative;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-  }
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0.5rem 1rem;
 
-  .label {
-    font-family: custom-regular;
-    font-size: 1rem;
-  }
+    border-radius: var(--border-radius);
 
-  .value {
-    font-family: custom-bold;
-    font-size: 1.3rem;
-  }
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        pointer-events: none;
+        border-radius: inherit;
+        border: 1px solid transparent;
+        background: var(--pseudo-border-background);
+        mask: var(--pseudo-border-mask);
+        mask-composite: subtract;
+    }
 
-  .icon {
-    width: 1.3rem;
-  }
+    .label-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .label {
+        font-family: custom-regular;
+        font-size: 1rem;
+    }
+
+    .value {
+        font-family: custom-bold;
+        font-size: 1.3rem;
+    }
+
+    .icon {
+        width: 1.3rem;
+    }
 }
 
 @media screen and (min-width: 1080px) {
-  .Kpi {
-    width: auto;
-  }
+    .Kpi {
+        width: auto;
+    }
 }

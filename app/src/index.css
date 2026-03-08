@@ -1,81 +1,78 @@
 /* ___________________ FONTS ____________________________ */
 @font-face {
-  font-family: custom-bold;
-  src: url("./fonts/Urbanist-Bold.ttf");
+    font-family: custom-bold;
+    src: url('./fonts/Urbanist-Bold.ttf');
 }
 
 @font-face {
-  font-family: custom-regular;
-  src: url("./fonts/Urbanist-Regular.ttf");
+    font-family: custom-regular;
+    src: url('./fonts/Urbanist-Regular.ttf');
 }
 
 @font-face {
-  font-family: custom-thin;
-  src: url("./fonts/Urbanist-Thin.ttf");
+    font-family: custom-thin;
+    src: url('./fonts/Urbanist-Thin.ttf');
 }
 
 /* ___________________ GLOBAL ____________________________ */
 :root {
-  --color: #fc3e74;
-  --color: #d71c60;
-  --color: #071c31;
-  --color: #070c10;
-  --color: #4aa7f1;
-  --color: #2265c1;
-  --color: #214263;
-  --color: #263951;
-  --color: #5845ba;
-  --color: #19122d;
-  --color: #feffff;
+    --primary-font-color: #feffff;
+    --primary-highlight-color: #fc3e74;
+    --secondary-highlight-color: #4aa7f1;
+    --tertiary-highlight-color: #d71c60;
+    --border-color: #feffff36;
+    --border: 1px solid var(--border-color);
+    --border-radius: 4px;
+    --section-gap: 20px;
 
-  --primary-font-color: #feffff;
-  --primary-highlight-color: #fc3e74;
-  --secondary-highlight-color: #4aa7f1;
-  --tertiary-highlight-color: #d71c60;
-  --border-color: #feffff36;
-  --border: 1px solid var(--border-color);
-  --border-radius: 4px;
-  --section-gap: 20px;
+    --pseudo-border-background: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            #d1427785
+        )
+        border-box;
+    --pseudo-border-mask:
+        linear-gradient(black, black) border-box,
+        linear-gradient(black, black) padding-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  width: 100%;
-  height: auto;
-  color: var(--primary-font-color);
-  font-family: custom-regular;
-  background: rgb(7, 28, 49);
-  background: linear-gradient(
-    180deg,
-    rgba(7, 28, 49, 1) 0%,
-    rgba(7, 12, 16, 1) 100%
-  );
-  overscroll-behavior: none;
+    width: 100%;
+    height: auto;
+    color: var(--primary-font-color);
+    font-family: custom-regular;
+    background: rgb(7, 28, 49);
+    background: linear-gradient(
+        180deg,
+        rgba(7, 28, 49, 1) 0%,
+        rgba(7, 12, 16, 1) 100%
+    );
+    overscroll-behavior: none;
 }
 
 body,
 #root {
-  width: 100%;
+    width: 100%;
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
 }
 
 h2 {
-  font-family: custom-bold;
-  font-size: 1.25rem;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
-  padding: 0;
-  margin: 0;
+    font-family: custom-bold;
+    font-size: 1.25rem;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+    padding: 0;
+    margin: 0;
 }
 
 option {
-  color: var(--primary-highlight-color) !important;
+    color: var(--primary-highlight-color) !important;
 }
