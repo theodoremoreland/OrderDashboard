@@ -145,7 +145,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                     <li className="menu-item">
                         <button
                             type="button"
-                            title="Reset randomized data"
+                            title="Randomize data"
                             onClick={() => {
                                 setSelectedYear('All');
                                 setRawData(
@@ -157,7 +157,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                             className="menu-button"
                         >
                             <RefreshIcon className="icon" />
-                            <p className="icon-label">Reset</p>
+                            <p className="icon-label">Random</p>
                         </button>
                     </li>
                     <li className="menu-item">
@@ -216,7 +216,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                 <MenuItem className="menu-item">
                     <button
                         type="button"
-                        title="Reset randomized data"
+                        title="Randomize data"
                         onClick={() => {
                             setSelectedYear('All');
                             setRawData(
@@ -228,7 +228,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
                         className="menu-button"
                     >
                         <RefreshIcon className="icon" />
-                        <p className="icon-label">Reset</p>
+                        <p className="icon-label">Random</p>
                     </button>
                 </MenuItem>
                 <MenuItem className="menu-item">
