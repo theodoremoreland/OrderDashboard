@@ -1,23 +1,5 @@
 # Order Dashboard
 
-<img src="presentation/thumbnail.webp" width="700">
-
-[View the web application](https://order-dashboard.theodoremoreland.dev)
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Technologies Used](#technologies-used)
-- [How to run locally](#how-to-run-locally)
-  - [With Docker](#with-docker)
-  - [With Windows](#with-windows)
-- [Getting the order data](#getting-the-order-data)
-- [Screenshots](#screenshots)
-  - [Desktop](#desktop)
-  - [Mobile](#mobile)
-
-## Overview
-
 I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
 
 I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard.
@@ -40,6 +22,21 @@ JSON data should be of the following format:
     ...
 ]
 ```
+
+<img src="presentation/thumbnail.webp" width="700">
+
+[View the web application](https://order-dashboard.theodoremoreland.dev)
+
+## Table of Contents
+
+- [Technologies Used](#technologies-used)
+- [How to run locally](#how-to-run-locally)
+  - [With Docker](#with-docker)
+  - [With Windows](#with-windows)
+- [Getting the order data](#getting-the-order-data)
+- [Screenshots](#screenshots)
+  - [Desktop](#desktop)
+  - [Mobile](#mobile)
 
 ## Technologies Used
 
