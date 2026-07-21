@@ -23,6 +23,8 @@ JSON data should be of the following format:
 ]
 ```
 
+Continue reading below for instructions on how to run locally and get your own order history data.
+
 <img src="presentation/thumbnail.webp" width="700">
 
 [View the web application](https://order-dashboard.theodoremoreland.dev)
