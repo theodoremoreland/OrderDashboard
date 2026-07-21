@@ -115,6 +115,23 @@ The data created from the [web scraping](#web-scraping) steps need to be transfo
 
 1. Run the `transform_data.py` script and point it to the JSON file created of the order data printed from `webScraper.js`.
 
+The resulting JSON data should be in the following format:
+
+```
+[
+    {
+        "storeName": "Store 1",
+        "date": "Oct 13 2023",
+        "cost": 121.67,
+        "itemCount": 3,
+        "items": ["item1", "item2", "item3"],
+        "wasCancelled": false,
+        "dayOfWeek": "Mon"
+    },
+    ...
+]
+```
+
 ## Screenshots
 
 ### Desktop
