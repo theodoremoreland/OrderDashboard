@@ -1,36 +1,12 @@
 # Order Dashboard
 
-I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
-
-I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard.
-
-The dashboard is initialized with random data. The randomized data can be shuffled by clicking the refresh icon in the navbar. Actual data in the form of a properly formatted JSON file can be supplied to the dashboard via clicking the attach/add icon in the navbar.
-
-JSON data should be of the following format:
-
-```
-[
-    {
-        "storeName": "Store 1",
-        "date": "Oct 13 2023",
-        "cost": 121.67,
-        "itemCount": 3,
-        "items": ["item1", "item2", "item3"],
-        "wasCancelled": false,
-        "dayOfWeek": "Mon"
-    },
-    ...
-]
-```
-
-Continue reading below for instructions on how to run locally and get your own order history data.
-
 <img src="presentation/thumbnail.webp" width="700">
 
 [View the web application](https://order-dashboard.theodoremoreland.dev)
 
 ## Table of Contents
 
+- [Overview](#overview)
 - [Technologies Used](#technologies-used)
 - [How to run locally](#how-to-run-locally)
   - [With Docker](#with-docker)
@@ -39,6 +15,16 @@ Continue reading below for instructions on how to run locally and get your own o
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
   - [Mobile](#mobile)
+ 
+## Overview
+
+I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
+
+I wrote a couple scripts to web scrape and transform my order history data from the DoorDash website. The data (in the form of a JSON file) can be supplied to the dashboard.
+
+The dashboard is initialized with random data. The randomized data can be shuffled by clicking the refresh icon in the navbar. Actual data in the form of a properly formatted JSON file can be supplied to the dashboard via clicking the attach/add icon in the navbar.
+
+Continue reading below for more information regarding how to run locally and how to scrape and transform your own order history data.
 
 ## Technologies Used
 
