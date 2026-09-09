@@ -146,39 +146,6 @@
     stroke: var(--border-color) !important;
 }
 
-/* DATA GRID */
-.grid-header {
-    color: var(--primary-font-color) !important;
-    background: rgb(17, 34, 52);
-    background: linear-gradient(
-        180deg,
-        rgb(17, 34, 52) 0%,
-        rgba(7, 28, 49, 1) 100%
-    );
-
-    .MuiSvgIcon-root {
-        color: var(--primary-highlight-color) !important;
-    }
-}
-
-.MuiDataGrid-root div[role='row'] {
-    background-color: transparent !important;
-}
-
-.MuiDataGrid-root ::after {
-    background-color: var(--border-color) !important;
-}
-
-.MuiDataGrid-root .MuiDataGrid-cell {
-    border-color: var(--border-color) !important;
-}
-
-.MuiDataGrid-footerContainer,
-.MuiTablePagination-displayedRows {
-    color: var(--primary-font-color) !important;
-    border-color: var(--border-color) !important;
-}
-
 .MuiButtonBase-root {
     color: var(--primary-highlight-color) !important;
 }
