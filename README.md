@@ -1,5 +1,23 @@
 # Order Dashboard
 
+New data:
+
+- Threshold for activity (e.g. min-max)
+- Year delta (previous year for single year and delta by all years)
+- Activity by tips
+- Display save defaults for visualization options
+
+- Favorite items
+- Average (high and low) tip amounts
+- View receipt
+- compare doordash prices - non doordash prices
+- Heatmap (total orders, total spend)
+
+New logic:
+
+- browser extension that grabs receipts then downloads json
+- manually record non doordash item prices
+
 <img src="presentation/thumbnail.webp" width="700">
 
 [View the web application](https://order-dashboard.theodoremoreland.dev)
@@ -15,7 +33,7 @@
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
   - [Mobile](#mobile)
- 
+
 ## Overview
 
 I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
