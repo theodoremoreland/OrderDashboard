@@ -5,11 +5,10 @@
     /* DATA GRID */
     .grid-header {
         color: var(--primary-font-color) !important;
-        background: rgb(17, 34, 52);
         background: linear-gradient(
             180deg,
             rgb(17, 34, 52) 0%,
-            rgba(7, 28, 49, 1) 100%
+            var(--primary-color) 100%
         );
 
         .MuiSvgIcon-root {

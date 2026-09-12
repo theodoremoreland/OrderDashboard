@@ -16,15 +16,22 @@
 
 /* ___________________ GLOBAL ____________________________ */
 :root {
+    /* Main colors */
+    --primary-color: rgba(7, 28, 49, 1);
+    --secondary-color: rgba(7, 12, 16, 1);
+
+    /* Font variables */
     --primary-font-color: #feffff;
+
+    /* Highlight colors */
     --primary-highlight-color: #fc3e74;
     --secondary-highlight-color: #4aa7f1;
     --tertiary-highlight-color: #d71c60;
+
+    /* Border variables */
     --border-color: #feffff36;
     --border: 1px solid var(--border-color);
     --border-radius: 4px;
-    --section-gap: 20px;
-
     --pseudo-border-background: linear-gradient(
             rgba(255, 255, 255, 0.5),
             #d1427785
@@ -33,6 +40,9 @@
     --pseudo-border-mask:
         linear-gradient(black, black) border-box,
         linear-gradient(black, black) padding-box;
+
+    /* Layout variables */
+    --section-gap: 20px;
 }
 
 * {
@@ -46,11 +56,10 @@ html {
     height: auto;
     color: var(--primary-font-color);
     font-family: custom-regular;
-    background: rgb(7, 28, 49);
     background: linear-gradient(
         180deg,
-        rgba(7, 28, 49, 1) 0%,
-        rgba(7, 12, 16, 1) 100%
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
     );
     overscroll-behavior: none;
 }
