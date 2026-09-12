@@ -7,7 +7,7 @@
         color: var(--primary-font-color) !important;
         background: linear-gradient(
             180deg,
-            rgb(17, 34, 52) 0%,
+            var(--tertiary-color) 0%,
             var(--primary-color) 100%
         );
 

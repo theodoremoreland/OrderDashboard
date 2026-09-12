@@ -1,17 +1,19 @@
 # Order Dashboard
 
-New data:
+Enhancements:
 
 - Threshold for activity (e.g. min-max)
 - Year delta (previous year for single year and delta by all years)
 - Activity by tips
 - Display save defaults for visualization options
 
+New data:
+
 - Favorite items
 - Average (high and low) tip amounts
 - View receipt
-- compare doordash prices - non doordash prices
-- Heatmap (total orders, total spend)
+- Compare doordash prices - non doordash prices
+- Heatmap (total orders, total spend, items) Stacks for all years, do it by day of month and not weekdays + horizontal scroll
 
 New logic:
 

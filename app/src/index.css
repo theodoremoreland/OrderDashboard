@@ -17,8 +17,11 @@
 /* ___________________ GLOBAL ____________________________ */
 :root {
     /* Main colors */
-    --primary-color: rgba(7, 28, 49, 1);
+    /* --primary-color: rgba(7, 28, 49, 1); */
+    --primary-color: rgb(1, 3, 5);
     --secondary-color: rgba(7, 12, 16, 1);
+    --tertiary-color: rgb(8, 17, 26);
+    /* --tertiary-color: rgb(17, 34, 52); */
 
     /* Font variables */
     --primary-font-color: #feffff;
@@ -43,6 +46,12 @@
 
     /* Layout variables */
     --section-gap: 20px;
+
+    --surface-dark: #0d1218;
+    --surface-border: #1a232d;
+    --surface-hover: #16202a;
+    --muted: #8a9bb0;
+    --accent-purple: #8b5cf6;
 }
 
 * {
