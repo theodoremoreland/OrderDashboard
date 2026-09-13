@@ -37,7 +37,7 @@
     --border-radius: 4px;
     --pseudo-border-background: linear-gradient(
             rgba(255, 255, 255, 0.5),
-            #d1427785
+            color-mix(in srgb, var(--tertiary-highlight-color) 50%, transparent)
         )
         border-box;
     --pseudo-border-mask:

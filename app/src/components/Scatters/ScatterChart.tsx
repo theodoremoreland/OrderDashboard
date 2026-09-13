@@ -28,7 +28,7 @@ const Scatter = ({
                     {
                         data,
                         valueFormatter: tooltipFormatter,
-                        color: '#d71c60',
+                        color: 'var(--tertiary-highlight-color)',
                     },
                 ]}
                 yAxis={[

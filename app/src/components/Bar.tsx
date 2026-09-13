@@ -52,7 +52,10 @@ const Bar = ({ id, dataset, xAxisFormatter }: Props): ReactElement => {
                         type: 'continuous',
                         min: dataset[dataset.length - 1].value,
                         max: dataset[0].value,
-                        color: ['#fc3e74', '#d71c60'],
+                        color: [
+                            'var(--primary-highlight-color)',
+                            'var(--tertiary-highlight-color)',
+                        ],
                     },
                     valueFormatter: xAxisFormatter,
                 },
