@@ -6,14 +6,17 @@ Enhancements:
 - Year delta (previous year for single year and delta by all years)
 - Activity by tips
 - Display save defaults for visualization options
+- Dedicated raw stats page with plain lines of data
 
 New data:
 
 - Favorite items
 - Average (high and low) tip amounts
-- View receipt
 - Compare doordash prices - non doordash prices
-- Heatmap (total orders, total spend, items) Stacks for all years, do it by day of month and not weekdays + horizontal scroll
+
+Both:
+
+- Heatmap option for data table (total orders, total spend, items) Stacks for all years, do it by day of month and not weekdays + horizontal scroll. Click to view receipt.
 
 New logic:
 
