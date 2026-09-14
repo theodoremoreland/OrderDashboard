@@ -2,7 +2,7 @@
 
 Enhancements:
 
-- Replace Activity Scatter Plot with lines that illustrate buying and not buying streaks (https://mui.com/x/react-charts/scatter/#plot-customization)
+- Replace Activity Scatter Plot with lines that illustrate buying and not buying streaks (https://mui.com/x/react-charts/lines/)
 - Add deltas to KPIs that so delta (percentages) between previous year for single year and delta by all years for all years
 - Display save defaults for visualization options
 
