@@ -2,17 +2,15 @@
 
 Enhancements:
 
-- Threshold for activity (e.g. min-max)
-- Year delta (previous year for single year and delta by all years)
-- Activity by tips
+- Replace Activity Scatter Plot with lines that illustrate buying and not buying streaks (https://mui.com/x/react-charts/scatter/#plot-customization)
+- Add deltas to KPIs that so delta (percentages) between previous year for single year and delta by all years for all years
 - Display save defaults for visualization options
-- Dedicated raw stats page with plain lines of data
 
 New data:
 
-- Favorite items
-- Average (high and low) tip amounts
-- Compare doordash prices - non doordash prices
+- Banner with High, Low, Average, and Rate of tips
+- Receipt that corresponds to row selection of table that shows all receipt info for that day and links to actual page on Doordash. Have a projected stat for non doordash price of total and items.
+- Add dedicated raw stats page with plain lines of data (most popular stores, most popular items, highest tips, lowest tips, etc)
 
 Both:
 
