@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  order-dashboard-service:
-    container_name: order-dashboard-dev-container
+  ordervia-service:
+    container_name: ordervia-dev-container
     build:
       context: ..
       dockerfile: ./docker/dev.Dockerfile

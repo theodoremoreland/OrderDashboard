@@ -20,12 +20,29 @@
 
     .app-title {
         z-index: 2;
+        position: relative;
         font-family: custom-bold;
         font-style: oblique;
         font-size: 1.55rem;
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
         padding: 0;
         margin: 0;
+
+        &::after {
+            z-index: -1;
+            content: 'OrderVIA';
+            position: absolute;
+            top: 0;
+            left: -7%;
+            display: none;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 150%;
+            height: 100%;
+            color: var(--primary-highlight-color);
+            font-size: 1.15em;
+        }
     }
 
     #desktop-menu {

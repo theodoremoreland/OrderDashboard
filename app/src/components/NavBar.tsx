@@ -80,7 +80,7 @@ const NavBar = ({ analytics }: Props): ReactElement => {
 
     return (
         <nav className="NavBar">
-            <h1 className="app-title">Order Dashboard</h1>
+            <h1 className="app-title">OrderVIA</h1>
             <FormControl
                 variant="standard"
                 size="small"
