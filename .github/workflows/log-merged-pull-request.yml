@@ -9,4 +9,5 @@ jobs:
     if: github.event.pull_request.merged == true
     uses: theodoremoreland/theodoremoreland/.github/workflows/log-merged-pull-request.yml@master
     with:
-      api_endpoint: "${{ vars.API_ENDPOINT }}/pull-requests" # Point this to your /pull-requests endpoint variable
+      api_endpoint: "${{ vars.API_ENDPOINT }}/pull-requests"
+      api_key: "${{ vars.API_KEY }}"
