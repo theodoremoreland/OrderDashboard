@@ -8,4 +8,4 @@ jobs:
   call-workflow:
     uses: theodoremoreland/theodoremoreland/.github/workflows/log-closed-issue.yml@master
     with:
-      api_endpoint: "${{ vars.API_ENDPOINT }}"
+      api_endpoint: "${{ vars.API_ENDPOINT }}/issues"
