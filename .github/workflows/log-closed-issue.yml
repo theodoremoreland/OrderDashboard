@@ -1,56 +1,11 @@
-name: Post Closed Issue to API
+name: Call Shared Issue Workflow
 
 on:
   issues:
     types: [closed]
 
 jobs:
-  post-issue:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send Issue Data to API Gateway
-        env:
-          API_ENDPOINT: "${{ vars.API_ENDPOINT }}"
-        run: |
-          # Extract and format the required fields from the GitHub event payload
-          ISSUE_ID="${{ github.event.issue.id }}"
-          PROJECT_ID="${{ github.event.repository.id }}"
-          CREATED_TIMESTAMP="${{ github.event.issue.created_at }}"
-          CLOSED_TIMESTAMP="${{ github.event.issue.closed_at }}"
-          STATUS="${{ github.event.issue.state }}"
-          
-          # Convert the labels array into a JSON list of label names using jq
-          LABELS=$(echo '${{ toJson(github.event.issue.labels) }}' | jq '[.[].name]')
-
-          # Construct the JSON payload
-          PAYLOAD=$(jq -n \
-            --arg id "$ISSUE_ID" \
-            --arg project_id "$PROJECT_ID" \
-            --arg created_timestamp "$CREATED_TIMESTAMP" \
-            --arg closed_timestamp "$CLOSED_TIMESTAMP" \
-            --arg status "$STATUS" \
-            --argjson labels "$LABELS" \
-            '{
-              id: $id,
-              project_id: $project_id,
-              created_timestamp: $created_timestamp,
-              closed_timestamp: $closed_timestamp,
-              status: $status,
-              labels: $labels
-            }')
-
-          echo "Sending payload to API Gateway..."
-
-          # Send the POST request to API Gateway
-          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -X POST "$API_ENDPOINT" \
-            -H "Content-Type: application/json" \
-            -d "$PAYLOAD")
-
-          echo "API Gateway response status code: $RESPONSE"
-
-          if [ "$RESPONSE" -ge 200 ] && [ "$RESPONSE" -lt 300 ]; then
-            echo "Successfully posted closed issue data."
-          else
-            echo "Error: API returned status code $RESPONSE"
-            exit 1
-          fi
+  call-workflow:
+    uses: theodoremoreland/theodoremoreland/.github/workflows/log-closed-issue.yml@master
+    secrets:
+      API_ENDPOINT: "${{ vars.API_ENDPOINT }}"
