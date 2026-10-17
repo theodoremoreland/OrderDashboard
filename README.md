@@ -1,8 +1,10 @@
-# Order Dashboard
+# OrderVIA
+
+Very Important Analytics
 
 <img src="presentation/thumbnail.webp" width="700">
 
-[View the web application](https://order-dashboard.theodoremoreland.dev)
+[View the web application](https://ordervia.theodoremoreland.dev/)
 
 ## Table of Contents
 
@@ -15,7 +17,7 @@
 - [Screenshots](#screenshots)
   - [Desktop](#desktop)
   - [Mobile](#mobile)
- 
+
 ## Overview
 
 I rather enjoy being referred to as a "DoorDash VIP" when I call their customer support, despite the fact that being a DoorDash VIP is probably not a good thing. I knew my DoorDash spending habits were bad, but how bad warranted VIP status?
@@ -82,20 +84,20 @@ npm run dev
 
 If you're interested, you can use my scripts and follow the method I used to grab my order history data (for your order history data). However, the method I used is relatively primitive and volatile, considering it isn't fully automated and is based on a particular version of the DoorDash website. If DoorDash updates the order history page, the script used to grab the order history will likely fail. This was sufficient for the scope of the project as I didn't anticipate much value in repeating this process (I wanted to identify trends but not monitor them).
 
-Two scripts are used to get the order history and prepare the data for analysis. One script parses the data [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js). The other script transforms that data into a format better suited for performing analysis [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py).
+Two scripts are used to get the order history and prepare the data for analysis. One script parses the data [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderVIA/blob/main/scripts/webScraper.js). The other script transforms that data into a format better suited for performing analysis [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderVIA/blob/main/scripts/transform_data.py).
 
 ### Web scraping
 
 1. Log in to your DoorDash account via the DoorDash website.
 2. Visit the Order History page on the DoorDash website.
 3. Open the "developer tools" from the Order History page.
-4. Copy and paste the JavaScript from [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/webScraper.js) into the dev console.
+4. Copy and paste the JavaScript from [`scripts/webScraper.js`](https://github.com/theodoremoreland/OrderVIA/blob/main/scripts/webScraper.js) into the dev console.
 5. Press Enter key and wait for script to finish running.
 6. Once the script is complete, copy the message printed in the dev console into an empty JSON file.
 
 ### Transforming data
 
-The data created from the [web scraping](#web-scraping) steps need to be transformed before performing analytics. The file @ [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderDashboard/blob/main/scripts/transform_data.py) is used to transform the data.
+The data created from the [web scraping](#web-scraping) steps need to be transformed before performing analytics. The file @ [`scripts/transform_data.py`](https://github.com/theodoremoreland/OrderVIA/blob/main/scripts/transform_data.py) is used to transform the data.
 
 **Note: Python is required to run the `transform_data.py` script.**
 
