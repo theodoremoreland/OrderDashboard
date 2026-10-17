@@ -29,6 +29,12 @@ jobs:
           npm ci --cache .npm --prefer-offline
           npm run build
 
+      - name: Decode OIDC token
+        run: |
+          TOKEN=$(curl -H "Authorization: Bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=sts.amazonaws.com" | jq -r '.value')
+          echo "$TOKEN" | jq -R 'split(".") | .[1] | @base64d | fromjson'
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
