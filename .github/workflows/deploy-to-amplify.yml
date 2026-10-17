@@ -1,0 +1,59 @@
+name: Deploy to AWS Amplify
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+          cache-dependency-path: app/package-lock.json
+
+      - name: Install Dependencies & Build
+        working-directory: app
+        run: |
+          npm ci --cache .npm --prefer-offline
+          npm run build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Bundle Build Artifacts
+        run: |
+          cd app/dist
+          zip -r ../../build.zip .
+          cd ../..
+
+      - name: Deploy to AWS Amplify
+        run: |
+          # 1. Create deployment and capture JSON response
+          RESPONSE=$(aws amplify create-deployment \
+            --app-id ${{ secrets.AMPLIFY_APP_ID }} \
+            --branch-name main \
+            --output json)
+
+          # 2. Extract Job ID and Upload URL from the response
+          JOB_ID=$(echo $RESPONSE | jq -r '.jobId')
+          UPLOAD_URL=$(echo $RESPONSE | jq -r '.zipUploadUrl')
+
+          # 3. Upload the build zip to the presigned S3 URL
+          curl -T build.zip "$UPLOAD_URL"
+
+          # 4. Trigger the deployment execution
+          aws amplify start-deployment \
+            --app-id ${{ secrets.AMPLIFY_APP_ID }} \
+            --branch-name main \
+            --job-id $JOB_ID
