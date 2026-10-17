@@ -8,6 +8,9 @@ on:
 jobs:
   call-shared:
     uses: theodoremoreland/theodoremoreland/.github/workflows/deploy-to-amplify.yml@master
+    permissions:
+      id-token: write
+      contents: read
     secrets:
       aws_role_arn: "${{ secrets.AWS_ROLE_ARN }}"
       aws_region: "${{ secrets.AWS_REGION }}"
